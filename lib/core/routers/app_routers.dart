@@ -24,7 +24,7 @@ class AppRouters {
   Route<dynamic> _buildRoute(Widget page) {
     return Platform.isIOS
         ? CupertinoPageRoute(
-            builder: (context) => page,
+            builder: (_) => page,
           )
         : MaterialPageRoute(builder: (_) => page);
   }
