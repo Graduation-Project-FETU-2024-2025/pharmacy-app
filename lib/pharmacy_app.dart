@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/routers/app_routers.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
+import 'package:pharmacy_app/core/theme/app_theme.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
 
 class PharmacyApp extends StatelessWidget {
@@ -24,9 +25,9 @@ class PharmacyApp extends StatelessWidget {
           supportedLocales: S.delegate.supportedLocales,
           locale: const Locale('en'),
           initialRoute: Routing.onboarding,
-          // theme: Themes.lightTheme,
-          // darkTheme: Themes.darkTheme,
-          // themeMode: ThemeSwitchingCubit.get(context).theme,
+          theme: Themes.lightTheme,
+          darkTheme: Themes.darkTheme,
+          themeMode:ThemeMode.light,
           onGenerateRoute: AppRouters().generateRoute,
         );
       },
