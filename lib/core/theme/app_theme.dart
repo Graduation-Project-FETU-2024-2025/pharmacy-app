@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
+import 'package:pharmacy_app/core/utils/app_styles.dart';
 
 abstract class Themes {
   // static const Color _lightPrimaryColor = AppColors.primaryColor;
@@ -45,6 +46,47 @@ abstract class Themes {
         //   titleMedium: AppFonts.semiBold16.copyWith(color: Colors.black),
         //   labelSmall: AppFonts.semiBold12.copyWith(color: Colors.black),
         // ),
+        textTheme: TextTheme(
+          headlineLarge: AppStyles.semiBold40.copyWith(
+            color: AppColors.primaryColor,
+          ),
+          headlineMedium: AppStyles.medium30.copyWith(
+            color: AppColors.primaryColor,
+          ),
+          headlineSmall: AppStyles.semiBold20.copyWith(
+            color: AppColors.primaryColor,
+          ),
+          titleLarge: AppStyles.semiBold20.copyWith(
+            color: AppColors.black,
+          ),
+          titleMedium: AppStyles.semiBold15.copyWith(
+            color: AppColors.black,
+          ),
+          titleSmall: AppStyles.semiBold12.copyWith(
+            color: AppColors.black,
+          ),
+          displaySmall: AppStyles.semiBold10.copyWith(
+            color: AppColors.primaryColor,
+          ),
+          displayMedium: AppStyles.semiBold15.copyWith(
+            color: AppColors.black,
+          ),
+          bodySmall: AppStyles.semiBold10.copyWith(
+            color: AppColors.black,
+          ),
+          bodyLarge: AppStyles.medium28.copyWith(
+            color: AppColors.black.withOpacity(0.5),
+          ),
+          labelMedium: AppStyles.semiBold14.copyWith(
+            color: AppColors.black,
+          ),
+          displayLarge: AppStyles.semiBold25.copyWith(
+            color: AppColors.primaryColor,
+          ),
+          labelSmall: AppStyles.semiBold12.copyWith(
+            color: AppColors.primaryColor,
+          ),
+        ),
       );
 
   static get darkTheme => ThemeData(
