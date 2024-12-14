@@ -11,7 +11,6 @@ class BranchesScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           CustomSliverAppBar(),
-          
           SliverToBoxAdapter(
             child: BranchesViewBody(),
           )
