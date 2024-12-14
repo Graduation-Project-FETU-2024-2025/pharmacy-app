@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/utils/app_images.dart';
-import '../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_colors.dart';
 
 class BranchesCardItems extends StatelessWidget {
   const BranchesCardItems({super.key});

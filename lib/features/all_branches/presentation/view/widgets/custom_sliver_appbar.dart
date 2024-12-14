@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pharmacy_app/core/utils/app_images.dart';
-import '../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_colors.dart';
 
 
 class CustomSliverAppBar extends StatelessWidget {

@@ -22,50 +22,52 @@ abstract class Themes {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
+            minimumSize: Size(255, 55),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
             backgroundColor: _lightElevatedButtonColor,
             foregroundColor: _foregroundTextColor,
             textStyle: const TextStyle(
-              color: _foregroundTextColor,
-              fontSize: 20,
-            ),
+                color: _foregroundTextColor,
+                fontSize: 20,
+                fontWeight: FontWeight.w500),
           ),
         ),
-
         inputDecorationTheme: InputDecorationTheme(
-        filled: true,
-        fillColor: Color(0xff4169E1).withOpacity(0.2), 
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide:  BorderSide(color: Color(0xff4169E1).withOpacity(0.2),width: 0),
+          filled: true,
+          fillColor: Color(0xff4169E1).withOpacity(0.2),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide:
+                BorderSide(color: Color(0xff4169E1).withOpacity(0.2), width: 0),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide:
+                BorderSide(color: Color(0xff4169E1).withOpacity(0.2), width: 0),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(color: Colors.grey, width: 1),
+          ),
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(color: Colors.red, width: 0),
+          ),
+          focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide:
+                BorderSide(color: Color(0xffFA0909).withOpacity(0.3), width: 2),
+          ),
+          hintStyle: const TextStyle(color: Color(0xff4169E1)),
+          labelStyle: const TextStyle(color: Color(0xff4169E1)),
+          suffixIconColor: Colors.green, // Icon color
+          prefixIconColor: Color(0xff4169E1),
+          errorStyle: const TextStyle(color: Colors.red),
         ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Color(0xff4169E1).withOpacity(0.2), width: 0),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Colors.grey, width: 1),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Colors.red,width: 0),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Color(0xffFA0909).withOpacity(0.3),width: 2),
-        ),
-        hintStyle: const TextStyle(color: Color(0xff4169E1)),
-        labelStyle: const TextStyle(color: Color(0xff4169E1)),
-        suffixIconColor: Colors.green, // Icon color
-        prefixIconColor: Color(0xff4169E1),
-        errorStyle: const TextStyle(color: Colors.red),
-        
-      ),
-
         textTheme: TextTheme(
           headlineLarge: AppStyles.semiBold40.copyWith(
             color: AppColors.primaryColor,
@@ -137,45 +139,44 @@ abstract class Themes {
         //   labelSmall: AppFonts.semiBold12.copyWith(color: Colors.white),
         // ),
 
-        
-      //   inputDecorationTheme: InputDecorationTheme(
-      //   filled: true,
-      //   fillColor: Colors.transparent, // Dark background color
-      //   contentPadding:
-      //       const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      //   border: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(10),
-      //     borderSide: BorderSide(
-      //         color: const Color(0xff4169E1).withOpacity(0.2), width: 0),
-      //   ),
-      //   enabledBorder: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(10),
-      //     borderSide: BorderSide(
-      //         color: const Color(0xff4169E1).withOpacity(0.2), width: 0),
-      //   ),
-      //   focusedBorder: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(10),
-      //     borderSide: const BorderSide(color: Colors.grey, width: 1),
-      //   ),
-      //   errorBorder: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(10),
-      //     borderSide: const BorderSide(color: Colors.red, width: 0),
-      //   ),
-      //   focusedErrorBorder: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(10),
-      //     borderSide: BorderSide(
-      //         color: const Color(0xffFA0909).withOpacity(0.3), width: 2),
-      //   ),
-      //   hintStyle: const TextStyle(
-      //     color: Color(
-      //         0xff9BB4F6), // Lighter blue for better visibility in dark mode
-      //   ),
-      //   labelStyle: const TextStyle(
-      //     color: Color(0xff4169E1), // Blue for labels
-      //   ),
-      //   suffixIconColor: const Color(0xff6EE7B7), // Greenish tint for icons
-      //   prefixIconColor: const Color(0xff4169E1),
-      //   errorStyle: const TextStyle(color: Colors.red),
-      // )
+        //   inputDecorationTheme: InputDecorationTheme(
+        //   filled: true,
+        //   fillColor: Colors.transparent, // Dark background color
+        //   contentPadding:
+        //       const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        //   border: OutlineInputBorder(
+        //     borderRadius: BorderRadius.circular(10),
+        //     borderSide: BorderSide(
+        //         color: const Color(0xff4169E1).withOpacity(0.2), width: 0),
+        //   ),
+        //   enabledBorder: OutlineInputBorder(
+        //     borderRadius: BorderRadius.circular(10),
+        //     borderSide: BorderSide(
+        //         color: const Color(0xff4169E1).withOpacity(0.2), width: 0),
+        //   ),
+        //   focusedBorder: OutlineInputBorder(
+        //     borderRadius: BorderRadius.circular(10),
+        //     borderSide: const BorderSide(color: Colors.grey, width: 1),
+        //   ),
+        //   errorBorder: OutlineInputBorder(
+        //     borderRadius: BorderRadius.circular(10),
+        //     borderSide: const BorderSide(color: Colors.red, width: 0),
+        //   ),
+        //   focusedErrorBorder: OutlineInputBorder(
+        //     borderRadius: BorderRadius.circular(10),
+        //     borderSide: BorderSide(
+        //         color: const Color(0xffFA0909).withOpacity(0.3), width: 2),
+        //   ),
+        //   hintStyle: const TextStyle(
+        //     color: Color(
+        //         0xff9BB4F6), // Lighter blue for better visibility in dark mode
+        //   ),
+        //   labelStyle: const TextStyle(
+        //     color: Color(0xff4169E1), // Blue for labels
+        //   ),
+        //   suffixIconColor: const Color(0xff6EE7B7), // Greenish tint for icons
+        //   prefixIconColor: const Color(0xff4169E1),
+        //   errorStyle: const TextStyle(color: Colors.red),
+        // )
       );
 }
