@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
+import 'package:pharmacy_app/features/presentation/view/branches_screen.dart';
 
 class AppRouters {
   Route generateRoute(RouteSettings settings) {
@@ -11,6 +12,11 @@ class AppRouters {
       case Routing.onboarding:
         return _buildRoute(
             Scaffold(body: Center(child: Text('Onboarding Screen'))));
+
+      case Routing.branchesScreen:
+        return MaterialPageRoute(
+          builder: (_) => const BranchesScreen(),
+        );
 
       default:
         return _buildRoute(

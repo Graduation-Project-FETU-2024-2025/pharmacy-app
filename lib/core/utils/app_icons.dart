@@ -81,5 +81,9 @@ class AppIcons {
   /// Assets for iconsVerified
   /// assets/icons/verified.svg
   static const String iconsVerified = "assets/icons/verified.svg";
+
+  /// Assets for iconsPhone
+  /// assets/icons/phone.svg
+  static const String iconsPhone = "assets/icons/phone.svg";
 }
 
