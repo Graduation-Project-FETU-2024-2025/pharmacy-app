@@ -10,9 +10,10 @@ class CustomSliverAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      automaticallyImplyLeading : false,
       systemOverlayStyle:
           const SystemUiOverlayStyle(statusBarBrightness: Brightness.dark),
-      expandedHeight: MediaQuery.of(context).size.height*0.49,
+      expandedHeight: MediaQuery.of(context).size.height*0.4,
       backgroundColor: Colors.white,
       elevation: 0.0,
       stretch: true,
