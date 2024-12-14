@@ -4,11 +4,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/features/presentation/view/branches_screen.dart';
+import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
 
 class AppRouters {
   Route generateRoute(RouteSettings settings) {
     var argument = settings.arguments;
     switch (settings.name) {
+      case Routing.splash:
+        return _buildRoute(SplashView());
+        
       case Routing.onboarding:
         return _buildRoute(
             Scaffold(body: Center(child: Text('Onboarding Screen'))));
