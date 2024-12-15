@@ -15,9 +15,14 @@ class BranchesViewBody extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Text('All Branches', style: AppStyles.semiBold15),
           ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height,
-            child: BranchesCard()),
+          GestureDetector(
+            onTap: (){
+              //TODO
+            },
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height,
+              child: BranchesCard()),
+          ),
         ],
       ),
     );
