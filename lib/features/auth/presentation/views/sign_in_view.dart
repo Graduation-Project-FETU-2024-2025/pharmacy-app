@@ -7,6 +7,7 @@ import 'package:pharmacy_app/core/utils/app_images.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/widgets/custom_button.dart';
 import 'package:pharmacy_app/core/widgets/custom_text_form_field.dart';
+import 'package:pharmacy_app/features/auth/presentation/view_model/cubit/sign_in_cubit.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
 
 class SignInView extends StatelessWidget {
@@ -42,8 +43,10 @@ class SignInView extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Spacer(
+                    flex: 1,
+                  ),
                   Text(
                     S.of(context).welcomeBack,
                     style: Theme.of(context).textTheme.headlineMedium,
@@ -57,22 +60,22 @@ class SignInView extends StatelessWidget {
                         ),
                   ),
                   Gap(30.h),
-                  CustomTextFormField(
-                    hintText: S.of(context).email,
-                    keyboardType: TextInputType.emailAddress,
-                    prefixIcon: Padding(
-                      padding: const EdgeInsetsDirectional.only(
-                        end: 4.0,
-                        top: 4,
-                        start: 4,
-                      ),
-                      child: SvgPicture.asset(
+                  Form(
+                    key: SignInCubit.get(context).formKey,
+                    child: CustomTextFormField(
+                      controller: SignInCubit.get(context).emailController,
+                      hintText: S.of(context).email,
+                      keyboardType: TextInputType.emailAddress,
+                      prefixIcon: SvgPicture.asset(
                         AppIcons.iconsEmail,
                       ),
                     ),
                   ),
                   Gap(60.h),
                   CustomButton(onPressed: () {}, text: S.of(context).login),
+                  Spacer(
+                    flex: 2,
+                  ),
                 ],
               ),
             ),

@@ -28,6 +28,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!")
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!")
       };
 }

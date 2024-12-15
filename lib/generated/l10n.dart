@@ -60,10 +60,10 @@ class S {
     );
   }
 
-  /// `Welcome back!`
+  /// `Welcome Back!`
   String get welcomeBack {
     return Intl.message(
-      'Welcome back!',
+      'Welcome Back!',
       name: 'welcomeBack',
       desc: '',
       args: [],

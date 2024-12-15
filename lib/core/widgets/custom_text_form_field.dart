@@ -77,7 +77,14 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       decoration: InputDecoration(
         hintText: widget.hintText,
         labelText: widget.labelText,
-        prefixIcon: widget.prefixIcon,
+        prefixIcon: Padding(
+          padding: const EdgeInsetsDirectional.only(
+            end: 4.0,
+            top: 4,
+            start: 4,
+          ),
+          child: widget.prefixIcon,
+        ),
         suffixIcon: isValid
             ? widget.suffixIcon ??
                 Icon(
