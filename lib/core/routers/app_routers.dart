@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view/branches_screen.dart';
+import 'package:pharmacy_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:pharmacy_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
 
@@ -17,6 +18,9 @@ class AppRouters {
       case Routing.onboarding:
         return _buildRoute(
             OnboardingView());
+      case Routing.signIn:
+        return _buildRoute(
+            SignInView());
 
       case Routing.branchesScreen:
         return MaterialPageRoute(
