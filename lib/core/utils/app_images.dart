@@ -17,4 +17,6 @@ class AppImages {
 
   static String imgEmail = 'assets/images/email.png';
 
+  static String imgOTP = 'assets/images/otp.png';
+
 }

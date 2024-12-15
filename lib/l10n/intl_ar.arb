@@ -4,11 +4,17 @@
     "welcomeBack":"!مرحبا بعودتك",
     "loginToYourAccount":"تسجيل الدخول إلى حسابك",
     "email":"البريد الإلكتروني",
-    "login":"تسجيل الدخول"
+    "login":"تسجيل الدخول",
 
     "allBranches":"جميع الفروع",
     "drStonePharmacy": "صيدلية دكتور ستون | الاستاد",
     "locateEgTanEstad":"مصر، طنطا، شارع الاستاد",
-    "freeDelivery":"توصيل مجاني"
+    "freeDelivery":"توصيل مجاني",
+
+    "enterOTP":"أدخل رمز التحقق",
+    "enterOTPWeSent":"أدخل رمز التحقق الذي أرسلناه لك على",
+    "haveNotReceivedOTP":"لم تستلم رمز التحقق؟",
+    "resend":"إعادة إرسال",
+    "Continue":"استمر"
 
 }

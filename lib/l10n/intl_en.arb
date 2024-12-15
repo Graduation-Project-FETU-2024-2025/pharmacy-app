@@ -4,11 +4,17 @@
     "welcomeBack":"Welcome Back!",
     "loginToYourAccount":"Login to your account",
     "email":"Email Address",
-    "login":"Login"
+    "login":"Login",
 
     "allBranches":"All Branches",
     "drStonePharmacy":"Dr. Stone Pharmacy | Elestad",
     "locateEgTanEstad":"Egypt, Tanta, El Estad Street",
-    "freeDelivery":"Free Delivery"
+    "freeDelivery":"Free Delivery",
+
+    "enterOTP":"Enter OTP",
+    "enterOTPWeSent":"Enter OTP we sent you at",
+    "haveNotReceivedOTP":"Haven't received OTP?",
+    "resend":"Resend",
+    "Continue":"Continue"
 
 }
