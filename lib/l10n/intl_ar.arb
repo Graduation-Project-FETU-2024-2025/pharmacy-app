@@ -15,6 +15,13 @@
     "enterOTPWeSent":"أدخل رمز التحقق الذي أرسلناه لك على",
     "haveNotReceivedOTP":"لم تستلم رمز التحقق؟",
     "resend":"إعادة إرسال",
-    "Continue":"استمر"
+    "Continue":"استمر",
+
+    "work24Hour":"خدمة أربع و عشرون ساعة !",
+    "workingHour": "ساعات العمل",
+    "pounds":"جنيه",
+    "km":"كم",
+    "deliveryArea&price":"منطقة التوصيل & السعر",
+    "description":"الوصف"
 
 }

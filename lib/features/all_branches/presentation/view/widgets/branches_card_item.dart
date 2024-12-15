@@ -4,6 +4,7 @@ import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/utils/app_images.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/models/branch_model.dart';
 import '../../../../../core/utils/app_colors.dart';
+import '../../../../../generated/l10n.dart';
 
 class BranchesCardItems extends StatelessWidget {
   const BranchesCardItems({super.key});
@@ -11,10 +12,10 @@ class BranchesCardItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Map<String, dynamic> branchJson = {
-  "branchName": "Dr. Stone Pharmacy | Elestad",
-  "branchLocation": "Egypt, Tanta, El Estad Street",
+  "branchName": S.of(context).drStonePharmacy,
+  "branchLocation": S.of(context).locateEgTanEstad,
   "branchPhone": "+20 1553258966",
-  "deliveryOption": "Free Delivery",
+  "deliveryOption": S.of(context).freeDelivery,
   "branchImagePath": AppImages.imgPharmacy,
 };
 

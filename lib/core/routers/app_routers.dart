@@ -10,6 +10,7 @@ import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit
 import 'package:pharmacy_app/features/auth/presentation/views/otp_view.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:pharmacy_app/features/onboarding/presentation/view/onboarding_view.dart';
+import 'package:pharmacy_app/features/pharmacy_details/presentation/view/pharmacy_details_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
 
 class AppRouters {
@@ -36,9 +37,9 @@ class AppRouters {
           ),
         ));
       case Routing.branchesScreen:
-        return MaterialPageRoute(
-          builder: (_) => const BranchesScreen(),
-        );
+        return _buildRoute(BranchesScreen());
+      case Routing.pharmacyDetail:
+        return _buildRoute(PharmacyDetailsView());
 
       default:
         return _buildRoute(

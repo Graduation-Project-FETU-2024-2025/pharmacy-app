@@ -89,5 +89,7 @@ class AppIcons {
   /// Assets for iconsSplash
   /// assets/icons/splash.svg
   static const String iconsSplash = "assets/icons/splash.svg";
+
+  static const String profilePic = "assets/icons/delivey_profile.svg";
 }
 
