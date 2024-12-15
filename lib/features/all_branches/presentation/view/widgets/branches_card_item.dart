@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/utils/app_images.dart';
+import 'package:pharmacy_app/features/all_branches/presentation/view_model/models/branch_model.dart';
 import '../../../../../core/utils/app_colors.dart';
 
 class BranchesCardItems extends StatelessWidget {
@@ -9,6 +10,16 @@ class BranchesCardItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Map<String, dynamic> branchJson = {
+  "branchName": "Dr. Stone Pharmacy | Elestad",
+  "branchLocation": "Egypt, Tanta, El Estad Street",
+  "branchPhone": "+20 1553258966",
+  "deliveryOption": "Free Delivery",
+  "branchImagePath": AppImages.imgPharmacy,
+};
+
+BranchModel branchFromJson = BranchModel.fromJson(branchJson);
+
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 30),
       child: Container(
@@ -19,14 +30,14 @@ class BranchesCardItems extends StatelessWidget {
         child: Row(
           children: [
             Padding(
-              padding: EdgeInsets.only(left: 17, top: 37, bottom: 31),
+              padding: EdgeInsets.only(left: 15, top: 37, bottom: 31 ,right: 15),
               child: Container(
                 width: 60,
                 height: 60,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                        image: AssetImage(AppImages.imgPharmacy))),
+                        image: AssetImage(branchFromJson.branchImagePath))),
               ),
             ),
             Padding(
@@ -35,9 +46,9 @@ class BranchesCardItems extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: 195,
+                    width: MediaQuery.of(context).size.width*0.55,
                     child: Text(
-                      'Dr. Stone Pharmacy | Elestad',
+                      branchFromJson.branchName,
                       style: Theme.of(context).textTheme.labelMedium!.copyWith(color: AppColors.primaryColor),
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -51,7 +62,7 @@ class BranchesCardItems extends StatelessWidget {
                   ),
                       SizedBox(width: 5),
                       Text(
-                        'Egypt, Tanta, El Estad Street',
+                        branchFromJson.branchLocation,
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -66,7 +77,7 @@ class BranchesCardItems extends StatelessWidget {
                   ),
                       SizedBox(width: 5),
                       Text(
-                        '+20 1553258966',
+                        branchFromJson.branchPhone,
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -78,7 +89,7 @@ class BranchesCardItems extends StatelessWidget {
                       Image.asset(AppImages.imgCheckmark),
                       SizedBox(width: 5),
                       Text(
-                        'Free Delivery',
+                        branchFromJson.deliveryOption,
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       ),
