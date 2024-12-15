@@ -1,7 +1,14 @@
 {
     "onboarding":"كل الخدمات لأجل صحتك",
+
+    "welcomeBack":"!مرحبا بعودتك",
+    "loginToYourAccount":"تسجيل الدخول إلى حسابك",
+    "email":"البريد الإلكتروني",
+    "login":"تسجيل الدخول"
+
     "allBranches":"جميع الفروع",
     "drStonePharmacy": "صيدلية دكتور ستون | الاستاد",
     "locateEgTanEstad":"مصر، طنطا، شارع الاستاد",
     "freeDelivery":"توصيل مجاني"
+
 }

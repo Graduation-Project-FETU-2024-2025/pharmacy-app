@@ -16,7 +16,7 @@ class OnboardingView extends StatelessWidget {
     await getIt<CacheHelper>()
         .saveData(key: CacheKeys.isFirstTime, value: false);
     if (context.mounted) {
-      context.pushReplacementNamed(Routing.branchesScreen);//TODO change to sign in
+      context.pushReplacementNamed(Routing.signIn);
     }
   }
 

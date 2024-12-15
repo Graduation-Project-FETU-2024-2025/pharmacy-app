@@ -52,7 +52,7 @@ class _SplashViewState extends State<SplashView> {
   _getInitRoute() {
     if (!getIt<CacheHelper>().getData(key: CacheKeys.isFirstTime)) {
       context
-          .pushReplacementNamed(Routing.branchesScreen); // TODO change to login
+          .pushReplacementNamed(Routing.signIn); 
     } else {
       context.pushReplacementNamed(Routing.onboarding);
     }

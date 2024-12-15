@@ -38,7 +38,7 @@ abstract class Themes {
           filled: true,
           fillColor: Color(0xff4169E1).withOpacity(0.2),
           contentPadding:
-              const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
             borderSide:
@@ -62,7 +62,7 @@ abstract class Themes {
             borderSide:
                 BorderSide(color: Color(0xffFA0909).withOpacity(0.3), width: 2),
           ),
-          hintStyle: const TextStyle(color: Color(0xff4169E1)),
+          hintStyle: const TextStyle(color: Color(0xff4169E1), fontSize: 18),
           labelStyle: const TextStyle(color: Color(0xff4169E1)),
           suffixIconColor: Colors.green, // Icon color
           prefixIconColor: Color(0xff4169E1),
