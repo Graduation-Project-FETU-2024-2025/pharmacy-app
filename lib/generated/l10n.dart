@@ -99,6 +99,96 @@ class S {
       args: [],
     );
   }
+
+  /// `All Branches`
+  String get allBranches {
+    return Intl.message(
+      'All Branches',
+      name: 'allBranches',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dr. Stone Pharmacy | Elestad`
+  String get drStonePharmacy {
+    return Intl.message(
+      'Dr. Stone Pharmacy | Elestad',
+      name: 'drStonePharmacy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Egypt, Tanta, El Estad Street`
+  String get locateEgTanEstad {
+    return Intl.message(
+      'Egypt, Tanta, El Estad Street',
+      name: 'locateEgTanEstad',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Free Delivery`
+  String get freeDelivery {
+    return Intl.message(
+      'Free Delivery',
+      name: 'freeDelivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter OTP`
+  String get enterOTP {
+    return Intl.message(
+      'Enter OTP',
+      name: 'enterOTP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter OTP we sent you at`
+  String get enterOTPWeSent {
+    return Intl.message(
+      'Enter OTP we sent you at',
+      name: 'enterOTPWeSent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Haven't received OTP?`
+  String get haveNotReceivedOTP {
+    return Intl.message(
+      'Haven\'t received OTP?',
+      name: 'haveNotReceivedOTP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend`
+  String get resend {
+    return Intl.message(
+      'Resend',
+      name: 'resend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get Continue {
+    return Intl.message(
+      'Continue',
+      name: 'Continue',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

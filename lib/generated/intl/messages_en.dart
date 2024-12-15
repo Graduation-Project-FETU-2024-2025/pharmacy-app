@@ -22,12 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
+        "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
+        "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
+            "Dr. Stone Pharmacy | Elestad"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "enterOTP": MessageLookupByLibrary.simpleMessage("Enter OTP"),
+        "enterOTPWeSent":
+            MessageLookupByLibrary.simpleMessage("Enter OTP we sent you at"),
+        "freeDelivery": MessageLookupByLibrary.simpleMessage("Free Delivery"),
+        "haveNotReceivedOTP":
+            MessageLookupByLibrary.simpleMessage("Haven\'t received OTP?"),
+        "locateEgTanEstad": MessageLookupByLibrary.simpleMessage(
+            "Egypt, Tanta, El Estad Street"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
+        "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!")
       };
 }

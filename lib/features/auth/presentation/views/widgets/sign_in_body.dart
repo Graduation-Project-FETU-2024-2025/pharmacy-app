@@ -8,7 +8,7 @@ import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/widgets/custom_button.dart';
 import 'package:pharmacy_app/core/widgets/custom_text_form_field.dart';
-import 'package:pharmacy_app/features/auth/presentation/view_model/cubit/sign_in_cubit.dart';
+import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
 
 class SignInBody extends StatelessWidget {
@@ -50,7 +50,7 @@ class SignInBody extends StatelessWidget {
         Gap(60.h),
         CustomButton(
             onPressed: () {
-              context.pushNamed(Routing.otp);
+              context.pushNamed(Routing.otp,argument: SignInCubit.get(context).emailController.text);
             },
             text: S.of(context).login),
         Spacer(
