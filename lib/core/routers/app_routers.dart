@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view/branches_screen.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/cubit/sign_in_cubit.dart';
+import 'package:pharmacy_app/features/auth/presentation/views/otp_view.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:pharmacy_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
@@ -26,7 +27,8 @@ class AppRouters {
             child: SignInView(),
           ),
         );
-
+      case Routing.otp:
+        return _buildRoute(OTPView());
       case Routing.branchesScreen:
         return MaterialPageRoute(
           builder: (_) => const BranchesScreen(),
