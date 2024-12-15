@@ -1,7 +1,14 @@
 {
     "onboarding":"All Services for your health",
+
     "welcomeBack":"Welcome Back!",
     "loginToYourAccount":"Login to your account",
     "email":"Email Address",
     "login":"Login"
+
+    "allBranches":"All Branches",
+    "drStonePharmacy":"Dr. Stone Pharmacy | Elestad",
+    "locateEgTanEstad":"Egypt, Tanta, El Estad Street",
+    "freeDelivery":"Free Delivery"
+
 }
