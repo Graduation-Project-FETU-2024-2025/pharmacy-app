@@ -19,4 +19,12 @@ class AppImages {
 
   static String imgOTP = 'assets/images/otp.png';
 
+  static String pharmacyDetailImg = "assets/images/pharmacy_detail_img.png";
+
+  static String deliveryImg = "assets/images/delivery_img.png";
+
+  static String workHour = "assets/images/working_hour.png";
+  static String imgEdit = "assets/images/imgEdit.png";
+
+
 }

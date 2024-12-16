@@ -15,6 +15,14 @@
     "enterOTPWeSent":"Enter OTP we sent you at",
     "haveNotReceivedOTP":"Haven't received OTP?",
     "resend":"Resend",
-    "Continue":"Continue"
+    "Continue":"Continue",
+
+    "work24Hour": "Twenty four hours service !",
+
+    "workingHour": "Working Hours",
+    "pounds":"Pounds",
+    "km":"KM",
+    "deliveryArea&price" :"Delivery Area & Price",
+    "description":"Description"
 
 }
