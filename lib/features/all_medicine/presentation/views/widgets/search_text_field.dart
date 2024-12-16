@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
+import '../../../../../generated/l10n.dart';
 
 class SearchTextField extends StatelessWidget {
   const SearchTextField({super.key});
@@ -23,7 +24,7 @@ class SearchTextField extends StatelessWidget {
               cursorColor: AppColors.primaryColor,
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.symmetric(horizontal: 16),
-                hintText: 'ابحث عن دواء',
+                hintText: S.of(context).searchHint,
                 hintStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
                       color: Color(0xffBDBDBD),
                     ),
@@ -66,7 +67,7 @@ class SearchTextField extends StatelessWidget {
                   ),
                 ),
                 child: Text(
-                  'ابحث',
+                  S.of(context).searchButtonTitle,
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         color: AppColors.white,
                       ),

@@ -22,7 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "onboarding":
-            MessageLookupByLibrary.simpleMessage("All Services for your health")
+        "onboarding": MessageLookupByLibrary.simpleMessage(
+            "All Services for your health"),
+        "searchButtonTitle": MessageLookupByLibrary.simpleMessage("search"),
+        "searchHint":
+            MessageLookupByLibrary.simpleMessage("Search for medicine")
       };
 }

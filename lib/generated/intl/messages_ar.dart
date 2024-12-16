@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "onboarding":
-            MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك")
+            MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),
+        "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
+        "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء")
       };
 }

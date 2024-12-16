@@ -59,6 +59,26 @@ class S {
       args: [],
     );
   }
+
+  /// `search`
+  String get searchButtonTitle {
+    return Intl.message(
+      'search',
+      name: 'searchButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for medicine`
+  String get searchHint {
+    return Intl.message(
+      'Search for medicine',
+      name: 'searchHint',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
