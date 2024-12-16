@@ -24,7 +24,11 @@ class AppImages {
   static String deliveryImg = "assets/images/delivery_img.png";
 
   static String workHour = "assets/images/working_hour.png";
+
   static String imgEdit = "assets/images/imgEdit.png";
+
+
+  static String imgOnboarding = "assets/images/onboarding.png";
 
 
 }
