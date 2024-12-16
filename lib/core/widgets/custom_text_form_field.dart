@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pharmacy_app/core/utils/app_images.dart';
 import '../helpers/extentions.dart';
 
 class CustomTextFormField extends StatefulWidget {
@@ -8,7 +9,6 @@ class CustomTextFormField extends StatefulWidget {
   final Widget? suffixIcon;
   final TextInputType keyboardType;
   final TextEditingController? controller;
-  // final String? Function(String?)? validator;  // no need to use
   final bool obscureText;
 
   const CustomTextFormField({
@@ -86,10 +86,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           child: widget.prefixIcon,
         ),
         suffixIcon: isValid
-            ? widget.suffixIcon ??
-                Icon(
-                  Icons.check_circle,
-                )
+            ? widget.suffixIcon ?? Image.asset(AppImages.imgCheckmark)
             : null,
       ),
     );

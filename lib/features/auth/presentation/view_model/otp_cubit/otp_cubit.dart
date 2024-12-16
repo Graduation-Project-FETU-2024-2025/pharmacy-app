@@ -9,11 +9,15 @@ class OtpCubit extends Cubit<OtpState> {
   TextEditingController otpController2 = TextEditingController();
   TextEditingController otpController3 = TextEditingController();
   TextEditingController otpController4 = TextEditingController();
+  TextEditingController otpController5 = TextEditingController();
+  TextEditingController otpController6 = TextEditingController();
 
   FocusNode focusNode1 = FocusNode();
   FocusNode focusNode2 = FocusNode();
   FocusNode focusNode3 = FocusNode();
   FocusNode focusNode4 = FocusNode();
+  FocusNode focusNode5 = FocusNode();
+  FocusNode focusNode6 = FocusNode();
 
   GlobalKey<FormState> otpFormKey = GlobalKey<FormState>();
 
@@ -36,10 +40,14 @@ class OtpCubit extends Cubit<OtpState> {
     otpController2.dispose();
     otpController3.dispose();
     otpController4.dispose();
+    otpController5.dispose();
+    otpController6.dispose();
     focusNode1.dispose();
     focusNode2.dispose();
     focusNode3.dispose();
     focusNode4.dispose();
+    focusNode5.dispose();
+    focusNode6.dispose();
     return super.close();
   }
 }

@@ -15,7 +15,7 @@ class OTPDigitsSection extends StatelessWidget {
       child: Form(
         key: OtpCubit.get(context).otpFormKey,
         child: SizedBox(
-          height: 75,
+          height: 65,
           child: Row(
             children: [
               Expanded(
@@ -55,7 +55,31 @@ class OTPDigitsSection extends StatelessWidget {
                   focusNode: OtpCubit.get(context).focusNode4,
                   validator: OtpCubit.get(context).numberValidator,
                   onChanged: (p0) {
-                    OtpCubit.get(context).focusNode4.unfocus();
+                    OtpCubit.get(context)
+                        .nextFiled(p0, OtpCubit.get(context).focusNode5);
+                  },
+                ),
+              ),
+              const Gap(10),
+              Expanded(
+                child: OtpTextFromFiled(
+                  controller: OtpCubit.get(context).otpController5,
+                  focusNode: OtpCubit.get(context).focusNode5,
+                  validator: OtpCubit.get(context).numberValidator,
+                  onChanged: (p0) {
+                    OtpCubit.get(context)
+                        .nextFiled(p0, OtpCubit.get(context).focusNode6);
+                  },
+                ),
+              ),
+              const Gap(10),
+              Expanded(
+                child: OtpTextFromFiled(
+                  controller: OtpCubit.get(context).otpController6,
+                  focusNode: OtpCubit.get(context).focusNode6,
+                  validator: OtpCubit.get(context).numberValidator,
+                  onChanged: (p0) {
+                    OtpCubit.get(context).focusNode6.unfocus();
                   },
                 ),
               ),
