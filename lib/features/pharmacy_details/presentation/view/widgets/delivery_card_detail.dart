@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../core/utils/app_icons.dart';
 import '../../../../../core/utils/app_images.dart';
+import '../../../../../generated/l10n.dart';
 
 class DeliveryCardDetail extends StatelessWidget {
   const DeliveryCardDetail({super.key});
@@ -61,7 +62,7 @@ class DeliveryCardDetail extends StatelessWidget {
                   ),
                   SizedBox(width: 5.w),
                   Text(
-                    '10 KM',
+                    '10 ${S.of(context).km}',
                     style: Theme.of(context).textTheme.bodySmall,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -72,7 +73,7 @@ class DeliveryCardDetail extends StatelessWidget {
                   ),
                   SizedBox(width: 5.w),
                   Text(
-                    '5 Pounds',
+                    '5 ${S.of(context).pounds}',
                     style: Theme.of(context).textTheme.bodySmall,
                     overflow: TextOverflow.ellipsis,
                   ),

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:pharmacy_app/core/widgets/custom_edit_text_form_field.dart';
 import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
+import 'package:pharmacy_app/generated/l10n.dart';
 
 class CustomEditList extends StatelessWidget {
   const CustomEditList({super.key});
@@ -16,69 +17,69 @@ class CustomEditList extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Pharmacy Name', style: Theme.of(context).textTheme.labelMedium),
+            Text(S.of(context).pharmacyName, style: Theme.of(context).textTheme.labelMedium),
             Gap(18.h),
             CustomEditTextFormField(
               controller: PharmacyEditCubit.get(context).pharmacyNameController,
-              hintTxt: 'Pharmacy Name',
+              hintTxt: S.of(context).pharmacyName,
             ),
             Gap(31.h),
-            Text('Branch Name', style: Theme.of(context).textTheme.labelMedium),
+            Text(S.of(context).branchName, style: Theme.of(context).textTheme.labelMedium),
             Gap(18.h),
             CustomEditTextFormField(
               controller: PharmacyEditCubit.get(context).branchNameController,
-              hintTxt: 'Branch Name',
+              hintTxt: S.of(context).branchName,
             ),
             Gap(31.h),
-            Text('Description', style: Theme.of(context).textTheme.labelMedium),
+            Text(S.of(context).description, style: Theme.of(context).textTheme.labelMedium),
             Gap(18.h),
             CustomEditTextFormField(
               controller: PharmacyEditCubit.get(context).descController,
-              hintTxt: 'Description',
+              hintTxt: S.of(context).description,
               maxLines: 5,
             ),
             Gap(31.h),
-            Text('Delivery man name',
+            Text(S.of(context).deliveryMan,
                 style: Theme.of(context).textTheme.labelMedium),
             Gap(18.h),
             CustomEditTextFormField(
               controller: PharmacyEditCubit.get(context).manNameController,
-              hintTxt: 'Delivery man name',
+              hintTxt: S.of(context).deliveryMan,
             ),
             Gap(31.h),
-            Text('Phone Number', style: Theme.of(context).textTheme.labelMedium),
+            Text(S.of(context).phoneNum, style: Theme.of(context).textTheme.labelMedium),
             Gap(18.h),
             CustomEditTextFormField(
               controller: PharmacyEditCubit.get(context).phoneController,
-              hintTxt: 'Phone Number',
+              hintTxt: S.of(context).phoneNum,
             ),
             Gap(31.h),
-            Text('Mileage', style: Theme.of(context).textTheme.labelMedium),
+            Text(S.of(context).mileage, style: Theme.of(context).textTheme.labelMedium),
             Gap(18.h),
             CustomEditTextFormField(
               controller: PharmacyEditCubit.get(context).mileageController,
-              hintTxt: 'Mileage',
+              hintTxt: S.of(context).mileage,
             ),
             Gap(31.h),
-            Text('Lowest price', style: Theme.of(context).textTheme.labelMedium),
+            Text(S.of(context).lowestPrice, style: Theme.of(context).textTheme.labelMedium),
             Gap(18.h),
             CustomEditTextFormField(
               controller: PharmacyEditCubit.get(context).lowestPriceController,
-              hintTxt: 'Lowest price',
+              hintTxt: S.of(context).lowestPrice,
             ),
             Gap(31.h),
-            Text('Working Hours', style: Theme.of(context).textTheme.labelMedium),
+            Text(S.of(context).workingHour, style: Theme.of(context).textTheme.labelMedium),
             Gap(18.h),
             CustomEditTextFormField(
               controller: PharmacyEditCubit.get(context).workHourController,
-              hintTxt: 'Working Hours',
+              hintTxt: S.of(context).workingHour,
             ),
             Gap(31.h),
-            Text('Branch Status', style: Theme.of(context).textTheme.labelMedium),
+            Text(S.of(context).branchStatus, style: Theme.of(context).textTheme.labelMedium),
             Gap(18.h),
             CustomEditTextFormField(
               controller: PharmacyEditCubit.get(context).branchStatusController,
-              hintTxt: 'Branch Status',
+              hintTxt: S.of(context).branchStatus,
             ),
             Gap(31.h),
           ],

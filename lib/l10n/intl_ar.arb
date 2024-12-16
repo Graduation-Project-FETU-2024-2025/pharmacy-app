@@ -32,6 +32,8 @@
     "mileage":"عدد الأميال",
     "lowestPrice":"أقل سعر",
     "branchStatus":"حالة الفرع",
-    "save": "حفظ"
+    "save": "حفظ",
+    "delete": "حذف",
+    "areaAndPrice":"منطقة التوصيل & السعر"
 
 }

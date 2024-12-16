@@ -33,6 +33,8 @@
     "mileage":"Mileage",
     "lowestPrice":"Lowest price",
     "branchStatus":"Branch Status",
-    "save": "Save"
+    "save": "Save",
+    "delete": "Delete",
+    "areaAndPrice": "Delivery Area & Price"
 
 }
