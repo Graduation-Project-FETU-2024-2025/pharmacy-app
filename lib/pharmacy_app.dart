@@ -31,7 +31,7 @@ class PharmacyApp extends StatelessWidget {
               ],
               supportedLocales: S.delegate.supportedLocales,
               locale: Locale(getIt<CacheHelper>().getCurrentLanguage() ?? 'ar'),
-              initialRoute: Routing.allMedicinesScreen,
+              initialRoute: Routing.splash,
               theme: Themes.lightTheme,
               darkTheme: Themes.darkTheme,
               themeMode: ThemeMode.light,
