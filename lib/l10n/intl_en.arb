@@ -1,3 +1,5 @@
 {
-    "onboarding":"All Services for your health"
+    "onboarding":"All Services for your health",
+    "searchButtonTitle":"search",
+    "searchHint":"Search for medicine"
 }
