@@ -13,6 +13,7 @@ class AppIcons {
   /// Assets for iconsBack
   /// assets/icons/back.svg
   static const String iconsBack = "assets/icons/back.svg";
+  static const String iconsBackRight = "assets/icons/back_right.svg";
 
   /// Assets for iconsBranches
   /// assets/icons/branches.svg

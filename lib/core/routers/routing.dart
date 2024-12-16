@@ -6,4 +6,5 @@ abstract class Routing {
   static const String otp = '/otp';
   static const String branchesScreen = '/branchesScreen';
   static const String pharmacyDetail = '/pharmacyDetail';
+  static const String pharmacyEdit = '/pharmacyEdit';
 }

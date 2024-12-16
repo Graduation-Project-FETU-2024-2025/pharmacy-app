@@ -23,6 +23,8 @@
     "pounds":"Pounds",
     "km":"KM",
     "deliveryArea&price" :"Delivery Area & Price",
-    "description":"Description"
+    "description":"Description",
+
+    "pharmacyInfo": "Pharmacy Information"
 
 }
