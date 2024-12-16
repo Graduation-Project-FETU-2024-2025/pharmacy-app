@@ -23,6 +23,16 @@
     "pounds":"Pounds",
     "km":"KM",
     "deliveryArea&price" :"Delivery Area & Price",
-    "description":"Description"
+    "description":"Description",
+
+    "pharmacyInfo": "Pharmacy Information",
+    "pharmacyName": "Pharmacy Name",
+    "branchName":"Branch Name",
+    "deliveryMan":"Delivery man name",
+    "phoneNum":"Phone Number",
+    "mileage":"Mileage",
+    "lowestPrice":"Lowest price",
+    "branchStatus":"Branch Status",
+    "save": "Save"
 
 }
