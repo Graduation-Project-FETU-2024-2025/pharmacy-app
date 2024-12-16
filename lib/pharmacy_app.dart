@@ -6,7 +6,6 @@ import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/global_cubits/change_language_cubit/change_language_cubit.dart';
 import 'package:pharmacy_app/core/global_cubits/change_language_cubit/change_language_state.dart';
 import 'package:pharmacy_app/core/routers/app_routers.dart';
-
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/theme/app_theme.dart';
@@ -31,8 +30,8 @@ class PharmacyApp extends StatelessWidget {
               ],
               supportedLocales: S.delegate.supportedLocales,
               locale:
-                  Locale(getIt<CacheHelper>().getCurrentLanguage() ?? 'ar'),
-              initialRoute: Routing.pharmacyEdit,
+                  Locale(getIt<CacheHelper>().getCurrentLanguage() ?? 'en'),
+              initialRoute: Routing.splash,
               theme: Themes.lightTheme,
               darkTheme: Themes.darkTheme,
               themeMode: ThemeMode.light,

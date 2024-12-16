@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pharmacy_app/core/helpers/extentions.dart';
+import 'package:pharmacy_app/core/routers/routing.dart';
 import '../../../../core/utils/app_images.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../../../generated/l10n.dart';
@@ -30,7 +32,9 @@ class BranchesScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 19.0),
-                  child: BranchesCardItems(),
+                  child: GestureDetector(
+                    onTap: () => context.pushNamed(Routing.pharmacyDetail),
+                    child: BranchesCardItems()),
                 );
               }),
         ],

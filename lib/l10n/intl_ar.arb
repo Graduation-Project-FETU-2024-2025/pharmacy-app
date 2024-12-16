@@ -24,6 +24,14 @@
     "deliveryArea&price":"منطقة التوصيل & السعر",
     "description":"الوصف",
 
-    "pharmacyInfo":"معلومات الصيدلية"
+    "pharmacyInfo":"معلومات الصيدلية",
+    "pharmacyName":"اسم الصيدلية",
+    "branchName":"اسم الفرع",
+    "deliveryMan":"اسم رجل التوصيل",
+    "phoneNum":"رقم الهاتف",
+    "mileage":"عدد الأميال",
+    "lowestPrice":"أقل سعر",
+    "branchStatus":"حالة الفرع",
+    "save": "حفظ"
 
 }
