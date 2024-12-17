@@ -242,6 +242,7 @@ class S {
     );
   }
 
+
   /// `Pharmacy Information`
   String get pharmacyInfo {
     return Intl.message(
@@ -381,6 +382,7 @@ class S {
       args: [],
     );
   }
+
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

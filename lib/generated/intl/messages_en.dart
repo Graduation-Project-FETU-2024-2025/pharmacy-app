@@ -24,12 +24,14 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
         "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
+
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "branchName": MessageLookupByLibrary.simpleMessage("Branch Name"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("Branch Status"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "deliveryMan":
             MessageLookupByLibrary.simpleMessage("Delivery man name"),
+
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
             "Dr. Stone Pharmacy | Elestad"),
@@ -42,7 +44,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "haveNotReceivedOTP":
             MessageLookupByLibrary.simpleMessage("Haven\'t received OTP?"),
         "km": MessageLookupByLibrary.simpleMessage("KM"),
+
         "language": MessageLookupByLibrary.simpleMessage("Language"),
+
+
         "locateEgTanEstad": MessageLookupByLibrary.simpleMessage(
             "Egypt, Tanta, El Estad Street"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
@@ -53,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "mileage": MessageLookupByLibrary.simpleMessage("Mileage"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
+
         "pharmacyInfo":
             MessageLookupByLibrary.simpleMessage("Pharmacy Information"),
         "pharmacyName": MessageLookupByLibrary.simpleMessage("Pharmacy Name"),
@@ -60,6 +66,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "pounds": MessageLookupByLibrary.simpleMessage("Pounds"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
+
+        "pounds": MessageLookupByLibrary.simpleMessage("Pounds"),
+        "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("Twenty four hours service !"),
