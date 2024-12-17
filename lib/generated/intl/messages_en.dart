@@ -67,8 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
 
-        "pounds": MessageLookupByLibrary.simpleMessage("Pounds"),
-        "resend": MessageLookupByLibrary.simpleMessage("Resend"),
+
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("Twenty four hours service !"),

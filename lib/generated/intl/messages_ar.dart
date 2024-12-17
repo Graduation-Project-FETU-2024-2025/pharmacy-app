@@ -66,8 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
 
-        "pounds": MessageLookupByLibrary.simpleMessage("جنيه"),
-        "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
+    
 
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
         "work24Hour":
