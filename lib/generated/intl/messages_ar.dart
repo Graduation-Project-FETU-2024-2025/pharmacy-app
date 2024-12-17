@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Continue": MessageLookupByLibrary.simpleMessage("استمر"),
         "allBranches": MessageLookupByLibrary.simpleMessage("جميع الفروع"),
+        "description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "drStonePharmacy":
             MessageLookupByLibrary.simpleMessage("صيدلية دكتور ستون | الاستاد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
@@ -33,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "freeDelivery": MessageLookupByLibrary.simpleMessage("توصيل مجاني"),
         "haveNotReceivedOTP":
             MessageLookupByLibrary.simpleMessage("لم تستلم رمز التحقق؟"),
+        "km": MessageLookupByLibrary.simpleMessage("كم"),
         "locateEgTanEstad":
             MessageLookupByLibrary.simpleMessage("مصر، طنطا، شارع الاستاد"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -40,7 +42,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),
+        "pounds": MessageLookupByLibrary.simpleMessage("جنيه"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك")
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
+        "work24Hour":
+            MessageLookupByLibrary.simpleMessage("خدمة أربع و عشرون ساعة !"),
+        "workingHour": MessageLookupByLibrary.simpleMessage("ساعات العمل")
       };
 }

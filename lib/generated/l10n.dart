@@ -189,6 +189,58 @@ class S {
       args: [],
     );
   }
+
+  /// `Twenty four hours service !`
+  String get work24Hour {
+    return Intl.message(
+      'Twenty four hours service !',
+      name: 'work24Hour',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Working Hours`
+  String get workingHour {
+    return Intl.message(
+      'Working Hours',
+      name: 'workingHour',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pounds`
+  String get pounds {
+    return Intl.message(
+      'Pounds',
+      name: 'pounds',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `KM`
+  String get km {
+    return Intl.message(
+      'KM',
+      name: 'km',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'deliveryArea&price' key
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
