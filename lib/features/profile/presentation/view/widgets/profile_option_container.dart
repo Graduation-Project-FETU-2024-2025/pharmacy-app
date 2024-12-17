@@ -40,23 +40,30 @@ class ProfileOptionContainer extends StatelessWidget {
           ),
           Divider(),
           ListTile(
-            onTap: () {},
             leading: SvgPicture.asset(AppIcons.iconsTheme),
             title: Text(
               S.of(context).darkMode,
               style: Theme.of(context).textTheme.titleMedium,
             ),
-            trailing: Icon(Icons.arrow_forward_ios),
+            trailing: Switch(
+              activeColor: AppColors.black,
+              activeTrackColor: AppColors.white,
+              inactiveTrackColor: AppColors.black,
+              inactiveThumbColor: AppColors.white,
+              value: false,
+              onChanged: (value) {}, //TODO: Implement dark mode
+            ),
           ),
           Divider(),
           ListTile(
-            onTap: () {},
+            onTap: () {}, // TODO naigate to sign in and distroy the token
             leading: SvgPicture.asset(AppIcons.iconsLogout),
             title: Text(
               S.of(context).logout,
-              style: Theme.of(context).textTheme.titleMedium,
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: AppColors.red,
+                  ),
             ),
-            trailing: Icon(Icons.arrow_forward_ios),
           ),
         ],
       ),
