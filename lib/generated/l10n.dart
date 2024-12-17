@@ -189,6 +189,178 @@ class S {
       args: [],
     );
   }
+
+  /// `Twenty four hours service !`
+  String get work24Hour {
+    return Intl.message(
+      'Twenty four hours service !',
+      name: 'work24Hour',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Working Hours`
+  String get workingHour {
+    return Intl.message(
+      'Working Hours',
+      name: 'workingHour',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pounds`
+  String get pounds {
+    return Intl.message(
+      'Pounds',
+      name: 'pounds',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `KM`
+  String get km {
+    return Intl.message(
+      'KM',
+      name: 'km',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'deliveryArea&price' key
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pharmacy Information`
+  String get pharmacyInfo {
+    return Intl.message(
+      'Pharmacy Information',
+      name: 'pharmacyInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pharmacy Name`
+  String get pharmacyName {
+    return Intl.message(
+      'Pharmacy Name',
+      name: 'pharmacyName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch Name`
+  String get branchName {
+    return Intl.message(
+      'Branch Name',
+      name: 'branchName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery man name`
+  String get deliveryMan {
+    return Intl.message(
+      'Delivery man name',
+      name: 'deliveryMan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get phoneNum {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNum',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mileage`
+  String get mileage {
+    return Intl.message(
+      'Mileage',
+      name: 'mileage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lowest price`
+  String get lowestPrice {
+    return Intl.message(
+      'Lowest price',
+      name: 'lowestPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch Status`
+  String get branchStatus {
+    return Intl.message(
+      'Branch Status',
+      name: 'branchStatus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log Out`
+  String get logout {
+    return Intl.message(
+      'Log Out',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark Mode`
+  String get darkMode {
+    return Intl.message(
+      'Dark Mode',
+      name: 'darkMode',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

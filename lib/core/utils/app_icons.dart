@@ -91,6 +91,18 @@ class AppIcons {
   /// assets/icons/splash.svg
   static const String iconsSplash = "assets/icons/splash.svg";
 
+  /// Assets for iconsLanguage
+  /// assets/icons/language.svg
+  static const String iconsLanguage = "assets/icons/language.svg";
+
+  /// Assets for iconsLogout
+  /// assets/icons/logout.svg
+  static const String iconsLogout = "assets/icons/logout.svg";
+
+  /// Assets for iconsTheme
+  /// assets/icons/theme.svg
+  static const String iconsTheme = "assets/icons/theme.svg";
+
   static const String profilePic = "assets/icons/delivey_profile.svg";
 }
 

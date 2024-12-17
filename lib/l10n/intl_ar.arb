@@ -32,6 +32,9 @@
     "mileage":"عدد الأميال",
     "lowestPrice":"أقل سعر",
     "branchStatus":"حالة الفرع",
-    "save": "حفظ"
+    "save": "حفظ",
+    "language": "اللغة",
+    "logout": "تسجيل الخروج",
+    "darkMode": "الوضع الداكن"
 
 }
