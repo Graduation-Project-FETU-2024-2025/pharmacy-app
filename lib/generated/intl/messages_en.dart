@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
         "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "branchName": MessageLookupByLibrary.simpleMessage("Branch Name"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("Branch Status"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
@@ -33,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
             "Dr. Stone Pharmacy | Elestad"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "enterOTP": MessageLookupByLibrary.simpleMessage("Enter OTP"),
         "enterOTPWeSent":
             MessageLookupByLibrary.simpleMessage("Enter OTP we sent you at"),

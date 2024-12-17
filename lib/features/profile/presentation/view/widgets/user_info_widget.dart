@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:pharmacy_app/core/utils/app_images.dart';
-import 'package:pharmacy_app/features/profile/presentation/view/widgest/custom_profile_image.dart';
+import 'package:pharmacy_app/features/profile/presentation/view/widgets/custom_profile_image.dart';
 
 
 class UserInfoWidget extends StatelessWidget {

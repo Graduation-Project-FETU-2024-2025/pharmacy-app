@@ -36,6 +36,8 @@
     "save": "Save",
     "language": "Language",
     "logout": "Log Out",
-    "darkMode": "Dark Mode"
+    "darkMode": "Dark Mode",
+    "english": "English",
+    "arabic": "Arabic"
 
 }

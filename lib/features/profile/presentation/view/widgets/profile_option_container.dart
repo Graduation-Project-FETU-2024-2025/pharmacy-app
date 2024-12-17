@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
+import 'package:pharmacy_app/features/profile/presentation/view/widgets/change_language_dialog.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
 
 class ProfileOptionContainer extends StatelessWidget {
@@ -22,7 +23,14 @@ class ProfileOptionContainer extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
-            onTap: () {},
+            onTap: () {
+              showDialog(
+                context: context,
+                builder: (context) => Dialog(
+                  child: ChangeLanguageDialog(),
+                ),
+              );
+            },
             leading: SvgPicture.asset(AppIcons.iconsLanguage),
             title: Text(
               S.of(context).language,

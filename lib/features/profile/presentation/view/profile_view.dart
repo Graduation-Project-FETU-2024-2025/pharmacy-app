@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:pharmacy_app/core/utils/app_images.dart';
-import 'package:pharmacy_app/features/profile/presentation/view/widgest/profile_option_container.dart';
-import 'package:pharmacy_app/features/profile/presentation/view/widgest/user_info_widget.dart';
+import 'package:pharmacy_app/features/profile/presentation/view/widgets/profile_option_container.dart';
+import 'package:pharmacy_app/features/profile/presentation/view/widgets/user_info_widget.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -23,7 +23,7 @@ class ProfileView extends StatelessWidget {
                 name: 'Ahmed Mohamed',
               ),
               Gap(30.h),
-              ProfileOptionContainer()
+              ProfileOptionContainer(),
             ],
           ),
         ),

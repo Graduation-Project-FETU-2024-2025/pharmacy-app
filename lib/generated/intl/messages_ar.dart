@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Continue": MessageLookupByLibrary.simpleMessage("استمر"),
         "allBranches": MessageLookupByLibrary.simpleMessage("جميع الفروع"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "branchName": MessageLookupByLibrary.simpleMessage("اسم الفرع"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("حالة الفرع"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
@@ -32,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "drStonePharmacy":
             MessageLookupByLibrary.simpleMessage("صيدلية دكتور ستون | الاستاد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "enterOTP": MessageLookupByLibrary.simpleMessage("أدخل رمز التحقق"),
         "enterOTPWeSent": MessageLookupByLibrary.simpleMessage(
             "أدخل رمز التحقق الذي أرسلناه لك على"),
