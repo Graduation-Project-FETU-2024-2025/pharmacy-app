@@ -33,6 +33,11 @@
     "mileage":"Mileage",
     "lowestPrice":"Lowest price",
     "branchStatus":"Branch Status",
-    "save": "Save"
+    "save": "Save",
 
+    "inStock":"In Stock",
+    "DoageForm":"Dosage Form",
+    "activeSubstance":"Active Substance",
+    "manufacturer":"Manufacturer",
+    "delete":"Delete"
 }

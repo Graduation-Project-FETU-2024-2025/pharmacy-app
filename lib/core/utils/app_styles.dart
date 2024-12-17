@@ -62,13 +62,18 @@ class AppStyles {
     fontWeight: FontWeight.w600,
     fontFamily: 'Lato',
   );
+  static const TextStyle semiBold18 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Lato',
+  );
   static const TextStyle semiBold20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w600,
     fontFamily: 'Lato',
   );
-  static const TextStyle semiBold25 = TextStyle(
-    fontSize: 25,
+  static const TextStyle semiBold24 = TextStyle(
+    fontSize: 24,
     fontWeight: FontWeight.w600,
     fontFamily: 'Lato',
   );

@@ -32,6 +32,11 @@
     "mileage":"عدد الأميال",
     "lowestPrice":"أقل سعر",
     "branchStatus":"حالة الفرع",
-    "save": "حفظ"
+    "save": "حفظ",
 
+    "inStock":"متوفر في المخزن",
+    "DoageForm":"شكل الجرعة",
+    "activeSubstance":"المادة الفعالة",
+    "manufacturer":"الشركة المصنعة",
+    "delete":"حذف"
 }

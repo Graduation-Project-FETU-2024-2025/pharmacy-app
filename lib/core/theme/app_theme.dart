@@ -102,11 +102,17 @@ abstract class Themes {
           labelMedium: AppStyles.semiBold14.copyWith(
             color: AppColors.black,
           ),
-          displayLarge: AppStyles.semiBold25.copyWith(
+          displayLarge: AppStyles.semiBold24.copyWith(
             color: AppColors.primaryColor,
           ),
           labelSmall: AppStyles.semiBold12.copyWith(
             color: AppColors.primaryColor,
+          ),
+          labelLarge: AppStyles.medium12.copyWith(
+            color: AppColors.black,
+          ),
+          bodyMedium: AppStyles.semiBold18.copyWith(
+            color: AppColors.black,
           ),
         ),
       );

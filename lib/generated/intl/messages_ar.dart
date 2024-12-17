@@ -23,7 +23,15 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Continue": MessageLookupByLibrary.simpleMessage("استمر"),
+        "DoageForm": MessageLookupByLibrary.simpleMessage("شكل الجرعة"),
+        "activeSubstance":
+            MessageLookupByLibrary.simpleMessage("المادة الفعالة"),
         "allBranches": MessageLookupByLibrary.simpleMessage("جميع الفروع"),
+        "branchName": MessageLookupByLibrary.simpleMessage("اسم الفرع"),
+        "branchStatus": MessageLookupByLibrary.simpleMessage("حالة الفرع"),
+        "delete": MessageLookupByLibrary.simpleMessage("حذف"),
+        "deliveryMan": MessageLookupByLibrary.simpleMessage("اسم رجل التوصيل"),
+        "description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "drStonePharmacy":
             MessageLookupByLibrary.simpleMessage("صيدلية دكتور ستون | الاستاد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
@@ -33,14 +41,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "freeDelivery": MessageLookupByLibrary.simpleMessage("توصيل مجاني"),
         "haveNotReceivedOTP":
             MessageLookupByLibrary.simpleMessage("لم تستلم رمز التحقق؟"),
+        "inStock": MessageLookupByLibrary.simpleMessage("متوفر في المخزن"),
+        "km": MessageLookupByLibrary.simpleMessage("كم"),
         "locateEgTanEstad":
             MessageLookupByLibrary.simpleMessage("مصر، طنطا، شارع الاستاد"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
+        "lowestPrice": MessageLookupByLibrary.simpleMessage("أقل سعر"),
+        "manufacturer": MessageLookupByLibrary.simpleMessage("الشركة المصنعة"),
+        "mileage": MessageLookupByLibrary.simpleMessage("عدد الأميال"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),
+        "pharmacyInfo":
+            MessageLookupByLibrary.simpleMessage("معلومات الصيدلية"),
+        "pharmacyName": MessageLookupByLibrary.simpleMessage("اسم الصيدلية"),
+        "phoneNum": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "pounds": MessageLookupByLibrary.simpleMessage("جنيه"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك")
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
+        "work24Hour":
+            MessageLookupByLibrary.simpleMessage("خدمة أربع و عشرون ساعة !"),
+        "workingHour": MessageLookupByLibrary.simpleMessage("ساعات العمل")
       };
 }
