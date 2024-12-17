@@ -13,6 +13,7 @@ import 'package:pharmacy_app/features/onboarding/presentation/view/onboarding_vi
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/pharmacy_details_view.dart';
 import 'package:pharmacy_app/features/pharmacy_edit/presentation/view/pharmacy_edit_screen.dart';
 import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
+import 'package:pharmacy_app/features/profile/presentation/view/profile_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
 
 class AppRouters {
@@ -47,7 +48,8 @@ class AppRouters {
           create: (context) => PharmacyEditCubit(),
           child: PharmacyEditScreen(),
         ));
-
+       case Routing.profile:
+        return _buildRoute(ProfileView());
       default:
         return _buildRoute(
           Scaffold(

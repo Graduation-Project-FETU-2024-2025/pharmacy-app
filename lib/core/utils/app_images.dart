@@ -30,5 +30,7 @@ class AppImages {
 
   static String imgOnboarding = "assets/images/onboarding.png";
 
+  static String imgEditName = "assets/images/edit.png";
+
 
 }

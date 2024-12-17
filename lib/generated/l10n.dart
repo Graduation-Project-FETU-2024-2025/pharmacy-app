@@ -241,6 +241,148 @@ class S {
       args: [],
     );
   }
+
+
+  /// `Pharmacy Information`
+  String get pharmacyInfo {
+    return Intl.message(
+      'Pharmacy Information',
+      name: 'pharmacyInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pharmacy Name`
+  String get pharmacyName {
+    return Intl.message(
+      'Pharmacy Name',
+      name: 'pharmacyName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch Name`
+  String get branchName {
+    return Intl.message(
+      'Branch Name',
+      name: 'branchName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery man name`
+  String get deliveryMan {
+    return Intl.message(
+      'Delivery man name',
+      name: 'deliveryMan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get phoneNum {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNum',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mileage`
+  String get mileage {
+    return Intl.message(
+      'Mileage',
+      name: 'mileage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lowest price`
+  String get lowestPrice {
+    return Intl.message(
+      'Lowest price',
+      name: 'lowestPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch Status`
+  String get branchStatus {
+    return Intl.message(
+      'Branch Status',
+      name: 'branchStatus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log Out`
+  String get logout {
+    return Intl.message(
+      'Log Out',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark Mode`
+  String get darkMode {
+    return Intl.message(
+      'Dark Mode',
+      name: 'darkMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get arabic {
+    return Intl.message(
+      'Arabic',
+      name: 'arabic',
+      desc: '',
+      args: [],
+    );
+  }
+
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
