@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmacy_app/core/utils/app_images.dart';
 import 'package:pharmacy_app/features/all_medicine/data/models/medicine_model.dart';
 
 import '../../../../../core/utils/app_colors.dart';
@@ -20,7 +22,7 @@ class MedicineCard extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            flex: 5,
+            flex: 4,
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(
@@ -37,6 +39,7 @@ class MedicineCard extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 5.h),
           Expanded(
             flex: 2,
             child: Container(
@@ -48,41 +51,61 @@ class MedicineCard extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 10.w,
                 ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                child: Column(
                   children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                    Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          medicineModel.medicineName,
-                          style: Theme.of(context).textTheme.labelMedium,
-                        ),
-                        Text(
-                          medicineModel.activeSubstance,
-                          style:
-                              Theme.of(context).textTheme.bodySmall?.copyWith(
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              medicineModel.medicineName,
+                              style: Theme.of(context).textTheme.labelMedium,
+                            ),
+                            Text(
+                              medicineModel.activeSubstance,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall
+                                  ?.copyWith(
                                     color: AppColors.black.withOpacity(0.6),
                                   ),
+                            ),
+                          ],
+                        ),
+                        Spacer(),
+                        Text(
+                          '${medicineModel.price}\$',
+                          style: Theme.of(context).textTheme.labelSmall,
                         ),
                       ],
                     ),
                     Spacer(),
-                    Text(
-                      '${medicineModel.price}\$',
-                      style: Theme.of(context).textTheme.labelSmall,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          AppImages.imgBranch,
+                          width: 12.w,
+                          height: 12.h,
+                        ),
+                        SizedBox(width: 2),
+                        Text(
+                          'Dr.Stone | Elstad',
+                          style: Theme.of(context).textTheme.displaySmall,
+                        ),
+                      ],
                     ),
+                    SizedBox(height: 8.h),
                   ],
                 ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 12,
           ),
         ],
       ),

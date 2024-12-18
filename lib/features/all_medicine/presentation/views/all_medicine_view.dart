@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/features/all_medicine/presentation/views/widgets/all_medicine_view_body.dart';
 
@@ -10,9 +11,9 @@ class AllMedicineView extends StatelessWidget {
     return Scaffold(
       body: AllMedicineViewBody(),
       floatingActionButton: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 30,
-          horizontal: 8,
+        padding: EdgeInsets.symmetric(
+          vertical: 30.h,
+          horizontal: 8.w,
         ),
         child: FloatingActionButton(
           shape: const CircleBorder(),

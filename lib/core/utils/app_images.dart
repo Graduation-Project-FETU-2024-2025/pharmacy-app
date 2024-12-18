@@ -13,4 +13,6 @@ class AppImages {
 
 // image medicine
   static String imgMedicine = 'assets/images/medicine.png';
+// image branch
+  static String imgBranch = 'assets/images/branch.png';
 }
