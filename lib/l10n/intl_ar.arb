@@ -32,6 +32,11 @@
     "mileage":"عدد الأميال",
     "lowestPrice":"أقل سعر",
     "branchStatus":"حالة الفرع",
-    "save": "حفظ"
+    "save": "حفظ",
 
+    "hi":"مرحبا",
+    "homeMessage":"! سوف نقوم بتوصيل الأدوية إليك",
+    "lastAdded":"المضاف حديثاً",
+    "almostRunOut":"شارف على النفاذ",
+    "seeAll":"عرض الكل"
 }

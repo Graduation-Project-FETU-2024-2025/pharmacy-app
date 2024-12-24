@@ -33,6 +33,11 @@
     "mileage":"Mileage",
     "lowestPrice":"Lowest price",
     "branchStatus":"Branch Status",
-    "save": "Save"
+    "save": "Save",
 
+    "hi":"Hi",
+    "homeMessage":"We will deliver you medicines!",
+    "lastAdded":"Last Added",
+    "almostRunOut":"Almost running out",
+    "seeAll":"See All"
 }
