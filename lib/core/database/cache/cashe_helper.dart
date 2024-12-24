@@ -22,8 +22,8 @@ class CacheHelper {
     sharedPreferences.setString(CacheKeys.currentLanguage, language);
   }
 
-  String? getCurrentLanguage() {
-    return sharedPreferences.getString(CacheKeys.currentLanguage);
+  String getCurrentLanguage() {
+    return sharedPreferences.getString(CacheKeys.currentLanguage)??'en';
   }
 }
 

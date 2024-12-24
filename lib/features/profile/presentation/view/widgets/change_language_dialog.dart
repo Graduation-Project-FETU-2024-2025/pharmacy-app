@@ -17,7 +17,7 @@ class ChangeLanguageDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String selectedValue = getIt<CacheHelper>().getCurrentLanguage()!;
+    String selectedValue = getIt<CacheHelper>().getCurrentLanguage();
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 32.h),
       decoration: BoxDecoration(
