@@ -32,6 +32,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "deliveryMan":
             MessageLookupByLibrary.simpleMessage("Delivery man name"),
 
+        "almostRunOut":
+            MessageLookupByLibrary.simpleMessage("Almost running out"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
             "Dr. Stone Pharmacy | Elestad"),
@@ -48,6 +50,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("Language"),
 
 
+        "hi": MessageLookupByLibrary.simpleMessage("Hi"),
+        "homeMessage": MessageLookupByLibrary.simpleMessage(
+            "We will deliver you medicines!"),
+        "lastAdded": MessageLookupByLibrary.simpleMessage("Last Added"),
         "locateEgTanEstad": MessageLookupByLibrary.simpleMessage(
             "Egypt, Tanta, El Estad Street"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
@@ -68,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("Save"),
 
 
+        "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("Twenty four hours service !"),

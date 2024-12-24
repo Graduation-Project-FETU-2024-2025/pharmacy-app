@@ -9,6 +9,7 @@ import 'package:pharmacy_app/features/auth/presentation/view_model/otp_cubit/otp
 import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/otp_view.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/sign_in_view.dart';
+import 'package:pharmacy_app/features/home/presentation/views/home_view.dart';
 import 'package:pharmacy_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/pharmacy_details_view.dart';
 import 'package:pharmacy_app/features/pharmacy_edit/presentation/view/pharmacy_edit_screen.dart';
@@ -41,6 +42,8 @@ class AppRouters {
         ));
       case Routing.branchesScreen:
         return _buildRoute(BranchesScreen());
+      case Routing.homeView:
+        return _buildRoute(HomeView());
       case Routing.pharmacyDetail:
         return _buildRoute(PharmacyDetailsView());
       case Routing.pharmacyEdit:

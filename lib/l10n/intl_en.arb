@@ -34,10 +34,18 @@
     "lowestPrice":"Lowest price",
     "branchStatus":"Branch Status",
     "save": "Save",
+<<<<<<< HEAD
     "language": "Language",
     "logout": "Log Out",
     "darkMode": "Dark Mode",
     "english": "English",
     "arabic": "Arabic"
+=======
+>>>>>>> origin/Feature/home-view
 
+    "hi":"Hi",
+    "homeMessage":"We will deliver you medicines!",
+    "lastAdded":"Last Added",
+    "almostRunOut":"Almost running out",
+    "seeAll":"See All"
 }

@@ -33,10 +33,18 @@
     "lowestPrice":"أقل سعر",
     "branchStatus":"حالة الفرع",
     "save": "حفظ",
+<<<<<<< HEAD
     "language": "اللغة",
     "logout": "تسجيل الخروج",
     "darkMode": "الوضع الداكن",
     "english": "الإنجليزية",
     "arabic": "العربية"
+=======
+>>>>>>> origin/Feature/home-view
 
+    "hi":"مرحبا",
+    "homeMessage":"! سوف نقوم بتوصيل الأدوية إليك",
+    "lastAdded":"المضاف حديثاً",
+    "almostRunOut":"شارف على النفاذ",
+    "seeAll":"عرض الكل"
 }

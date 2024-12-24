@@ -31,6 +31,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
         "deliveryMan": MessageLookupByLibrary.simpleMessage("اسم رجل التوصيل"),
 
+        "almostRunOut": MessageLookupByLibrary.simpleMessage("شارف على النفاذ"),
+       
+      
+       
         "description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "drStonePharmacy":
             MessageLookupByLibrary.simpleMessage("صيدلية دكتور ستون | الاستاد"),
@@ -47,6 +51,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
 
 
+        "hi": MessageLookupByLibrary.simpleMessage("مرحبا"),
+        "homeMessage": MessageLookupByLibrary.simpleMessage(
+            "! سوف نقوم بتوصيل الأدوية إليك"),
+        
+        "lastAdded": MessageLookupByLibrary.simpleMessage("المضاف حديثاً"),
         "locateEgTanEstad":
             MessageLookupByLibrary.simpleMessage("مصر، طنطا، شارع الاستاد"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -68,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
     
 
+        "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("خدمة أربع و عشرون ساعة !"),

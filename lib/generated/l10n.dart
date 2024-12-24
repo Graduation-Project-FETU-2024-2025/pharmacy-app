@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
 
-// **************************************************************************
-// Generator: Flutter Intl IDE plugin
-// Made by Localizely
-// **************************************************************************
+// ************************************************************************** 
+// Generator: Flutter Intl IDE plugin 
+// Made by Localizely 
+// ************************************************************************** 
 
-// ignore_for_file: non_constant_identifier_names, lines_longer_than_80_chars
-// ignore_for_file: join_return_with_assignment, prefer_final_in_for_each
-// ignore_for_file: avoid_redundant_argument_values, avoid_escaping_inner_quotes
+// ignore_for_file: non_constant_identifier_names, lines_longer_than_80_chars 
+// ignore_for_file: join_return_with_assignment, prefer_final_in_for_each 
+// ignore_for_file: avoid_redundant_argument_values, avoid_escaping_inner_quotes 
 
 class S {
   S();
@@ -34,7 +34,6 @@ class S {
       Intl.defaultLocale = localeName;
       final instance = S();
       S._current = instance;
-
       return instance;
     });
   }
@@ -190,10 +189,10 @@ class S {
     );
   }
 
-  /// `Twenty four hours service !`
+  /// `Twenty four hours service!`
   String get work24Hour {
     return Intl.message(
-      'Twenty four hours service !',
+      'Twenty four hours service!',
       name: 'work24Hour',
       desc: '',
       args: [],
@@ -230,8 +229,6 @@ class S {
     );
   }
 
-  // skipped getter for the 'deliveryArea&price' key
-
   /// `Description`
   String get description {
     return Intl.message(
@@ -241,7 +238,6 @@ class S {
       args: [],
     );
   }
-
 
   /// `Pharmacy Information`
   String get pharmacyInfo {
@@ -343,11 +339,31 @@ class S {
     );
   }
 
+  /// `Hi`
+  String get hi {
+    return Intl.message(
+      'Hi',
+      name: 'hi',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Log Out`
   String get logout {
     return Intl.message(
       'Log Out',
       name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We will deliver you medicines!`
+  String get homeMessage {
+    return Intl.message(
+      'We will deliver you medicines!',
+      name: 'homeMessage',
       desc: '',
       args: [],
     );
@@ -363,11 +379,31 @@ class S {
     );
   }
 
+  /// `Last Added`
+  String get lastAdded {
+    return Intl.message(
+      'Last Added',
+      name: 'lastAdded',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `English`
   String get english {
     return Intl.message(
       'English',
       name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Almost running out`
+  String get almostRunOut {
+    return Intl.message(
+      'Almost running out',
+      name: 'almostRunOut',
       desc: '',
       args: [],
     );
@@ -383,6 +419,15 @@ class S {
     );
   }
 
+  /// `See All`
+  String get seeAll {
+    return Intl.message(
+      'See All',
+      name: 'seeAll',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -397,8 +442,10 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
 
   @override
   bool isSupported(Locale locale) => _isSupported(locale);
+
   @override
   Future<S> load(Locale locale) => S.load(locale);
+
   @override
   bool shouldReload(AppLocalizationDelegate old) => false;
 
