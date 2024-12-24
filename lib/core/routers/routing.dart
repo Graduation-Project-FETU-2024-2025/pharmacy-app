@@ -9,6 +9,7 @@ abstract class Routing {
 
   static const String profile = '/profile';
 
-
   static const String homeView = '/homeView';
+
+  static const String allMedicinesScreen = '/allMedicinesScreen';
 }

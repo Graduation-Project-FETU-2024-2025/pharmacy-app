@@ -112,4 +112,8 @@ class AppIcons {
   /// Assets for arrowSeeAll
   /// assets/icons/arrowSeeAll.svg
   static const String iconsArrowSeeAll = "assets/icons/arrowSeeAll.svg";
+
+  /// Assets for filter
+  /// assets/icons/filter.svg
+  static const String iconsFilter = "assets/icons/filter.svg";
 }

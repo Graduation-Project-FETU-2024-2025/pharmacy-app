@@ -17,6 +17,8 @@ import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/phar
 import 'package:pharmacy_app/features/profile/presentation/view/profile_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
 
+import '../../features/all_medicines/presentation/views/all_medicine_view.dart';
+
 class AppRouters {
   Route generateRoute(RouteSettings settings) {
     var argument = settings.arguments;
@@ -44,6 +46,8 @@ class AppRouters {
         return _buildRoute(BranchesScreen());
       case Routing.homeView:
         return _buildRoute(HomeView());
+      case Routing.allMedicinesScreen:
+        return _buildRoute(AllMedicineView());
       case Routing.pharmacyDetail:
         return _buildRoute(PharmacyDetailsView());
       case Routing.pharmacyEdit:
@@ -51,7 +55,7 @@ class AppRouters {
           create: (context) => PharmacyEditCubit(),
           child: PharmacyEditScreen(),
         ));
-       case Routing.profile:
+      case Routing.profile:
         return _buildRoute(ProfileView());
       default:
         return _buildRoute(

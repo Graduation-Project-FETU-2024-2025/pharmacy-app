@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pharmacy_app/generated/l10n.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 
@@ -26,7 +27,7 @@ class SearchTextField extends StatelessWidget {
               cursorColor: AppColors.primaryColor,
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.symmetric(horizontal: 16),
-                hintText: 'Search for medicine',
+                hintText: S.of(context).searchHint,
                 hintStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
                       color: Color(0xffBDBDBD),
                     ),
@@ -69,7 +70,7 @@ class SearchTextField extends StatelessWidget {
                   ),
                 ),
                 child: Text(
-                  'search',
+                  S.of(context).searchButtonTitle,
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         color: AppColors.white,
                       ),
