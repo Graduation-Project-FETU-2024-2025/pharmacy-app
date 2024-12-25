@@ -29,7 +29,7 @@ class LastAddedListView extends StatelessWidget {
             medicineModel: MedicineModel(
               id: 1,
               medicineName: 'Abacavir',
-              img: AppImages.pharmacyDetailImg,
+              img: AppImages.imgMedicine,
               form: 'أقراص',
               quantity: 10,
               company: 'pharma',

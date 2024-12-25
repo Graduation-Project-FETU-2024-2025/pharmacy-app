@@ -71,7 +71,7 @@ class HomeViewBody extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(
                         right: getIt<CacheHelper>().getCurrentLanguage() == 'ar'
-                            ? 20.w
+                            ? 60.w
                             : 0,
                         left: getIt<CacheHelper>().getCurrentLanguage() == 'en'
                             ? 60.w
@@ -90,7 +90,14 @@ class HomeViewBody extends StatelessWidget {
                                 style: Theme.of(context)
                                     .textTheme
                                     .displayLarge!
-                                    .copyWith(color: AppColors.black),
+                                    .copyWith(
+                                      color: AppColors.black,
+                                      fontSize: getIt<CacheHelper>()
+                                                  .getCurrentLanguage() ==
+                                              'ar'
+                                          ? 23
+                                          : 25,
+                                    ),
                               ),
                             ),
                           ),
@@ -141,11 +148,20 @@ class HomeViewBody extends StatelessWidget {
                         style: Theme.of(context).textTheme.displaySmall,
                       ),
                       SizedBox(width: 3.w),
-                      SvgPicture.asset(
-                        AppIcons.iconsArrowSeeAll,
-                        width: 10,
-                        height: 10,
-                      ),
+                      getIt<CacheHelper>().getCurrentLanguage() == 'ar'
+                          ? Transform.rotate(
+                              angle: 180 * 3.14 / 180,
+                              child: SvgPicture.asset(
+                                AppIcons.iconsArrowSeeAll,
+                                width: 10,
+                                height: 10,
+                              ),
+                            )
+                          : SvgPicture.asset(
+                              AppIcons.iconsArrowSeeAll,
+                              width: 10,
+                              height: 10,
+                            ),
                     ],
                   ),
                 ],

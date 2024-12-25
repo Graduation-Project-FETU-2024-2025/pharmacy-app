@@ -32,7 +32,7 @@ class AlmostRunOutCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                    image: AssetImage(AppImages.pharmacyDetailImg),
+                    image: AssetImage(AppImages.imgMedicine),
                     fit: BoxFit.fill,
                   ),
                 ),

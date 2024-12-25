@@ -43,7 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لم تستلم رمز التحقق؟"),
         "hi": MessageLookupByLibrary.simpleMessage("مرحبا"),
         "homeMessage": MessageLookupByLibrary.simpleMessage(
-            "! سوف نقوم بتوصيل الأدوية إليك"),
+            "سوف نقوم بتوصيل الأدوية إليك!"),
         "km": MessageLookupByLibrary.simpleMessage("كم"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "lastAdded": MessageLookupByLibrary.simpleMessage("المضاف حديثاً"),
