@@ -21,7 +21,7 @@ class AllMedicineViewBody extends StatelessWidget {
           child: Column(
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   SvgPicture.asset(
                     AppIcons.iconsFilter,
