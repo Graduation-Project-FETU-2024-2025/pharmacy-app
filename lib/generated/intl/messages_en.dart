@@ -24,16 +24,14 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
         "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
-
+        "almostRunOut":
+            MessageLookupByLibrary.simpleMessage("Almost running out"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "branchName": MessageLookupByLibrary.simpleMessage("Branch Name"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("Branch Status"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "deliveryMan":
             MessageLookupByLibrary.simpleMessage("Delivery man name"),
-
-        "almostRunOut":
-            MessageLookupByLibrary.simpleMessage("Almost running out"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
             "Dr. Stone Pharmacy | Elestad"),
@@ -45,14 +43,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "freeDelivery": MessageLookupByLibrary.simpleMessage("Free Delivery"),
         "haveNotReceivedOTP":
             MessageLookupByLibrary.simpleMessage("Haven\'t received OTP?"),
-        "km": MessageLookupByLibrary.simpleMessage("KM"),
-
-        "language": MessageLookupByLibrary.simpleMessage("Language"),
-
-
         "hi": MessageLookupByLibrary.simpleMessage("Hi"),
         "homeMessage": MessageLookupByLibrary.simpleMessage(
             "We will deliver you medicines!"),
+        "km": MessageLookupByLibrary.simpleMessage("KM"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastAdded": MessageLookupByLibrary.simpleMessage("Last Added"),
         "locateEgTanEstad": MessageLookupByLibrary.simpleMessage(
             "Egypt, Tanta, El Estad Street"),
@@ -64,7 +59,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "mileage": MessageLookupByLibrary.simpleMessage("Mileage"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
-
         "pharmacyInfo":
             MessageLookupByLibrary.simpleMessage("Pharmacy Information"),
         "pharmacyName": MessageLookupByLibrary.simpleMessage("Pharmacy Name"),
@@ -72,8 +66,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "pounds": MessageLookupByLibrary.simpleMessage("Pounds"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
-
-
+        "searchButtonTitle": MessageLookupByLibrary.simpleMessage("search"),
+        "searchHint":
+            MessageLookupByLibrary.simpleMessage("Search for medicine"),
         "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "work24Hour":

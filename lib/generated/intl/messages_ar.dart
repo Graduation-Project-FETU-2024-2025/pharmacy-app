@@ -24,17 +24,12 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Continue": MessageLookupByLibrary.simpleMessage("استمر"),
         "allBranches": MessageLookupByLibrary.simpleMessage("جميع الفروع"),
-
+        "almostRunOut": MessageLookupByLibrary.simpleMessage("شارف على النفاذ"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "branchName": MessageLookupByLibrary.simpleMessage("اسم الفرع"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("حالة الفرع"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
         "deliveryMan": MessageLookupByLibrary.simpleMessage("اسم رجل التوصيل"),
-
-        "almostRunOut": MessageLookupByLibrary.simpleMessage("شارف على النفاذ"),
-       
-      
-       
         "description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "drStonePharmacy":
             MessageLookupByLibrary.simpleMessage("صيدلية دكتور ستون | الاستاد"),
@@ -46,15 +41,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "freeDelivery": MessageLookupByLibrary.simpleMessage("توصيل مجاني"),
         "haveNotReceivedOTP":
             MessageLookupByLibrary.simpleMessage("لم تستلم رمز التحقق؟"),
-        "km": MessageLookupByLibrary.simpleMessage("كم"),
-
-        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
-
-
         "hi": MessageLookupByLibrary.simpleMessage("مرحبا"),
         "homeMessage": MessageLookupByLibrary.simpleMessage(
-            "! سوف نقوم بتوصيل الأدوية إليك"),
-        
+            "سوف نقوم بتوصيل الأدوية إليك!"),
+        "km": MessageLookupByLibrary.simpleMessage("كم"),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "lastAdded": MessageLookupByLibrary.simpleMessage("المضاف حديثاً"),
         "locateEgTanEstad":
             MessageLookupByLibrary.simpleMessage("مصر، طنطا، شارع الاستاد"),
@@ -66,7 +57,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "mileage": MessageLookupByLibrary.simpleMessage("عدد الأميال"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),
-
         "pharmacyInfo":
             MessageLookupByLibrary.simpleMessage("معلومات الصيدلية"),
         "pharmacyName": MessageLookupByLibrary.simpleMessage("اسم الصيدلية"),
@@ -74,9 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "pounds": MessageLookupByLibrary.simpleMessage("جنيه"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
-
-    
-
+        "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
+        "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
         "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
         "work24Hour":

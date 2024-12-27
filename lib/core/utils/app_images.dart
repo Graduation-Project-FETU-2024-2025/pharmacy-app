@@ -34,4 +34,6 @@ class AppImages {
   static String imgBranch = "assets/images/branch.png";
 
   static String imgAlarm = "assets/images/alarm.png";
+
+  static String imgMedicine = "assets/images/medicine.png";
 }
