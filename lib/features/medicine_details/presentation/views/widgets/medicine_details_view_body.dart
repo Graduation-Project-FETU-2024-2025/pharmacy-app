@@ -7,6 +7,7 @@ import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 
 import '../../../../../core/utils/app_images.dart';
+import '../../../../../core/widgets/add_delete_button.dart';
 import '../../../../../generated/l10n.dart';
 import 'all_info_medicine.dart';
 

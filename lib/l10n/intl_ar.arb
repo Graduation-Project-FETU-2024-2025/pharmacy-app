@@ -48,5 +48,11 @@
     "seeAll":"عرض الكل",
 
     "searchButtonTitle":"ابحث",
-    "searchHint":"ابحث عن دواء"
+    "searchHint":"ابحث عن دواء",
+
+    "inStock":"متوفر في المخزن",
+    "DoageForm":"شكل الجرعة",
+    "activeSubstance":"المادة الفعالة",
+    "manufacturer":"الشركة المصنعة",
+    "delete":"حذف"
 }

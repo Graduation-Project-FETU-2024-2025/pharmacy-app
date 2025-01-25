@@ -451,6 +451,56 @@ class S {
       args: [],
     );
   }
+
+  /// `In Stock`
+  String get inStock {
+    return Intl.message(
+      'In Stock',
+      name: 'inStock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dosage Form`
+  String get DoageForm {
+    return Intl.message(
+      'Dosage Form',
+      name: 'DoageForm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Active Substance`
+  String get activeSubstance {
+    return Intl.message(
+      'Active Substance',
+      name: 'activeSubstance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Manufacturer`
+  String get manufacturer {
+    return Intl.message(
+      'Manufacturer',
+      name: 'manufacturer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
