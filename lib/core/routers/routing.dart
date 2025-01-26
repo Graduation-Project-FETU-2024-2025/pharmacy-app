@@ -12,4 +12,6 @@ abstract class Routing {
   static const String homeView = '/homeView';
 
   static const String allMedicinesScreen = '/allMedicinesScreen';
+
+  static const String addMedicine = '/addMedicine';
 }

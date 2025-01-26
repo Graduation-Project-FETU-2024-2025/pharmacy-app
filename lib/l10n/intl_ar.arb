@@ -48,5 +48,6 @@
     "seeAll":"عرض الكل",
 
     "searchButtonTitle":"ابحث",
-    "searchHint":"ابحث عن دواء"
+    "searchHint":"ابحث عن دواء",
+    "medicineInformation":"معلومات الدواء"
 }

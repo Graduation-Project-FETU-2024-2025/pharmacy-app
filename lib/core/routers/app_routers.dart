@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
+import 'package:pharmacy_app/features/add_medicine/presentation/view_models/cubit/add_medicine_cubit.dart';
+import 'package:pharmacy_app/features/add_medicine/presentation/views/add_medicine_view.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view/branches_screen.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/otp_cubit/otp_cubit.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
@@ -46,6 +48,11 @@ class AppRouters {
         return _buildRoute(BranchesScreen());
       case Routing.homeView:
         return _buildRoute(HomeView());
+      case Routing.addMedicine:
+        return _buildRoute(BlocProvider(
+          create: (context) => AddMedicineCubit(),
+          child: AddMedicineView(),
+        ));
       case Routing.allMedicinesScreen:
         return _buildRoute(AllMedicineView());
       case Routing.pharmacyDetail:

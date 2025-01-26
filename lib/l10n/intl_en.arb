@@ -48,5 +48,6 @@
     "seeAll":"See All",
 
     "searchButtonTitle":"search",
-    "searchHint":"Search for medicine"
+    "searchHint":"Search for medicine",
+    "medicineInformation":"Medicine Information"
 }
