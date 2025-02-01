@@ -23,12 +23,16 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Continue": MessageLookupByLibrary.simpleMessage("استمر"),
+        "DoageForm": MessageLookupByLibrary.simpleMessage("شكل الجرعة"),
+        "activeSubstance":
+            MessageLookupByLibrary.simpleMessage("المادة الفعالة"),
         "allBranches": MessageLookupByLibrary.simpleMessage("جميع الفروع"),
         "almostRunOut": MessageLookupByLibrary.simpleMessage("شارف على النفاذ"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "branchName": MessageLookupByLibrary.simpleMessage("اسم الفرع"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("حالة الفرع"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
+        "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "deliveryMan": MessageLookupByLibrary.simpleMessage("اسم رجل التوصيل"),
         "description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "drStonePharmacy":
@@ -44,6 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hi": MessageLookupByLibrary.simpleMessage("مرحبا"),
         "homeMessage": MessageLookupByLibrary.simpleMessage(
             "سوف نقوم بتوصيل الأدوية إليك!"),
+        "inStock": MessageLookupByLibrary.simpleMessage("متوفر في المخزن"),
         "km": MessageLookupByLibrary.simpleMessage("كم"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "lastAdded": MessageLookupByLibrary.simpleMessage("المضاف حديثاً"),
@@ -54,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "lowestPrice": MessageLookupByLibrary.simpleMessage("أقل سعر"),
+        "manufacturer": MessageLookupByLibrary.simpleMessage("الشركة المصنعة"),
         "mileage": MessageLookupByLibrary.simpleMessage("عدد الأميال"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),

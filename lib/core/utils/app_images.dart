@@ -36,4 +36,6 @@ class AppImages {
   static String imgAlarm = "assets/images/alarm.png";
 
   static String imgMedicine = "assets/images/medicine.png";
+
+  static String imgMedDetail = 'assets/images/medicine_details.png';
 }

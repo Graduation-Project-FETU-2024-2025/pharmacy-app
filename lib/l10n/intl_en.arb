@@ -48,5 +48,12 @@
     "seeAll":"See All",
 
     "searchButtonTitle":"search",
-    "searchHint":"Search for medicine"
+    "searchHint":"Search for medicine",
+
+    "inStock":"In Stock",
+    "DoageForm":"Dosage Form",
+    "activeSubstance":"Active Substance",
+    "manufacturer":"Manufacturer",
+    "delete":"Delete"
+
 }

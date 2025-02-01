@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
+        "DoageForm": MessageLookupByLibrary.simpleMessage("Dosage Form"),
+        "activeSubstance":
+            MessageLookupByLibrary.simpleMessage("Active Substance"),
         "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
         "almostRunOut":
             MessageLookupByLibrary.simpleMessage("Almost running out"),
@@ -30,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "branchName": MessageLookupByLibrary.simpleMessage("Branch Name"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("Branch Status"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "deliveryMan":
             MessageLookupByLibrary.simpleMessage("Delivery man name"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
@@ -46,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hi": MessageLookupByLibrary.simpleMessage("Hi"),
         "homeMessage": MessageLookupByLibrary.simpleMessage(
             "We will deliver you medicines!"),
+        "inStock": MessageLookupByLibrary.simpleMessage("In Stock"),
         "km": MessageLookupByLibrary.simpleMessage("KM"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastAdded": MessageLookupByLibrary.simpleMessage("Last Added"),
@@ -56,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "logout": MessageLookupByLibrary.simpleMessage("Log Out"),
         "lowestPrice": MessageLookupByLibrary.simpleMessage("Lowest price"),
+        "manufacturer": MessageLookupByLibrary.simpleMessage("Manufacturer"),
         "mileage": MessageLookupByLibrary.simpleMessage("Mileage"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),

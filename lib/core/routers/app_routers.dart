@@ -10,6 +10,7 @@ import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit
 import 'package:pharmacy_app/features/auth/presentation/views/otp_view.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:pharmacy_app/features/home/presentation/views/home_view.dart';
+import 'package:pharmacy_app/features/medicine_details/presentation/views/medicine_details_view.dart';
 import 'package:pharmacy_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/pharmacy_details_view.dart';
 import 'package:pharmacy_app/features/pharmacy_edit/presentation/view/pharmacy_edit_screen.dart';
@@ -48,6 +49,8 @@ class AppRouters {
         return _buildRoute(HomeView());
       case Routing.allMedicinesScreen:
         return _buildRoute(AllMedicineView());
+      case Routing.medicineDetails:
+        return _buildRoute(MedicineDetailsView());
       case Routing.pharmacyDetail:
         return _buildRoute(PharmacyDetailsView());
       case Routing.pharmacyEdit:
