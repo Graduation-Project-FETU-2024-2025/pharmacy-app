@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-import '../../../../../core/utils/app_images.dart';
 
 class WorkingHourDetail extends StatelessWidget {
   const WorkingHourDetail({super.key});
@@ -11,9 +10,11 @@ class WorkingHourDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(AppImages.workHour),
-        Gap(2.w),
-        Text('Twenty four hours service !',style: Theme.of(context).textTheme.labelMedium,)
+        Text('10:00 Am',style: Theme.of(context).textTheme.labelMedium),
+        Gap(20.w),
+        Text('-',style: Theme.of(context).textTheme.labelMedium),
+        Gap(20.w),
+        Text('12:00 PM',style: Theme.of(context).textTheme.labelMedium,),
       ],
     );
   }
