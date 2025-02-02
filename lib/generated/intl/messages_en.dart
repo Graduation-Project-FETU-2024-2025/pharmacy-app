@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "deliveryMan":
             MessageLookupByLibrary.simpleMessage("Delivery man name"),
+        "deliveryRange": MessageLookupByLibrary.simpleMessage("Delivery Range"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
             "Dr. Stone Pharmacy | Elestad"),
@@ -39,14 +40,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterOTPWeSent":
             MessageLookupByLibrary.simpleMessage("Enter OTP we sent you at"),
         "freeDelivery": MessageLookupByLibrary.simpleMessage("Free Delivery"),
+        "getAddressInfo":
+            MessageLookupByLibrary.simpleMessage("Get Address Info"),
         "haveNotReceivedOTP":
             MessageLookupByLibrary.simpleMessage("Haven\'t received OTP?"),
         "km": MessageLookupByLibrary.simpleMessage("KM"),
+        "latitude": MessageLookupByLibrary.simpleMessage("Latitude"),
         "locateEgTanEstad": MessageLookupByLibrary.simpleMessage(
             "Egypt, Tanta, El Estad Street"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
+        "longitude": MessageLookupByLibrary.simpleMessage("Longitude"),
         "lowestPrice": MessageLookupByLibrary.simpleMessage("Lowest price"),
         "mileage": MessageLookupByLibrary.simpleMessage("Mileage"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
@@ -56,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pharmacyName": MessageLookupByLibrary.simpleMessage("Pharmacy Name"),
         "phoneNum": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "pounds": MessageLookupByLibrary.simpleMessage("Pounds"),
+        "pricePerKilo": MessageLookupByLibrary.simpleMessage("Price Per Killo"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),

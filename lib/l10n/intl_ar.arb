@@ -34,6 +34,11 @@
     "branchStatus":"حالة الفرع",
     "save": "حفظ",
     "delete": "حذف",
-    "areaAndPrice":"منطقة التوصيل & السعر"
+    "areaAndPrice":"منطقة التوصيل & السعر",
+    "pricePerKilo": "السعر بالكيلو",
+    "deliveryRange": "نطاق التوصيل",
+    "latitude":"العرض",
+    "longitude":"الطول",
+    "getAddressInfo":"الحصول على معلومات العنوان"
 
 }

@@ -35,6 +35,11 @@
     "branchStatus":"Branch Status",
     "save": "Save",
     "delete": "Delete",
-    "areaAndPrice": "Delivery Area & Price"
+    "areaAndPrice": "Delivery Area & Price",
+    "pricePerKilo": "Price Per Killo",
+    "deliveryRange": "Delivery Range",
+    "latitude":"Latitude",
+    "longitude":"Longitude",
+    "getAddressInfo":"Get Address Info"
 
 }

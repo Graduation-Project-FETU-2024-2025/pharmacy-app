@@ -351,6 +351,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Price Per Killo`
+  String get pricePerKilo {
+    return Intl.message(
+      'Price Per Killo',
+      name: 'pricePerKilo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Range`
+  String get deliveryRange {
+    return Intl.message(
+      'Delivery Range',
+      name: 'deliveryRange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Latitude`
+  String get latitude {
+    return Intl.message(
+      'Latitude',
+      name: 'latitude',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Longitude`
+  String get longitude {
+    return Intl.message(
+      'Longitude',
+      name: 'longitude',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Address Info`
+  String get getAddressInfo {
+    return Intl.message(
+      'Get Address Info',
+      name: 'getAddressInfo',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

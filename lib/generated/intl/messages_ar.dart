@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "branchStatus": MessageLookupByLibrary.simpleMessage("حالة الفرع"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "deliveryMan": MessageLookupByLibrary.simpleMessage("اسم رجل التوصيل"),
+        "deliveryRange": MessageLookupByLibrary.simpleMessage("نطاق التوصيل"),
         "description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "drStonePharmacy":
             MessageLookupByLibrary.simpleMessage("صيدلية دكتور ستون | الاستاد"),
@@ -38,14 +39,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterOTPWeSent": MessageLookupByLibrary.simpleMessage(
             "أدخل رمز التحقق الذي أرسلناه لك على"),
         "freeDelivery": MessageLookupByLibrary.simpleMessage("توصيل مجاني"),
+        "getAddressInfo":
+            MessageLookupByLibrary.simpleMessage("الحصول على معلومات العنوان"),
         "haveNotReceivedOTP":
             MessageLookupByLibrary.simpleMessage("لم تستلم رمز التحقق؟"),
         "km": MessageLookupByLibrary.simpleMessage("كم"),
+        "latitude": MessageLookupByLibrary.simpleMessage("العرض"),
         "locateEgTanEstad":
             MessageLookupByLibrary.simpleMessage("مصر، طنطا، شارع الاستاد"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
+        "longitude": MessageLookupByLibrary.simpleMessage("الطول"),
         "lowestPrice": MessageLookupByLibrary.simpleMessage("أقل سعر"),
         "mileage": MessageLookupByLibrary.simpleMessage("عدد الأميال"),
         "onboarding":
@@ -55,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pharmacyName": MessageLookupByLibrary.simpleMessage("اسم الصيدلية"),
         "phoneNum": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "pounds": MessageLookupByLibrary.simpleMessage("جنيه"),
+        "pricePerKilo": MessageLookupByLibrary.simpleMessage("السعر بالكيلو"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
