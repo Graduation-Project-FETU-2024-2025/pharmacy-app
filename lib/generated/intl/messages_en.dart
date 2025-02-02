@@ -62,6 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("Log Out"),
         "lowestPrice": MessageLookupByLibrary.simpleMessage("Lowest price"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Manufacturer"),
+        "medicineInformation":
+            MessageLookupByLibrary.simpleMessage("Medicine Information"),
         "mileage": MessageLookupByLibrary.simpleMessage("Mileage"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),

@@ -60,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "lowestPrice": MessageLookupByLibrary.simpleMessage("أقل سعر"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("الشركة المصنعة"),
+        "medicineInformation":
+            MessageLookupByLibrary.simpleMessage("معلومات الدواء"),
         "mileage": MessageLookupByLibrary.simpleMessage("عدد الأميال"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),

@@ -501,6 +501,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Medicine Information`
+  String get medicineInformation {
+    return Intl.message(
+      'Medicine Information',
+      name: 'medicineInformation',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

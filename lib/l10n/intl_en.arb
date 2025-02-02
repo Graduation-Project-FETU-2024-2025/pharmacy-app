@@ -54,6 +54,7 @@
     "DoageForm":"Dosage Form",
     "activeSubstance":"Active Substance",
     "manufacturer":"Manufacturer",
-    "delete":"Delete"
+    "delete":"Delete",
+    "medicineInformation":"Medicine Information"
 
 }
