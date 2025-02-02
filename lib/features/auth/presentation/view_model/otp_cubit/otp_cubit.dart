@@ -5,22 +5,15 @@ import 'package:pharmacy_app/features/auth/presentation/view_model/otp_cubit/otp
 class OtpCubit extends Cubit<OtpState> {
   OtpCubit() : super(OtpInitial());
   static OtpCubit get(context) => BlocProvider.of<OtpCubit>(context);
-  TextEditingController otpController1 = TextEditingController();
-  TextEditingController otpController2 = TextEditingController();
-  TextEditingController otpController3 = TextEditingController();
-  TextEditingController otpController4 = TextEditingController();
-  TextEditingController otpController5 = TextEditingController();
-  TextEditingController otpController6 = TextEditingController();
+  static final int _numberOTP = 6;
+  List<TextEditingController> otpControllers =
+      List.generate(_numberOTP, (index) => TextEditingController());
 
-  FocusNode focusNode1 = FocusNode();
-  FocusNode focusNode2 = FocusNode();
-  FocusNode focusNode3 = FocusNode();
-  FocusNode focusNode4 = FocusNode();
-  FocusNode focusNode5 = FocusNode();
-  FocusNode focusNode6 = FocusNode();
+  List<FocusNode> otpFocusNodes =
+      List.generate(_numberOTP, (index) => FocusNode());
 
   GlobalKey<FormState> otpFormKey = GlobalKey<FormState>();
-
+  int get numberOfOtp => _numberOTP;
   void nextFiled(String value, FocusNode focusNode) {
     if (value.length == 1) {
       focusNode.requestFocus();
@@ -34,20 +27,22 @@ class OtpCubit extends Cubit<OtpState> {
     return null;
   }
 
+  void _disposeTextEditingControllers() {
+    for (var controller in otpControllers) {
+      controller.dispose();
+    }
+  }
+
+  void _disposeFocusNodes() {
+    for (var focusNode in otpFocusNodes) {
+      focusNode.dispose();
+    }
+  }
+
   @override
   Future<void> close() {
-    otpController1.dispose();
-    otpController2.dispose();
-    otpController3.dispose();
-    otpController4.dispose();
-    otpController5.dispose();
-    otpController6.dispose();
-    focusNode1.dispose();
-    focusNode2.dispose();
-    focusNode3.dispose();
-    focusNode4.dispose();
-    focusNode5.dispose();
-    focusNode6.dispose();
+    _disposeTextEditingControllers();
+    _disposeFocusNodes();
     return super.close();
   }
 }
