@@ -12,12 +12,14 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
   final TextEditingController pharmacyNameController = TextEditingController();
   final TextEditingController branchNameController = TextEditingController();
   final TextEditingController descController = TextEditingController();
-  final TextEditingController manNameController = TextEditingController();
+  final TextEditingController pricePerKilo= TextEditingController();
   final TextEditingController phoneController = TextEditingController();
-  final TextEditingController mileageController = TextEditingController();
+  final TextEditingController deliveryRange = TextEditingController();
   final TextEditingController lowestPriceController = TextEditingController();
   final TextEditingController workHourController = TextEditingController();
   final TextEditingController branchStatusController = TextEditingController();
+  final TextEditingController latitudeController = TextEditingController();
+  final TextEditingController longitudeController = TextEditingController();
 
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
@@ -28,12 +30,14 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
     pharmacyNameController.dispose();
     branchNameController.dispose();
     descController.dispose();
-    manNameController.dispose();
+    pricePerKilo.dispose();
     phoneController.dispose();
-    mileageController.dispose();
+    deliveryRange.dispose();
     lowestPriceController.dispose();
     workHourController.dispose();
     branchStatusController.dispose();
+    latitudeController.dispose();
+    longitudeController.dispose();
     return super.close();
   }
 }

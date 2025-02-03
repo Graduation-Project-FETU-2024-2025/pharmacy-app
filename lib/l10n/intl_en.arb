@@ -34,6 +34,13 @@
     "lowestPrice":"Lowest price",
     "branchStatus":"Branch Status",
     "save": "Save",
+    "delete": "Delete",
+    "areaAndPrice": "Delivery Area & Price",
+    "pricePerKilo": "Price Per Killo",
+    "deliveryRange": "Delivery Range",
+    "latitude":"Latitude",
+    "longitude":"Longitude",
+    "getAddressInfo":"Get Address Info",
 
     "language": "Language",
     "logout": "Log Out",
@@ -53,7 +60,6 @@
     "inStock":"In Stock",
     "DoageForm":"Dosage Form",
     "activeSubstance":"Active Substance",
-    "manufacturer":"Manufacturer",
-    "delete":"Delete"
+    "manufacturer":"Manufacturer"
 
 }

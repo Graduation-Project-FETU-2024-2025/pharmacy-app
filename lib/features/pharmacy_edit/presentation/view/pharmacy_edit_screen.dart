@@ -4,6 +4,7 @@ import 'package:pharmacy_app/core/helpers/extentions.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import '../../../../core/database/cache/cashe_helper.dart';
 import '../../../../core/services/get_it.dart';
+import '../../../../generated/l10n.dart';
 import 'widgets/pharmacy_edit_body.dart';
 
 class PharmacyEditScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class PharmacyEditScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         title: Text(
-          'Pharmacy Information',
+          S.of(context).pharmacyInfo,
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         leading: IconButton(

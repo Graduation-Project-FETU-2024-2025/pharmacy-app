@@ -34,7 +34,7 @@ class PharmacyDetailBody extends StatelessWidget {
           ),
           Gap(36.h),
           Text(
-            'Description',
+            S.of(context).description,
             style: Theme.of(context).textTheme.labelMedium,
           ),
           Gap(10.h),
@@ -47,13 +47,13 @@ class PharmacyDetailBody extends StatelessWidget {
           ),
           Gap(20.h),
           Text(
-            'Delivery Area & Price',
+            S.of(context).areaAndPrice,
             style: Theme.of(context).textTheme.labelMedium,
           ),
           DeliveryAreaCard(),
           Gap(35.h),
           Text(
-            'Working Hours',
+            S.of(context).workingHour,
             style: Theme.of(context).textTheme.labelMedium,
           ),
           Gap(20.h),

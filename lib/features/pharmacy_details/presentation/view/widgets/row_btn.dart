@@ -7,6 +7,8 @@ import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class RowBtn extends StatelessWidget {
   const RowBtn({super.key});
 
@@ -29,7 +31,7 @@ class RowBtn extends StatelessWidget {
             ),
             onPressed: () {},//TODO
             child: Text(
-              'Delete',
+              S.of(context).delete,
               style: Theme.of(context)
                   .textTheme
                   .displayMedium!

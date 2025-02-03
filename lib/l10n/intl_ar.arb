@@ -33,6 +33,13 @@
     "lowestPrice":"أقل سعر",
     "branchStatus":"حالة الفرع",
     "save": "حفظ",
+    "delete": "حذف",
+    "areaAndPrice":"منطقة التوصيل & السعر",
+    "pricePerKilo": "السعر بالكيلو",
+    "deliveryRange": "نطاق التوصيل",
+    "latitude":"العرض",
+    "longitude":"الطول",
+    "getAddressInfo":"الحصول على معلومات العنوان",
 
     "language": "اللغة",
     "logout": "تسجيل الخروج",
@@ -53,6 +60,5 @@
     "inStock":"متوفر في المخزن",
     "DoageForm":"شكل الجرعة",
     "activeSubstance":"المادة الفعالة",
-    "manufacturer":"الشركة المصنعة",
-    "delete":"حذف"
+    "manufacturer":"الشركة المصنعة"
 }
