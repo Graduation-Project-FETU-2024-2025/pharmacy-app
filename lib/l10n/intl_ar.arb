@@ -55,5 +55,13 @@
     "activeSubstance":"المادة الفعالة",
     "manufacturer":"الشركة المصنعة",
     "delete":"حذف",
-    "medicineInformation":"معلومات الدواء"
+    "medicineInformation":"معلومات الدواء",
+    "medicineName":"اسم الدواء",
+    "form":"الشكل",
+    "quantity":"الكمية",
+    "enterQuantity":"ادخل الكمية",
+    "price":"السعر",
+    "enterPrice":"ادخل السعر",
+    "branch":"الفرع",
+    "selectBranch":"اختر الفرع"
 }

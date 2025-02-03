@@ -3,16 +3,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/utils/app_colors.dart';
 
 class TextAddMedForm extends StatelessWidget {
-  const TextAddMedForm(
-      {super.key,
-      required this.label,
-      required this.readOnly,
-      this.controller,
-      required this.hintText});
+  const TextAddMedForm({
+    super.key,
+    required this.label,
+    required this.readOnly,
+    this.controller,
+    required this.hintText,
+    this.suffixIcon,
+  });
   final String label;
   final bool readOnly;
   final TextEditingController? controller;
   final String hintText;
+  final Widget? suffixIcon;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -43,6 +46,11 @@ class TextAddMedForm extends StatelessWidget {
             cursorHeight: 25.h,
             cursorColor: AppColors.primaryColor,
             decoration: InputDecoration(
+              suffixIcon: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                child: suffixIcon ?? const SizedBox(),
+              ),
               contentPadding: EdgeInsets.symmetric(
                 horizontal: 16,
               ),

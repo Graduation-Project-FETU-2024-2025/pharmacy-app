@@ -5,6 +5,7 @@ import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/widgets/add_delete_button.dart';
 import 'package:pharmacy_app/features/add_medicine/presentation/view_models/cubit/add_medicine_cubit.dart';
+import 'package:pharmacy_app/features/add_medicine/presentation/views/widgets/choose_branch.dart';
 import '../../../../../core/database/cache/cashe_helper.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_images.dart';
@@ -24,7 +25,7 @@ class AddMedicineViewBody extends StatelessWidget {
             child: Column(
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     getIt<CacheHelper>().getCurrentLanguage() == 'en'
@@ -38,9 +39,9 @@ class AddMedicineViewBody extends StatelessWidget {
                             height: 32,
                             width: 32,
                           ),
-                    SizedBox(
-                      width: 40.w,
-                    ),
+                    // SizedBox(
+                    //   width: 40.w,
+                    // ),
                     Column(
                       children: [
                         SizedBox(
@@ -59,6 +60,9 @@ class AddMedicineViewBody extends StatelessWidget {
                         ),
                       ],
                     ),
+                    SizedBox(
+                      width: 50.w,
+                    ),
                   ],
                 ),
                 SizedBox(
@@ -68,7 +72,7 @@ class AddMedicineViewBody extends StatelessWidget {
                   height: 24.h,
                 ),
                 TextAddMedForm(
-                  label: 'Medicine Name',
+                  label: S.of(context).medicineName,
                   hintText: 'Enter Quantity',
                   readOnly: true,
                 ),
@@ -76,7 +80,7 @@ class AddMedicineViewBody extends StatelessWidget {
                   height: 24.h,
                 ),
                 TextAddMedForm(
-                  label: 'Form',
+                  label: S.of(context).form,
                   hintText: 'Enter Quantity',
                   readOnly: true,
                 ),
@@ -84,7 +88,7 @@ class AddMedicineViewBody extends StatelessWidget {
                   height: 24.h,
                 ),
                 TextAddMedForm(
-                  label: 'Dosage Form',
+                  label: S.of(context).DoageForm,
                   hintText: 'Enter Quantity',
                   readOnly: true,
                 ),
@@ -92,7 +96,7 @@ class AddMedicineViewBody extends StatelessWidget {
                   height: 24.h,
                 ),
                 TextAddMedForm(
-                  label: 'Active Substance',
+                  label: S.of(context).activeSubstance,
                   hintText: 'Enter Quantity',
                   readOnly: true,
                 ),
@@ -100,7 +104,7 @@ class AddMedicineViewBody extends StatelessWidget {
                   height: 24.h,
                 ),
                 TextAddMedForm(
-                  label: 'Manufacturer',
+                  label: S.of(context).manufacturer,
                   hintText: 'Enter Quantity',
                   readOnly: true,
                 ),
@@ -108,8 +112,8 @@ class AddMedicineViewBody extends StatelessWidget {
                   height: 24.h,
                 ),
                 TextAddMedForm(
-                  label: 'Price',
-                  hintText: 'Price',
+                  label: S.of(context).price,
+                  hintText: S.of(context).enterPrice,
                   readOnly: false,
                   controller:
                       AddMedicineCubit.get(context).medicinePriceController,
@@ -118,12 +122,16 @@ class AddMedicineViewBody extends StatelessWidget {
                   height: 24.h,
                 ),
                 TextAddMedForm(
-                  label: 'Stock',
-                  hintText: 'Stock',
+                  label: S.of(context).quantity,
+                  hintText: S.of(context).enterQuantity,
                   readOnly: false,
                   controller:
                       AddMedicineCubit.get(context).medicineStockController,
                 ),
+                SizedBox(
+                  height: 24.h,
+                ),
+                ChooseBranch(),
                 SizedBox(
                   height: 32.h,
                 ),
