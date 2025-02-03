@@ -10,12 +10,14 @@ class TextAddMedForm extends StatelessWidget {
     this.controller,
     required this.hintText,
     this.suffixIcon,
+    this.keyboardType,
   });
   final String label;
   final bool readOnly;
   final TextEditingController? controller;
   final String hintText;
   final Widget? suffixIcon;
+  final TextInputType? keyboardType;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -38,6 +40,7 @@ class TextAddMedForm extends StatelessWidget {
                 : BorderRadius.circular(20.r),
           ),
           child: TextFormField(
+            keyboardType: keyboardType ?? TextInputType.text,
             onTapOutside: (v) {
               FocusScope.of(context).unfocus();
             },
@@ -45,6 +48,7 @@ class TextAddMedForm extends StatelessWidget {
             readOnly: readOnly,
             cursorHeight: 25.h,
             cursorColor: AppColors.primaryColor,
+            style: Theme.of(context).textTheme.titleMedium,
             decoration: InputDecoration(
               suffixIcon: Padding(
                 padding:

@@ -39,9 +39,6 @@ class AddMedicineViewBody extends StatelessWidget {
                             height: 32,
                             width: 32,
                           ),
-                    // SizedBox(
-                    //   width: 40.w,
-                    // ),
                     Column(
                       children: [
                         SizedBox(
@@ -113,6 +110,7 @@ class AddMedicineViewBody extends StatelessWidget {
                 ),
                 TextAddMedForm(
                   label: S.of(context).price,
+                  keyboardType: TextInputType.number,
                   hintText: S.of(context).enterPrice,
                   readOnly: false,
                   controller:
@@ -124,6 +122,7 @@ class AddMedicineViewBody extends StatelessWidget {
                 TextAddMedForm(
                   label: S.of(context).quantity,
                   hintText: S.of(context).enterQuantity,
+                  keyboardType: TextInputType.number,
                   readOnly: false,
                   controller:
                       AddMedicineCubit.get(context).medicineStockController,
