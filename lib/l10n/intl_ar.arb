@@ -54,5 +54,6 @@
     "DoageForm":"شكل الجرعة",
     "activeSubstance":"المادة الفعالة",
     "manufacturer":"الشركة المصنعة",
-    "delete":"حذف"
+    "delete":"حذف",
+    "allMedicines":"جميع الأدوية"
 }

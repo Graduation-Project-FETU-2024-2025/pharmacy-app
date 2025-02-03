@@ -8,21 +8,23 @@ class AllMedicineView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: AllMedicineViewBody(),
-      floatingActionButton: Padding(
-        padding: EdgeInsets.symmetric(
-          vertical: 30.h,
-          horizontal: 8.w,
-        ),
-        child: FloatingActionButton(
-          shape: const CircleBorder(),
-          backgroundColor: AppColors.primaryColor,
-          child: const Icon(
-            Icons.add,
-            color: Colors.white,
+    return SafeArea(
+      child: Scaffold(
+        body: AllMedicineViewBody(),
+        floatingActionButton: Padding(
+          padding: EdgeInsets.symmetric(
+            vertical: 30.h,
+            horizontal: 8.w,
           ),
-          onPressed: () {},
+          child: FloatingActionButton(
+            shape: const CircleBorder(),
+            backgroundColor: AppColors.primaryColor,
+            child: const Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
+            onPressed: () {},
+          ),
         ),
       ),
     );
