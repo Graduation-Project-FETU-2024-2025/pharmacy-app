@@ -40,6 +40,26 @@
     "deliveryRange": "Delivery Range",
     "latitude":"Latitude",
     "longitude":"Longitude",
-    "getAddressInfo":"Get Address Info"
+    "getAddressInfo":"Get Address Info",
+
+    "language": "Language",
+    "logout": "Log Out",
+    "darkMode": "Dark Mode",
+    "english": "English",
+    "arabic": "Arabic",
+
+    "hi":"Hi",
+    "homeMessage":"We will deliver you medicines!",
+    "lastAdded":"Last Added",
+    "almostRunOut":"Almost running out",
+    "seeAll":"See All",
+
+    "searchButtonTitle":"search",
+    "searchHint":"Search for medicine",
+
+    "inStock":"In Stock",
+    "DoageForm":"Dosage Form",
+    "activeSubstance":"Active Substance",
+    "manufacturer":"Manufacturer"
 
 }

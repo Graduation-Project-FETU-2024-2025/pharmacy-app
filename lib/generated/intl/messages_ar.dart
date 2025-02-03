@@ -23,11 +23,17 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Continue": MessageLookupByLibrary.simpleMessage("استمر"),
+        "DoageForm": MessageLookupByLibrary.simpleMessage("شكل الجرعة"),
+        "activeSubstance":
+            MessageLookupByLibrary.simpleMessage("المادة الفعالة"),
         "allBranches": MessageLookupByLibrary.simpleMessage("جميع الفروع"),
+        "almostRunOut": MessageLookupByLibrary.simpleMessage("شارف على النفاذ"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "areaAndPrice":
             MessageLookupByLibrary.simpleMessage("منطقة التوصيل & السعر"),
         "branchName": MessageLookupByLibrary.simpleMessage("اسم الفرع"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("حالة الفرع"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "deliveryMan": MessageLookupByLibrary.simpleMessage("اسم رجل التوصيل"),
         "deliveryRange": MessageLookupByLibrary.simpleMessage("نطاق التوصيل"),
@@ -35,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "drStonePharmacy":
             MessageLookupByLibrary.simpleMessage("صيدلية دكتور ستون | الاستاد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "enterOTP": MessageLookupByLibrary.simpleMessage("أدخل رمز التحقق"),
         "enterOTPWeSent": MessageLookupByLibrary.simpleMessage(
             "أدخل رمز التحقق الذي أرسلناه لك على"),
@@ -43,15 +50,23 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الحصول على معلومات العنوان"),
         "haveNotReceivedOTP":
             MessageLookupByLibrary.simpleMessage("لم تستلم رمز التحقق؟"),
+        "hi": MessageLookupByLibrary.simpleMessage("مرحبا"),
+        "homeMessage": MessageLookupByLibrary.simpleMessage(
+            "سوف نقوم بتوصيل الأدوية إليك!"),
+        "inStock": MessageLookupByLibrary.simpleMessage("متوفر في المخزن"),
         "km": MessageLookupByLibrary.simpleMessage("كم"),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "lastAdded": MessageLookupByLibrary.simpleMessage("المضاف حديثاً"),
         "latitude": MessageLookupByLibrary.simpleMessage("العرض"),
         "locateEgTanEstad":
             MessageLookupByLibrary.simpleMessage("مصر، طنطا، شارع الاستاد"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "longitude": MessageLookupByLibrary.simpleMessage("الطول"),
         "lowestPrice": MessageLookupByLibrary.simpleMessage("أقل سعر"),
+        "manufacturer": MessageLookupByLibrary.simpleMessage("الشركة المصنعة"),
         "mileage": MessageLookupByLibrary.simpleMessage("عدد الأميال"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),
@@ -63,6 +78,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "pricePerKilo": MessageLookupByLibrary.simpleMessage("السعر بالكيلو"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
+        "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
+        "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("خدمة أربع و عشرون ساعة !"),

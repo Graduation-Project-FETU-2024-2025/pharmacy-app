@@ -401,6 +401,166 @@ class S {
       args: [],
     );
   }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log Out`
+  String get logout {
+    return Intl.message(
+      'Log Out',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark Mode`
+  String get darkMode {
+    return Intl.message(
+      'Dark Mode',
+      name: 'darkMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get arabic {
+    return Intl.message(
+      'Arabic',
+      name: 'arabic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hi`
+  String get hi {
+    return Intl.message(
+      'Hi',
+      name: 'hi',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We will deliver you medicines!`
+  String get homeMessage {
+    return Intl.message(
+      'We will deliver you medicines!',
+      name: 'homeMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Added`
+  String get lastAdded {
+    return Intl.message(
+      'Last Added',
+      name: 'lastAdded',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Almost running out`
+  String get almostRunOut {
+    return Intl.message(
+      'Almost running out',
+      name: 'almostRunOut',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See All`
+  String get seeAll {
+    return Intl.message(
+      'See All',
+      name: 'seeAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `search`
+  String get searchButtonTitle {
+    return Intl.message(
+      'search',
+      name: 'searchButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for medicine`
+  String get searchHint {
+    return Intl.message(
+      'Search for medicine',
+      name: 'searchHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In Stock`
+  String get inStock {
+    return Intl.message(
+      'In Stock',
+      name: 'inStock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dosage Form`
+  String get DoageForm {
+    return Intl.message(
+      'Dosage Form',
+      name: 'DoageForm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Active Substance`
+  String get activeSubstance {
+    return Intl.message(
+      'Active Substance',
+      name: 'activeSubstance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Manufacturer`
+  String get manufacturer {
+    return Intl.message(
+      'Manufacturer',
+      name: 'manufacturer',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

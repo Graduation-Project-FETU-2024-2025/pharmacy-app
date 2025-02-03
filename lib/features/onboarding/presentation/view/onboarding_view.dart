@@ -6,6 +6,7 @@ import 'package:pharmacy_app/core/helpers/extentions.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
+import 'package:pharmacy_app/core/utils/app_images.dart';
 import 'package:pharmacy_app/core/widgets/custom_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
@@ -29,6 +30,9 @@ class OnboardingView extends StatelessWidget {
         children: [
           Row(),
           Spacer(),
+          AspectRatio(
+              aspectRatio: 333 / 249,
+              child: Image.asset(AppImages.imgOnboarding)),
           Text(
             S.of(context).onboarding,
             textAlign: TextAlign.center,

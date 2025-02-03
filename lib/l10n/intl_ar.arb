@@ -39,6 +39,26 @@
     "deliveryRange": "نطاق التوصيل",
     "latitude":"العرض",
     "longitude":"الطول",
-    "getAddressInfo":"الحصول على معلومات العنوان"
+    "getAddressInfo":"الحصول على معلومات العنوان",
 
+    "language": "اللغة",
+    "logout": "تسجيل الخروج",
+    "darkMode": "الوضع الداكن",
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+
+
+    "hi":"مرحبا",
+    "homeMessage":"سوف نقوم بتوصيل الأدوية إليك!",
+    "lastAdded":"المضاف حديثاً",
+    "almostRunOut":"شارف على النفاذ",
+    "seeAll":"عرض الكل",
+
+    "searchButtonTitle":"ابحث",
+    "searchHint":"ابحث عن دواء",
+
+    "inStock":"متوفر في المخزن",
+    "DoageForm":"شكل الجرعة",
+    "activeSubstance":"المادة الفعالة",
+    "manufacturer":"الشركة المصنعة"
 }

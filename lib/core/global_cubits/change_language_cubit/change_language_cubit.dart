@@ -6,9 +6,13 @@ import 'package:pharmacy_app/core/services/get_it.dart';
 class ChangeLanguageCubit extends Cubit<ChangeLanguageState> {
   ChangeLanguageCubit() : super(ChangeLanguageInitial());
   static ChangeLanguageCubit get(context) => BlocProvider.of(context);
-
+  String arabic = 'ar';
+  String english = 'en';
   void changeLanguage({required String language})async {
    await getIt<CacheHelper>().setCurrentLanguage(language: language);
     emit(ChangeLanguageDone());
   }
+
+
+  
 }
