@@ -552,6 +552,16 @@ class S {
     );
   }
 
+  /// `All Medicines`
+  String get allMedicines {
+    return Intl.message(
+      'All Medicines',
+      name: 'allMedicines',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Medicine Information`
   String get medicineInformation {
     return Intl.message(

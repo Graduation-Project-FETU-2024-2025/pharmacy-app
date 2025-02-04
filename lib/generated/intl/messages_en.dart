@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "activeSubstance":
             MessageLookupByLibrary.simpleMessage("Active Substance"),
         "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
+        "allMedicines": MessageLookupByLibrary.simpleMessage("All Medicines"),
         "almostRunOut":
             MessageLookupByLibrary.simpleMessage("Almost running out"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
