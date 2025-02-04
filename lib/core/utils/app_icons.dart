@@ -91,6 +91,9 @@ class AppIcons {
   /// assets/icons/splash.svg
   static const String iconsSplash = "assets/icons/splash.svg";
 
+  static const String profilePic = "assets/icons/delivey_profile.svg";
+  static const String arrowDown = "assets/icons/arrow_down.svg";
+
   /// Assets for iconsLanguage
   /// assets/icons/language.svg
   static const String iconsLanguage = "assets/icons/language.svg";
@@ -102,8 +105,6 @@ class AppIcons {
   /// Assets for iconsTheme
   /// assets/icons/theme.svg
   static const String iconsTheme = "assets/icons/theme.svg";
-
-  static const String profilePic = "assets/icons/delivey_profile.svg";
 
   /// Assets for cart
   /// assets/icons/cart.svg

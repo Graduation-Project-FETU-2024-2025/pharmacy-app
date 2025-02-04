@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "almostRunOut":
             MessageLookupByLibrary.simpleMessage("Almost running out"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "areaAndPrice":
+            MessageLookupByLibrary.simpleMessage("Delivery Area & Price"),
         "branch": MessageLookupByLibrary.simpleMessage("Branch"),
         "branchName": MessageLookupByLibrary.simpleMessage("Branch Name"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("Branch Status"),
@@ -37,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "deliveryMan":
             MessageLookupByLibrary.simpleMessage("Delivery man name"),
+        "deliveryRange": MessageLookupByLibrary.simpleMessage("Delivery Range"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
             "Dr. Stone Pharmacy | Elestad"),
@@ -49,6 +52,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterQuantity": MessageLookupByLibrary.simpleMessage("Enter Quantity"),
         "form": MessageLookupByLibrary.simpleMessage("Form"),
         "freeDelivery": MessageLookupByLibrary.simpleMessage("Free Delivery"),
+        "getAddressInfo":
+            MessageLookupByLibrary.simpleMessage("Get Address Info"),
         "haveNotReceivedOTP":
             MessageLookupByLibrary.simpleMessage("Haven\'t received OTP?"),
         "hi": MessageLookupByLibrary.simpleMessage("Hi"),
@@ -58,12 +63,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "km": MessageLookupByLibrary.simpleMessage("KM"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastAdded": MessageLookupByLibrary.simpleMessage("Last Added"),
+        "latitude": MessageLookupByLibrary.simpleMessage("Latitude"),
         "locateEgTanEstad": MessageLookupByLibrary.simpleMessage(
             "Egypt, Tanta, El Estad Street"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "logout": MessageLookupByLibrary.simpleMessage("Log Out"),
+        "longitude": MessageLookupByLibrary.simpleMessage("Longitude"),
         "lowestPrice": MessageLookupByLibrary.simpleMessage("Lowest price"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Manufacturer"),
         "medicineInformation":
@@ -78,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneNum": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "pounds": MessageLookupByLibrary.simpleMessage("Pounds"),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
+        "pricePerKilo": MessageLookupByLibrary.simpleMessage("Price Per Killo"),
         "quantity": MessageLookupByLibrary.simpleMessage("Quantity"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),

@@ -332,6 +332,66 @@ class S {
     );
   }
 
+  /// `Delivery Area & Price`
+  String get areaAndPrice {
+    return Intl.message(
+      'Delivery Area & Price',
+      name: 'areaAndPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price Per Killo`
+  String get pricePerKilo {
+    return Intl.message(
+      'Price Per Killo',
+      name: 'pricePerKilo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Range`
+  String get deliveryRange {
+    return Intl.message(
+      'Delivery Range',
+      name: 'deliveryRange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Latitude`
+  String get latitude {
+    return Intl.message(
+      'Latitude',
+      name: 'latitude',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Longitude`
+  String get longitude {
+    return Intl.message(
+      'Longitude',
+      name: 'longitude',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Address Info`
+  String get getAddressInfo {
+    return Intl.message(
+      'Get Address Info',
+      name: 'getAddressInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Language`
   String get language {
     return Intl.message(
@@ -482,16 +542,6 @@ class S {
     );
   }
 
-  /// `Manufacturer`
-  String get manufacturer {
-    return Intl.message(
-      'Manufacturer',
-      name: 'manufacturer',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Delete`
   String get delete {
     return Intl.message(
@@ -587,6 +637,16 @@ class S {
     return Intl.message(
       'Select Branch',
       name: 'selectBranch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Manufacturer`
+  String get manufacturer {
+    return Intl.message(
+      'Manufacturer',
+      name: 'manufacturer',
       desc: '',
       args: [],
     );
