@@ -34,7 +34,6 @@
     "lowestPrice":"Lowest price",
     "branchStatus":"Branch Status",
     "save": "Save",
-    "delete": "Delete",
     "areaAndPrice": "Delivery Area & Price",
     "pricePerKilo": "Price Per Killo",
     "deliveryRange": "Delivery Range",
@@ -60,6 +59,16 @@
     "inStock":"In Stock",
     "DoageForm":"Dosage Form",
     "activeSubstance":"Active Substance",
+    "delete":"Delete",
+    "medicineInformation":"Medicine Information",
+    "medicineName":"Medicine Name",
+    "form":"Form",
+    "quantity":"Quantity",
+    "enterQuantity":"Enter Quantity",
+    "price":"Price",
+    "enterPrice":"Enter Price",
+    "branch":"Branch",
+    "selectBranch":"Select Branch",
     "manufacturer":"Manufacturer"
 
 }

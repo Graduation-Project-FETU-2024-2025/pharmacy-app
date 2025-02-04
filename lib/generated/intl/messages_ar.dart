@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "areaAndPrice":
             MessageLookupByLibrary.simpleMessage("منطقة التوصيل & السعر"),
+        "branch": MessageLookupByLibrary.simpleMessage("الفرع"),
         "branchName": MessageLookupByLibrary.simpleMessage("اسم الفرع"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("حالة الفرع"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
@@ -45,6 +46,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterOTP": MessageLookupByLibrary.simpleMessage("أدخل رمز التحقق"),
         "enterOTPWeSent": MessageLookupByLibrary.simpleMessage(
             "أدخل رمز التحقق الذي أرسلناه لك على"),
+        "enterPrice": MessageLookupByLibrary.simpleMessage("ادخل السعر"),
+        "enterQuantity": MessageLookupByLibrary.simpleMessage("ادخل الكمية"),
+        "form": MessageLookupByLibrary.simpleMessage("الشكل"),
         "freeDelivery": MessageLookupByLibrary.simpleMessage("توصيل مجاني"),
         "getAddressInfo":
             MessageLookupByLibrary.simpleMessage("الحصول على معلومات العنوان"),
@@ -67,6 +71,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "longitude": MessageLookupByLibrary.simpleMessage("الطول"),
         "lowestPrice": MessageLookupByLibrary.simpleMessage("أقل سعر"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("الشركة المصنعة"),
+        "medicineInformation":
+            MessageLookupByLibrary.simpleMessage("معلومات الدواء"),
+        "medicineName": MessageLookupByLibrary.simpleMessage("اسم الدواء"),
         "mileage": MessageLookupByLibrary.simpleMessage("عدد الأميال"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),
@@ -75,12 +82,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "pharmacyName": MessageLookupByLibrary.simpleMessage("اسم الصيدلية"),
         "phoneNum": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "pounds": MessageLookupByLibrary.simpleMessage("جنيه"),
+        "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "pricePerKilo": MessageLookupByLibrary.simpleMessage("السعر بالكيلو"),
+        "quantity": MessageLookupByLibrary.simpleMessage("الكمية"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
         "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
         "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+        "selectBranch": MessageLookupByLibrary.simpleMessage("اختر الفرع"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("خدمة أربع و عشرون ساعة !"),

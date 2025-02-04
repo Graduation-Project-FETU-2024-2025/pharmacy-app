@@ -18,6 +18,8 @@ import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/phar
 import 'package:pharmacy_app/features/profile/presentation/view/profile_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
 
+import '../../features/add_medicine/presentation/view_models/cubit/add_medicine_cubit.dart';
+import '../../features/add_medicine/presentation/views/add_medicine_view.dart';
 import '../../features/all_medicines/presentation/views/all_medicine_view.dart';
 
 class AppRouters {
@@ -42,6 +44,11 @@ class AppRouters {
           child: OTPView(
             email: argument as String,
           ),
+        ));
+      case Routing.addMedicine:
+        return _buildRoute(BlocProvider(
+          create: (context) => AddMedicineCubit(),
+          child: AddMedicineView(),
         ));
       case Routing.branchesScreen:
         return _buildRoute(BranchesScreen());

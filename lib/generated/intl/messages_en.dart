@@ -32,6 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "areaAndPrice":
             MessageLookupByLibrary.simpleMessage("Delivery Area & Price"),
+        "branch": MessageLookupByLibrary.simpleMessage("Branch"),
         "branchName": MessageLookupByLibrary.simpleMessage("Branch Name"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("Branch Status"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
@@ -47,6 +48,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterOTP": MessageLookupByLibrary.simpleMessage("Enter OTP"),
         "enterOTPWeSent":
             MessageLookupByLibrary.simpleMessage("Enter OTP we sent you at"),
+        "enterPrice": MessageLookupByLibrary.simpleMessage("Enter Price"),
+        "enterQuantity": MessageLookupByLibrary.simpleMessage("Enter Quantity"),
+        "form": MessageLookupByLibrary.simpleMessage("Form"),
         "freeDelivery": MessageLookupByLibrary.simpleMessage("Free Delivery"),
         "getAddressInfo":
             MessageLookupByLibrary.simpleMessage("Get Address Info"),
@@ -69,6 +73,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "longitude": MessageLookupByLibrary.simpleMessage("Longitude"),
         "lowestPrice": MessageLookupByLibrary.simpleMessage("Lowest price"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Manufacturer"),
+        "medicineInformation":
+            MessageLookupByLibrary.simpleMessage("Medicine Information"),
+        "medicineName": MessageLookupByLibrary.simpleMessage("Medicine Name"),
         "mileage": MessageLookupByLibrary.simpleMessage("Mileage"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
@@ -77,13 +84,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "pharmacyName": MessageLookupByLibrary.simpleMessage("Pharmacy Name"),
         "phoneNum": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "pounds": MessageLookupByLibrary.simpleMessage("Pounds"),
+        "price": MessageLookupByLibrary.simpleMessage("Price"),
         "pricePerKilo": MessageLookupByLibrary.simpleMessage("Price Per Killo"),
+        "quantity": MessageLookupByLibrary.simpleMessage("Quantity"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("search"),
         "searchHint":
             MessageLookupByLibrary.simpleMessage("Search for medicine"),
         "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
+        "selectBranch": MessageLookupByLibrary.simpleMessage("Select Branch"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("Twenty four hours service !"),

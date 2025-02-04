@@ -60,5 +60,14 @@
     "inStock":"متوفر في المخزن",
     "DoageForm":"شكل الجرعة",
     "activeSubstance":"المادة الفعالة",
-    "manufacturer":"الشركة المصنعة"
+    "manufacturer":"الشركة المصنعة",
+    "medicineInformation":"معلومات الدواء",
+    "medicineName":"اسم الدواء",
+    "form":"الشكل",
+    "quantity":"الكمية",
+    "enterQuantity":"ادخل الكمية",
+    "price":"السعر",
+    "enterPrice":"ادخل السعر",
+    "branch":"الفرع",
+    "selectBranch":"اختر الفرع"
 }

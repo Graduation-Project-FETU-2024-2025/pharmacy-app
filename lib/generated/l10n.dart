@@ -332,16 +332,6 @@ class S {
     );
   }
 
-  /// `Delete`
-  String get delete {
-    return Intl.message(
-      'Delete',
-      name: 'delete',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Delivery Area & Price`
   String get areaAndPrice {
     return Intl.message(
@@ -547,6 +537,106 @@ class S {
     return Intl.message(
       'Active Substance',
       name: 'activeSubstance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medicine Information`
+  String get medicineInformation {
+    return Intl.message(
+      'Medicine Information',
+      name: 'medicineInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medicine Name`
+  String get medicineName {
+    return Intl.message(
+      'Medicine Name',
+      name: 'medicineName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Form`
+  String get form {
+    return Intl.message(
+      'Form',
+      name: 'form',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quantity`
+  String get quantity {
+    return Intl.message(
+      'Quantity',
+      name: 'quantity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Quantity`
+  String get enterQuantity {
+    return Intl.message(
+      'Enter Quantity',
+      name: 'enterQuantity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price`
+  String get price {
+    return Intl.message(
+      'Price',
+      name: 'price',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Price`
+  String get enterPrice {
+    return Intl.message(
+      'Enter Price',
+      name: 'enterPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch`
+  String get branch {
+    return Intl.message(
+      'Branch',
+      name: 'branch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Branch`
+  String get selectBranch {
+    return Intl.message(
+      'Select Branch',
+      name: 'selectBranch',
       desc: '',
       args: [],
     );
