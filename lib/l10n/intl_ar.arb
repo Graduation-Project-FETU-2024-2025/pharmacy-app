@@ -33,6 +33,12 @@
     "lowestPrice":"أقل سعر",
     "branchStatus":"حالة الفرع",
     "save": "حفظ",
+    "areaAndPrice":"منطقة التوصيل & السعر",
+    "pricePerKilo": "السعر بالكيلو",
+    "deliveryRange": "نطاق التوصيل",
+    "latitude":"العرض",
+    "longitude":"الطول",
+    "getAddressInfo":"الحصول على معلومات العنوان",
 
     "language": "اللغة",
     "logout": "تسجيل الخروج",
@@ -55,5 +61,14 @@
     "activeSubstance":"المادة الفعالة",
     "manufacturer":"الشركة المصنعة",
     "delete":"حذف",
-    "allMedicines":"جميع الأدوية"
+    "allMedicines":"جميع الأدوية",
+    "medicineInformation":"معلومات الدواء",
+    "medicineName":"اسم الدواء",
+    "form":"الشكل",
+    "quantity":"الكمية",
+    "enterQuantity":"ادخل الكمية",
+    "price":"السعر",
+    "enterPrice":"ادخل السعر",
+    "branch":"الفرع",
+    "selectBranch":"اختر الفرع"
 }

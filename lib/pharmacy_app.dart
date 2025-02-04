@@ -29,8 +29,7 @@ class PharmacyApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: S.delegate.supportedLocales,
-              locale:
-                  Locale(getIt<CacheHelper>().getCurrentLanguage()),
+              locale: Locale(getIt<CacheHelper>().getCurrentLanguage()),
               initialRoute: Routing.splash,
               theme: Themes.lightTheme,
               darkTheme: Themes.darkTheme,

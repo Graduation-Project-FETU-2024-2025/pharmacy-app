@@ -11,8 +11,10 @@ Future<void> main() async {
   Bloc.observer = MyBlocObserver();
   setup();
   await getIt<CacheHelper>().init();
-  runApp(BlocProvider(
-    create: (context) => ChangeLanguageCubit(),
-    child: const PharmacyApp(),
-  ));
+  runApp(
+    BlocProvider(
+      create: (context) => ChangeLanguageCubit(),
+      child: const PharmacyApp(),
+    ),
+  );
 }
