@@ -106,20 +106,20 @@ class AlmostRunOutCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    left: getIt<CacheHelper>().getCurrentLanguage() == 'en'
-                        ? 24.w
-                        : 0,
-                    right: getIt<CacheHelper>().getCurrentLanguage() == 'ar'
-                        ? 24.w
-                        : 0,
-                  ),
-                  child: Text(
-                    'Dr.Stone | Elstad',
-                    style: Theme.of(context).textTheme.displaySmall,
-                  ),
-                ),
+                // Padding(
+                //   padding: EdgeInsets.only(
+                //     left: getIt<CacheHelper>().getCurrentLanguage() == 'en'
+                //         ? 24.w
+                //         : 0,
+                //     right: getIt<CacheHelper>().getCurrentLanguage() == 'ar'
+                //         ? 24.w
+                //         : 0,
+                //   ),
+                //   child: Text(
+                //     'Dr.Stone | Elstad',
+                //     style: Theme.of(context).textTheme.displaySmall,
+                //   ),
+                // ),
               ],
             ),
           ),

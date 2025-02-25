@@ -12,10 +12,11 @@ class AllMedicinesGridview extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 24.w,
-          mainAxisSpacing: 20.h,
-          childAspectRatio: 150 / 170),
+        crossAxisCount: 2,
+        crossAxisSpacing: 24.w,
+        mainAxisSpacing: 20.h,
+        childAspectRatio: 150 / 157,
+      ),
       itemBuilder: (context, index) => MedicineCard(
         medicineModel: MedicineModel(
           id: 1,

@@ -5,7 +5,6 @@ import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/widgets/add_delete_button.dart';
 import 'package:pharmacy_app/features/add_medicine/presentation/view_models/cubit/add_medicine_cubit.dart';
-import 'package:pharmacy_app/features/add_medicine/presentation/views/widgets/choose_branch.dart';
 import '../../../../../core/database/cache/cashe_helper.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_images.dart';
@@ -130,7 +129,6 @@ class AddMedicineViewBody extends StatelessWidget {
                 SizedBox(
                   height: 24.h,
                 ),
-                ChooseBranch(),
                 SizedBox(
                   height: 32.h,
                 ),

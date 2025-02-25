@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pharmacy_app/features/all_medicines/presentation/views/widgets/filter_branches_list.dart';
 import 'package:pharmacy_app/features/all_medicines/presentation/views/widgets/filter_list_view.dart';
 
 import '../../../../../core/utils/app_colors.dart';
@@ -48,11 +47,6 @@ class _FilterDialogState extends State<FilterDialog> {
             child: Column(
               children: [
                 FilterListView(
-                  selectedIndex: selectedIndex,
-                  onSelect: updateSelection,
-                ),
-                Divider(color: AppColors.black.withOpacity(0.1)),
-                FilterBranchesList(
                   selectedIndex: selectedIndex,
                   onSelect: updateSelection,
                 ),
