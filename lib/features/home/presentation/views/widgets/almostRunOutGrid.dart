@@ -14,10 +14,11 @@ class AlmostRunOutGrid extends StatelessWidget {
       shrinkWrap: true,
       itemCount: 4,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 24.w,
-          mainAxisSpacing: 20.h,
-          childAspectRatio: 157 / 198),
+        crossAxisCount: 2,
+        crossAxisSpacing: 24.w,
+        mainAxisSpacing: 20.h,
+        childAspectRatio: 157 / 179,
+      ),
       itemBuilder: (context, index) {
         return AlmostRunOutCard();
       },

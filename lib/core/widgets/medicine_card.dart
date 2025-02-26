@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pharmacy_app/core/utils/app_images.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../features/home/data/models/medicine_model.dart';
@@ -13,9 +12,9 @@ class MedicineCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 150 / 170,
+      aspectRatio: 157 / 150,
       child: Container(
-        height: 170.h,
+        width: 157,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
@@ -70,6 +69,7 @@ class MedicineCard extends StatelessWidget {
                                 medicineModel.medicineName,
                                 style: Theme.of(context).textTheme.labelMedium,
                               ),
+                              SizedBox(height: 5.h),
                               Text(
                                 medicineModel.activeSubstance,
                                 style: Theme.of(context)
@@ -88,22 +88,22 @@ class MedicineCard extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Spacer(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            AppImages.imgBranch,
-                            width: 12.w,
-                            height: 12.h,
-                          ),
-                          SizedBox(width: 2),
-                          Text(
-                            'Dr.Stone | Elstad',
-                            style: Theme.of(context).textTheme.displaySmall,
-                          ),
-                        ],
-                      ),
+                      // Spacer(),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.start,
+                      //   children: [
+                      //     Image.asset(
+                      //       AppImages.imgBranch,
+                      //       width: 12.w,
+                      //       height: 12.h,
+                      //     ),
+                      //     SizedBox(width: 2),
+                      //     Text(
+                      //       'Dr.Stone | Elstad',
+                      //       style: Theme.of(context).textTheme.displaySmall,
+                      //     ),
+                      //   ],
+                      // ),
                       SizedBox(height: 8.h),
                     ],
                   ),

@@ -21,6 +21,8 @@ class ProfileView extends StatelessWidget {
               UserInfoWidget(
                 imagePath: AppImages.imgMap,
                 name: 'Ahmed Mohamed',
+
+                
               ),
               Gap(30.h),
               ProfileOptionContainer(),

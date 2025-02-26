@@ -9,14 +9,12 @@ class TextAddMedForm extends StatelessWidget {
     required this.readOnly,
     this.controller,
     required this.hintText,
-    this.suffixIcon,
     this.keyboardType,
   });
   final String label;
   final bool readOnly;
   final TextEditingController? controller;
   final String hintText;
-  final Widget? suffixIcon;
   final TextInputType? keyboardType;
   @override
   Widget build(BuildContext context) {
@@ -50,11 +48,6 @@ class TextAddMedForm extends StatelessWidget {
             cursorColor: AppColors.primaryColor,
             style: Theme.of(context).textTheme.titleMedium,
             decoration: InputDecoration(
-              suffixIcon: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                child: suffixIcon ?? const SizedBox(),
-              ),
               contentPadding: EdgeInsets.symmetric(
                 horizontal: 16,
               ),
