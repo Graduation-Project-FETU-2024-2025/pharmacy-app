@@ -70,5 +70,7 @@
     "price":"السعر",
     "enterPrice":"ادخل السعر",
     "branch":"الفرع",
-    "selectBranch":"اختر الفرع"
+    "selectBranch":"اختر الفرع",
+    "startTime": "وقت البداية",
+    "endTime": "وقت الانتهاء"
 }

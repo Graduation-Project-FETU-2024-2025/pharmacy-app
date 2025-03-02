@@ -70,6 +70,8 @@
     "enterPrice":"Enter Price",
     "branch":"Branch",
     "selectBranch":"Select Branch",
-    "manufacturer":"Manufacturer"
+    "manufacturer":"Manufacturer",
+    "startTime": "Start Time",
+    "endTime": "End Time"
 
 }

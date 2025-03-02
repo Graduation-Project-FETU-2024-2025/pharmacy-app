@@ -16,7 +16,8 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController deliveryRange = TextEditingController();
   final TextEditingController lowestPriceController = TextEditingController();
-  final TextEditingController workHourController = TextEditingController();
+  final TextEditingController startTimeController = TextEditingController();
+  TextEditingController endTimeController = TextEditingController();
   final TextEditingController branchStatusController = TextEditingController();
   final TextEditingController latitudeController = TextEditingController();
   final TextEditingController longitudeController = TextEditingController();
@@ -34,7 +35,8 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
     phoneController.dispose();
     deliveryRange.dispose();
     lowestPriceController.dispose();
-    workHourController.dispose();
+    startTimeController.dispose();
+    endTimeController.dispose();
     branchStatusController.dispose();
     latitudeController.dispose();
     longitudeController.dispose();

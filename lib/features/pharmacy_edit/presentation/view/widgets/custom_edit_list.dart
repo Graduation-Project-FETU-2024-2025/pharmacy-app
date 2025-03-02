@@ -5,8 +5,8 @@ import 'package:pharmacy_app/core/widgets/custom_edit_text_form_field.dart';
 import 'package:pharmacy_app/features/pharmacy_edit/presentation/view/widgets/get_lat_and_long.dart';
 import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
-
 import 'delivery_status_field.dart';
+import 'working_hour_widget.dart';
 
 class CustomEditList extends StatelessWidget {
   const CustomEditList({super.key});
@@ -60,13 +60,7 @@ class CustomEditList extends StatelessWidget {
               hintTxt: S.of(context).lowestPrice,
             ),
             Gap(31.h),
-            Text(S.of(context).workingHour,
-                style: Theme.of(context).textTheme.labelMedium),
-            Gap(18.h),
-            CustomEditTextFormField(
-              controller: PharmacyEditCubit.get(context).workHourController,
-              hintTxt: S.of(context).workingHour,
-            ),
+            WorkingHourWidget(),
             Gap(31.h),
             Text(S.of(context).branchStatus,
                 style: Theme.of(context).textTheme.labelMedium),

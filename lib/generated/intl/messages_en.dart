@@ -45,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
             "Dr. Stone Pharmacy | Elestad"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "endTime": MessageLookupByLibrary.simpleMessage("End Time"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "enterOTP": MessageLookupByLibrary.simpleMessage("Enter OTP"),
         "enterOTPWeSent":
@@ -95,6 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Search for medicine"),
         "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
         "selectBranch": MessageLookupByLibrary.simpleMessage("Select Branch"),
+        "startTime": MessageLookupByLibrary.simpleMessage("Start Time"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("Twenty four hours service !"),
