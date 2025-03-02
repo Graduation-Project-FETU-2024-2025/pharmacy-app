@@ -27,44 +27,45 @@ class _PharmacyEditImgState extends State<PharmacyEditImg> {
       });
     }
   }
-void showImagePicker() {
-  showModalBottomSheet(
-    context: context,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
-    ),
-    builder: (context) => Padding(
-      padding: EdgeInsets.all(16.0),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              BuildImageOption(
-                icon: Icons.photo_library,
-                text: "Gallery",
-                onTap: () {
-                  pickImage(ImageSource.gallery);
-                  Navigator.pop(context);
-                },
-              ),
-              BuildImageOption(
-                icon: Icons.camera_alt,
-                text: "Camera",
-                onTap: () {
-                  pickImage(ImageSource.camera);
-                  Navigator.pop(context);
-                },
-              ),
-            ],
-          ),
-          SizedBox(height: 20),
-        ],
+
+  void showImagePicker() {
+    showModalBottomSheet(
+      context: context,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
       ),
-    ),
-  );
-}
+      builder: (context) => Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                BuildImageOption(
+                  icon: Icons.photo_library,
+                  text: "Gallery",
+                  onTap: () {
+                    pickImage(ImageSource.gallery);
+                    Navigator.pop(context);
+                  },
+                ),
+                BuildImageOption(
+                  icon: Icons.camera_alt,
+                  text: "Camera",
+                  onTap: () {
+                    pickImage(ImageSource.camera);
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
