@@ -70,6 +70,14 @@
     "enterPrice":"Enter Price",
     "branch":"Branch",
     "selectBranch":"Select Branch",
-    "manufacturer":"Manufacturer"
+    "manufacturer":"Manufacturer",
+
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "enableLocationService": "Please enable location service",
+    "locationPermissionDenied": "Location permission denied",
+    "locationPermanentlyDenied": "Location permission permanently denied"
+
+
 
 }

@@ -70,5 +70,11 @@
     "price":"السعر",
     "enterPrice":"ادخل السعر",
     "branch":"الفرع",
-    "selectBranch":"اختر الفرع"
+    "selectBranch":"اختر الفرع",
+
+    "startTime": "وقت البداية",
+    "endTime": "وقت الانتهاء",
+    "enableLocationService": "يرجى تفعيل خدمة الموقع",
+    "locationPermissionDenied": "تم رفض إذن الموقع",
+    "locationPermanentlyDenied": "تم رفض إذن الموقع بشكل دائم"
 }

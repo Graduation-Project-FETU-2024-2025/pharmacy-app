@@ -117,4 +117,5 @@ class AppIcons {
   /// Assets for filter
   /// assets/icons/filter.svg
   static const String iconsFilter = "assets/icons/filter.svg";
+  static const String iconTime = "assets/icons/time.svg";
 }

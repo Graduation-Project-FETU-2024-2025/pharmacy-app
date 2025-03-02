@@ -661,6 +661,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Start Time`
+  String get startTime {
+    return Intl.message(
+      'Start Time',
+      name: 'startTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End Time`
+  String get endTime {
+    return Intl.message(
+      'End Time',
+      name: 'endTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enable location service`
+  String get enableLocationService {
+    return Intl.message(
+      'Please enable location service',
+      name: 'enableLocationService',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location permission denied`
+  String get locationPermissionDenied {
+    return Intl.message(
+      'Location permission denied',
+      name: 'locationPermissionDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location permission permanently denied`
+  String get locationPermanentlyDenied {
+    return Intl.message(
+      'Location permission permanently denied',
+      name: 'locationPermanentlyDenied',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
