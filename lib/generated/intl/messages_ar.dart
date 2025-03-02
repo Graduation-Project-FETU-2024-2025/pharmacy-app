@@ -43,6 +43,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "drStonePharmacy":
             MessageLookupByLibrary.simpleMessage("صيدلية دكتور ستون | الاستاد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "enableLocationService":
+            MessageLookupByLibrary.simpleMessage("يرجى تفعيل خدمة الموقع"),
         "endTime": MessageLookupByLibrary.simpleMessage("وقت الانتهاء"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "enterOTP": MessageLookupByLibrary.simpleMessage("أدخل رمز التحقق"),
@@ -66,6 +68,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "latitude": MessageLookupByLibrary.simpleMessage("العرض"),
         "locateEgTanEstad":
             MessageLookupByLibrary.simpleMessage("مصر، طنطا، شارع الاستاد"),
+        "locationPermanentlyDenied":
+            MessageLookupByLibrary.simpleMessage("تم رفض إذن الموقع بشكل دائم"),
+        "locationPermissionDenied":
+            MessageLookupByLibrary.simpleMessage("تم رفض إذن الموقع"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),

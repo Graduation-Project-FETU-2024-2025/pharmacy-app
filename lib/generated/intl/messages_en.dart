@@ -45,6 +45,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
             "Dr. Stone Pharmacy | Elestad"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "enableLocationService": MessageLookupByLibrary.simpleMessage(
+            "Please enable location service"),
         "endTime": MessageLookupByLibrary.simpleMessage("End Time"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "enterOTP": MessageLookupByLibrary.simpleMessage("Enter OTP"),
@@ -68,6 +70,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "latitude": MessageLookupByLibrary.simpleMessage("Latitude"),
         "locateEgTanEstad": MessageLookupByLibrary.simpleMessage(
             "Egypt, Tanta, El Estad Street"),
+        "locationPermanentlyDenied": MessageLookupByLibrary.simpleMessage(
+            "Location permission permanently denied"),
+        "locationPermissionDenied":
+            MessageLookupByLibrary.simpleMessage("Location permission denied"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
