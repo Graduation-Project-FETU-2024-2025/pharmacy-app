@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../core/utils/app_icons.dart';
 import '../../../../../core/utils/app_images.dart';
-import '../../../../../generated/l10n.dart';
 
 class DeliveryCardDetail extends StatelessWidget {
   const DeliveryCardDetail({super.key});
