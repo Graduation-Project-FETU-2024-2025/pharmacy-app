@@ -1,16 +1,29 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit/sign_in_state.dart';
 
 class SignInCubit extends Cubit<SignInState> {
-  SignInCubit() : super(SignInInitial());
+  SignInCubit(this.authRepo) : super(SignInInitial());
+  final AuthRepo authRepo;
   static SignInCubit get(context) => BlocProvider.of<SignInCubit>(context);
+
   final TextEditingController emailController = TextEditingController();
 
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
+  void signUpStateEmitter() async {
+    emit(SignInLoading());
+    final result = await authRepo.login(emailController.text);
+    result.fold(
+      (errorMessage) {
+        emit(SignInFailure(message: errorMessage));
+      },
+      (successMessage) {
+        emit(SignInSuccess(message: successMessage));
+      },
+    );
+  }
 
   @override
   Future<void> close() {

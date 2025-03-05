@@ -3,8 +3,8 @@ import 'package:gap/gap.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_images.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pharmacy_app/core/widgets/custom_button.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/widgets/otp_digits_section.dart';
+import 'package:pharmacy_app/features/auth/presentation/views/widgets/otp_sing_in_bloc_consumer_button.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
 
 class OTPBody extends StatelessWidget {
@@ -42,7 +42,7 @@ class OTPBody extends StatelessWidget {
         Gap(30.h),
         OTPDigitsSection(),
         Gap(30.h),
-        CustomButton(onPressed: () {}, text: S.of(context).Continue),
+        OtpSignInBlocConsumerButton(email: email),
         Gap(18.h),
         Text(
           S.of(context).haveNotReceivedOTP,
@@ -67,3 +67,4 @@ class OTPBody extends StatelessWidget {
     );
   }
 }
+

@@ -83,11 +83,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("معلومات الدواء"),
         "medicineName": MessageLookupByLibrary.simpleMessage("اسم الدواء"),
         "mileage": MessageLookupByLibrary.simpleMessage("عدد الأميال"),
+        "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "pharmacyInfo":
             MessageLookupByLibrary.simpleMessage("معلومات الصيدلية"),
         "pharmacyName": MessageLookupByLibrary.simpleMessage("اسم الصيدلية"),
+        "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "phoneNum": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "pounds": MessageLookupByLibrary.simpleMessage("جنيه"),
         "price": MessageLookupByLibrary.simpleMessage("السعر"),

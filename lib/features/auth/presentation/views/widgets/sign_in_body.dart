@@ -1,14 +1,13 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:pharmacy_app/core/helpers/extentions.dart';
-import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pharmacy_app/core/widgets/custom_button.dart';
 import 'package:pharmacy_app/core/widgets/custom_text_form_field.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
+import 'package:pharmacy_app/features/auth/presentation/views/widgets/sign_in_bloc_consumer_button.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
 
 class SignInBody extends StatelessWidget {
@@ -18,11 +17,11 @@ class SignInBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final signInCubit = SignInCubit.get(context);
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 30.0.w),
       child: Column(
         children: [
-
           Gap(50.h),
           Text(
             S.of(context).welcomeBack,
@@ -38,9 +37,9 @@ class SignInBody extends StatelessWidget {
           ),
           Gap(30.h),
           Form(
-            key: SignInCubit.get(context).formKey,
+            key: signInCubit.formKey,
             child: CustomTextFormField(
-              controller: SignInCubit.get(context).emailController,
+              controller: signInCubit.emailController,
               hintText: S.of(context).email,
               keyboardType: TextInputType.emailAddress,
               prefixIcon: SvgPicture.asset(
@@ -49,13 +48,7 @@ class SignInBody extends StatelessWidget {
             ),
           ),
           Gap(60.h),
-          CustomButton(
-            onPressed: () {
-              context.pushNamed(Routing.otp,
-                  argument: SignInCubit.get(context).emailController.text);
-            },
-            text: S.of(context).login,
-          ),
+          SignInBlocConsumerButton(),
           Gap(20.h),
         ],
       ),

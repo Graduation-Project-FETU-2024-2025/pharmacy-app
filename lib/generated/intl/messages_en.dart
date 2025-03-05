@@ -85,11 +85,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Medicine Information"),
         "medicineName": MessageLookupByLibrary.simpleMessage("Medicine Name"),
         "mileage": MessageLookupByLibrary.simpleMessage("Mileage"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
         "pharmacyInfo":
             MessageLookupByLibrary.simpleMessage("Pharmacy Information"),
         "pharmacyName": MessageLookupByLibrary.simpleMessage("Pharmacy Name"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "phoneNum": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "pounds": MessageLookupByLibrary.simpleMessage("Pounds"),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
