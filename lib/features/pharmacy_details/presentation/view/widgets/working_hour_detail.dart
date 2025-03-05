@@ -10,11 +10,11 @@ class WorkingHourDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('10:00 Am',style: Theme.of(context).textTheme.labelMedium),
-        Gap(20.w),
-        Text('-',style: Theme.of(context).textTheme.labelMedium),
-        Gap(20.w),
-        Text('12:00 PM',style: Theme.of(context).textTheme.labelMedium,),
+        Text('10:00 Am',style: Theme.of(context).textTheme.bodySmall),
+        Gap(5.w),
+        Text('-',style: Theme.of(context).textTheme.bodySmall),
+        Gap(5.w),
+        Text('12:00 PM',style: Theme.of(context).textTheme.bodySmall,),
       ],
     );
   }

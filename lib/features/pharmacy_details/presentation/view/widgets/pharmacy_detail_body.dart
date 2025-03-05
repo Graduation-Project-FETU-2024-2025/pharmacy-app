@@ -15,7 +15,7 @@ class PharmacyDetailBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 29, right: 29, top: 35),
+      padding: const EdgeInsets.only(left: 30, right: 30, top: 35),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -38,7 +38,7 @@ class PharmacyDetailBody extends StatelessWidget {
                       SizedBox(width: 5),
                       Text(
                         S.of(context).locateEgTanEstad,
-                        style: Theme.of(context).textTheme.displayMedium!.copyWith(color: AppColors.black.withOpacity(0.4)),
+                        style: Theme.of(context).textTheme.labelMedium!.copyWith(color: AppColors.black.withOpacity(0.4), fontWeight: FontWeight.normal),
                         overflow: TextOverflow.ellipsis,
                       ),
                     ],
@@ -46,16 +46,30 @@ class PharmacyDetailBody extends StatelessWidget {
           Gap(32.h),
           Text(
             'Delivery Area & Price',
-            style: Theme.of(context).textTheme.labelMedium,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           DeliveryAreaCard(),
           Gap(34.h),
-          Text(
-            'Working Hours',
-            style: Theme.of(context).textTheme.labelMedium,
+          Row(
+            children: [
+              SvgPicture.asset(
+                    AppIcons.hourIcon,
+                    fit: BoxFit.contain,
+                    width: 20,
+                    height: 20,
+                  ),
+                  Gap(4.w),
+              Text(
+                'Working Hours',
+                style: Theme.of(context).textTheme.titleSmall,
+              ),
+            ],
           ),
           Gap(14.h),
-          WorkingHourDetail(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 18),
+            child: WorkingHourDetail(),
+          ),
           Gap(33.h),
           RowBtn(),
           Gap(42.h),

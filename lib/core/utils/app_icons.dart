@@ -91,5 +91,6 @@ class AppIcons {
   static const String iconsSplash = "assets/icons/splash.svg";
 
   static const String profilePic = "assets/icons/delivey_profile.svg";
+  static const String hourIcon = "assets/icons/work_hour.svg";
 }
 
