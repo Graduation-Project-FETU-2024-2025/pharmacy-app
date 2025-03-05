@@ -5,7 +5,9 @@
     "loginToYourAccount":"Login to your account",
     "email":"Email Address",
     "login":"Login",
-
+    "password":"Password",
+    "name":"Name",
+    "phone":"Phone",
     "allBranches":"All Branches",
     "drStonePharmacy":"Dr. Stone Pharmacy | Elestad",
     "locateEgTanEstad":"Egypt, Tanta, El Estad Street",

@@ -1,15 +1,16 @@
 
-import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
+
 
 class EndPoints {
   // base url
-  static String baseUrl = "https://food-api-omega.vercel.app/api/v1/";
+  static String baseUrl = "https://afiyatuk.runasp.net/";
 
   // endpoints
-  static String signIn = "user/signin";
-  static String signUp = "user/signup";
-  static String getUSer = "user/get-user/${CacheHelper().getData(key: ApiKeys.id)}";
-
+  
+  //auth
+  static String auth = "api/Auth/";
+  static String signIn = "${auth}login";
+  static String otp = "${auth}test-otp";
 }
 
 class ApiKeys {

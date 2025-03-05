@@ -5,7 +5,9 @@
     "loginToYourAccount":"تسجيل الدخول إلى حسابك",
     "email":"البريد الإلكتروني",
     "login":"تسجيل الدخول",
-
+    "password":"كلمة المرور",
+    "name":"الاسم",
+    "phone":"الهاتف",
     "allBranches":"جميع الفروع",
     "drStonePharmacy": "صيدلية دكتور ستون | الاستاد",
     "locateEgTanEstad":"مصر، طنطا، شارع الاستاد",
