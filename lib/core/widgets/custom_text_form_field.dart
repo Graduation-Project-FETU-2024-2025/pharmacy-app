@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pharmacy_app/core/utils/app_images.dart';
+import 'package:pharmacy_app/generated/l10n.dart';
 import '../helpers/extentions.dart';
 
 class CustomTextFormField extends StatefulWidget {
@@ -8,7 +10,6 @@ class CustomTextFormField extends StatefulWidget {
   final Widget? suffixIcon;
   final TextInputType keyboardType;
   final TextEditingController? controller;
-  // final String? Function(String?)? validator;  // no need to use
   final bool obscureText;
 
   const CustomTextFormField({
@@ -31,19 +32,19 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   bool isValid = false;
 
   String? validator({required String value, required String hintText}) {
-    if (hintText.toLowerCase().contains('email')) {
+    if (hintText.toLowerCase().contains(S.of(context).email.toLowerCase())) {
       if (!value.isValidEmail) {
         return 'Please enter a valid email address';
       }
-    } else if (hintText.toLowerCase().contains('password')) {
+    } else if (hintText.toLowerCase().contains(S.of(context).password.toLowerCase())) {
       if (!value.isValidPassword) {
         return 'Password must be at least 8 characters long and include letters and numbers';
       }
-    } else if (hintText.toLowerCase().contains('name')) {
+    } else if (hintText.toLowerCase().contains(S.of(context).name.toLowerCase())) {
       if (!value.isValidName) {
         return 'Please enter a valid name';
       }
-    } else if (hintText.toLowerCase().contains('phone')) {
+    } else if (hintText.toLowerCase().contains(S.of(context).phone.toLowerCase())) {
       if (!value.isValidPhone) {
         return 'Please enter a valid phone number';
       }
@@ -86,10 +87,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           child: widget.prefixIcon,
         ),
         suffixIcon: isValid
-            ? widget.suffixIcon ??
-                Icon(
-                  Icons.check_circle,
-                )
+            ? widget.suffixIcon ?? Image.asset(AppImages.imgCheckmark)
             : null,
       ),
     );

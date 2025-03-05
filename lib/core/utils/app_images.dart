@@ -1,19 +1,17 @@
 class AppImages {
-// map in branch screen 
+// map in branch screen
   static String imgMap = 'assets/images/map.png';
 
 //map pharmacy in branch screen
   static String imgPharmacy = 'assets/images/pharmacy.png';
 
-// image check mark 
+// image check mark
   static String imgCheckmark = 'assets/images/checkmark.png';
 
-// image wrong 
+// image wrong
   static String imgWrong = 'assets/images/wrong.png';
 
-
   static String imgAuthHeader = 'assets/images/auth_header_image.png';
-
 
   static String imgEmail = 'assets/images/email.png';
 
@@ -24,7 +22,20 @@ class AppImages {
   static String deliveryImg = "assets/images/delivery_img.png";
 
   static String workHour = "assets/images/working_hour.png";
+
   static String imgEdit = "assets/images/imgEdit.png";
 
+  static String imgOnboarding = "assets/images/onboarding.png";
 
+  static String imgEditName = "assets/images/edit.png";
+
+  static String imgWelcomeHome = "assets/images/welcomeHome.png";
+
+  static String imgBranch = "assets/images/branch.png";
+
+  static String imgAlarm = "assets/images/alarm.png";
+
+  static String imgMedicine = "assets/images/medicine.png";
+
+  static String imgMedDetail = 'assets/images/medicine_details.png';
 }

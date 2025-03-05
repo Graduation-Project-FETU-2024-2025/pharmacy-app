@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/otp_cubit/otp_cubit.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/widgets/otp_text_form_filed.dart';
 
@@ -15,51 +14,35 @@ class OTPDigitsSection extends StatelessWidget {
       child: Form(
         key: OtpCubit.get(context).otpFormKey,
         child: SizedBox(
-          height: 75,
+          height: 65,
           child: Row(
-            children: [
-              Expanded(
-                child: OtpTextFromFiled(
-                  controller: OtpCubit.get(context).otpController1,
-                  focusNode: OtpCubit.get(context).focusNode1,
-                  validator: OtpCubit.get(context).numberValidator,
-                  autoFocus: true,
-                  onChanged: (p0) => OtpCubit.get(context)
-                      .nextFiled(p0, OtpCubit.get(context).focusNode2),
+            children: List.generate(
+              OtpCubit.get(context).numberOfOtp,
+              (index) => Expanded(
+                child: Padding(
+                  padding: EdgeInsetsDirectional.only(
+                    end: index == OtpCubit.get(context).numberOfOtp - 1 ? 0 : 5,
+                  ),
+                  child: OtpTextFromFiled(
+                    controller: OtpCubit.get(context).otpControllers[index],
+                    focusNode: OtpCubit.get(context).otpFocusNodes[index],
+                    autoFocus: index == 0,
+                    onChanged: (value) {
+                      int otpIndex = OtpCubit.get(context).numberOfOtp - 1;
+                      if (index < otpIndex) {
+                        OtpCubit.get(context).nextFiled(
+                          value,
+                          OtpCubit.get(context).otpFocusNodes[index + 1],
+                        );
+                      }
+                      if (index == otpIndex) {
+                        OtpCubit.get(context).otpFocusNodes[index].unfocus();
+                      }
+                    },
+                  ),
                 ),
               ),
-              const Gap(10),
-              Expanded(
-                child: OtpTextFromFiled(
-                  controller: OtpCubit.get(context).otpController2,
-                  focusNode: OtpCubit.get(context).focusNode2,
-                  validator: OtpCubit.get(context).numberValidator,
-                  onChanged: (p0) => OtpCubit.get(context)
-                      .nextFiled(p0, OtpCubit.get(context).focusNode3),
-                ),
-              ),
-              const Gap(10),
-              Expanded(
-                child: OtpTextFromFiled(
-                  controller: OtpCubit.get(context).otpController3,
-                  focusNode: OtpCubit.get(context).focusNode3,
-                  validator: OtpCubit.get(context).numberValidator,
-                  onChanged: (p0) => OtpCubit.get(context)
-                      .nextFiled(p0, OtpCubit.get(context).focusNode4),
-                ),
-              ),
-              const Gap(10),
-              Expanded(
-                child: OtpTextFromFiled(
-                  controller: OtpCubit.get(context).otpController4,
-                  focusNode: OtpCubit.get(context).focusNode4,
-                  validator: OtpCubit.get(context).numberValidator,
-                  onChanged: (p0) {
-                    OtpCubit.get(context).focusNode4.unfocus();
-                  },
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),

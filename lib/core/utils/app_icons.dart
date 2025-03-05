@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class AppIcons {
   AppIcons._();
-  
+
   /// Assets for iconsAlarm
   /// assets/icons/alarm.svg
   static const String iconsAlarm = "assets/icons/alarm.svg";
@@ -13,6 +13,7 @@ class AppIcons {
   /// Assets for iconsBack
   /// assets/icons/back.svg
   static const String iconsBack = "assets/icons/back.svg";
+  static const String iconsBackRight = "assets/icons/back_right.svg";
 
   /// Assets for iconsBranches
   /// assets/icons/branches.svg
@@ -92,5 +93,31 @@ class AppIcons {
 
   static const String profilePic = "assets/icons/delivey_profile.svg";
   static const String hourIcon = "assets/icons/work_hour.svg";
-}
 
+  static const String arrowDown = "assets/icons/arrow_down.svg";
+
+  /// Assets for iconsLanguage
+  /// assets/icons/language.svg
+  static const String iconsLanguage = "assets/icons/language.svg";
+
+  /// Assets for iconsLogout
+  /// assets/icons/logout.svg
+  static const String iconsLogout = "assets/icons/logout.svg";
+
+  /// Assets for iconsTheme
+  /// assets/icons/theme.svg
+  static const String iconsTheme = "assets/icons/theme.svg";
+
+  /// Assets for cart
+  /// assets/icons/cart.svg
+  static const String iconsCart = "assets/icons/cart.svg";
+
+  /// Assets for arrowSeeAll
+  /// assets/icons/arrowSeeAll.svg
+  static const String iconsArrowSeeAll = "assets/icons/arrowSeeAll.svg";
+
+  /// Assets for filter
+  /// assets/icons/filter.svg
+  static const String iconsFilter = "assets/icons/filter.svg";
+  static const String iconTime = "assets/icons/time.svg";
+}

@@ -1,22 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pharmacy_app/features/auth/data/data/otp_sign_in_request_model.dart';
+import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/otp_cubit/otp_state.dart';
 
 class OtpCubit extends Cubit<OtpState> {
-  OtpCubit() : super(OtpInitial());
+  OtpCubit(this._authRepo) : super(OtpInitial());
+  final AuthRepo _authRepo;
   static OtpCubit get(context) => BlocProvider.of<OtpCubit>(context);
-  TextEditingController otpController1 = TextEditingController();
-  TextEditingController otpController2 = TextEditingController();
-  TextEditingController otpController3 = TextEditingController();
-  TextEditingController otpController4 = TextEditingController();
+  static final int _numberOTP = 4;
+  List<TextEditingController> otpControllers =
+      List.generate(_numberOTP, (index) => TextEditingController());
 
-  FocusNode focusNode1 = FocusNode();
-  FocusNode focusNode2 = FocusNode();
-  FocusNode focusNode3 = FocusNode();
-  FocusNode focusNode4 = FocusNode();
+  List<FocusNode> otpFocusNodes =
+      List.generate(_numberOTP, (index) => FocusNode());
+  void submitOtp(String email) async {
+    emit(OtpCheckLoading());
+    String otp = '';
+    for (var element in otpControllers) {
+      otp += element.text;
+    }
+    final result = await _authRepo
+        .verifyOTP(OtpSignInRequestModel(email: email, otp: otp));
+    result.fold(
+      (message) => emit(OtpCheckFailure(message)),
+      (r) => emit(OtpCheckSuccess()),
+    );
+  }
 
   GlobalKey<FormState> otpFormKey = GlobalKey<FormState>();
-
+  int get numberOfOtp => _numberOTP;
   void nextFiled(String value, FocusNode focusNode) {
     if (value.length == 1) {
       focusNode.requestFocus();
@@ -30,16 +43,22 @@ class OtpCubit extends Cubit<OtpState> {
     return null;
   }
 
+  void _disposeTextEditingControllers() {
+    for (var controller in otpControllers) {
+      controller.dispose();
+    }
+  }
+
+  void _disposeFocusNodes() {
+    for (var focusNode in otpFocusNodes) {
+      focusNode.dispose();
+    }
+  }
+
   @override
   Future<void> close() {
-    otpController1.dispose();
-    otpController2.dispose();
-    otpController3.dispose();
-    otpController4.dispose();
-    focusNode1.dispose();
-    focusNode2.dispose();
-    focusNode3.dispose();
-    focusNode4.dispose();
+    _disposeTextEditingControllers();
+    _disposeFocusNodes();
     return super.close();
   }
 }

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:pharmacy_app/core/utils/app_colors.dart';
+import 'package:pharmacy_app/core/utils/app_icons.dart';
+import 'package:pharmacy_app/features/pharmacy_details/presentation/view/widgets/delivery_area_card.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/widgets/row_btn.dart';
-import '../../../../../core/utils/app_colors.dart';
-import '../../../../../core/utils/app_icons.dart';
 import '../../../../../generated/l10n.dart';
-import 'delivery_area_card.dart';
 import 'working_hour_detail.dart';
 
 class PharmacyDetailBody extends StatelessWidget {

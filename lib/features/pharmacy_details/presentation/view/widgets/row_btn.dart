@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:pharmacy_app/core/helpers/extentions.dart';
+import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
+
+import '../../../../../generated/l10n.dart';
 
 class RowBtn extends StatelessWidget {
   const RowBtn({super.key});
@@ -27,7 +31,7 @@ class RowBtn extends StatelessWidget {
             ),
             onPressed: () {},//TODO
             child: Text(
-              'Delete',
+              S.of(context).delete,
               style: Theme.of(context)
                   .textTheme
                   .displayMedium!
@@ -49,7 +53,9 @@ class RowBtn extends StatelessWidget {
                 EdgeInsets.all(10),
               ),
             ),
-            onPressed: () {},//TODO
+            onPressed: () {
+              context.pushNamed(Routing.pharmacyEdit);
+            },
             child: SvgPicture.asset(
               AppIcons.iconsEdit,
               colorFilter: ColorFilter.mode(Colors.white, BlendMode.dst),

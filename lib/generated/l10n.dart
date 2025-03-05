@@ -100,6 +100,36 @@ class S {
     );
   }
 
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message(
+      'Phone',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `All Branches`
   String get allBranches {
     return Intl.message(
@@ -237,6 +267,476 @@ class S {
     return Intl.message(
       'Description',
       name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pharmacy Information`
+  String get pharmacyInfo {
+    return Intl.message(
+      'Pharmacy Information',
+      name: 'pharmacyInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pharmacy Name`
+  String get pharmacyName {
+    return Intl.message(
+      'Pharmacy Name',
+      name: 'pharmacyName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch Name`
+  String get branchName {
+    return Intl.message(
+      'Branch Name',
+      name: 'branchName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery man name`
+  String get deliveryMan {
+    return Intl.message(
+      'Delivery man name',
+      name: 'deliveryMan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get phoneNum {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNum',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mileage`
+  String get mileage {
+    return Intl.message(
+      'Mileage',
+      name: 'mileage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lowest price`
+  String get lowestPrice {
+    return Intl.message(
+      'Lowest price',
+      name: 'lowestPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch Status`
+  String get branchStatus {
+    return Intl.message(
+      'Branch Status',
+      name: 'branchStatus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Area & Price`
+  String get areaAndPrice {
+    return Intl.message(
+      'Delivery Area & Price',
+      name: 'areaAndPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price Per Killo`
+  String get pricePerKilo {
+    return Intl.message(
+      'Price Per Killo',
+      name: 'pricePerKilo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Range`
+  String get deliveryRange {
+    return Intl.message(
+      'Delivery Range',
+      name: 'deliveryRange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Latitude`
+  String get latitude {
+    return Intl.message(
+      'Latitude',
+      name: 'latitude',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Longitude`
+  String get longitude {
+    return Intl.message(
+      'Longitude',
+      name: 'longitude',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Address Info`
+  String get getAddressInfo {
+    return Intl.message(
+      'Get Address Info',
+      name: 'getAddressInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log Out`
+  String get logout {
+    return Intl.message(
+      'Log Out',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark Mode`
+  String get darkMode {
+    return Intl.message(
+      'Dark Mode',
+      name: 'darkMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get arabic {
+    return Intl.message(
+      'Arabic',
+      name: 'arabic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hi`
+  String get hi {
+    return Intl.message(
+      'Hi',
+      name: 'hi',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We will deliver you medicines!`
+  String get homeMessage {
+    return Intl.message(
+      'We will deliver you medicines!',
+      name: 'homeMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Added`
+  String get lastAdded {
+    return Intl.message(
+      'Last Added',
+      name: 'lastAdded',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Almost running out`
+  String get almostRunOut {
+    return Intl.message(
+      'Almost running out',
+      name: 'almostRunOut',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See All`
+  String get seeAll {
+    return Intl.message(
+      'See All',
+      name: 'seeAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `search`
+  String get searchButtonTitle {
+    return Intl.message(
+      'search',
+      name: 'searchButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for medicine`
+  String get searchHint {
+    return Intl.message(
+      'Search for medicine',
+      name: 'searchHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In Stock`
+  String get inStock {
+    return Intl.message(
+      'In Stock',
+      name: 'inStock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dosage Form`
+  String get DoageForm {
+    return Intl.message(
+      'Dosage Form',
+      name: 'DoageForm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Active Substance`
+  String get activeSubstance {
+    return Intl.message(
+      'Active Substance',
+      name: 'activeSubstance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Medicines`
+  String get allMedicines {
+    return Intl.message(
+      'All Medicines',
+      name: 'allMedicines',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medicine Information`
+  String get medicineInformation {
+    return Intl.message(
+      'Medicine Information',
+      name: 'medicineInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medicine Name`
+  String get medicineName {
+    return Intl.message(
+      'Medicine Name',
+      name: 'medicineName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Form`
+  String get form {
+    return Intl.message(
+      'Form',
+      name: 'form',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quantity`
+  String get quantity {
+    return Intl.message(
+      'Quantity',
+      name: 'quantity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Quantity`
+  String get enterQuantity {
+    return Intl.message(
+      'Enter Quantity',
+      name: 'enterQuantity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price`
+  String get price {
+    return Intl.message(
+      'Price',
+      name: 'price',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Price`
+  String get enterPrice {
+    return Intl.message(
+      'Enter Price',
+      name: 'enterPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch`
+  String get branch {
+    return Intl.message(
+      'Branch',
+      name: 'branch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Branch`
+  String get selectBranch {
+    return Intl.message(
+      'Select Branch',
+      name: 'selectBranch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Manufacturer`
+  String get manufacturer {
+    return Intl.message(
+      'Manufacturer',
+      name: 'manufacturer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Time`
+  String get startTime {
+    return Intl.message(
+      'Start Time',
+      name: 'startTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End Time`
+  String get endTime {
+    return Intl.message(
+      'End Time',
+      name: 'endTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enable location service`
+  String get enableLocationService {
+    return Intl.message(
+      'Please enable location service',
+      name: 'enableLocationService',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location permission denied`
+  String get locationPermissionDenied {
+    return Intl.message(
+      'Location permission denied',
+      name: 'locationPermissionDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location permission permanently denied`
+  String get locationPermanentlyDenied {
+    return Intl.message(
+      'Location permission permanently denied',
+      name: 'locationPermanentlyDenied',
       desc: '',
       args: [],
     );

@@ -5,7 +5,9 @@
     "loginToYourAccount":"Login to your account",
     "email":"Email Address",
     "login":"Login",
-
+    "password":"Password",
+    "name":"Name",
+    "phone":"Phone",
     "allBranches":"All Branches",
     "drStonePharmacy":"Dr. Stone Pharmacy | Elestad",
     "locateEgTanEstad":"Egypt, Tanta, El Estad Street",
@@ -23,6 +25,61 @@
     "pounds":"Pounds",
     "km":"KM",
     "deliveryArea&price" :"Delivery Area & Price",
-    "description":"Description"
+    "description":"Description",
+
+    "pharmacyInfo": "Pharmacy Information",
+    "pharmacyName": "Pharmacy Name",
+    "branchName":"Branch Name",
+    "deliveryMan":"Delivery man name",
+    "phoneNum":"Phone Number",
+    "mileage":"Mileage",
+    "lowestPrice":"Lowest price",
+    "branchStatus":"Branch Status",
+    "save": "Save",
+    "areaAndPrice": "Delivery Area & Price",
+    "pricePerKilo": "Price Per Killo",
+    "deliveryRange": "Delivery Range",
+    "latitude":"Latitude",
+    "longitude":"Longitude",
+    "getAddressInfo":"Get Address Info",
+
+    "language": "Language",
+    "logout": "Log Out",
+    "darkMode": "Dark Mode",
+    "english": "English",
+    "arabic": "Arabic",
+
+    "hi":"Hi",
+    "homeMessage":"We will deliver you medicines!",
+    "lastAdded":"Last Added",
+    "almostRunOut":"Almost running out",
+    "seeAll":"See All",
+
+    "searchButtonTitle":"search",
+    "searchHint":"Search for medicine",
+
+    "inStock":"In Stock",
+    "DoageForm":"Dosage Form",
+    "activeSubstance":"Active Substance",
+    "delete":"Delete",
+    "allMedicines":"All Medicines",
+    "medicineInformation":"Medicine Information",
+    "medicineName":"Medicine Name",
+    "form":"Form",
+    "quantity":"Quantity",
+    "enterQuantity":"Enter Quantity",
+    "price":"Price",
+    "enterPrice":"Enter Price",
+    "branch":"Branch",
+    "selectBranch":"Select Branch",
+    "manufacturer":"Manufacturer",
+
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "enableLocationService": "Please enable location service",
+    "locationPermissionDenied": "Location permission denied",
+    "locationPermanentlyDenied": "Location permission permanently denied"
+
+
 
 }
