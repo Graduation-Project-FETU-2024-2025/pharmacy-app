@@ -1,26 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:pharmacy_app/core/database/api/api_consumer.dart';
-import 'package:pharmacy_app/core/database/api/api_interceptors.dart';
-import 'package:pharmacy_app/core/database/api/end_points.dart';
 
 class DioConsumer extends ApiConsumer {
   final Dio dio;
 
-  DioConsumer({required this.dio}) {
-    dio.options.baseUrl =
-        EndPoints.baseUrl; // base url for API
-    dio.interceptors.add(ApiInterceptors());
-    dio.interceptors.add(
-      LogInterceptor(
-        request: true,
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: true,
-        error: true,
-      ),
-    );
-  }
+  DioConsumer({required this.dio});
   @override
   Future delete(
     String path, {
@@ -92,7 +76,8 @@ class DioConsumer extends ApiConsumer {
       handleDioExceptions(e);
     }
   }
-  handleDioExceptions(e){
+
+  handleDioExceptions(e) {
     print(e.message); // I Will Handle this later 😑😑
   }
 }
