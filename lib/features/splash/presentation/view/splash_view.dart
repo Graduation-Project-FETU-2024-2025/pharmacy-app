@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pharmacy_app/core/database/api/end_points.dart';
 import 'package:pharmacy_app/core/database/cache/cache_keys.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
+import 'package:pharmacy_app/core/database/cache/secure_storage.dart';
 import 'package:pharmacy_app/core/helpers/extentions.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
@@ -49,12 +51,16 @@ class _SplashViewState extends State<SplashView> {
     );
   }
 
-  _getInitRoute() {
-    if (!getIt<CacheHelper>().getData(key: CacheKeys.isFirstTime)) {
-      context
-          .pushReplacementNamed(Routing.signIn); 
-    } else {
-      context.pushReplacementNamed(Routing.onboarding);
+  _getInitRoute() async {
+    final token = await SecureStorage.instance.getData(key: ApiKeys.token);
+    if (mounted) {
+      if (token != null) {
+        context.pushReplacementNamed(Routing.homeView);
+      } else if (!getIt<CacheHelper>().getData(key: CacheKeys.isFirstTime)) {
+        context.pushReplacementNamed(Routing.signIn);
+      } else {
+        context.pushReplacementNamed(Routing.onboarding);
+      }
     }
   }
 }

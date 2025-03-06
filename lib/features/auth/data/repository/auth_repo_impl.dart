@@ -15,7 +15,7 @@ class AuthRepoImpl extends AuthRepo {
     try {
       final response = await _apiConsumer
           .post(EndPoints.signIn, data: {ApiKeys.email: email});
-      final message = response[ApiKeys.message];
+      final message = response.data[ApiKeys.message];
       return Right(message);
     } catch (e) {
       return Left(e.toString());
@@ -27,7 +27,7 @@ class AuthRepoImpl extends AuthRepo {
     try {
       final response = await _apiConsumer.post(EndPoints.otp,
           data: otpSignInRequestModel.toJson());
-      final data = OtpSignInResponseModel.fromJson(response);
+      final data = OtpSignInResponseModel.fromJson(response.data);
       await _cacheTokenAndId(data.token);
       return Right(data.message);
     } catch (e) {
