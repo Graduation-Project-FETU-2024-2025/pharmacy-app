@@ -6,11 +6,12 @@ import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/widgets/delivery_area_card.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/widgets/row_btn.dart';
-import '../../../../../generated/l10n.dart';
+import 'package:pharmacy_app/features/pharmacy_details/presentation/view_model/model/pharmacy_branch_model.dart';
 import 'working_hour_detail.dart';
 
 class PharmacyDetailBody extends StatelessWidget {
-  const PharmacyDetailBody({super.key});
+  const PharmacyDetailBody({super.key, required this.branch});
+  final PharmacyBranchModel branch;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class PharmacyDetailBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            S.of(context).drStonePharmacy.substring(0, 18),
+            branch.branchName,
             style: Theme.of(context)
                 .textTheme
                 .displayLarge!
@@ -37,7 +38,7 @@ class PharmacyDetailBody extends StatelessWidget {
                   ),
                       SizedBox(width: 5),
                       Text(
-                        S.of(context).locateEgTanEstad,
+                        branch.address,
                         style: Theme.of(context).textTheme.labelMedium!.copyWith(color: AppColors.black.withOpacity(0.4), fontWeight: FontWeight.normal),
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -48,7 +49,7 @@ class PharmacyDetailBody extends StatelessWidget {
             'Delivery Area & Price',
             style: Theme.of(context).textTheme.titleSmall,
           ),
-          DeliveryAreaCard(),
+          DeliveryAreaCard( phoneNum : branch.phoneNumber ,pricePerKilo: branch.pricePerKilo ,deliveryRange: branch.deliveryRange),
           Gap(34.h),
           Row(
             children: [
@@ -68,7 +69,7 @@ class PharmacyDetailBody extends StatelessWidget {
           Gap(14.h),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 18),
-            child: WorkingHourDetail(),
+            child: WorkingHourDetail(workingHour: branch.workingHours),
           ),
           Gap(33.h),
           RowBtn(),

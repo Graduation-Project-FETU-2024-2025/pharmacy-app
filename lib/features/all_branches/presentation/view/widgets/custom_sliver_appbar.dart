@@ -20,9 +20,9 @@ class CustomSliverAppBar extends StatelessWidget {
       elevation: 0.0,
       stretch: true,
       flexibleSpace: FlexibleSpaceBar(
-        background: Image.asset(
+        background: Image.network(
           img,
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
         ),
         stretchModes: const [
           StretchMode.blurBackground,

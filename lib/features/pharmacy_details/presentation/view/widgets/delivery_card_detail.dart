@@ -5,8 +5,10 @@ import '../../../../../core/utils/app_icons.dart';
 import '../../../../../core/utils/app_images.dart';
 
 class DeliveryCardDetail extends StatelessWidget {
-  const DeliveryCardDetail({super.key});
-
+  const DeliveryCardDetail({super.key, required this.phoneNum, required this.pricePerKilo, required this.deliveryRange});
+  final String phoneNum;
+  final double pricePerKilo;
+  final int deliveryRange;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -15,7 +17,7 @@ class DeliveryCardDetail extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: 120.w,
+            width: 119.w,
             height: 80.h,
             decoration: BoxDecoration(
                 image: DecorationImage(
@@ -35,7 +37,7 @@ class DeliveryCardDetail extends StatelessWidget {
                     ),
                     SizedBox(width: 5.w),
                     Text(
-                      '+20 1553258966',
+                      phoneNum,
                       style: Theme.of(context).textTheme.bodySmall,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -49,7 +51,7 @@ class DeliveryCardDetail extends StatelessWidget {
                     ),
                     SizedBox(width: 5.w),
                     Text(
-                      '10 KM',
+                      '$deliveryRange KM',
                       style: Theme.of(context).textTheme.bodySmall,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -60,7 +62,7 @@ class DeliveryCardDetail extends StatelessWidget {
                     ),
                     SizedBox(width: 5.w),
                     Text(
-                      '5 Pounds',
+                      '$pricePerKilo Pounds',
                       style: Theme.of(context).textTheme.bodySmall,
                       overflow: TextOverflow.ellipsis,
                     ),

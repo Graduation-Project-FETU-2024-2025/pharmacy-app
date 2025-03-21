@@ -26,12 +26,15 @@ class DioConsumer extends ApiConsumer {
 
   @override
   Future get(String path,
-      {Object? data, Map<String, dynamic>? queryParameter}) async {
+      {Object? data, Map<String, dynamic>? queryParameter,Map<String, String>? headers}) async {
     try {
       final response = await dio.get(
         path,
         data: data,
         queryParameters: queryParameter,
+        options: Options(
+        headers: headers ?? {}, 
+      ),
       );
       return response;
     } on DioException catch (e) {
