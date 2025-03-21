@@ -2,24 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/utils/app_images.dart';
-import 'package:pharmacy_app/features/all_branches/presentation/view_model/models/branch_model.dart';
 import '../../../../../core/utils/app_colors.dart';
-import '../../../../../generated/l10n.dart';
+import '../../../data/data/pharmacy_branch_model.dart';
 
 class BranchesCardItems extends StatelessWidget {
-  const BranchesCardItems({super.key});
+  const BranchesCardItems({super.key, required this.branches});
+  final PharmacyBranchModel branches;
 
   @override
   Widget build(BuildContext context) {
-    Map<String, dynamic> branchJson = {
-  "branchName": S.of(context).drStonePharmacy,
-  "branchLocation": S.of(context).locateEgTanEstad,
-  "branchPhone": "+20 1553258966",
-  "deliveryOption": S.of(context).freeDelivery,
-  "branchImagePath": AppImages.imgPharmacy,
-};
-
-BranchModel branchFromJson = BranchModel.fromJson(branchJson);
 
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 30),
@@ -38,7 +29,8 @@ BranchModel branchFromJson = BranchModel.fromJson(branchJson);
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                        image: AssetImage(branchFromJson.branchImagePath))),
+                      fit: BoxFit.cover,
+                        image: NetworkImage(branches.image))),
               ),
             ),
             Padding(
@@ -49,7 +41,7 @@ BranchModel branchFromJson = BranchModel.fromJson(branchJson);
                   SizedBox(
                     width: MediaQuery.of(context).size.width*0.55,
                     child: Text(
-                      branchFromJson.branchName,
+                      branches.branchName,
                       style: Theme.of(context).textTheme.labelMedium!.copyWith(color: AppColors.primaryColor),
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -63,7 +55,7 @@ BranchModel branchFromJson = BranchModel.fromJson(branchJson);
                   ),
                       SizedBox(width: 5),
                       Text(
-                        branchFromJson.branchLocation,
+                        branches.address,
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -78,7 +70,7 @@ BranchModel branchFromJson = BranchModel.fromJson(branchJson);
                   ),
                       SizedBox(width: 5),
                       Text(
-                        branchFromJson.branchPhone,
+                        branches.phoneNumber,
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -90,7 +82,7 @@ BranchModel branchFromJson = BranchModel.fromJson(branchJson);
                       Image.asset(AppImages.imgCheckmark),
                       SizedBox(width: 5),
                       Text(
-                        branchFromJson.deliveryOption,
+                        branches.status,
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       ),

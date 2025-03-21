@@ -1,11 +1,11 @@
-class WorkingHoursModel {
+class WorkingHours {
   final String start;
   final String end;
 
-  WorkingHoursModel({required this.start, required this.end});
+  WorkingHours({required this.start, required this.end});
 
-  factory WorkingHoursModel.fromJson(Map<String, dynamic> json) {
-    return WorkingHoursModel(
+  factory WorkingHours.fromJson(Map<String, dynamic> json) {
+    return WorkingHours(
       start: json['start'],
       end: json['end'],
     );

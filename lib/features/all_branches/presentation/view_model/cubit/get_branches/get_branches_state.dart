@@ -8,7 +8,9 @@ final class GetBranchesInitial extends GetBranchesState {}
 final class GetBranchesLoading extends GetBranchesState {}
 
 final class GetBranchesSuccess extends GetBranchesState {
+  final List<PharmacyBranchModel> branches;
 
+  GetBranchesSuccess({required this.branches});
 }
 
 final class GetBranchesFailure extends GetBranchesState {

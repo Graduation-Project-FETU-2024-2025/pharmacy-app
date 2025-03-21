@@ -15,7 +15,7 @@ class DeliveryCardDetail extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: 120.w,
+            width: 119.w,
             height: 80.h,
             decoration: BoxDecoration(
                 image: DecorationImage(
