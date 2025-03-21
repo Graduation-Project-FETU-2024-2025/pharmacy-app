@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
+import 'package:pharmacy_app/features/all_branches/data/repo/get_branches_repo.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view/branches_screen.dart';
+import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_cubit.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/otp_cubit/otp_cubit.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
@@ -53,7 +55,10 @@ class AppRouters {
           child: AddMedicineView(),
         ));
       case Routing.branchesScreen:
-        return _buildRoute(BranchesScreen());
+        return _buildRoute(BlocProvider(
+          create: (context) => GetBranchesCubit(getIt<GetBranchesRepo>()),
+          child: BranchesScreen(),
+        ));
       case Routing.homeView:
         return _buildRoute(HomeView());
       case Routing.allMedicinesScreen:

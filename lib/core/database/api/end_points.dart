@@ -11,6 +11,7 @@ class EndPoints {
   static String auth = "api/Auth/";
   static String signIn = "${auth}login";
   static String otp = "${auth}test-otp";
+  static String getBranches = '/api/secure/Branch';
 }
 
 class ApiKeys {
