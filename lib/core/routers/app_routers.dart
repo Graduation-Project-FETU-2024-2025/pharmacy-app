@@ -56,7 +56,7 @@ class AppRouters {
         ));
       case Routing.branchesScreen:
         return _buildRoute(BlocProvider(
-          create: (context) => GetBranchesCubit(getIt<GetBranchesRepo>()),
+          create: (context) => GetBranchesCubit(getIt<GetBranchesRepo>())..fetchBranches(),
           child: BranchesScreen(),
         ));
       case Routing.homeView:

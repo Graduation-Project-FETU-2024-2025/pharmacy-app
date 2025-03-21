@@ -35,10 +35,10 @@ class GetBranchesRepoImpl implements GetBranchesRepo {
         },
       );
 
-      List<dynamic> data = response['data']; 
-      log(data.toString());
+      List<dynamic> data = response.data["data"];
       return data.map((json) => PharmacyBranchModel.fromJson(json)).toList();
     } catch (e) {
+      log(e.toString());
       throw Exception('Failed to fetch pharmacies: $e');
     }
   }

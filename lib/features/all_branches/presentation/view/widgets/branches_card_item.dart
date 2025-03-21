@@ -29,6 +29,7 @@ class BranchesCardItems extends StatelessWidget {
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
+                      fit: BoxFit.cover,
                         image: NetworkImage(branches.image))),
               ),
             ),

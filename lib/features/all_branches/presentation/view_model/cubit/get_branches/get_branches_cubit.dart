@@ -9,7 +9,7 @@ class GetBranchesCubit extends Cubit<GetBranchesState> {
   final GetBranchesRepo getBranchesRepo;
 
   Future<void> fetchBranches() async {
-    emit(GetBranchesInitial());
+    emit(GetBranchesLoading());
 
     try {
       final branches = await getBranchesRepo.getAllBranches();

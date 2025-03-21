@@ -6,7 +6,6 @@ import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit
 import '../../../../core/utils/app_images.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../../../generated/l10n.dart';
-import '../../data/repo/get_branches_repo.dart';
 import 'widgets/branches_card_item.dart';
 import 'widgets/custom_sliver_appbar.dart';
 
