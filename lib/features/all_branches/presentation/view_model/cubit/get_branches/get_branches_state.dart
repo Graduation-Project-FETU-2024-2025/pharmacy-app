@@ -1,6 +1,6 @@
-part of 'get_branches_cubit.dart';
 
-@immutable
+import 'package:pharmacy_app/features/all_branches/data/data/pharmacy_branch_model.dart';
+
 sealed class GetBranchesState {}
 
 final class GetBranchesInitial extends GetBranchesState {}

@@ -4,10 +4,14 @@ import '../../../../../core/utils/app_colors.dart';
 
 class CustomSliverAppBar extends StatelessWidget {
   const CustomSliverAppBar(
-      {super.key, required this.img, required this.isBtnValid, required this.height});
+      {super.key,
+      required this.img,
+      required this.isBtnValid,
+      required this.height,  this.isLocalImage=false});
   final String img;
   final bool isBtnValid;
   final double height;
+  final bool isLocalImage;
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +24,10 @@ class CustomSliverAppBar extends StatelessWidget {
       elevation: 0.0,
       stretch: true,
       flexibleSpace: FlexibleSpaceBar(
-        background: Image.asset(
+        background:isLocalImage? Image.asset(img) :Image.network(
+           // TODO: change this to CachedNetworkImage
           img,
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
         ),
         stretchModes: const [
           StretchMode.blurBackground,
