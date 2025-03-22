@@ -2,8 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:pharmacy_app/features/all_branches/data/data/working_hours_model.dart';
 
-import '../../view_model/model/working_hours_model.dart';
+
 
 class WorkingHourDetail extends StatelessWidget {
   const WorkingHourDetail({super.key, required this.workingHour});

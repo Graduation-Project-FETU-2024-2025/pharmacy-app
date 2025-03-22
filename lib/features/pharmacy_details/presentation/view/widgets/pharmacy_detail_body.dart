@@ -4,9 +4,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
+import 'package:pharmacy_app/features/all_branches/data/data/pharmacy_branch_model.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/widgets/delivery_area_card.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/widgets/row_btn.dart';
-import 'package:pharmacy_app/features/pharmacy_details/presentation/view_model/model/pharmacy_branch_model.dart';
+
 import 'working_hour_detail.dart';
 
 class PharmacyDetailBody extends StatelessWidget {
@@ -29,37 +30,42 @@ class PharmacyDetailBody extends StatelessWidget {
           ),
           Gap(10.h),
           Row(
-                    children: [
-                      SvgPicture.asset(
-                    AppIcons.iconsLocation,
-                    fit: BoxFit.contain,
-                    width: 20,
-                    height: 20,
-                  ),
-                      SizedBox(width: 5),
-                      Text(
-                        branch.address,
-                        style: Theme.of(context).textTheme.labelMedium!.copyWith(color: AppColors.black.withOpacity(0.4), fontWeight: FontWeight.normal),
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ],
-                  ),
+            children: [
+              SvgPicture.asset(
+                AppIcons.iconsLocation,
+                fit: BoxFit.contain,
+                width: 20,
+                height: 20,
+              ),
+              SizedBox(width: 5),
+              Text(
+                branch.address,
+                style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                    color: AppColors.black.withOpacity(0.4),
+                    fontWeight: FontWeight.normal),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ],
+          ),
           Gap(32.h),
           Text(
             'Delivery Area & Price',
             style: Theme.of(context).textTheme.titleSmall,
           ),
-          DeliveryAreaCard( phoneNum : branch.phoneNumber ,pricePerKilo: branch.pricePerKilo ,deliveryRange: branch.deliveryRange),
+          DeliveryAreaCard(
+              phoneNum: branch.phoneNumber,
+              pricePerKilo: branch.pricePerKilo,
+              deliveryRange: branch.deliveryRange),
           Gap(34.h),
           Row(
             children: [
               SvgPicture.asset(
-                    AppIcons.hourIcon,
-                    fit: BoxFit.contain,
-                    width: 20,
-                    height: 20,
-                  ),
-                  Gap(4.w),
+                AppIcons.hourIcon,
+                fit: BoxFit.contain,
+                width: 20,
+                height: 20,
+              ),
+              Gap(4.w),
               Text(
                 'Working Hours',
                 style: Theme.of(context).textTheme.titleSmall,

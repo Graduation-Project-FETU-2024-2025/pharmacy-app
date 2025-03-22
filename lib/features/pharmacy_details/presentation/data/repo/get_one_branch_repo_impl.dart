@@ -1,10 +1,10 @@
 import 'dart:developer';
 import 'package:pharmacy_app/core/database/api/api_consumer.dart';
+import 'package:pharmacy_app/features/all_branches/data/data/pharmacy_branch_model.dart';
 import '../../../../../core/database/api/end_points.dart';
 import '../../../../../core/database/cache/cashe_helper.dart';
 import '../../../../../core/database/cache/secure_storage.dart';
 import '../../../../../core/services/get_it.dart';
-import '../../view_model/model/pharmacy_branch_model.dart';
 import 'get_one_branch_repo.dart';
 
 class GetOneBranchRepoImpl implements GetOneBranchRepo {

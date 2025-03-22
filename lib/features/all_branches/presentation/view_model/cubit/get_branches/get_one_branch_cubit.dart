@@ -1,8 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:pharmacy_app/features/all_branches/data/data/pharmacy_branch_model.dart';
+import 'package:pharmacy_app/features/pharmacy_details/presentation/data/repo/get_one_branch_repo.dart';
 
-import '../../../data/repo/get_one_branch_repo.dart';
-import '../../model/pharmacy_branch_model.dart';
+
 
 part 'get_one_branch_state.dart';
 
