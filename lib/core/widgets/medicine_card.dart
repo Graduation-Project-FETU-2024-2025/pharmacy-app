@@ -1,13 +1,19 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmacy_app/core/services/get_it.dart';
+import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
 
 import '../../../../../core/utils/app_colors.dart';
-import '../../features/home/data/models/medicine_model.dart';
+import '../database/cache/cashe_helper.dart';
 
 class MedicineCard extends StatelessWidget {
-  const MedicineCard({super.key, required this.medicineModel});
+  const MedicineCard({
+    super.key,
+    required this.medicineModel,
+  });
 
-  final MedicineModel medicineModel;
+  final MedicineBranchModel medicineModel;
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +39,8 @@ class MedicineCard extends StatelessWidget {
                     topRight: Radius.circular(10),
                   ),
                   image: DecorationImage(
-                    image: AssetImage(
-                      medicineModel.img,
+                    image: CachedNetworkImageProvider(
+                      medicineModel.productsDTO.image,
                     ),
                     fit: BoxFit.fill,
                   ),
@@ -66,12 +72,15 @@ class MedicineCard extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                medicineModel.medicineName,
+                                getIt<CacheHelper>().getCurrentLanguage() ==
+                                        'ar'
+                                    ? medicineModel.productsDTO.arName
+                                    : medicineModel.productsDTO.enName,
                                 style: Theme.of(context).textTheme.labelMedium,
                               ),
                               SizedBox(height: 5.h),
                               Text(
-                                medicineModel.activeSubstance,
+                                medicineModel.productsDTO.activePrincipal,
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodySmall

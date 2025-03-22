@@ -1,17 +1,15 @@
-
-
-
 class EndPoints {
   // base url
   static String baseUrl = "https://afiyatuk.runasp.net/";
 
   // endpoints
-  
+
   //auth
   static String auth = "api/Auth/";
   static String signIn = "${auth}login";
   static String otp = "${auth}test-otp";
   static String getBranches = '/api/secure/Branch';
+  static String getBranchProducts = 'api/secure/Product/';
 }
 
 class ApiKeys {
@@ -32,7 +30,5 @@ class ApiKeys {
   static String favorites = "favorites";
   static String createdAt = "createdAt";
   static String user = "user";
-  
-
-
+  static String lang = "lang";
 }

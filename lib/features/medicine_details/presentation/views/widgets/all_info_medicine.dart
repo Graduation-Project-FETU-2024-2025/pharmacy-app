@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmacy_app/core/services/get_it.dart';
+import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
 
+import '../../../../../core/database/cache/cashe_helper.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../generated/l10n.dart';
 import 'medicine_info_widget.dart';
@@ -8,7 +11,9 @@ import 'medicine_info_widget.dart';
 class AllIfoMedicine extends StatelessWidget {
   const AllIfoMedicine({
     super.key,
+    required this.medicineBranchModel,
   });
+  final MedicineBranchModel medicineBranchModel;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +21,9 @@ class AllIfoMedicine extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'أباكافير',
+          getIt.get<CacheHelper>().getCurrentLanguage() == 'en'
+              ? medicineBranchModel.productsDTO.enName
+              : medicineBranchModel.productsDTO.arName,
           style: Theme.of(context).textTheme.displayLarge,
         ),
         Text(
@@ -33,7 +40,7 @@ class AllIfoMedicine extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Text(
-                r'$ 15.00',
+                ' ${medicineBranchModel.price}',
                 style: Theme.of(context).textTheme.displayLarge,
               ),
             ),
@@ -47,7 +54,7 @@ class AllIfoMedicine extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        '40',
+                        medicineBranchModel.stock.toString(),
                         style: Theme.of(context).textTheme.labelLarge,
                       ),
                       SizedBox(
@@ -67,8 +74,10 @@ class AllIfoMedicine extends StatelessWidget {
                     child: SizedBox(
                       height: 10.h,
                       child: LinearProgressIndicator(
-                        value: 0.7,
-                        color: Color(0xff24B58E),
+                        value: medicineBranchModel.stock < 5 ? 0.25 : 0.75,
+                        color: medicineBranchModel.stock < 5
+                            ? Colors.red
+                            : Color(0xff24B58E),
                         backgroundColor: AppColors.black.withOpacity(0.1),
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -86,12 +95,12 @@ class AllIfoMedicine extends StatelessWidget {
           children: [
             MedicineInfoWidget(
               title: S.of(context).DoageForm,
-              info: 'أقراص',
+              info: medicineBranchModel.productsDTO.type,
             ),
             Spacer(),
             MedicineInfoWidget(
               title: S.of(context).activeSubstance,
-              info: 'الايبوبروفين',
+              info: medicineBranchModel.productsDTO.activePrincipal,
             ),
           ],
         ),
@@ -103,7 +112,7 @@ class AllIfoMedicine extends StatelessWidget {
           children: [
             MedicineInfoWidget(
               title: S.of(context).manufacturer,
-              info: 'القاهرة، مصر',
+              info: medicineBranchModel.productsDTO.companyName,
             )
           ],
         ),
