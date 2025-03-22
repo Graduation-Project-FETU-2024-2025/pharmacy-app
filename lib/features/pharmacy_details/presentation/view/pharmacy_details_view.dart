@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view/widgets/custom_sliver_appbar.dart';
-import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_one_branch_cubit.dart';
+import 'package:pharmacy_app/features/pharmacy_details/presentation/view_model/get_one_branch_cubit/get_one_branch_cubit.dart';
+import 'package:pharmacy_app/features/pharmacy_details/presentation/view_model/get_one_branch_cubit/get_one_branch_state.dart';
 import '../../../../core/services/get_it.dart';
-import '../data/repo/get_one_branch_repo.dart';
+import '../../data/repo/get_one_branch_repo.dart';
 import 'widgets/pharmacy_detail_body.dart';
 
 class PharmacyDetailsView extends StatelessWidget {

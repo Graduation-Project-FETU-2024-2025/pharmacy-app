@@ -7,8 +7,8 @@ import 'package:pharmacy_app/features/all_branches/data/repo/get_branches_repo.d
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo_impl.dart';
 
-import '../../features/pharmacy_details/presentation/data/repo/get_one_branch_repo.dart';
-import '../../features/pharmacy_details/presentation/data/repo/get_one_branch_repo_impl.dart';
+import '../../features/pharmacy_details/data/repo/get_one_branch_repo.dart';
+import '../../features/pharmacy_details/data/repo/get_one_branch_repo_impl.dart';
 import '../../features/all_branches/data/repo/get_branches_repo_impl.dart';
 
 final getIt = GetIt.instance;
