@@ -21,6 +21,7 @@ class BranchesScreen extends StatelessWidget {
                   img: AppImages.imgMap,
                   isBtnValid: true,
                   height: MediaQuery.of(context).size.height * 0.4,
+                  isLocalImage: true,
                 ),
                 SliverToBoxAdapter(
                   child: Padding(
