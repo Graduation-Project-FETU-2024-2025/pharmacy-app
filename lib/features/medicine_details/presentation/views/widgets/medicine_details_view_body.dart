@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -5,14 +6,15 @@ import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
+import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
 
-import '../../../../../core/utils/app_images.dart';
 import '../../../../../core/widgets/add_delete_button.dart';
 import '../../../../../generated/l10n.dart';
 import 'all_info_medicine.dart';
 
 class MedicineDetailsViewBody extends StatelessWidget {
-  const MedicineDetailsViewBody({super.key});
+  const MedicineDetailsViewBody({super.key, required this.medicineBranchModel});
+  final MedicineBranchModel medicineBranchModel;
 
   @override
   Widget build(BuildContext context) {
@@ -56,8 +58,8 @@ class MedicineDetailsViewBody extends StatelessWidget {
                 height: 360.h,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(
-                      AppImages.imgMedDetail,
+                    image: CachedNetworkImageProvider(
+                      medicineBranchModel.productsDTO.image,
                     ),
                     fit: BoxFit.fill,
                   ),
@@ -66,10 +68,13 @@ class MedicineDetailsViewBody extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(
+            padding: EdgeInsets.symmetric(
               horizontal: 24,
+              vertical: 16.h,
             ),
-            child: AllIfoMedicine(),
+            child: AllIfoMedicine(
+              medicineBranchModel: medicineBranchModel,
+            ),
           ),
           Spacer(),
           Row(

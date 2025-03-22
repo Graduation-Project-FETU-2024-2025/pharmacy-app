@@ -8,6 +8,8 @@ import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/features/all_branches/data/repo/get_branches_repo.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view/branches_screen.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_cubit.dart';
+import 'package:pharmacy_app/features/all_medicines/data/repos/get_branch_products_repo.dart';
+import 'package:pharmacy_app/features/all_medicines/presentation/view_models/cubit/get_branch_products_cubit.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/otp_cubit/otp_cubit.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
@@ -24,6 +26,7 @@ import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart'
 
 import '../../features/add_medicine/presentation/view_models/cubit/add_medicine_cubit.dart';
 import '../../features/add_medicine/presentation/views/add_medicine_view.dart';
+import '../../features/all_medicines/data/models/medicine_branch_model.dart';
 import '../../features/all_medicines/presentation/views/all_medicine_view.dart';
 
 class AppRouters {
@@ -56,15 +59,25 @@ class AppRouters {
         ));
       case Routing.branchesScreen:
         return _buildRoute(BlocProvider(
-          create: (context) => GetBranchesCubit(getIt<GetBranchesRepo>())..fetchBranches(),
+          create: (context) =>
+              GetBranchesCubit(getIt<GetBranchesRepo>())..fetchBranches(),
           child: BranchesScreen(),
         ));
       case Routing.homeView:
         return _buildRoute(HomeView());
       case Routing.allMedicinesScreen:
-        return _buildRoute(AllMedicineView());
+        return _buildRoute(BlocProvider(
+          create: (context) =>
+              GetBranchProductsCubit(getIt<GetBranchProductsRepo>()),
+          child: AllMedicineView(),
+        ));
       case Routing.medicineDetails:
-        return _buildRoute(MedicineDetailsView());
+        final medicine = argument as MedicineBranchModel;
+        return _buildRoute(
+          MedicineDetailsView(
+            medicineBranchModel: medicine,
+          ),
+        );
       case Routing.pharmacyDetail:
         return _buildRoute(PharmacyDetailsView());
       case Routing.pharmacyEdit:
