@@ -26,6 +26,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "DoageForm": MessageLookupByLibrary.simpleMessage("شكل الجرعة"),
         "activeSubstance":
             MessageLookupByLibrary.simpleMessage("المادة الفعالة"),
+        "addMedFail":
+            MessageLookupByLibrary.simpleMessage("فشل في اضافة الدواء"),
+        "addMedSuccess":
+            MessageLookupByLibrary.simpleMessage("تمت اضافة الدواء بنجاح"),
         "allBranches": MessageLookupByLibrary.simpleMessage("جميع الفروع"),
         "allMedicines": MessageLookupByLibrary.simpleMessage("جميع الأدوية"),
         "almostRunOut": MessageLookupByLibrary.simpleMessage("شارف على النفاذ"),
