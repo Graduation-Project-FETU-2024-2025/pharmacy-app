@@ -84,6 +84,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "medicineName": MessageLookupByLibrary.simpleMessage("اسم الدواء"),
         "mileage": MessageLookupByLibrary.simpleMessage("عدد الأميال"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "noBranches": MessageLookupByLibrary.simpleMessage("لا توجد فروع"),
+        "noMedicines": MessageLookupByLibrary.simpleMessage("لا توجد أدوية"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
@@ -102,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
         "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "selectBranch": MessageLookupByLibrary.simpleMessage("اختر الفرع"),
+        "somethingWrong": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "startTime": MessageLookupByLibrary.simpleMessage("وقت البداية"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
         "work24Hour":

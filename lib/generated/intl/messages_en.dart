@@ -86,6 +86,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "medicineName": MessageLookupByLibrary.simpleMessage("Medicine Name"),
         "mileage": MessageLookupByLibrary.simpleMessage("Mileage"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "noBranches": MessageLookupByLibrary.simpleMessage("No Branches Found"),
+        "noMedicines":
+            MessageLookupByLibrary.simpleMessage("No Medicines Found"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
@@ -105,6 +108,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Search for medicine"),
         "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
         "selectBranch": MessageLookupByLibrary.simpleMessage("Select Branch"),
+        "somethingWrong":
+            MessageLookupByLibrary.simpleMessage("Something Went Wrong"),
         "startTime": MessageLookupByLibrary.simpleMessage("Start Time"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "work24Hour":

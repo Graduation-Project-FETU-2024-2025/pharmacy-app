@@ -18,14 +18,4 @@ class DeleteCubit extends Cubit<DeleteState> {
       emit(DeleteSuccess(successMessage: successMessage));
     });
   }
-  //don't forget to add this to EndPoints
-  //  static String deleteMedicine = "api/secure/Product/";
-
-  //don't forget to add this to ApiKeys
-  //  static String lang = "lang";
-
-  //don't forget to add the this to getit function
-  // getIt.registerLazySingleton<DeleteRepo>(
-  //   () => DeleteRepoImpl(apiConsumer:getIt<ApiConsumer>()),
-  // );
 }

@@ -741,6 +741,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Something Went Wrong`
+  String get somethingWrong {
+    return Intl.message(
+      'Something Went Wrong',
+      name: 'somethingWrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Branches Found`
+  String get noBranches {
+    return Intl.message(
+      'No Branches Found',
+      name: 'noBranches',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Medicines Found`
+  String get noMedicines {
+    return Intl.message(
+      'No Medicines Found',
+      name: 'noMedicines',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

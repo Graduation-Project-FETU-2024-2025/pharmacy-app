@@ -9,7 +9,10 @@ import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit
 import 'package:pharmacy_app/features/all_medicines/presentation/view_models/cubit/get_branch_products_cubit.dart';
 import 'package:pharmacy_app/features/all_medicines/presentation/views/widgets/all_branches_view.dart';
 import 'package:pharmacy_app/features/all_medicines/presentation/views/widgets/filter_dialog.dart';
+import 'package:pharmacy_app/features/all_medicines/presentation/views/widgets/loading_state_widget.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 import '../../../../../core/widgets/search_text_field.dart';
+import '../../../../../generated/l10n.dart';
 import '../../../../all_branches/data/repo/get_branches_repo.dart';
 import 'all_medicines_grid_view.dart';
 
@@ -37,7 +40,10 @@ class _AllMedicineViewBodyState extends State<AllMedicineViewBody> {
         if (state is GetBranchProductsSuccess) {
           if (state.medicines.isEmpty) {
             return Center(
-              child: Text('No Medicines Found'),
+              child: Text(
+                S.of(context).noMedicines,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
             );
           }
           return SingleChildScrollView(
@@ -82,9 +88,49 @@ class _AllMedicineViewBodyState extends State<AllMedicineViewBody> {
             ),
           );
         } else if (state is GetBranchProductsLoading) {
-          return const Center(
-            child: CircularProgressIndicator(
-              color: AppColors.primaryColor,
+          return SingleChildScrollView(
+            child: Padding(
+              padding:
+                  EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 24.0.h),
+              child: Column(
+                children: [
+                  Skeleton.keep(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => FilterDialog(
+                                selectedIndex: selectedIndex,
+                                onSelect: updateSelection,
+                              ),
+                            );
+                          },
+                          child: SvgPicture.asset(
+                            AppIcons.iconsFilter,
+                            width: 24.w,
+                            height: 24.h,
+                            colorFilter: const ColorFilter.mode(
+                              AppColors.primaryColor,
+                              BlendMode.srcIn,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 20.h),
+                  SearchTextField(),
+                  SizedBox(height: 60.h),
+                  Skeletonizer(
+                    enabled: true,
+                    effect: ShimmerEffect(),
+                    child: LoadingStateWidget(),
+                  ),
+                ],
+              ),
             ),
           );
         } else if (state is GetBranchProductsFailure) {

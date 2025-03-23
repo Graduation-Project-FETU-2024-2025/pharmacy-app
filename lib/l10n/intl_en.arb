@@ -78,7 +78,10 @@
     "endTime": "End Time",
     "enableLocationService": "Please enable location service",
     "locationPermissionDenied": "Location permission denied",
-    "locationPermanentlyDenied": "Location permission permanently denied"
+    "locationPermanentlyDenied": "Location permission permanently denied",
+    "somethingWrong":"Something Went Wrong",
+    "noBranches":"No Branches Found",
+    "noMedicines":"No Medicines Found"
 
 
 
