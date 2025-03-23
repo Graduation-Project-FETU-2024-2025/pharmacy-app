@@ -1,4 +1,6 @@
 
+import 'package:pharmacy_app/core/database/api/api_error_model.dart';
+
 sealed class OtpState {}
 
 final class OtpInitial extends OtpState {}
@@ -8,8 +10,9 @@ final class OtpCheckLoading extends OtpState {}
 final class OtpCheckSuccess extends OtpState {}
 
 final class OtpCheckFailure extends OtpState {
-  final String message;
-  OtpCheckFailure(this.message);
+ final ApiErrorModel apiErrorModel;
+
+  OtpCheckFailure({required this.apiErrorModel});
 }
 
 
