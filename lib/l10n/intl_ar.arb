@@ -78,5 +78,11 @@
     "endTime": "وقت الانتهاء",
     "enableLocationService": "يرجى تفعيل خدمة الموقع",
     "locationPermissionDenied": "تم رفض إذن الموقع",
-    "locationPermanentlyDenied": "تم رفض إذن الموقع بشكل دائم"
+    "locationPermanentlyDenied": "تم رفض إذن الموقع بشكل دائم",
+    "somethingWrong":"حدث خطأ ما",
+    "noBranches":"لا توجد فروع",
+    "noMedicines":"لا توجد أدوية"
+
+
+
 }
