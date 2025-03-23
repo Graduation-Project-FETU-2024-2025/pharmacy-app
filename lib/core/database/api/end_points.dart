@@ -10,7 +10,11 @@ class EndPoints {
   static String otp = "${auth}test-otp";
   static String getBranches = '/api/secure/Branch';
   static String getBranchProducts = 'api/secure/Product/';
+
+  static String getAllSystemMedicines = 'api/secure/Product';
+
   static String deleteMedicine = "api/secure/Product/";
+
 }
 
 class ApiKeys {

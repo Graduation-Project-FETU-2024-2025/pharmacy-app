@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
+import 'package:pharmacy_app/features/add_medicine/data/models/system_medicine_model.dart';
+import 'package:pharmacy_app/features/add_medicine/presentation/view_models/cubit/system_medicines_cubit.dart';
+import 'package:pharmacy_app/features/add_medicine/presentation/views/system_medicine_view.dart';
 import 'package:pharmacy_app/features/all_branches/data/repo/get_branches_repo.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view/branches_screen.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_cubit.dart';
@@ -24,6 +27,7 @@ import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/phar
 import 'package:pharmacy_app/features/profile/presentation/view/profile_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
 
+import '../../features/add_medicine/data/repos/get_system_medicines_repo.dart';
 import '../../features/add_medicine/presentation/view_models/cubit/add_medicine_cubit.dart';
 import '../../features/add_medicine/presentation/views/add_medicine_view.dart';
 import '../../features/all_medicines/data/models/medicine_branch_model.dart';
@@ -53,9 +57,15 @@ class AppRouters {
           ),
         ));
       case Routing.addMedicine:
+        final args = argument as Map<String, dynamic>;
+        final systemMedicine = args['systemMedicine'] as SystemMedicineModel;
+        final branchId = args['branchId'] as String;
         return _buildRoute(BlocProvider(
           create: (context) => AddMedicineCubit(),
-          child: AddMedicineView(),
+          child: AddMedicineView(
+            systemMedicineModel: systemMedicine,
+            branchId: branchId,
+          ),
         ));
       case Routing.branchesScreen:
         return _buildRoute(BlocProvider(
@@ -87,6 +97,16 @@ class AppRouters {
         ));
       case Routing.profile:
         return _buildRoute(ProfileView());
+      case Routing.systemMedicine:
+        final branchId = settings.arguments as String;
+        return _buildRoute(BlocProvider(
+          create: (context) =>
+              SystemMedicinesCubit(getIt<GetSystemMedicinesRepo>())
+                ..getSystemMedicines(),
+          child: SystemMedicineView(
+            branchId: branchId,
+          ),
+        ));
       default:
         return _buildRoute(
           Scaffold(

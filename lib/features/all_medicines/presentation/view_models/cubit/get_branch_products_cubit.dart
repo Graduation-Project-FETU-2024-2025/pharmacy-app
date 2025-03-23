@@ -11,9 +11,11 @@ class GetBranchProductsCubit extends Cubit<GetBranchProductsState> {
       : super(GetBranchProductsInitial());
   static GetBranchProductsCubit get(context) => BlocProvider.of(context);
   final GetBranchProductsRepo getBranchProductsRepo;
+  String? currentBranchId;
 
   void getBranchProducts({required String branchId}) async {
     {
+      currentBranchId = branchId;
       emit(GetBranchProductsLoading());
       final result = await getBranchProductsRepo.getBranchProducts(
         branchId: branchId,
