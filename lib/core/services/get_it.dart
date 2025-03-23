@@ -3,6 +3,8 @@ import 'package:pharmacy_app/core/database/api/api_consumer.dart';
 import 'package:pharmacy_app/core/database/api/dio_consumer.dart';
 import 'package:pharmacy_app/core/database/api/dio_factory.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
+import 'package:pharmacy_app/features/add_medicine/data/repos/get_system_medicines_repo.dart';
+import 'package:pharmacy_app/features/add_medicine/data/repos/get_system_medicines_repo_impl.dart';
 import 'package:pharmacy_app/features/all_branches/data/repo/get_branches_repo.dart';
 import 'package:pharmacy_app/features/all_medicines/data/repos/get_branch_products_repo.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
@@ -36,5 +38,8 @@ void setup() {
   );
   getIt.registerLazySingleton<GetBranchProductsRepo>(
     () => GetBranchProductsRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<GetSystemMedicinesRepo>(
+    () => GetSystemMedicinesRepoImpl(apiConsumer: getIt<ApiConsumer>()),
   );
 }
