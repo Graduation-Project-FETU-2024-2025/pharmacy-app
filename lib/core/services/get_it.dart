@@ -12,6 +12,8 @@ import '../../features/pharmacy_details/data/repo/get_one_branch_repo.dart';
 import '../../features/pharmacy_details/data/repo/get_one_branch_repo_impl.dart';
 import '../../features/all_branches/data/repo/get_branches_repo_impl.dart';
 import '../../features/all_medicines/data/repos/get_branch_products_repo_impl.dart';
+import '../../features/medicine_details/data/repos/delete_repo.dart';
+import '../../features/medicine_details/data/repos/delete_repo_impl.dart';
 
 final getIt = GetIt.instance;
 
@@ -36,5 +38,8 @@ void setup() {
   );
   getIt.registerLazySingleton<GetBranchProductsRepo>(
     () => GetBranchProductsRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<DeleteRepo>(
+    () => DeleteRepoImpl(apiConsumer: getIt<ApiConsumer>()),
   );
 }
