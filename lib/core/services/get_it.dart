@@ -8,6 +8,8 @@ import 'package:pharmacy_app/features/all_medicines/data/repos/get_branch_produc
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo_impl.dart';
 
+import '../../features/pharmacy_details/data/repo/get_one_branch_repo.dart';
+import '../../features/pharmacy_details/data/repo/get_one_branch_repo_impl.dart';
 import '../../features/all_branches/data/repo/get_branches_repo_impl.dart';
 import '../../features/all_medicines/data/repos/get_branch_products_repo_impl.dart';
 import '../../features/medicine_details/data/repos/delete_repo.dart';
@@ -27,6 +29,9 @@ void setup() {
 
   getIt.registerLazySingleton<AuthRepo>(
     () => AuthRepoImpl(getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<GetOneBranchRepo>(
+    () => GetOneBranchRepoImpl(getIt<ApiConsumer>()),
   );
   getIt.registerLazySingleton<GetBranchesRepo>(
     () => GetBranchesRepoImpl(getIt<ApiConsumer>()),

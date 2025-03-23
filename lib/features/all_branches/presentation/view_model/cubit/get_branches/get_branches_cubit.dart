@@ -1,8 +1,8 @@
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
-import 'package:pharmacy_app/features/all_branches/data/data/pharmacy_branch_model.dart';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_state.dart';
 import '../../../../data/repo/get_branches_repo.dart';
-part 'get_branches_state.dart';
+
 
 class GetBranchesCubit extends Cubit<GetBranchesState> {
   GetBranchesCubit(this.getBranchesRepo) : super(GetBranchesInitial());
@@ -10,12 +10,12 @@ class GetBranchesCubit extends Cubit<GetBranchesState> {
 
   Future<void> fetchBranches() async {
     emit(GetBranchesLoading());
-
-    try {
-      final branches = await getBranchesRepo.getAllBranches();
-      emit(GetBranchesSuccess(branches: branches));
-    } catch (e) {
-      emit(GetBranchesFailure(e.toString()));
-    }
+    final result = await getBranchesRepo.getAllBranches();
+    result.fold(
+      (message) => GetBranchesFailure(message),
+      (branches) => emit(
+        GetBranchesSuccess(branches: branches),
+      ),
+    );
   }
 }
