@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pharmacy_app/core/helpers/extentions.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_cubit.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_state.dart';
+import '../../../../core/routers/routing.dart';
+import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_images.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../../../generated/l10n.dart';
@@ -57,6 +60,13 @@ class BranchesScreen extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: ()=>context.pushNamed(Routing.pharmacyEdit),
+        backgroundColor: AppColors.primaryColor,
+        shape: CircleBorder(),
+        child: Icon(Icons.add,color: AppColors.white,),
+        )
+        ,
     );
   }
 }

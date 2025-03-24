@@ -5,11 +5,12 @@ import '../../../../../core/utils/app_icons.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 
+import '../../../../../core/utils/app_images.dart';
 import 'build_image_option.dart';
 
 class PharmacyEditImg extends StatefulWidget {
   const PharmacyEditImg({super.key, required this.pharmacyImg});
-  final String pharmacyImg;
+  final String? pharmacyImg;
 
   @override
   State<PharmacyEditImg> createState() => _PharmacyEditImgState();
@@ -77,14 +78,16 @@ class _PharmacyEditImgState extends State<PharmacyEditImg> {
           shape: BoxShape.circle,
           color: Colors.black,
           image: DecorationImage(
-            image: imageFile == null
-                ? AssetImage(widget.pharmacyImg) as ImageProvider
+            image: imageFile == null&& widget.pharmacyImg != null
+                ? NetworkImage(widget.pharmacyImg!) as ImageProvider:
+                widget.pharmacyImg == null
+                ? AssetImage(AppImages.pharmacyDetailImg) as ImageProvider
                 : FileImage(imageFile!),
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
           ),
         ),
         child: Align(
-          alignment: Alignment(1.w, 1.3.h),
+          alignment: Alignment(1.5.w, 2.h),
           child: IconButton(
             onPressed: showImagePicker,
             icon: SvgPicture.asset(AppIcons.iconsCamera),

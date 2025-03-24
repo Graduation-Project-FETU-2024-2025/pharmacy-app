@@ -29,7 +29,8 @@
 
     "pharmacyInfo": "Pharmacy Information",
     "pharmacyName": "Pharmacy Name",
-    "branchName":"Branch Name",
+    "arBranchName":"Arabic Branch Name",
+    "enBranchName":"English Branch Name",
     "deliveryMan":"Delivery man name",
     "phoneNum":"Phone Number",
     "mileage":"Mileage",

@@ -15,7 +15,7 @@ class BranchesCardItems extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return GestureDetector(
-      onTap: () => context.pushNamed(Routing.pharmacyDetail , argument: branches),
+      onTap: () => context.pushNamed(Routing.pharmacyDetail , argument: branches.id),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 30),
         child: Container(

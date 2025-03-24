@@ -78,7 +78,7 @@ class PharmacyDetailBody extends StatelessWidget {
             child: WorkingHourDetail(workingHour: branch.workingHours),
           ),
           Gap(33.h),
-          RowBtn(),
+          RowBtn(branch : branch),
           Gap(42.h),
         ],
       ),

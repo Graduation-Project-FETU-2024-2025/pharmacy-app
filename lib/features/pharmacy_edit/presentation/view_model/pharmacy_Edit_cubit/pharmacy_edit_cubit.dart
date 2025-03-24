@@ -10,7 +10,8 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
   static PharmacyEditCubit get(context) => BlocProvider.of<PharmacyEditCubit>(context);
 
   final TextEditingController pharmacyNameController = TextEditingController();
-  final TextEditingController branchNameController = TextEditingController();
+  final TextEditingController arBranchNameController = TextEditingController();
+  final TextEditingController enBranchNameController = TextEditingController();
   final TextEditingController descController = TextEditingController();
   final TextEditingController pricePerKilo= TextEditingController();
   final TextEditingController phoneController = TextEditingController();
@@ -29,7 +30,8 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
   @override
   Future<void> close() {
     pharmacyNameController.dispose();
-    branchNameController.dispose();
+    arBranchNameController.dispose();
+    enBranchNameController.dispose();
     descController.dispose();
     pricePerKilo.dispose();
     phoneController.dispose();

@@ -33,7 +33,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "areaAndPrice":
             MessageLookupByLibrary.simpleMessage("منطقة التوصيل & السعر"),
         "branch": MessageLookupByLibrary.simpleMessage("الفرع"),
-        "branchName": MessageLookupByLibrary.simpleMessage("اسم الفرع"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("حالة الفرع"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),

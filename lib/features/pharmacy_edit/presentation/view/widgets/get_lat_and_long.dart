@@ -9,7 +9,9 @@ import '../../../../../generated/l10n.dart';
 import '../../view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 
 class GetLatAndLong extends StatefulWidget {
-  const GetLatAndLong({super.key});
+  const GetLatAndLong({super.key, this.lat, this.long});
+  final String? lat;
+  final String? long;
 
   @override
   State<GetLatAndLong> createState() => _GetLatAndLongState();
@@ -81,7 +83,7 @@ class _GetLatAndLongState extends State<GetLatAndLong> {
                             CustomEditTextFormField(
                               controller:
                                   PharmacyEditCubit.get(context).latitudeController,
-                              hintTxt: "00.000",
+                              hintTxt:widget.lat?? "00.000",
                             ),
                           ],
                         ),
@@ -99,7 +101,7 @@ class _GetLatAndLongState extends State<GetLatAndLong> {
                             CustomEditTextFormField(
                               controller: PharmacyEditCubit.get(context)
                                   .longitudeController,
-                              hintTxt: "00.000",
+                              hintTxt:widget.long?? "00.000",
                             ),
                           ],
                         ),

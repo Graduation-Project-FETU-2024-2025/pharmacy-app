@@ -8,8 +8,9 @@ import '../../../../../core/widgets/custom_edit_text_form_field.dart';
 class DeliveryStatusField extends StatefulWidget {
   final TextEditingController controller;
   final Function(String)? onChanged;
+  final String? status;
 
-  const DeliveryStatusField({super.key, required this.controller, this.onChanged});
+  const DeliveryStatusField({super.key, required this.controller, this.onChanged, this.status});
 
   @override
   State<DeliveryStatusField> createState() => _DeliveryStatusFieldState();
@@ -27,6 +28,7 @@ class _DeliveryStatusFieldState extends State<DeliveryStatusField> {
         CustomEditTextFormField(
           controller: widget.controller,
           hintTxt: "Branch Status",
+          initialVal: widget.status,
         ),
         Positioned(
           right: 15.h,

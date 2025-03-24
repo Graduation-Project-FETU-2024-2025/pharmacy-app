@@ -92,13 +92,15 @@ class AppRouters {
       case Routing.pharmacyDetail:
         return _buildRoute(
           PharmacyDetailsView(
-            branch: settings.arguments as PharmacyBranchModel
+            branchId: settings.arguments as String
             ),
         );
       case Routing.pharmacyEdit:
         return _buildRoute(BlocProvider(
           create: (context) => PharmacyEditCubit(),
-          child: PharmacyEditScreen(),
+          child: PharmacyEditScreen(
+            branch: settings.arguments as PharmacyBranchModel?,
+          ),
         ));
       case Routing.profile:
         return _buildRoute(ProfileView());
