@@ -9,6 +9,7 @@ import '../../../../core/utils/app_styles.dart';
 import '../../../../generated/l10n.dart';
 import 'widgets/branches_card_item.dart';
 import 'widgets/custom_sliver_appbar.dart';
+import 'widgets/shimmer_loading_branches.dart';
 
 class BranchesScreen extends StatelessWidget {
   const BranchesScreen({super.key});
@@ -38,7 +39,7 @@ class BranchesScreen extends StatelessWidget {
                 return const SliverToBoxAdapter(
                   child: Center(
                       child:
-                          CircularProgressIndicator()), // TODO: use shimmer effect for loading
+                          ShimmerLoadingBranches()), // TODO: use shimmer effect for loading
                 );
               } else if (state is GetBranchesSuccess) {
                 return SliverList.builder(
