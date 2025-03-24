@@ -1,7 +1,9 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
+import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_images.dart';
@@ -9,10 +11,12 @@ import '../../../../../core/utils/app_images.dart';
 class AlmostRunOutCard extends StatelessWidget {
   const AlmostRunOutCard({
     super.key,
+    required this.medicineBranchModel,
   });
-
+  final MedicineBranchModel medicineBranchModel;
   @override
   Widget build(BuildContext context) {
+    String lang = getIt<CacheHelper>().getCurrentLanguage();
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -32,7 +36,9 @@ class AlmostRunOutCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                    image: AssetImage(AppImages.imgMedicine),
+                    image: CachedNetworkImageProvider(
+                      medicineBranchModel.productsDTO.image,
+                    ),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -49,30 +55,24 @@ class AlmostRunOutCard extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    left: getIt<CacheHelper>().getCurrentLanguage() == 'en'
-                        ? 24.w
-                        : 0,
-                    right: getIt<CacheHelper>().getCurrentLanguage() == 'ar'
-                        ? 24.w
-                        : 0,
+                    left: lang == 'en' ? 24.w : 0,
+                    right: lang == 'ar' ? 24.w : 0,
                   ),
                   child: Text(
-                    'Abacavir',
+                    lang == 'ar'
+                        ? medicineBranchModel.productsDTO.arName
+                        : medicineBranchModel.productsDTO.enName,
                     style: Theme.of(context).textTheme.labelMedium,
                   ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    left: getIt<CacheHelper>().getCurrentLanguage() == 'en'
-                        ? 24.w
-                        : 8.w,
-                    right: getIt<CacheHelper>().getCurrentLanguage() == 'ar'
-                        ? 24.w
-                        : 8.w,
+                    left: lang == 'en' ? 24.w : 8.w,
+                    right: lang == 'ar' ? 24.w : 8.w,
                   ),
                   child: Row(
                     children: [
-                      Text(r'90$',
+                      Text('${medicineBranchModel.price}\$',
                           style: Theme.of(context).textTheme.labelSmall),
                       Spacer(),
                       Container(
@@ -92,7 +92,7 @@ class AlmostRunOutCard extends StatelessWidget {
                             ),
                             SizedBox(width: 3.w),
                             Text(
-                              '5',
+                              medicineBranchModel.stock.toString(),
                               style: Theme.of(context)
                                   .textTheme
                                   .bodySmall!

@@ -27,9 +27,6 @@ class OutOfStockCubit extends Cubit<OutOfStockState> {
     );
   }
   //dont forget to add ro getit func.
-  // getIt.registerLazySingleton<OutOfStockRepo>(
-  //   () => OutOfStockRepoImpl(apiConsumer: getIt<ApiConsumer>()),
-  // );
 
   //dont forget to add to endpoint.
   //static String getOutOfStock = "api/secure/Product/out-of-stock";
