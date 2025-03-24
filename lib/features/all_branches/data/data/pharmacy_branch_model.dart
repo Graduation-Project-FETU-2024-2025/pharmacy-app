@@ -1,7 +1,7 @@
 import 'working_hours_model.dart';
 
 class PharmacyBranchModel {
-final String id;
+  final String id;
   final String pharmacyId;
   final String address;
   final String branchName;
@@ -35,7 +35,7 @@ final String id;
     return PharmacyBranchModel(
       id: json['id'],
       pharmacyId: json['pharmacyId'],
-      address: json['address'],
+      address: json['address'] ?? "",
       branchName: json['branchName'],
       phoneNumber: json['phoneNumber'],
       image: json['image'],

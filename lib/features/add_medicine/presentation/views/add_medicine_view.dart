@@ -12,6 +12,7 @@ class AddMedicineView extends StatelessWidget {
     return Scaffold(
       body: AddMedicineViewBody(
         systemMedicineModel: systemMedicineModel,
+        branchId: branchId,
       ),
     );
   }

@@ -14,7 +14,7 @@ class EndPoints {
   static String getAllSystemMedicines = 'api/secure/Product';
 
   static String deleteMedicine = "api/secure/Product/";
-
+  static String addMedicine = "api/secure/Product";
 }
 
 class ApiKeys {
