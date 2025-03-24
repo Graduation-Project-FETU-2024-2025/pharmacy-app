@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "DoageForm": MessageLookupByLibrary.simpleMessage("Dosage Form"),
         "activeSubstance":
             MessageLookupByLibrary.simpleMessage("Active Substance"),
+        "address": MessageLookupByLibrary.simpleMessage("address"),
         "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
         "allMedicines": MessageLookupByLibrary.simpleMessage("All Medicines"),
         "almostRunOut":

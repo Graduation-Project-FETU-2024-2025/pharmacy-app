@@ -81,8 +81,8 @@
     "locationPermanentlyDenied": "تم رفض إذن الموقع بشكل دائم",
     "somethingWrong":"حدث خطأ ما",
     "noBranches":"لا توجد فروع",
-    "noMedicines":"لا توجد أدوية"
+    "noMedicines":"لا توجد أدوية",
 
-
+    "address":"العنوان"
 
 }

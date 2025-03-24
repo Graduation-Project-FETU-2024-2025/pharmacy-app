@@ -26,13 +26,13 @@ import 'package:pharmacy_app/features/pharmacy_edit/presentation/view/pharmacy_e
 import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 import 'package:pharmacy_app/features/profile/presentation/view/profile_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
-
 import '../../features/add_medicine/data/repos/get_system_medicines_repo.dart';
 import '../../features/add_medicine/presentation/view_models/cubit/add_medicine_cubit.dart';
 import '../../features/add_medicine/presentation/views/add_medicine_view.dart';
 import '../../features/all_branches/data/models/pharmacy_branch_model.dart';
 import '../../features/all_medicines/data/models/medicine_branch_model.dart';
 import '../../features/all_medicines/presentation/views/all_medicine_view.dart';
+import '../../features/pharmacy_edit/data/repo/add_branch_repo.dart';
 
 class AppRouters {
   Route generateRoute(RouteSettings settings) {
@@ -97,7 +97,7 @@ class AppRouters {
         );
       case Routing.pharmacyEdit:
         return _buildRoute(BlocProvider(
-          create: (context) => PharmacyEditCubit(),
+          create: (context) => PharmacyEditCubit(getIt<AddBranchRepo>()),
           child: PharmacyEditScreen(
             branch: settings.arguments as PharmacyBranchModel?,
           ),

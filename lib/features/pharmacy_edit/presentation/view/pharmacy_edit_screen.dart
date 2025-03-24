@@ -14,7 +14,6 @@ class PharmacyEditScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -23,15 +22,18 @@ class PharmacyEditScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         leading: IconButton(
-          onPressed: ()=>context.pop(), 
-          icon: SizedBox(
-            // width: 50.w,
-            child:getIt<CacheHelper>().getCurrentLanguage() == 'en' ? SvgPicture.asset(AppIcons.iconsBack , 
-            ): SvgPicture.asset(AppIcons.iconsBackRight , 
-            ),
-          )),
+            onPressed: () => context.pop(),
+            icon: SizedBox(
+              child: getIt<CacheHelper>().getCurrentLanguage() == 'en'
+                  ? SvgPicture.asset(
+                      AppIcons.iconsBack,
+                    )
+                  : SvgPicture.asset(
+                      AppIcons.iconsBackRight,
+                    ),
+            )),
       ),
-      body: PharmacyEditBody(branch : branch),
+      body: PharmacyEditBody(branch: branch),
     );
   }
 }

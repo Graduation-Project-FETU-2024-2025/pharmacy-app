@@ -82,8 +82,8 @@
     "locationPermanentlyDenied": "Location permission permanently denied",
     "somethingWrong":"Something Went Wrong",
     "noBranches":"No Branches Found",
-    "noMedicines":"No Medicines Found"
+    "noMedicines":"No Medicines Found",
 
-
+    "address": "address"
 
 }
