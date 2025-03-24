@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/utils/app_images.dart';
 import '../../../../../core/utils/app_colors.dart';
-import '../../../data/data/pharmacy_branch_model.dart';
+import '../../../data/models/pharmacy_branch_model.dart';
 
 class BranchesCardItems extends StatelessWidget {
   const BranchesCardItems({super.key, required this.branches});

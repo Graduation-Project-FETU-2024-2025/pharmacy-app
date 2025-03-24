@@ -1,5 +1,5 @@
 
-import 'package:pharmacy_app/features/all_branches/data/data/pharmacy_branch_model.dart';
+import 'package:pharmacy_app/features/all_branches/data/models/pharmacy_branch_model.dart';
 
 sealed class GetBranchesState {}
 

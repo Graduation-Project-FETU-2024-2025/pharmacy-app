@@ -35,7 +35,7 @@ final String id;
     return PharmacyBranchModel(
       id: json['id'],
       pharmacyId: json['pharmacyId'],
-      address: json['address'],
+      address: json['address'].toString(),
       branchName: json['branchName'],
       phoneNumber: json['phoneNumber'],
       image: json['image'],
