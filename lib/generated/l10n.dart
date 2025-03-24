@@ -771,6 +771,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Medicine Added Successfully`
+  String get addMedSuccess {
+    return Intl.message(
+      'Medicine Added Successfully',
+      name: 'addMedSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to Add Medicine`
+  String get addMedFail {
+    return Intl.message(
+      'Failed to Add Medicine',
+      name: 'addMedFail',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
