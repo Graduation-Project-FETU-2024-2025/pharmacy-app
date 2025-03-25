@@ -84,7 +84,8 @@ class AppRouters {
       case Routing.allMedicinesScreen:
         return _buildRoute(BlocProvider(
           create: (context) =>
-              GetBranchProductsCubit(getIt<GetBranchProductsRepo>()),
+              GetBranchProductsCubit(getIt<GetBranchProductsRepo>())
+                ..selectBranch(),
           child: AllMedicineView(),
         ));
       case Routing.medicineDetails:

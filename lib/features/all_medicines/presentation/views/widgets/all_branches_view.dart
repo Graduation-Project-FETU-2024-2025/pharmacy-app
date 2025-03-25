@@ -50,7 +50,6 @@ class AllBranchesView extends StatelessWidget {
               child: ListView.builder(
                 itemCount: 5,
                 itemBuilder: (context, index) => GestureDetector(
-                  onTap: () {},
                   child: AllBranchListItem(
                     branchName: '',
                   ),

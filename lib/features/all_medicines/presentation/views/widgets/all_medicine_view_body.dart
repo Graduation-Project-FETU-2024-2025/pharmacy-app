@@ -2,18 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
-import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_cubit.dart';
 import 'package:pharmacy_app/features/all_medicines/presentation/view_models/cubit/get_branch_products_cubit.dart';
-import 'package:pharmacy_app/features/all_medicines/presentation/views/widgets/all_branches_view.dart';
 import 'package:pharmacy_app/features/all_medicines/presentation/views/widgets/filter_dialog.dart';
 import 'package:pharmacy_app/features/all_medicines/presentation/views/widgets/loading_state_widget.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import '../../../../../core/widgets/search_text_field.dart';
 import '../../../../../generated/l10n.dart';
-import '../../../../all_branches/data/repo/get_branches_repo.dart';
 import 'all_medicines_grid_view.dart';
 
 class AllMedicineViewBody extends StatefulWidget {
@@ -87,7 +83,11 @@ class _AllMedicineViewBodyState extends State<AllMedicineViewBody> {
               ),
             ),
           );
-        } else if (state is GetBranchProductsLoading) {
+        } else if (state is GetBranchProductsFailure) {
+          return Center(
+            child: Text(state.erorrMessage),
+          );
+        } else {
           return SingleChildScrollView(
             child: Padding(
               padding:
@@ -132,16 +132,6 @@ class _AllMedicineViewBodyState extends State<AllMedicineViewBody> {
                 ],
               ),
             ),
-          );
-        } else if (state is GetBranchProductsFailure) {
-          return Center(
-            child: Text(state.erorrMessage),
-          );
-        } else {
-          return BlocProvider(
-            create: (context) =>
-                GetBranchesCubit(getIt<GetBranchesRepo>())..fetchBranches(),
-            child: AllBranchesView(),
           );
         }
       },
