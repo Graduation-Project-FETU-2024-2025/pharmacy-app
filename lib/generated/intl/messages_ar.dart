@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "DoageForm": MessageLookupByLibrary.simpleMessage("شكل الجرعة"),
         "activeSubstance":
             MessageLookupByLibrary.simpleMessage("المادة الفعالة"),
+        "add": MessageLookupByLibrary.simpleMessage("اضافة"),
         "addMedFail":
             MessageLookupByLibrary.simpleMessage("فشل في اضافة الدواء"),
         "addMedSuccess":
@@ -110,6 +111,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectBranch": MessageLookupByLibrary.simpleMessage("اختر الفرع"),
         "somethingWrong": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "startTime": MessageLookupByLibrary.simpleMessage("وقت البداية"),
+        "update": MessageLookupByLibrary.simpleMessage("تعديل"),
+        "updateMedFail":
+            MessageLookupByLibrary.simpleMessage("فشل في تعديل الدواء"),
+        "updateMedSuccess":
+            MessageLookupByLibrary.simpleMessage("تم تعديل الدواء بنجاح"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("خدمة أربع و عشرون ساعة !"),

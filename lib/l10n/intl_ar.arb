@@ -83,7 +83,12 @@
     "noBranches":"لا توجد فروع",
     "noMedicines":"لا توجد أدوية",
     "addMedSuccess":"تمت اضافة الدواء بنجاح",
-    "addMedFail":"فشل في اضافة الدواء"
+    "addMedFail":"فشل في اضافة الدواء",
+    "update":"تعديل",
+    "updateMedSuccess":"تم تعديل الدواء بنجاح",
+    "updateMedFail":"فشل في تعديل الدواء",
+    "add":"اضافة"
+
 
 
 

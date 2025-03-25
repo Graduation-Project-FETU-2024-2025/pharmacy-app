@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "DoageForm": MessageLookupByLibrary.simpleMessage("Dosage Form"),
         "activeSubstance":
             MessageLookupByLibrary.simpleMessage("Active Substance"),
+        "add": MessageLookupByLibrary.simpleMessage("Add"),
         "addMedFail":
             MessageLookupByLibrary.simpleMessage("Failed to Add Medicine"),
         "addMedSuccess":
@@ -115,6 +116,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "somethingWrong":
             MessageLookupByLibrary.simpleMessage("Something Went Wrong"),
         "startTime": MessageLookupByLibrary.simpleMessage("Start Time"),
+        "update": MessageLookupByLibrary.simpleMessage("Update"),
+        "updateMedFail":
+            MessageLookupByLibrary.simpleMessage("Failed to Update Medicine"),
+        "updateMedSuccess": MessageLookupByLibrary.simpleMessage(
+            "Medicine Updated Successfully"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("Twenty four hours service !"),

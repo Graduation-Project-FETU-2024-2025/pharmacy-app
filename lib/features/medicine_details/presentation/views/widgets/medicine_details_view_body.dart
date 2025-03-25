@@ -4,13 +4,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
+import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
+import 'package:pharmacy_app/core/widgets/add_delete_button.dart';
 import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
 import 'package:pharmacy_app/features/medicine_details/data/repos/delete_repo.dart';
 import 'package:pharmacy_app/features/medicine_details/presentation/view_models/cubit/delete_cubit.dart';
 import 'package:pharmacy_app/features/medicine_details/presentation/views/widgets/delete_button_consumer.dart';
+import 'package:pharmacy_app/features/update_medicine/presentation/view_models/update_medicine/update_medcine_cubit.dart';
+import 'package:pharmacy_app/generated/l10n.dart';
 
 import 'all_info_medicine.dart';
 
@@ -86,6 +90,29 @@ class MedicineDetailsViewBody extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(
+                  height: 35.h,
+                  width: 120.w,
+                  child: AddDeleteButton(
+                    title: S.of(context).update,
+                    color: AppColors.primaryColor,
+                    onpressed: () {
+                      final updateCubit = UpdateMedcineCubit.get(context);
+                      updateCubit.setInitialValues(
+                        price: medicineBranchModel.price.toString(),
+                        stock: medicineBranchModel.stock.toString(),
+                      );
+                      Navigator.pushNamed(context, Routing.updateMedicine,
+                          arguments: {
+                            'medicineBranchModel': medicineBranchModel,
+                            'branchId': medicineBranchModel.branchId
+                          });
+                    },
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
                 SizedBox(
                   height: 35.h,
                   width: 120.w,

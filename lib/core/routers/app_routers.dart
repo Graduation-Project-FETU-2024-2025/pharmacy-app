@@ -27,6 +27,9 @@ import 'package:pharmacy_app/features/pharmacy_edit/presentation/view/pharmacy_e
 import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 import 'package:pharmacy_app/features/profile/presentation/view/profile_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
+import 'package:pharmacy_app/features/update_medicine/data/repos/update_medicine_repo.dart';
+import 'package:pharmacy_app/features/update_medicine/presentation/view_models/update_medicine/update_medcine_cubit.dart';
+import 'package:pharmacy_app/features/update_medicine/presentation/views/update_medicine_view.dart';
 
 import '../../features/add_medicine/data/repos/get_system_medicines_repo.dart';
 import '../../features/add_medicine/presentation/view_models/cubit/add_medicine_cubit.dart';
@@ -85,8 +88,12 @@ class AppRouters {
       case Routing.medicineDetails:
         final medicine = argument as MedicineBranchModel;
         return _buildRoute(
-          MedicineDetailsView(
-            medicineBranchModel: medicine,
+          BlocProvider(
+            create: (context) =>
+                UpdateMedcineCubit(getIt<UpdateMedicineRepo>()),
+            child: MedicineDetailsView(
+              medicineBranchModel: medicine,
+            ),
           ),
         );
       case Routing.pharmacyDetail:
@@ -105,6 +112,18 @@ class AppRouters {
               SystemMedicinesCubit(getIt<GetSystemMedicinesRepo>())
                 ..getSystemMedicines(),
           child: SystemMedicineView(
+            branchId: branchId,
+          ),
+        ));
+      case Routing.updateMedicine:
+        final args = argument as Map<String, dynamic>;
+        final medicineBranch =
+            args['medicineBranchModel'] as MedicineBranchModel;
+        final branchId = args['branchId'] as String;
+        return _buildRoute(BlocProvider(
+          create: (context) => UpdateMedcineCubit(getIt<UpdateMedicineRepo>()),
+          child: UpdateMedicineView(
+            medicineBranchModel: medicineBranch,
             branchId: branchId,
           ),
         ));

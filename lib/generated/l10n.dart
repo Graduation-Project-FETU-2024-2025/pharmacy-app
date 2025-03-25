@@ -791,6 +791,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Update`
+  String get update {
+    return Intl.message(
+      'Update',
+      name: 'update',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medicine Updated Successfully`
+  String get updateMedSuccess {
+    return Intl.message(
+      'Medicine Updated Successfully',
+      name: 'updateMedSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to Update Medicine`
+  String get updateMedFail {
+    return Intl.message(
+      'Failed to Update Medicine',
+      name: 'updateMedFail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add`
+  String get add {
+    return Intl.message(
+      'Add',
+      name: 'add',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
