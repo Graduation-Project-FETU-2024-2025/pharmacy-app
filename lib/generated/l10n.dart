@@ -292,11 +292,21 @@ class S {
     );
   }
 
-  /// `Branch Name`
-  String get branchName {
+  /// `Arabic Branch Name`
+  String get arBranchName {
     return Intl.message(
-      'Branch Name',
-      name: 'branchName',
+      'Arabic Branch Name',
+      name: 'arBranchName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English Branch Name`
+  String get enBranchName {
+    return Intl.message(
+      'English Branch Name',
+      name: 'enBranchName',
       desc: '',
       args: [],
     );
@@ -867,6 +877,16 @@ class S {
     return Intl.message(
       'field Required',
       name: 'fieldRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `address`
+  String get address {
+    return Intl.message(
+      'address',
+      name: 'address',
       desc: '',
       args: [],
     );

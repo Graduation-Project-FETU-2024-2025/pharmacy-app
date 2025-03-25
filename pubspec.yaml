@@ -55,6 +55,7 @@ dependencies:
   percent_indicator: ^4.2.3
   pretty_dio_logger: ^1.4.0
   shared_preferences: ^2.3.2
+  shimmer: ^3.0.0
   skeletonizer: ^1.4.3
 
 dev_dependencies:

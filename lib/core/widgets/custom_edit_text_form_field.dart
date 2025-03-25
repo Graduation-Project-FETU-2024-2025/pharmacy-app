@@ -11,10 +11,12 @@ class CustomEditTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (initialVal != null && controller.text.isEmpty) {
+      controller.text = initialVal!;
+    }
     return TextFormField(
       style: Theme.of(context).textTheme.labelMedium!.copyWith(color: AppColors.primaryColor),
       controller: controller,
-      initialValue: initialVal,
       maxLines: maxLines,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,

@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:dartz/dartz.dart';
 
 import '../../../../core/database/api/end_points.dart';
-import '../data/pharmacy_branch_model.dart';
+import '../models/pharmacy_branch_model.dart';
 import 'get_branches_repo.dart';
 import 'package:pharmacy_app/core/database/api/api_consumer.dart';
 

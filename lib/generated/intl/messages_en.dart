@@ -31,17 +31,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Failed to Add Medicine"),
         "addMedSuccess":
             MessageLookupByLibrary.simpleMessage("Medicine Added Successfully"),
+        "address": MessageLookupByLibrary.simpleMessage("address"),
         "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
         "allMedicines": MessageLookupByLibrary.simpleMessage("All Medicines"),
         "almostRunOut":
             MessageLookupByLibrary.simpleMessage("Almost running out"),
+        "arBranchName":
+            MessageLookupByLibrary.simpleMessage("Arabic Branch Name"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "areYouSureToDelete": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to delete this medicine?"),
         "areaAndPrice":
             MessageLookupByLibrary.simpleMessage("Delivery Area & Price"),
         "branch": MessageLookupByLibrary.simpleMessage("Branch"),
-        "branchName": MessageLookupByLibrary.simpleMessage("Branch Name"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("Branch Status"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
@@ -52,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
             "Dr. Stone Pharmacy | Elestad"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "enBranchName":
+            MessageLookupByLibrary.simpleMessage("English Branch Name"),
         "enableLocationService": MessageLookupByLibrary.simpleMessage(
             "Please enable location service"),
         "endTime": MessageLookupByLibrary.simpleMessage("End Time"),

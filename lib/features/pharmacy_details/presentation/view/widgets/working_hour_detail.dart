@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-import 'package:pharmacy_app/features/all_branches/data/data/working_hours_model.dart';
+import 'package:pharmacy_app/features/all_branches/data/models/working_hours_model.dart';
 
 
 

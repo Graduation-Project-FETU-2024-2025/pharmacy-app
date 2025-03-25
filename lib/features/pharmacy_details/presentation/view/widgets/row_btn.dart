@@ -6,11 +6,13 @@ import 'package:pharmacy_app/core/helpers/extentions.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
+import 'package:pharmacy_app/features/all_branches/data/models/pharmacy_branch_model.dart';
 
 import '../../../../../generated/l10n.dart';
 
 class RowBtn extends StatelessWidget {
-  const RowBtn({super.key});
+  const RowBtn({super.key, required this.branch});
+  final PharmacyBranchModel branch;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +56,7 @@ class RowBtn extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              context.pushNamed(Routing.pharmacyEdit);
+              context.pushNamed(Routing.pharmacyEdit , argument: branch );
             },
             child: SvgPicture.asset(
               AppIcons.iconsEdit,

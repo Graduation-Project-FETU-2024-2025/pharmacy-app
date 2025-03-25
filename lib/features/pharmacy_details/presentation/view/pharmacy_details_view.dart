@@ -6,22 +6,24 @@ import 'package:pharmacy_app/features/pharmacy_details/presentation/view_model/g
 import '../../../../core/services/get_it.dart';
 import '../../data/repo/get_one_branch_repo.dart';
 import 'widgets/pharmacy_detail_body.dart';
+import 'widgets/pharmacy_detail_shimmer.dart';
 
 class PharmacyDetailsView extends StatelessWidget {
-  const PharmacyDetailsView({super.key});
+  const PharmacyDetailsView({super.key, required this.branchId});
+  final String branchId;
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => GetOneBranchCubit(
         getIt<GetOneBranchRepo>(), 
-        'fc01d1d3-8e55-46f5-928e-a63a840ee90f',
+        branchId,
       )..fetchOneBranch(),
       child: BlocBuilder<GetOneBranchCubit, GetOneBranchState>(
         builder: (context, state) {
           return Scaffold(
             body: state is GetOneBranchLoading
-                ? const Center(child: CircularProgressIndicator())
+                ? PharmacyDetailShimmer()
                 : state is GetOneBranchFailure
                     ? Center(child: Text('Error: ${state.message}'))
                     : state is GetOneBranchSuccess ? CustomScrollView(
@@ -38,6 +40,7 @@ class PharmacyDetailsView extends StatelessWidget {
                         ],
                       ): const SizedBox.shrink(),
           );
+          
         },
       ),
     );

@@ -36,8 +36,10 @@ import 'package:pharmacy_app/features/update_medicine/presentation/views/update_
 import '../../features/add_medicine/data/repos/get_system_medicines_repo.dart';
 import '../../features/add_medicine/presentation/view_models/cubit/add_medicine_cubit.dart';
 import '../../features/add_medicine/presentation/views/add_medicine_view.dart';
+import '../../features/all_branches/data/models/pharmacy_branch_model.dart';
 import '../../features/all_medicines/data/models/medicine_branch_model.dart';
 import '../../features/all_medicines/presentation/views/all_medicine_view.dart';
+import '../../features/pharmacy_edit/data/repo/add_branch_repo.dart';
 
 class AppRouters {
   Route generateRoute(RouteSettings settings) {
@@ -111,11 +113,17 @@ class AppRouters {
           ),
         );
       case Routing.pharmacyDetail:
-        return _buildRoute(PharmacyDetailsView());
+        return _buildRoute(
+          PharmacyDetailsView(
+            branchId: settings.arguments as String
+            ),
+        );
       case Routing.pharmacyEdit:
         return _buildRoute(BlocProvider(
-          create: (context) => PharmacyEditCubit(),
-          child: PharmacyEditScreen(),
+          create: (context) => PharmacyEditCubit(getIt<AddBranchRepo>()),
+          child: PharmacyEditScreen(
+            branch: settings.arguments as PharmacyBranchModel?,
+          ),
         ));
       case Routing.profile:
         return _buildRoute(ProfileView());

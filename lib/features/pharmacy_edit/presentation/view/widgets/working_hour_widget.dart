@@ -8,7 +8,9 @@ import '../../../../../core/widgets/custom_edit_text_form_field.dart';
 import '../../view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 
 class WorkingHourWidget extends StatefulWidget {
-  const WorkingHourWidget({super.key});
+  const WorkingHourWidget({super.key, this.start, this.end, });
+  final String? start;
+  final String? end;
 
   @override
   State<WorkingHourWidget> createState() => _WorkingHourWidgetState();
@@ -61,7 +63,7 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                     CustomEditTextFormField(
                       controller:
                           PharmacyEditCubit.get(context).startTimeController,
-                      hintTxt: "00:00",
+                      hintTxt:widget.start?? "00:00",
                       suffixIcon: IconButton(
                           onPressed: () => getTimeFromUser(isStartTime: true),
                           icon: SvgPicture.asset(AppIcons.iconTime)),
@@ -82,7 +84,7 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                     CustomEditTextFormField(
                       controller:
                           PharmacyEditCubit.get(context).endTimeController,
-                      hintTxt: "00:00",
+                      hintTxt:widget.end?? "00:00",
                       suffixIcon: IconButton(
                           onPressed: () => getTimeFromUser(isStartTime: false),
                           icon: SvgPicture.asset(AppIcons.iconTime)),

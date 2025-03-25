@@ -92,9 +92,10 @@
     "yes":"نعم",
     "no":"لا",
     
-    "fieldRequired":"هذا الحقل مطلوب"
+    "fieldRequired":"هذا الحقل مطلوب",
 
 
 
+    "address":"العنوان"
 
 }

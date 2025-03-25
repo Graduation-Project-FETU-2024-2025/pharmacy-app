@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmacy_app/core/helpers/extentions.dart';
-import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_cubit.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_state.dart';
+import '../../../../core/routers/routing.dart';
+import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_images.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../../../generated/l10n.dart';
 import 'widgets/branches_card_item.dart';
 import 'widgets/custom_sliver_appbar.dart';
+import 'widgets/shimmer_loading_branches.dart';
 
 class BranchesScreen extends StatelessWidget {
   const BranchesScreen({super.key});
@@ -35,22 +37,14 @@ class BranchesScreen extends StatelessWidget {
           BlocBuilder<GetBranchesCubit, GetBranchesState>(
             builder: (context, state) {
               if (state is GetBranchesLoading) {
-                return const SliverToBoxAdapter(
-                  child: Center(
-                      child:
-                          CircularProgressIndicator()), // TODO: use shimmer effect for loading
-                );
+                return ShimmerLoadingBranches();
               } else if (state is GetBranchesSuccess) {
                 return SliverList.builder(
                   itemCount: state.branches.length,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 19.0),
-                      child: GestureDetector(
-                        onTap: () => context.pushNamed(Routing.pharmacyDetail),
-                        child:
-                            BranchesCardItems(branches: state.branches[index]),
-                      ),
+                      child: BranchesCardItems(branches: state.branches[index]),
                     );
                   },
                 );
@@ -66,6 +60,13 @@ class BranchesScreen extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: ()=>context.pushNamed(Routing.pharmacyEdit),
+        backgroundColor: AppColors.primaryColor,
+        shape: CircleBorder(),
+        child: Icon(Icons.add,color: AppColors.white,),
+        )
+        ,
     );
   }
 }
