@@ -83,7 +83,8 @@
     "noBranches":"No Branches Found",
     "noMedicines":"No Medicines Found",
     "addMedSuccess":"Medicine Added Successfully",
-    "addMedFail":"Failed to Add Medicine"
+    "addMedFail":"Failed to Add Medicine",
+    "fieldRequired":"field Required"
 
 
 }

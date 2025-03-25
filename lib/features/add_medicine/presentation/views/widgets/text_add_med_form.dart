@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmacy_app/generated/l10n.dart';
 import '../../../../../core/utils/app_colors.dart';
 
 class TextAddMedForm extends StatelessWidget {
@@ -38,6 +39,12 @@ class TextAddMedForm extends StatelessWidget {
                 : BorderRadius.circular(20.r),
           ),
           child: TextFormField(
+            validator: (value) {
+              if (value!.isEmpty && !readOnly) {
+                return S.of(context).fieldRequired;
+              }
+              return null;
+            },
             keyboardType: keyboardType ?? TextInputType.text,
             onTapOutside: (v) {
               FocusScope.of(context).unfocus();
