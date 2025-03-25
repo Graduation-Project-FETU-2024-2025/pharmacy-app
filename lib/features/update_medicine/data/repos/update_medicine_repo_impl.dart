@@ -1,5 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:pharmacy_app/core/database/api/api_consumer.dart';
+import 'package:pharmacy_app/core/database/api/api_error_handler.dart';
+import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/core/database/api/end_points.dart';
 import 'package:pharmacy_app/features/update_medicine/data/models/update_medicine_request_model.dart';
 import 'package:pharmacy_app/features/update_medicine/data/models/update_medicine_response_model.dart';
@@ -10,7 +12,7 @@ class UpdateMedicineRepoImpl implements UpdateMedicineRepo {
 
   UpdateMedicineRepoImpl({required this.apiConsumer});
   @override
-  Future<Either<String, UpdateMedicineResponseModel>> updateMedicine(
+  Future<Either<ApiErrorModel, UpdateMedicineResponseModel>> updateMedicine(
       {required UpdateMedicineRequestModel data}) async {
     try {
       final response = await apiConsumer.put(
@@ -22,7 +24,7 @@ class UpdateMedicineRepoImpl implements UpdateMedicineRepo {
       );
       return Right(updateResponse);
     } catch (e) {
-      return Left(e.toString());
+      return Left(ApiErrorHandler.handleError(e));
     }
   }
 }

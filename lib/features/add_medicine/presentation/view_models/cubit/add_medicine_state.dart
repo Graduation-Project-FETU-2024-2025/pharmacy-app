@@ -10,6 +10,7 @@ final class AddMedicineLoading extends AddMedicineState {}
 final class AddMedicineSuccess extends AddMedicineState {}
 
 final class AddMedicineFailure extends AddMedicineState {
-  final String errorMessage;
-  AddMedicineFailure({required this.errorMessage});
+  final ApiErrorModel apiErrorModel;
+
+  AddMedicineFailure({required this.apiErrorModel});
 }

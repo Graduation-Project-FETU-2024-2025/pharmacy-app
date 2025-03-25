@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/features/home/data/repos/out_of_stock_repo.dart';
 
 import '../../../../all_medicines/data/models/medicine_branch_model.dart';
@@ -16,8 +17,8 @@ class OutOfStockCubit extends Cubit<OutOfStockState> {
     emit(OutOfStockLoading());
     final result = await outOfStockRepo.getOutOfStock();
     result.fold(
-      (ifLeft) => emit(
-        OutOfStockFailure(errorMessage: ifLeft),
+      (apiErrorModel) => emit(
+        OutOfStockFailure(errorModel: apiErrorModel),
       ),
       (ifRight) => emit(
         OutOfStockSuccess(

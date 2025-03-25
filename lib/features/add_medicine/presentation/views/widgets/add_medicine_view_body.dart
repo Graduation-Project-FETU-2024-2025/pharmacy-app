@@ -149,7 +149,7 @@ class AddMedicineViewBody extends StatelessWidget {
                         successToast(message: S.of(context).addMedSuccess);
                       }
                       if (state is AddMedicineFailure) {
-                        errorToast(message: S.of(context).addMedFail);
+                        errorToast(message: state.apiErrorModel.message!);
                       }
                     },
                     builder: (context, state) {

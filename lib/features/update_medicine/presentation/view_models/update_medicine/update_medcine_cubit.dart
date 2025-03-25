@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/features/update_medicine/data/models/update_medicine_request_model.dart';
 import 'package:pharmacy_app/features/update_medicine/data/repos/update_medicine_repo.dart';
 
@@ -31,8 +32,8 @@ class UpdateMedcineCubit extends Cubit<UpdateMedcineState> {
           visibility: true),
     );
     result.fold(
-      (ifLeft) => emit(
-        UpdateMedcineFailure(errorMessage: ifLeft),
+      (apiErrorModel) => emit(
+        UpdateMedcineFailure(apiErrorModel: apiErrorModel),
       ),
       (ifRight) => emit(
         UpdateMedcineSuccess(),

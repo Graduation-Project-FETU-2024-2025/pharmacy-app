@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/features/add_medicine/data/models/add_medicine_request_model.dart';
 import 'package:pharmacy_app/features/add_medicine/data/repos/add_medicine_repo.dart';
 part 'add_medicine_state.dart';
@@ -28,8 +29,8 @@ class AddMedicineCubit extends Cubit<AddMedicineState> {
       ),
     );
     result.fold(
-      (errorMessage) => emit(
-        AddMedicineFailure(errorMessage: errorMessage),
+      (errorModel) => emit(
+        AddMedicineFailure(apiErrorModel: errorModel),
       ),
       (successMessage) => emit(
         AddMedicineSuccess(),

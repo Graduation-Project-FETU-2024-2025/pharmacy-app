@@ -13,6 +13,6 @@ final class SystemMedicinesSuccess extends SystemMedicinesState {
 }
 
 final class SystemMedicinesFailure extends SystemMedicinesState {
-  final String errorMessage;
-  SystemMedicinesFailure({required this.errorMessage});
+  final ApiErrorModel apiErrorModel;
+  SystemMedicinesFailure({required this.apiErrorModel});
 }

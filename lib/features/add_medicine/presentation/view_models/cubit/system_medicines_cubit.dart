@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/features/add_medicine/data/models/system_medicine_model.dart';
 import 'package:pharmacy_app/features/add_medicine/data/repos/get_system_medicines_repo.dart';
 
@@ -14,8 +15,8 @@ class SystemMedicinesCubit extends Cubit<SystemMedicinesState> {
   void getSystemMedicines() async {
     final result = await getSystemMedicinesRepo.getSystemMedicines();
     result.fold(
-      (left) => emit(
-        SystemMedicinesFailure(errorMessage: left),
+      (apiErrorModel) => emit(
+        SystemMedicinesFailure(apiErrorModel: apiErrorModel),
       ),
       (right) => emit(
         SystemMedicinesSuccess(systemMedicines: right.data),

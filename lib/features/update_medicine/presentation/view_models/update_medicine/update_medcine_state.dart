@@ -10,8 +10,7 @@ final class UpdateMedcineLoading extends UpdateMedcineState {}
 final class UpdateMedcineSuccess extends UpdateMedcineState {}
 
 final class UpdateMedcineFailure extends UpdateMedcineState {
-  final String errorMessage;
-  UpdateMedcineFailure({
-    required this.errorMessage,
-  });
+  final ApiErrorModel apiErrorModel;
+
+  UpdateMedcineFailure({required this.apiErrorModel});
 }

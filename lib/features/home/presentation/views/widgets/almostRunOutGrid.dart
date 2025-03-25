@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmacy_app/core/widgets/error_api_widget.dart';
 import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
 import 'package:pharmacy_app/features/all_medicines/data/models/product_dto_model.dart';
 import 'package:pharmacy_app/features/home/presentation/view_models/out_of_stock_cubit/out_of_stock_cubit.dart';
 import 'package:pharmacy_app/features/home/presentation/views/widgets/almostRunOutCard.dart';
-import 'package:pharmacy_app/generated/l10n.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class AlmostRunOutGrid extends StatelessWidget {
@@ -37,7 +37,11 @@ class AlmostRunOutGrid extends StatelessWidget {
               );
             },
           );
-        } else if (state is OutOfStockLoading) {
+        } else if (state is OutOfStockFailure) {
+          return ErrorApiWidget(
+            message: state.errorModel.message!,
+          );
+        } else {
           return Skeletonizer(
             enabled: true,
             effect: ShimmerEffect(),
@@ -74,8 +78,6 @@ class AlmostRunOutGrid extends StatelessWidget {
               },
             ),
           );
-        } else {
-          return Text(S.of(context).somethingWrong);
         }
       },
     );
