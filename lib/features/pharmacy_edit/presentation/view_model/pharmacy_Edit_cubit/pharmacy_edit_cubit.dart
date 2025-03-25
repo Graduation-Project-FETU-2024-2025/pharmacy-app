@@ -6,6 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:meta/meta.dart';
 import 'package:pharmacy_app/core/database/api/api_error_handler.dart';
 import 'package:pharmacy_app/core/database/api/api_error_model.dart';
+import 'package:pharmacy_app/features/pharmacy_edit/data/models/add_branch_model_response.dart';
 import '../../../../../core/database/cache/secure_storage.dart';
 import '../../../../all_branches/data/models/working_hours_model.dart';
 import '../../../data/models/add_branch_model.dart';

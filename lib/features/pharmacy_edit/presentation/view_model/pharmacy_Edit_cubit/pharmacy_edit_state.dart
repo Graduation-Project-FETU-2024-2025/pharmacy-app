@@ -9,7 +9,7 @@ final class AddBranchInitial extends PharmacyEditState {}
 class AddBranchLoading extends PharmacyEditState {}
 
 class AddBranchSuccess extends PharmacyEditState {
-  final AddBranchModel branch;
+  final AddBranchModelResponse branch;
   AddBranchSuccess(this.branch);
 }
 
