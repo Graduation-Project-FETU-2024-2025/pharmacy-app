@@ -56,6 +56,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "أدخل رمز التحقق الذي أرسلناه لك على"),
         "enterPrice": MessageLookupByLibrary.simpleMessage("ادخل السعر"),
         "enterQuantity": MessageLookupByLibrary.simpleMessage("ادخل الكمية"),
+        "fieldRequired":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "form": MessageLookupByLibrary.simpleMessage("الشكل"),
         "freeDelivery": MessageLookupByLibrary.simpleMessage("توصيل مجاني"),
         "getAddressInfo":
