@@ -23,7 +23,7 @@ class OtpCubit extends Cubit<OtpState> {
     final result = await _authRepo
         .verifyOTP(OtpSignInRequestModel(email: email, otp: otp));
     result.fold(
-      (message) => emit(OtpCheckFailure(message)),
+      (apiErrorModel) => emit(OtpCheckFailure(apiErrorModel: apiErrorModel)),
       (r) => emit(OtpCheckSuccess()),
     );
   }

@@ -34,4 +34,8 @@ class GetBranchProductsCubit extends Cubit<GetBranchProductsState> {
       );
     }
   }
+
+  void selectBranch() {
+    emit(GetBranchProductsSelectBranch());
+  }
 }

@@ -782,6 +782,106 @@ class S {
     );
   }
 
+  /// `Medicine Added Successfully`
+  String get addMedSuccess {
+    return Intl.message(
+      'Medicine Added Successfully',
+      name: 'addMedSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to Add Medicine`
+  String get addMedFail {
+    return Intl.message(
+      'Failed to Add Medicine',
+      name: 'addMedFail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update`
+  String get update {
+    return Intl.message(
+      'Update',
+      name: 'update',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medicine Updated Successfully`
+  String get updateMedSuccess {
+    return Intl.message(
+      'Medicine Updated Successfully',
+      name: 'updateMedSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to Update Medicine`
+  String get updateMedFail {
+    return Intl.message(
+      'Failed to Update Medicine',
+      name: 'updateMedFail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add`
+  String get add {
+    return Intl.message(
+      'Add',
+      name: 'add',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete this medicine?`
+  String get areYouSureToDelete {
+    return Intl.message(
+      'Are you sure you want to delete this medicine?',
+      name: 'areYouSureToDelete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `field Required`
+  String get fieldRequired {
+    return Intl.message(
+      'field Required',
+      name: 'fieldRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `address`
   String get address {
     return Intl.message(

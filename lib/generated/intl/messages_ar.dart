@@ -26,11 +26,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "DoageForm": MessageLookupByLibrary.simpleMessage("شكل الجرعة"),
         "activeSubstance":
             MessageLookupByLibrary.simpleMessage("المادة الفعالة"),
+        "add": MessageLookupByLibrary.simpleMessage("اضافة"),
+        "addMedFail":
+            MessageLookupByLibrary.simpleMessage("فشل في اضافة الدواء"),
+        "addMedSuccess":
+            MessageLookupByLibrary.simpleMessage("تمت اضافة الدواء بنجاح"),
         "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "allBranches": MessageLookupByLibrary.simpleMessage("جميع الفروع"),
         "allMedicines": MessageLookupByLibrary.simpleMessage("جميع الأدوية"),
         "almostRunOut": MessageLookupByLibrary.simpleMessage("شارف على النفاذ"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "areYouSureToDelete":
+            MessageLookupByLibrary.simpleMessage("هل انت متاكد من حذف الدواء؟"),
         "areaAndPrice":
             MessageLookupByLibrary.simpleMessage("منطقة التوصيل & السعر"),
         "branch": MessageLookupByLibrary.simpleMessage("الفرع"),
@@ -52,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "أدخل رمز التحقق الذي أرسلناه لك على"),
         "enterPrice": MessageLookupByLibrary.simpleMessage("ادخل السعر"),
         "enterQuantity": MessageLookupByLibrary.simpleMessage("ادخل الكمية"),
+        "fieldRequired":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "form": MessageLookupByLibrary.simpleMessage("الشكل"),
         "freeDelivery": MessageLookupByLibrary.simpleMessage("توصيل مجاني"),
         "getAddressInfo":
@@ -84,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "medicineName": MessageLookupByLibrary.simpleMessage("اسم الدواء"),
         "mileage": MessageLookupByLibrary.simpleMessage("عدد الأميال"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "no": MessageLookupByLibrary.simpleMessage("لا"),
         "noBranches": MessageLookupByLibrary.simpleMessage("لا توجد فروع"),
         "noMedicines": MessageLookupByLibrary.simpleMessage("لا توجد أدوية"),
         "onboarding":
@@ -106,9 +116,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectBranch": MessageLookupByLibrary.simpleMessage("اختر الفرع"),
         "somethingWrong": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "startTime": MessageLookupByLibrary.simpleMessage("وقت البداية"),
+        "update": MessageLookupByLibrary.simpleMessage("تعديل"),
+        "updateMedFail":
+            MessageLookupByLibrary.simpleMessage("فشل في تعديل الدواء"),
+        "updateMedSuccess":
+            MessageLookupByLibrary.simpleMessage("تم تعديل الدواء بنجاح"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("خدمة أربع و عشرون ساعة !"),
-        "workingHour": MessageLookupByLibrary.simpleMessage("ساعات العمل")
+        "workingHour": MessageLookupByLibrary.simpleMessage("ساعات العمل"),
+        "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

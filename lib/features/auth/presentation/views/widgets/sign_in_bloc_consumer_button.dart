@@ -27,7 +27,7 @@ class SignInBlocConsumerButton extends StatelessWidget {
               argument: signInCubit.emailController.text);
         } else if (state is SignInFailure) {
           signInCubit.emailController.clear();
-          errorToast(message: state.message);
+          errorToast(message: state.apiErrorModel.message!);
         }
       },
       buildWhen: (previous, current) =>

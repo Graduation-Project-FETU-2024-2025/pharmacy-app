@@ -17,3 +17,5 @@ final class GetBranchProductsFailure extends GetBranchProductsState {
 
   GetBranchProductsFailure({required this.erorrMessage});
 }
+
+final class GetBranchProductsSelectBranch extends GetBranchProductsState {}

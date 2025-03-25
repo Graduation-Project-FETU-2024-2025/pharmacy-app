@@ -1,20 +1,25 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/widgets/add_delete_button.dart';
+import 'package:pharmacy_app/core/widgets/toast.dart';
 import 'package:pharmacy_app/features/add_medicine/data/models/system_medicine_model.dart';
 import 'package:pharmacy_app/features/add_medicine/presentation/view_models/cubit/add_medicine_cubit.dart';
+import 'package:pharmacy_app/features/auth/presentation/views/widgets/loading_widget.dart';
 import '../../../../../core/database/cache/cashe_helper.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../generated/l10n.dart';
 import 'text_add_med_form.dart';
 
 class AddMedicineViewBody extends StatelessWidget {
-  const AddMedicineViewBody({super.key, required this.systemMedicineModel});
+  const AddMedicineViewBody(
+      {super.key, required this.systemMedicineModel, required this.branchId});
   final SystemMedicineModel systemMedicineModel;
+  final String branchId;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -133,18 +138,41 @@ class AddMedicineViewBody extends StatelessWidget {
                       AddMedicineCubit.get(context).medicineStockController,
                 ),
                 SizedBox(
-                  height: 24.h,
-                ),
-                SizedBox(
-                  height: 32.h,
+                  height: 56.h,
                 ),
                 SizedBox(
                   height: 35.h,
                   width: 120.w,
-                  child: AddDeleteButton(
-                    title: S.of(context).save,
-                    color: AppColors.primaryColor,
-                    onpressed: () {},
+                  child: BlocConsumer<AddMedicineCubit, AddMedicineState>(
+                    listener: (context, state) {
+                      if (state is AddMedicineSuccess) {
+                        successToast(message: S.of(context).addMedSuccess);
+                      }
+                      if (state is AddMedicineFailure) {
+                        errorToast(message: S.of(context).addMedFail);
+                      }
+                    },
+                    builder: (context, state) {
+                      return state is AddMedicineLoading
+                          ? LoadingWidget()
+                          : AddDeleteButton(
+                              title: S.of(context).add,
+                              color: state is AddMedicineSuccess
+                                  ? Colors.grey.withOpacity(0.3)
+                                  : AppColors.primaryColor,
+                              onpressed: () {
+                                if (AddMedicineCubit.get(context)
+                                    .formKey
+                                    .currentState!
+                                    .validate()) {
+                                  context.read<AddMedicineCubit>().addMedicine(
+                                        branchId: branchId,
+                                        medicineCode: systemMedicineModel.code,
+                                      );
+                                }
+                              },
+                            );
+                    },
                   ),
                 ),
               ],

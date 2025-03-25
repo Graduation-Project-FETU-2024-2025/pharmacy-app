@@ -9,9 +9,18 @@ class MedicineDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: MedicineDetailsViewBody(
-        medicineBranchModel: medicineBranchModel,
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) async {
+        if (didPop) return;
+
+        Navigator.of(context).pop(true);
+      },
+      child: Scaffold(
+        body: MedicineDetailsViewBody(
+          branchId: medicineBranchModel.branchId,
+          id: medicineBranchModel.systemProductCode,
+        ),
       ),
     );
   }

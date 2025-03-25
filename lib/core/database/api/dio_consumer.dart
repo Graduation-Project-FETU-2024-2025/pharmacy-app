@@ -13,17 +13,13 @@ class DioConsumer extends ApiConsumer {
     Map<String, String>? headers,
     bool isFormData = false,
   }) async {
-    try {
-      final response = await dio.delete(path,
-          data: isFormData ? FormData.fromMap(data) : data,
-          queryParameters: queryParameter,
-          options: Options(
-            headers: headers ?? {},
-          ));
-      return response;
-    } on DioException catch (e) {
-      handleDioExceptions(e);
-    }
+    final response = await dio.delete(path,
+        data: isFormData ? FormData.fromMap(data) : data,
+        queryParameters: queryParameter,
+        options: Options(
+          headers: headers ?? {},
+        ));
+    return response;
   }
 
   @override
@@ -33,19 +29,15 @@ class DioConsumer extends ApiConsumer {
     Map<String, dynamic>? queryParameter,
     Map<String, String>? headers,
   }) async {
-    try {
-      final response = await dio.get(
-        path,
-        data: data,
-        queryParameters: queryParameter,
-        options: Options(
-          headers: headers ?? {},
-        ),
-      );
-      return response;
-    } on DioException catch (e) {
-      handleDioExceptions(e);
-    }
+    final response = await dio.get(
+      path,
+      data: data,
+      queryParameters: queryParameter,
+      options: Options(
+        headers: headers ?? {},
+      ),
+    );
+    return response;
   }
 
   @override
@@ -55,16 +47,12 @@ class DioConsumer extends ApiConsumer {
     Map<String, dynamic>? queryParameter,
     bool isFormData = false,
   }) async {
-    try {
-      final response = await dio.patch(
-        path,
-        data: isFormData ? FormData.fromMap(data) : data,
-        queryParameters: queryParameter,
-      );
-      return response;
-    } on DioException catch (e) {
-      handleDioExceptions(e);
-    }
+    final response = await dio.patch(
+      path,
+      data: isFormData ? FormData.fromMap(data) : data,
+      queryParameters: queryParameter,
+    );
+    return response;
   }
 
   @override
@@ -74,19 +62,26 @@ class DioConsumer extends ApiConsumer {
     Map<String, dynamic>? queryParameter,
     bool isFormData = false,
   }) async {
-    try {
-      final response = await dio.post(
-        path,
-        data: isFormData ? FormData.fromMap(data) : data,
-        queryParameters: queryParameter,
-      );
-      return response;
-    } on DioException catch (e) {
-      handleDioExceptions(e);
-    }
+    final response = await dio.post(
+      path,
+      data: isFormData ? FormData.fromMap(data) : data,
+      queryParameters: queryParameter,
+    );
+    return response;
   }
 
-  handleDioExceptions(e) {
-    print(e.message); // I Will Handle this later 😑😑
+  @override
+  put(
+    String path, {
+    dynamic data,
+    Map<String, dynamic>? queryParameter,
+    bool isFormData = false,
+  }) async {
+    final response = await dio.put(
+      path,
+      data: isFormData ? FormData.fromMap(data) : data,
+      queryParameters: queryParameter,
+    );
+    return response;
   }
 }
