@@ -43,11 +43,11 @@ class PharmacyEditBody extends StatelessWidget {
                       );
                       Navigator.pop(context);
                     } else if (state is AddBranchError) {
-                      log(state.message);
+                      log(state.apiErrorModel.message!);
                       Navigator.pop(context);
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                            content: Text(state.message),
+                            content: Text(state.apiErrorModel.message!),
                             backgroundColor: Colors.red),
                       );
                     }

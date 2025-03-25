@@ -14,8 +14,8 @@ class AddBranchSuccess extends PharmacyEditState {
 }
 
 class AddBranchError extends PharmacyEditState {
-  final String message;
-  AddBranchError(this.message);
+  final ApiErrorModel apiErrorModel;
+  AddBranchError(this.apiErrorModel);
 }
 
 class BranchImagePicked extends PharmacyEditState {
