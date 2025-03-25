@@ -8,9 +8,17 @@ class SystemMedicineView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        body: SystemMedicineViewBody(
-          branchId: branchId,
+      child: PopScope(
+        canPop: false,
+        onPopInvokedWithResult: (didPop, result) async {
+          if (didPop) return;
+
+          Navigator.of(context).pop(true);
+        },
+        child: Scaffold(
+          body: SystemMedicineViewBody(
+            branchId: branchId,
+          ),
         ),
       ),
     );

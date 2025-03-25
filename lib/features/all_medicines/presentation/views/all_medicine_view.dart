@@ -55,10 +55,17 @@ class AllMedicineView extends StatelessWidget {
                           Icons.add,
                           color: Colors.white,
                         ),
-                        onPressed: () {
-                          Navigator.pushNamed(context, Routing.systemMedicine,
-                              arguments:
-                                  getbranchproductscubit.currentBranchId);
+                        onPressed: () async {
+                          final result = await Navigator.pushNamed(
+                            context,
+                            Routing.systemMedicine,
+                            arguments: getbranchproductscubit.currentBranchId,
+                          );
+                          if (result == true) {
+                            getbranchproductscubit.getBranchProducts(
+                              branchId: getbranchproductscubit.currentBranchId!,
+                            );
+                          }
                         },
                       ),
                     )
