@@ -35,6 +35,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "allMedicines": MessageLookupByLibrary.simpleMessage("جميع الأدوية"),
         "almostRunOut": MessageLookupByLibrary.simpleMessage("شارف على النفاذ"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "areYouSureToDelete":
+            MessageLookupByLibrary.simpleMessage("هل انت متاكد من حذف الدواء؟"),
         "areaAndPrice":
             MessageLookupByLibrary.simpleMessage("منطقة التوصيل & السعر"),
         "branch": MessageLookupByLibrary.simpleMessage("الفرع"),
@@ -89,6 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "medicineName": MessageLookupByLibrary.simpleMessage("اسم الدواء"),
         "mileage": MessageLookupByLibrary.simpleMessage("عدد الأميال"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "no": MessageLookupByLibrary.simpleMessage("لا"),
         "noBranches": MessageLookupByLibrary.simpleMessage("لا توجد فروع"),
         "noMedicines": MessageLookupByLibrary.simpleMessage("لا توجد أدوية"),
         "onboarding":
@@ -119,6 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("خدمة أربع و عشرون ساعة !"),
-        "workingHour": MessageLookupByLibrary.simpleMessage("ساعات العمل")
+        "workingHour": MessageLookupByLibrary.simpleMessage("ساعات العمل"),
+        "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

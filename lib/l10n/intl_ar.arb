@@ -87,9 +87,9 @@
     "update":"تعديل",
     "updateMedSuccess":"تم تعديل الدواء بنجاح",
     "updateMedFail":"فشل في تعديل الدواء",
-    "add":"اضافة"
-
-
-
-
+    "add":"اضافة",
+    "areYouSureToDelete":"هل انت متاكد من حذف الدواء؟",
+    "yes":"نعم",
+    "no":"لا"
+    
 }

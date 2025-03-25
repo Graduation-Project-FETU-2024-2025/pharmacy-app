@@ -36,6 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "almostRunOut":
             MessageLookupByLibrary.simpleMessage("Almost running out"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "areYouSureToDelete": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to delete this medicine?"),
         "areaAndPrice":
             MessageLookupByLibrary.simpleMessage("Delivery Area & Price"),
         "branch": MessageLookupByLibrary.simpleMessage("Branch"),
@@ -91,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "medicineName": MessageLookupByLibrary.simpleMessage("Medicine Name"),
         "mileage": MessageLookupByLibrary.simpleMessage("Mileage"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "noBranches": MessageLookupByLibrary.simpleMessage("No Branches Found"),
         "noMedicines":
             MessageLookupByLibrary.simpleMessage("No Medicines Found"),
@@ -124,6 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("Twenty four hours service !"),
-        "workingHour": MessageLookupByLibrary.simpleMessage("Working Hours")
+        "workingHour": MessageLookupByLibrary.simpleMessage("Working Hours"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

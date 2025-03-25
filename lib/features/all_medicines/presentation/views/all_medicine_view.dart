@@ -41,7 +41,8 @@ class AllMedicineView extends StatelessWidget {
                       child: AllBranchesView(),
                     )
                   : AllMedicineViewBody(),
-              floatingActionButton: state is GetBranchProductsSuccess
+              floatingActionButton: (state is GetBranchProductsSuccess ||
+                      state is GetBranchProductsFailure)
                   ? Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 30.h,
