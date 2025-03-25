@@ -51,7 +51,7 @@ class BranchesScreen extends StatelessWidget {
               } else if (state is GetBranchesFailure) {
                 return SliverToBoxAdapter(
                   child: Center(
-                      child: Text(state.message,
+                      child: Text(state.apiErrorModel.message!,
                           style: TextStyle(color: Colors.red))),
                 );
               }

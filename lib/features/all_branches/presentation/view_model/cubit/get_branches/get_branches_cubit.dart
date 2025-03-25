@@ -13,7 +13,7 @@ class GetBranchesCubit extends Cubit<GetBranchesState> {
     emit(GetBranchesLoading());
     final result = await getBranchesRepo.getAllBranches();
     result.fold(
-      (message) => GetBranchesFailure(message),
+      (apiErrorModel) => GetBranchesFailure(apiErrorModel: apiErrorModel),
       (branches) => emit(
         GetBranchesSuccess(branches: branches),
       ),
