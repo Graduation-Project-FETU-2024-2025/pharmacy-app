@@ -27,7 +27,7 @@ class DeleteButtonConsumer extends StatelessWidget {
           successToast(message: state.successMessage);
         }
         if (state is DeleteFailure) {
-          errorToast(message: state.errorMessage);
+          errorToast(message: state.apiErrorModel.message!);
         }
       },
       builder: (context, state) {

@@ -43,7 +43,14 @@ class AllBranchesView extends StatelessWidget {
                 ),
               ),
             );
-          } else if (state is GetBranchesLoading) {
+          } else if (state is GetBranchesFailure) {
+            return Center(
+              child: Text(
+                S.of(context).somethingWrong,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            );
+          } else {
             return Skeletonizer(
               enabled: true,
               effect: ShimmerEffect(),
@@ -54,13 +61,6 @@ class AllBranchesView extends StatelessWidget {
                     branchName: '',
                   ),
                 ),
-              ),
-            );
-          } else {
-            return Center(
-              child: Text(
-                S.of(context).somethingWrong,
-                style: Theme.of(context).textTheme.titleMedium,
               ),
             );
           }

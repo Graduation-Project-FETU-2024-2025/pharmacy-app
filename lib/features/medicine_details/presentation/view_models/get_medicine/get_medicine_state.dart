@@ -8,9 +8,9 @@ final class GetMedicineInitial extends GetMedicineState {}
 final class GetMedicineLoading extends GetMedicineState {}
 
 final class GetMedicineFailure extends GetMedicineState {
-  final String errorMessage;
+  final ApiErrorModel apiErrorModel;
 
-  GetMedicineFailure({required this.errorMessage});
+  GetMedicineFailure({required this.apiErrorModel});
 }
 
 final class GetMedicineSuccess extends GetMedicineState {

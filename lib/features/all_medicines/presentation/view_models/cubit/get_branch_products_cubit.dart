@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
 
 import '../../../data/repos/get_branch_products_repo.dart';
@@ -21,10 +22,8 @@ class GetBranchProductsCubit extends Cubit<GetBranchProductsState> {
         branchId: branchId,
       );
       result.fold(
-        (left) => emit(
-          GetBranchProductsFailure(
-            erorrMessage: left,
-          ),
+        (apiErrorModel) => emit(
+          GetBranchProductsFailure(apiErrorModel: apiErrorModel),
         ),
         (right) => emit(
           GetBranchProductsSuccess(

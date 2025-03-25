@@ -13,9 +13,9 @@ final class GetBranchProductsSuccess extends GetBranchProductsState {
 }
 
 final class GetBranchProductsFailure extends GetBranchProductsState {
-  final String erorrMessage;
+  final ApiErrorModel apiErrorModel;
 
-  GetBranchProductsFailure({required this.erorrMessage});
+  GetBranchProductsFailure({required this.apiErrorModel});
 }
 
 final class GetBranchProductsSelectBranch extends GetBranchProductsState {}

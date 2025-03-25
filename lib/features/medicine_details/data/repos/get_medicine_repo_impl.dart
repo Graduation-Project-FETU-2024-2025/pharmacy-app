@@ -1,5 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:pharmacy_app/core/database/api/api_consumer.dart';
+import 'package:pharmacy_app/core/database/api/api_error_handler.dart';
+import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/core/database/api/end_points.dart';
 import 'package:pharmacy_app/features/medicine_details/data/models/get_medicine_response_model.dart';
 import 'package:pharmacy_app/features/medicine_details/data/repos/get_medicine_repo.dart';
@@ -9,7 +11,7 @@ class GetMedicineRepoImpl implements GetMedicineRepo {
 
   GetMedicineRepoImpl({required this.apiConsumer});
   @override
-  Future<Either<String, GetMedicineResponseModel>> getMedicineDetails({
+  Future<Either<ApiErrorModel, GetMedicineResponseModel>> getMedicineDetails({
     required String branchId,
     required String id,
   }) async {
@@ -19,7 +21,7 @@ class GetMedicineRepoImpl implements GetMedicineRepo {
       final data = GetMedicineResponseModel.fromJson(response.data);
       return Right(data);
     } catch (e) {
-      return Left(e.toString());
+      return Left(ApiErrorHandler.handleError(e));
     }
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
+import 'package:pharmacy_app/core/widgets/error_api_widget.dart';
 import 'package:pharmacy_app/features/all_medicines/presentation/view_models/cubit/get_branch_products_cubit.dart';
 import 'package:pharmacy_app/features/all_medicines/presentation/views/widgets/loading_state_widget.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
@@ -55,7 +56,7 @@ class AllMedicinesGridview extends StatelessWidget {
           );
         } else if (state is GetBranchProductsFailure) {
           return Center(
-            child: Text(state.erorrMessage),
+            child: ErrorApiWidget(message: state.apiErrorModel.message!),
           );
         } else {
           return LoadingStateWidget();

@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
 import 'package:pharmacy_app/features/medicine_details/data/repos/get_medicine_repo.dart';
 
@@ -17,7 +18,9 @@ class GetMedicineCubit extends Cubit<GetMedicineState> {
       id: id,
     );
     result.fold(
-      (ifLeft) => emit(GetMedicineFailure(errorMessage: ifLeft)),
+      (apiErrorModel) => emit(
+        GetMedicineFailure(apiErrorModel: apiErrorModel),
+      ),
       (ifRight) => emit(
         GetMedicineSuccess(medicineBranchModel: ifRight.data!),
       ),

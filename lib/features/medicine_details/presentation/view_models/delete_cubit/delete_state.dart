@@ -13,6 +13,7 @@ final class DeleteSuccess extends DeleteState {
 }
 
 final class DeleteFailure extends DeleteState {
-  final String errorMessage;
-  DeleteFailure({required this.errorMessage});
+  final ApiErrorModel apiErrorModel;
+
+  DeleteFailure({required this.apiErrorModel});
 }

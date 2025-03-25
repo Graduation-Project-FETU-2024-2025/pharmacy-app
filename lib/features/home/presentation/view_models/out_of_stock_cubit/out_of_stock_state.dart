@@ -13,6 +13,6 @@ final class OutOfStockSuccess extends OutOfStockState {
 }
 
 final class OutOfStockFailure extends OutOfStockState {
-  final String errorMessage;
-  OutOfStockFailure({required this.errorMessage});
+  final ApiErrorModel errorModel;
+  OutOfStockFailure({required this.errorModel});
 }

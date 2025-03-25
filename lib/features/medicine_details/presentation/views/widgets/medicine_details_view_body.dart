@@ -9,6 +9,7 @@ import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/widgets/add_delete_button.dart';
+import 'package:pharmacy_app/core/widgets/error_api_widget.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/widgets/loading_widget.dart';
 import 'package:pharmacy_app/features/medicine_details/data/repos/delete_repo.dart';
 import 'package:pharmacy_app/features/medicine_details/presentation/view_models/delete_cubit/delete_cubit.dart';
@@ -148,7 +149,7 @@ class MedicineDetailsViewBody extends StatelessWidget {
           );
         } else if (state is GetMedicineFailure) {
           return Center(
-            child: Text(state.errorMessage),
+            child: ErrorApiWidget(message: state.apiErrorModel.message!),
           );
         } else {
           return const Center(
