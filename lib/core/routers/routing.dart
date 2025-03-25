@@ -17,4 +17,5 @@ abstract class Routing {
 
   static const String addMedicine = '/addMedicine';
   static const String systemMedicine = '/systemMedicine';
+  static const String updateMedicine = '/updateMedicine';
 }

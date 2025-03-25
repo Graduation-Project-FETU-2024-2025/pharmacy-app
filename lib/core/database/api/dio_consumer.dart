@@ -69,4 +69,19 @@ class DioConsumer extends ApiConsumer {
     );
     return response;
   }
+
+  @override
+  put(
+    String path, {
+    dynamic data,
+    Map<String, dynamic>? queryParameter,
+    bool isFormData = false,
+  }) async {
+    final response = await dio.put(
+      path,
+      data: isFormData ? FormData.fromMap(data) : data,
+      queryParameters: queryParameter,
+    );
+    return response;
+  }
 }
