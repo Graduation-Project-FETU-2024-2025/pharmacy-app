@@ -85,9 +85,7 @@ class DeleteButton extends StatelessWidget {
                       ),
                     );
                   },
-            child: state is DeleteBranchLoading
-                ? const CircularProgressIndicator(color: Colors.white)
-                : Text(
+            child: Text(
                     S.of(context).delete,
                     style: Theme.of(context)
                         .textTheme

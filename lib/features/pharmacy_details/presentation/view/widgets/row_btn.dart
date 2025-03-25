@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -7,6 +8,7 @@ import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/features/all_branches/data/models/pharmacy_branch_model.dart';
+import '../../../../all_branches/presentation/view_model/cubit/get_branches/get_branches_cubit.dart';
 import 'delete_button.dart';
 
 class RowBtn extends StatelessWidget {
@@ -35,7 +37,13 @@ class RowBtn extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                context.pushNamed(Routing.pharmacyEdit, argument: branch);
+                context
+                    .pushNamed(Routing.pharmacyEdit, argument: branch)
+                    .then((value) {
+                  if (value == true) {
+                    context.read<GetBranchesCubit>().fetchBranches();
+                  }
+                });
               },
               child: SvgPicture.asset(
                 AppIcons.iconsEdit,
