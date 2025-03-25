@@ -1,25 +1,22 @@
+import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 
-sealed class SignInState {
-  final String message;
-
-  SignInState({required this.message});
-}
+sealed class SignInState {}
 
 final class SignInInitial extends SignInState {
-  SignInInitial():super(message: "");
+  SignInInitial();
 }
 
 final class SignInLoading extends SignInState {
-    SignInLoading():super(message: "");
+  SignInLoading();
 }
 
 final class SignInSuccess extends SignInState {
-  SignInSuccess({required super.message});
-  
+  final String message;
+  SignInSuccess({required this.message});
 }
 
 final class SignInFailure extends SignInState {
-  SignInFailure({required super.message});
+  final ApiErrorModel apiErrorModel;
+
+  SignInFailure({required this.apiErrorModel});
 }
-
-
