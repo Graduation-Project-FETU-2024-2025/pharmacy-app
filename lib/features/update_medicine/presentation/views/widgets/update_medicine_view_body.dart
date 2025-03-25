@@ -155,6 +155,7 @@ class UpdateMedicineViewBody extends StatelessWidget {
                     listener: (context, state) {
                       if (state is UpdateMedcineSuccess) {
                         successToast(message: S.of(context).updateMedSuccess);
+                        Navigator.pop(context, true);
                       }
                       if (state is UpdateMedcineFailure) {
                         errorToast(message: S.of(context).updateMedFail);

@@ -11,7 +11,8 @@ class MedicineDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: MedicineDetailsViewBody(
-        medicineBranchModel: medicineBranchModel,
+        branchId: medicineBranchModel.branchId,
+        id: medicineBranchModel.systemProductCode,
       ),
     );
   }

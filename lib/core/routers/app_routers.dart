@@ -20,6 +20,8 @@ import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit
 import 'package:pharmacy_app/features/auth/presentation/views/otp_view.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:pharmacy_app/features/home/presentation/views/home_view.dart';
+import 'package:pharmacy_app/features/medicine_details/data/repos/get_medicine_repo.dart';
+import 'package:pharmacy_app/features/medicine_details/presentation/view_models/get_medicine/get_medicine_cubit.dart';
 import 'package:pharmacy_app/features/medicine_details/presentation/views/medicine_details_view.dart';
 import 'package:pharmacy_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/pharmacy_details_view.dart';
@@ -88,9 +90,20 @@ class AppRouters {
       case Routing.medicineDetails:
         final medicine = argument as MedicineBranchModel;
         return _buildRoute(
-          BlocProvider(
-            create: (context) =>
-                UpdateMedcineCubit(getIt<UpdateMedicineRepo>()),
+          MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) =>
+                    UpdateMedcineCubit(getIt<UpdateMedicineRepo>()),
+              ),
+              BlocProvider(
+                create: (context) => GetMedicineCubit(getIt<GetMedicineRepo>())
+                  ..getMedicine(
+                    branchId: medicine.branchId,
+                    id: medicine.systemProductCode,
+                  ),
+              ),
+            ],
             child: MedicineDetailsView(
               medicineBranchModel: medicine,
             ),

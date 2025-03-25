@@ -7,7 +7,6 @@ import 'package:skeletonizer/skeletonizer.dart';
 
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_state.dart';
 
-
 import '../../../../../generated/l10n.dart';
 import '../../view_models/cubit/get_branch_products_cubit.dart';
 import 'all_branches_list_item.dart';
@@ -51,11 +50,7 @@ class AllBranchesView extends StatelessWidget {
               child: ListView.builder(
                 itemCount: 5,
                 itemBuilder: (context, index) => GestureDetector(
-                  onTap: () {
-                    getBranchProductsCubit.getBranchProducts(
-                      branchId: '',
-                    );
-                  },
+                  onTap: () {},
                   child: AllBranchListItem(
                     branchName: '',
                   ),

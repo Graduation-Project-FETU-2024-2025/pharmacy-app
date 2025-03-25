@@ -7,7 +7,7 @@ import '../../../../../core/widgets/toast.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../all_medicines/data/models/medicine_branch_model.dart';
 import '../../../../auth/presentation/views/widgets/loading_widget.dart';
-import '../../view_models/cubit/delete_cubit.dart';
+import '../../view_models/delete_cubit/delete_cubit.dart';
 
 class DeleteButtonConsumer extends StatelessWidget {
   const DeleteButtonConsumer({

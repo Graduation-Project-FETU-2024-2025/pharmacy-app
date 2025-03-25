@@ -11,6 +11,8 @@ import 'package:pharmacy_app/features/all_branches/data/repo/get_branches_repo.d
 import 'package:pharmacy_app/features/all_medicines/data/repos/get_branch_products_repo.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo_impl.dart';
+import 'package:pharmacy_app/features/medicine_details/data/repos/get_medicine_repo.dart';
+import 'package:pharmacy_app/features/medicine_details/data/repos/get_medicine_repo_impl.dart';
 import 'package:pharmacy_app/features/update_medicine/data/repos/update_medicine_repo.dart';
 import 'package:pharmacy_app/features/update_medicine/data/repos/update_medicine_repo_impl.dart';
 
@@ -57,5 +59,8 @@ void setup() {
   );
   getIt.registerLazySingleton<UpdateMedicineRepo>(
     () => UpdateMedicineRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<GetMedicineRepo>(
+    () => GetMedicineRepoImpl(apiConsumer: getIt<ApiConsumer>()),
   );
 }
