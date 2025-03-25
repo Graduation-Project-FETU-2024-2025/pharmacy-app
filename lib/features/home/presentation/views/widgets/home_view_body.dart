@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
@@ -6,6 +7,8 @@ import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/utils/app_images.dart';
 import 'package:pharmacy_app/core/widgets/search_text_field.dart';
+import 'package:pharmacy_app/features/home/data/repos/out_of_stock_repo.dart';
+import 'package:pharmacy_app/features/home/presentation/view_models/out_of_stock_cubit/out_of_stock_cubit.dart';
 import 'package:pharmacy_app/features/home/presentation/views/widgets/almostRunOutGrid.dart';
 import 'package:pharmacy_app/features/home/presentation/views/widgets/last_added_section.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
@@ -171,7 +174,11 @@ class HomeViewBody extends StatelessWidget {
           SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 15.h),
-              child: AlmostRunOutGrid(),
+              child: BlocProvider(
+                create: (context) =>
+                    OutOfStockCubit(getIt<OutOfStockRepo>())..getOutOfStock(),
+                child: AlmostRunOutGrid(),
+              ),
             ),
           ),
         ],

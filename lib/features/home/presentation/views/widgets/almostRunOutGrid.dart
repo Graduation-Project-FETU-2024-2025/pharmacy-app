@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
+import 'package:pharmacy_app/features/all_medicines/data/models/product_dto_model.dart';
+import 'package:pharmacy_app/features/home/presentation/view_models/out_of_stock_cubit/out_of_stock_cubit.dart';
 import 'package:pharmacy_app/features/home/presentation/views/widgets/almostRunOutCard.dart';
+import 'package:pharmacy_app/generated/l10n.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 class AlmostRunOutGrid extends StatelessWidget {
   const AlmostRunOutGrid({
@@ -9,18 +15,68 @@ class AlmostRunOutGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      itemCount: 4,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 24.w,
-        mainAxisSpacing: 20.h,
-        childAspectRatio: 157 / 179,
-      ),
-      itemBuilder: (context, index) {
-        return AlmostRunOutCard();
+    return BlocBuilder<OutOfStockCubit, OutOfStockState>(
+      builder: (context, state) {
+        if (state is OutOfStockSuccess) {
+          if (state.medicines.isEmpty) {
+            return Text('');
+          }
+          return GridView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: state.medicines.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 24.w,
+              mainAxisSpacing: 20.h,
+              childAspectRatio: 157 / 179,
+            ),
+            itemBuilder: (context, index) {
+              return AlmostRunOutCard(
+                medicineBranchModel: state.medicines[index],
+              );
+            },
+          );
+        } else if (state is OutOfStockLoading) {
+          return Skeletonizer(
+            enabled: true,
+            effect: ShimmerEffect(),
+            child: GridView.builder(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: 4,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 24.w,
+                mainAxisSpacing: 20.h,
+                childAspectRatio: 157 / 179,
+              ),
+              itemBuilder: (context, index) {
+                return AlmostRunOutCard(
+                  medicineBranchModel: MedicineBranchModel(
+                    branchId: '',
+                    name: '',
+                    systemProductCode: '',
+                    stock: 0,
+                    price: 0,
+                    visibility: true,
+                    productsDTO: ProductDtoModel(
+                      code: '',
+                      arName: 'cnmdv',
+                      enName: 'vmd,v',
+                      image: 'm,d',
+                      type: 'ndm,vn',
+                      activePrincipal: 'm,dv',
+                      companyName: 'dnmv',
+                    ),
+                  ),
+                );
+              },
+            ),
+          );
+        } else {
+          return Text(S.of(context).somethingWrong);
+        }
       },
     );
   }

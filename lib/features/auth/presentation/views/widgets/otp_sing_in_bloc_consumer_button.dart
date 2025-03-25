@@ -25,7 +25,7 @@ class OtpSignInBlocConsumerButton extends StatelessWidget {
           context.pushNamedAndRemoveUntil(Routing.homeView,
               predicate: (route) => false);
         } else if (state is OtpCheckFailure) {
-          errorToast(message: state.message);
+          errorToast(message: state.apiErrorModel.message!);
         }
       },
       buildWhen: (previous, current) =>

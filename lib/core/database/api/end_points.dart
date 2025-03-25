@@ -17,6 +17,7 @@ class EndPoints {
   static String addMedicine = "api/secure/Product";
   static String updateMedicine = "api/secure/Product";
   static String getMedicine = "api/secure/Product";
+  static String getOutOfStock = "api/secure/Product/out-of-stock";
 }
 
 class ApiKeys {

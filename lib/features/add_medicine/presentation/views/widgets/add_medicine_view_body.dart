@@ -161,10 +161,15 @@ class AddMedicineViewBody extends StatelessWidget {
                                   ? Colors.grey.withOpacity(0.3)
                                   : AppColors.primaryColor,
                               onpressed: () {
-                                context.read<AddMedicineCubit>().addMedicine(
-                                      branchId: branchId,
-                                      medicineCode: systemMedicineModel.code,
-                                    );
+                                if (AddMedicineCubit.get(context)
+                                    .formKey
+                                    .currentState!
+                                    .validate()) {
+                                  context.read<AddMedicineCubit>().addMedicine(
+                                        branchId: branchId,
+                                        medicineCode: systemMedicineModel.code,
+                                      );
+                                }
                               },
                             );
                     },

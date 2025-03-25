@@ -61,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter OTP we sent you at"),
         "enterPrice": MessageLookupByLibrary.simpleMessage("Enter Price"),
         "enterQuantity": MessageLookupByLibrary.simpleMessage("Enter Quantity"),
+        "fieldRequired": MessageLookupByLibrary.simpleMessage("field Required"),
         "form": MessageLookupByLibrary.simpleMessage("Form"),
         "freeDelivery": MessageLookupByLibrary.simpleMessage("Free Delivery"),
         "getAddressInfo":

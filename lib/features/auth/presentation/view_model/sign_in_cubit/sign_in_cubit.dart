@@ -16,8 +16,8 @@ class SignInCubit extends Cubit<SignInState> {
     emit(SignInLoading());
     final result = await authRepo.login(emailController.text);
     result.fold(
-      (errorMessage) {
-        emit(SignInFailure(message: errorMessage));
+      (apiErrorModel) {
+        emit(SignInFailure(apiErrorModel: apiErrorModel));
       },
       (successMessage) {
         emit(SignInSuccess(message: successMessage));
