@@ -9,13 +9,13 @@ final class AddBranchInitial extends PharmacyEditState {}
 class AddBranchLoading extends PharmacyEditState {}
 
 class AddBranchSuccess extends PharmacyEditState {
-  final AddBranchModel branch;
+  final AddBranchModelResponse branch;
   AddBranchSuccess(this.branch);
 }
 
 class AddBranchError extends PharmacyEditState {
-  final String message;
-  AddBranchError(this.message);
+  final ApiErrorModel apiErrorModel;
+  AddBranchError(this.apiErrorModel);
 }
 
 class BranchImagePicked extends PharmacyEditState {

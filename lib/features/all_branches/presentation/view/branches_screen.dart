@@ -61,12 +61,16 @@ class BranchesScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: ()=>context.pushNamed(Routing.pharmacyEdit),
-        backgroundColor: AppColors.primaryColor,
-        shape: CircleBorder(),
-        child: Icon(Icons.add,color: AppColors.white,),
-        )
-        ,
+  onPressed: () async {
+    final result = await context.pushNamed(Routing.pharmacyEdit);
+    if (result == true) {
+      context.read<GetBranchesCubit>().fetchBranches(); // إعادة تحميل الفروع
+    }
+  },
+  backgroundColor: AppColors.primaryColor,
+  shape: CircleBorder(),
+  child: Icon(Icons.add, color: AppColors.white),
+),
     );
   }
 }

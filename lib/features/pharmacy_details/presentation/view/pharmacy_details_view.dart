@@ -25,7 +25,7 @@ class PharmacyDetailsView extends StatelessWidget {
             body: state is GetOneBranchLoading
                 ? PharmacyDetailShimmer()
                 : state is GetOneBranchFailure
-                    ? Center(child: Text('Error: ${state.message}'))
+                    ? Center(child: Text('Error: ${state.apiErrorModel.message}'))
                     : state is GetOneBranchSuccess ? CustomScrollView(
                         slivers: [
                           CustomSliverAppBar(

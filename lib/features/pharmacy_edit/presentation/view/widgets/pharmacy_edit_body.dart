@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -37,17 +35,16 @@ class PharmacyEditBody extends StatelessWidget {
                             Center(child: CircularProgressIndicator()),
                       );
                     } else if (state is AddBranchSuccess) {
-                      Navigator.pop(context);
+                      Navigator.pop(context, true);
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text("Branch added successfully!")),
                       );
-                      Navigator.pop(context);
+                      Navigator.pop(context,true);
                     } else if (state is AddBranchError) {
-                      log(state.message);
                       Navigator.pop(context);
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                            content: Text(state.message),
+                            content: Text(state.apiErrorModel.message!),
                             backgroundColor: Colors.red),
                       );
                     }

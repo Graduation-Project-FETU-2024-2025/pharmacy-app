@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -8,7 +9,11 @@ import '../../../../../core/widgets/custom_edit_text_form_field.dart';
 import '../../view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 
 class WorkingHourWidget extends StatefulWidget {
-  const WorkingHourWidget({super.key, this.start, this.end, });
+  const WorkingHourWidget({
+    super.key,
+    this.start,
+    this.end,
+  });
   final String? start;
   final String? end;
 
@@ -34,12 +39,12 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
           PharmacyEditCubit.get(context).startTimeController.text =
               formattedTime;
         });
-      } else if (!isStartTime)
-        setState(() {
-          PharmacyEditCubit.get(context).endTimeController.text = formattedTime;
-        });
-      else
-        print('null or somthing wrong');
+      } else if (!isStartTime) {
+        setState(() => PharmacyEditCubit.get(context).endTimeController.text =
+            formattedTime);
+      } else {
+        log('something error');
+      }
     }
 
     return Column(
@@ -63,7 +68,7 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                     CustomEditTextFormField(
                       controller:
                           PharmacyEditCubit.get(context).startTimeController,
-                      hintTxt:widget.start?? "00:00",
+                      hintTxt: widget.start ?? "00:00",
                       suffixIcon: IconButton(
                           onPressed: () => getTimeFromUser(isStartTime: true),
                           icon: SvgPicture.asset(AppIcons.iconTime)),
@@ -84,7 +89,7 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                     CustomEditTextFormField(
                       controller:
                           PharmacyEditCubit.get(context).endTimeController,
-                      hintTxt:widget.end?? "00:00",
+                      hintTxt: widget.end ?? "00:00",
                       suffixIcon: IconButton(
                           onPressed: () => getTimeFromUser(isStartTime: false),
                           icon: SvgPicture.asset(AppIcons.iconTime)),

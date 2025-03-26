@@ -16,7 +16,7 @@ class GetOneBranchCubit extends Cubit<GetOneBranchState> {
     emit(GetOneBranchLoading());
     final result = await getOneBranchRepo.getBranch(branchId);
     result.fold(
-      (message) => emit(GetOneBranchFailure(message)),
+      (apiErrorModel) => emit(GetOneBranchFailure(apiErrorModel:apiErrorModel)),
       (branch) => emit(GetOneBranchSuccess(branch: branch)),
     );
   }

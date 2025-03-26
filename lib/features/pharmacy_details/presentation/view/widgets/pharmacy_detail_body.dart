@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/features/all_branches/data/models/pharmacy_branch_model.dart';
+import 'package:pharmacy_app/features/pharmacy_details/data/repo/delete_branch_repo.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/widgets/delivery_area_card.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/widgets/row_btn.dart';
+import 'package:pharmacy_app/features/pharmacy_details/presentation/view_model/delete_branch/delete_branch_cubit.dart';
 
 import 'working_hour_detail.dart';
 
@@ -78,7 +82,10 @@ class PharmacyDetailBody extends StatelessWidget {
             child: WorkingHourDetail(workingHour: branch.workingHours),
           ),
           Gap(33.h),
-          RowBtn(branch : branch),
+          BlocProvider(
+            create: (context) => DeleteBranchCubit(getIt<DeleteBranchRepo>()),
+            child: RowBtn(branch: branch),
+          ),
           Gap(42.h),
         ],
       ),
