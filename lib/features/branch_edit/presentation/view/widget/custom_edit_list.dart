@@ -22,21 +22,12 @@ class CustomEditList extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(S.of(context).enBranchName,
+            Text(S.of(context).branchName,
                 style: Theme.of(context).textTheme.labelMedium),
             Gap(18.h),
             CustomEditTextFormField(
-              controller: PharmacyEditCubit.get(context).enBranchNameController,
-              hintTxt: S.of(context).enBranchName,
-              initialVal: branch?.branchName,
-            ),
-            Gap(31.h),
-            Text(S.of(context).arBranchName,
-                style: Theme.of(context).textTheme.labelMedium),
-            Gap(18.h),
-            CustomEditTextFormField(
-              controller: PharmacyEditCubit.get(context).arBranchNameController,
-              hintTxt: S.of(context).arBranchName,
+              controller: PharmacyEditCubit.get(context).branchNameController,
+              hintTxt: S.of(context).branchName,
               initialVal: branch?.branchName,
             ),
             Gap(31.h),

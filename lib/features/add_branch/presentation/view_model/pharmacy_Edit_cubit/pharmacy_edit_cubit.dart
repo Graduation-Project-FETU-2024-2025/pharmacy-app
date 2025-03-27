@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +22,7 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
   final TextEditingController pharmacyNameController = TextEditingController();
   final TextEditingController arBranchNameController = TextEditingController();
   final TextEditingController enBranchNameController = TextEditingController();
+  final TextEditingController branchNameController = TextEditingController();
   final TextEditingController addressController = TextEditingController();
   final TextEditingController pricePerKilo= TextEditingController();
   final TextEditingController phoneController = TextEditingController();
@@ -113,9 +113,6 @@ final EditBranchRepo editBranchRepo;
       ], 
     );
 
-    log("Start Time: ${startTimeController.text}");
-log("End Time: ${endTimeController.text}");
-
     emit(UpdateBranchLoading());
     final result = await editBranchRepo.updateBranch(branch, branchId);
     result.fold(
@@ -132,6 +129,7 @@ log("End Time: ${endTimeController.text}");
     pharmacyNameController.dispose();
     arBranchNameController.dispose();
     enBranchNameController.dispose();
+    branchNameController.dispose();
     addressController.dispose();
     pricePerKilo.dispose();
     phoneController.dispose();
