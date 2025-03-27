@@ -69,6 +69,7 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                       controller:
                           PharmacyEditCubit.get(context).startTimeController,
                       hintTxt: widget.start ?? "00:00",
+                      initialVal: widget.start,
                       suffixIcon: IconButton(
                           onPressed: () => getTimeFromUser(isStartTime: true),
                           icon: SvgPicture.asset(AppIcons.iconTime)),
@@ -90,6 +91,7 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                       controller:
                           PharmacyEditCubit.get(context).endTimeController,
                       hintTxt: widget.end ?? "00:00",
+                      initialVal: widget.end,
                       suffixIcon: IconButton(
                           onPressed: () => getTimeFromUser(isStartTime: false),
                           icon: SvgPicture.asset(AppIcons.iconTime)),

@@ -77,11 +77,13 @@ class _PharmacyEditImgState extends State<PharmacyEditImg> {
               shape: BoxShape.circle,
               color: Colors.black,
               image: DecorationImage(
-                image: imageFile != null
-                    ? FileImage(imageFile)
-                    :widget.pharmacyImg != null
-                        ? NetworkImage(widget.pharmacyImg!) as ImageProvider
-                        : AssetImage(AppImages.pharmacyDetailImg) as ImageProvider,
+                image: 
+                // imageFile != null
+                //     ? FileImage(imageFile)
+                //     :widget.pharmacyImg != null
+                //         ? NetworkImage(widget.pharmacyImg!) as ImageProvider
+                //         :
+                          AssetImage(AppImages.pharmacyDetailImg) as ImageProvider,
                 fit: BoxFit.cover,
               ),
             ),
