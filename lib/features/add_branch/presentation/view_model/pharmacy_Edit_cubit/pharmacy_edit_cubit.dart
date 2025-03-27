@@ -20,6 +20,7 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
   final TextEditingController pharmacyNameController = TextEditingController();
   final TextEditingController arBranchNameController = TextEditingController();
   final TextEditingController enBranchNameController = TextEditingController();
+  final TextEditingController branchNameController = TextEditingController();
   final TextEditingController addressController = TextEditingController();
   final TextEditingController pricePerKilo= TextEditingController();
   final TextEditingController phoneController = TextEditingController();
@@ -88,6 +89,7 @@ final AddBranchRepo branchRepository;
   @override
   Future<void> close() {
     pharmacyNameController.dispose();
+    branchNameController.dispose();
     arBranchNameController.dispose();
     enBranchNameController.dispose();
     addressController.dispose();

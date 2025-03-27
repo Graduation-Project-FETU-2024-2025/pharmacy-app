@@ -891,6 +891,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Branch Name`
+  String get branchName {
+    return Intl.message(
+      'Branch Name',
+      name: 'branchName',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

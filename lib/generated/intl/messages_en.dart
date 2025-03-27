@@ -44,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "areaAndPrice":
             MessageLookupByLibrary.simpleMessage("Delivery Area & Price"),
         "branch": MessageLookupByLibrary.simpleMessage("Branch"),
+        "branchName": MessageLookupByLibrary.simpleMessage("Branch Name"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("Branch Status"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),

@@ -6,7 +6,7 @@ import 'package:pharmacy_app/features/branch_edit/presentation/view/widget/pharm
 import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 
 import '../../../../../core/utils/app_colors.dart';
-import '../../../../branch_edit/presentation/view/widget/custom_edit_list.dart';
+import 'custom_add_list.dart';
 
 class BranchAddBody extends StatelessWidget {
   const BranchAddBody({super.key});
@@ -19,7 +19,7 @@ class BranchAddBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           PharmacyEditImg(),
-          CustomEditList(),
+          CustomAddList(),
           Center(
             child: SizedBox(
                 width: 120.w,
