@@ -5,7 +5,7 @@ abstract class Routing {
   static const String otp = '/otp';
   static const String branchesScreen = '/branchesScreen';
   static const String pharmacyDetail = '/pharmacyDetail';
-  static const String pharmacyEdit = '/pharmacyEdit';
+  static const String branchEdit = '/branchEdit';
 
   static const String profile = '/profile';
 
@@ -18,4 +18,7 @@ abstract class Routing {
   static const String addMedicine = '/addMedicine';
   static const String systemMedicine = '/systemMedicine';
   static const String updateMedicine = '/updateMedicine';
+
+  static const String addBranch = '/addBranch';
+
 }

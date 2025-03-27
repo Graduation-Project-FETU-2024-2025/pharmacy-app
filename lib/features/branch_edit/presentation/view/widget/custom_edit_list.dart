@@ -3,14 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:pharmacy_app/core/widgets/custom_edit_text_form_field.dart';
 import 'package:pharmacy_app/features/all_branches/data/models/pharmacy_branch_model.dart';
-import 'package:pharmacy_app/features/pharmacy_edit/presentation/view/widgets/get_lat_and_long.dart';
-import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
+import 'package:pharmacy_app/features/add_branch/presentation/view/widgets/get_lat_and_long.dart';
+import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
-import 'delivery_status_field.dart';
-import 'working_hour_widget.dart';
+import '../../../../add_branch/presentation/view/widgets/delivery_status_field.dart';
+import '../../../../add_branch/presentation/view/widgets/working_hour_widget.dart';
 
 class CustomEditList extends StatelessWidget {
-  const CustomEditList({super.key, required this.branch});
+  const CustomEditList({super.key, this.branch});
   final PharmacyBranchModel? branch;
 
   @override

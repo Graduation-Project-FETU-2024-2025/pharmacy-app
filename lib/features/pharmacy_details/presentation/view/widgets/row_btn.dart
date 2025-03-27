@@ -38,7 +38,7 @@ class RowBtn extends StatelessWidget {
               ),
               onPressed: () {
                 context
-                    .pushNamed(Routing.pharmacyEdit, argument: branch)
+                    .pushNamed(Routing.branchEdit, argument: branch)
                     .then((value) {
                   if (value == true) {
                     context.read<GetBranchesCubit>().fetchBranches();
