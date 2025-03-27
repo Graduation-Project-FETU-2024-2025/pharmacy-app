@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
+import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 import '../../../../../core/utils/app_icons.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../../core/utils/app_images.dart';
-import 'build_image_option.dart';
+import '../../../../add_branch/presentation/view/widgets/build_image_option.dart';
 
 class PharmacyEditImg extends StatefulWidget {
-  const PharmacyEditImg({super.key, required this.pharmacyImg});
+  const PharmacyEditImg({super.key, this.pharmacyImg});
   final String? pharmacyImg;
 
   @override

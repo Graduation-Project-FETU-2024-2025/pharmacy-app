@@ -13,12 +13,20 @@ class AddBranchSuccess extends PharmacyEditState {
   AddBranchSuccess(this.branch);
 }
 
-class AddBranchError extends PharmacyEditState {
+class AddBranchFailure extends PharmacyEditState {
   final ApiErrorModel apiErrorModel;
-  AddBranchError(this.apiErrorModel);
+  AddBranchFailure(this.apiErrorModel);
 }
 
 class BranchImagePicked extends PharmacyEditState {
   final File image;
   BranchImagePicked(this.image);
+}
+
+final class UpdateBranchLoading extends PharmacyEditState {}
+final class UpdateBranchSuccess extends PharmacyEditState {}
+final class UpdateBranchFailure extends PharmacyEditState {
+  final ApiErrorModel apiErrorModel;
+
+  UpdateBranchFailure({required this.apiErrorModel});
 }

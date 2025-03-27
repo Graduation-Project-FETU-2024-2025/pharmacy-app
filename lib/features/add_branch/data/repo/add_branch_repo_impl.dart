@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:pharmacy_app/core/database/api/api_error_handler.dart';
 import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/core/database/api/end_points.dart';
-import 'package:pharmacy_app/features/pharmacy_edit/data/models/add_branch_model_response.dart';
+import 'package:pharmacy_app/features/add_branch/data/models/add_branch_model_response.dart';
 
 import '../../../../core/database/api/api_consumer.dart';
 import '../models/add_branch_model.dart';

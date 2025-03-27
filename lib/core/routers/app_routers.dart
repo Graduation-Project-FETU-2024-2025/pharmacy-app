@@ -1,10 +1,10 @@
 import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
+import 'package:pharmacy_app/features/add_branch/presentation/view/branch_add_screen.dart';
 import 'package:pharmacy_app/features/add_medicine/data/models/system_medicine_model.dart';
 import 'package:pharmacy_app/features/add_medicine/data/repos/add_medicine_repo.dart';
 import 'package:pharmacy_app/features/add_medicine/presentation/view_models/cubit/system_medicines_cubit.dart';
@@ -25,21 +25,20 @@ import 'package:pharmacy_app/features/medicine_details/presentation/view_models/
 import 'package:pharmacy_app/features/medicine_details/presentation/views/medicine_details_view.dart';
 import 'package:pharmacy_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/pharmacy_details_view.dart';
-import 'package:pharmacy_app/features/pharmacy_edit/presentation/view/pharmacy_edit_screen.dart';
-import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
+import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 import 'package:pharmacy_app/features/profile/presentation/view/profile_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
 import 'package:pharmacy_app/features/update_medicine/data/repos/update_medicine_repo.dart';
 import 'package:pharmacy_app/features/update_medicine/presentation/view_models/update_medicine/update_medcine_cubit.dart';
 import 'package:pharmacy_app/features/update_medicine/presentation/views/update_medicine_view.dart';
-
 import '../../features/add_medicine/data/repos/get_system_medicines_repo.dart';
 import '../../features/add_medicine/presentation/view_models/cubit/add_medicine_cubit.dart';
 import '../../features/add_medicine/presentation/views/add_medicine_view.dart';
 import '../../features/all_branches/data/models/pharmacy_branch_model.dart';
 import '../../features/all_medicines/data/models/medicine_branch_model.dart';
 import '../../features/all_medicines/presentation/views/all_medicine_view.dart';
-import '../../features/pharmacy_edit/data/repo/add_branch_repo.dart';
+import '../../features/add_branch/data/repo/add_branch_repo.dart';
+import '../../features/branch_edit/presentation/view/branch_edit_view.dart';
 
 class AppRouters {
   Route generateRoute(RouteSettings settings) {
@@ -118,12 +117,17 @@ class AppRouters {
             branchId: settings.arguments as String
             ),
         );
-      case Routing.pharmacyEdit:
+      case Routing.branchEdit:
         return _buildRoute(BlocProvider(
           create: (context) => PharmacyEditCubit(getIt<AddBranchRepo>()),
-          child: PharmacyEditScreen(
-            branch: settings.arguments as PharmacyBranchModel?,
+          child: BranchEditView(
+            branch: settings.arguments as PharmacyBranchModel,
           ),
+        ));
+      case Routing.addBranch:
+        return _buildRoute(BlocProvider(
+          create: (context) => PharmacyEditCubit(getIt<AddBranchRepo>()),
+          child: BranchAddScreen(),
         ));
       case Routing.profile:
         return _buildRoute(ProfileView());

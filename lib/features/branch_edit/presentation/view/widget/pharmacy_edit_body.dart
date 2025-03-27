@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-import 'package:pharmacy_app/features/pharmacy_edit/presentation/view/widgets/pharmacy_edit_img.dart';
-import 'package:pharmacy_app/features/pharmacy_edit/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
+import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
+import 'package:pharmacy_app/features/all_branches/data/models/pharmacy_branch_model.dart';
 
 import '../../../../../core/utils/app_colors.dart';
-import '../../../../all_branches/data/models/pharmacy_branch_model.dart';
 import 'custom_edit_list.dart';
+import 'pharmacy_edit_img.dart';
 
 class PharmacyEditBody extends StatelessWidget {
   const PharmacyEditBody({super.key, required this.branch});
-  final PharmacyBranchModel? branch;
+  final PharmacyBranchModel branch;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class PharmacyEditBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          PharmacyEditImg(pharmacyImg: branch?.image),
+          PharmacyEditImg(pharmacyImg: branch.image),
           CustomEditList(branch: branch),
           Center(
             child: SizedBox(
@@ -27,20 +27,20 @@ class PharmacyEditBody extends StatelessWidget {
                 height: 36.h,
                 child: BlocConsumer<PharmacyEditCubit, PharmacyEditState>(
                   listener: (context, state) {
-                    if (state is AddBranchLoading) {
+                    if (state is UpdateBranchLoading) {
                       showDialog(
                         context: context,
                         barrierDismissible: false,
                         builder: (_) =>
                             Center(child: CircularProgressIndicator()),
                       );
-                    } else if (state is AddBranchSuccess) {
+                    } else if (state is UpdateBranchSuccess) {
                       Navigator.pop(context, true);
                       ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text("Branch added successfully!")),
+                        SnackBar(content: Text("Branch Updated successfully!")),
                       );
                       Navigator.pop(context,true);
-                    } else if (state is AddBranchError) {
+                    } else if (state is UpdateBranchFailure) {
                       Navigator.pop(context);
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
@@ -51,12 +51,12 @@ class PharmacyEditBody extends StatelessWidget {
                   },
                   builder: (context, state) {
                     return ElevatedButton(
-                      onPressed: state is AddBranchLoading
+                      onPressed: state is UpdateBranchLoading
                           ? null
                           : () {
-                              context.read<PharmacyEditCubit>().addBranch();
+                              // context.read<UpdateBranchCubit>().updateBranch();
                             },
-                      child: state is AddBranchLoading
+                      child: state is UpdateBranchLoading
                           ? CircularProgressIndicator(color: Colors.white)
                           : Text(
                               "Save",
