@@ -94,6 +94,7 @@
     "no":"No",
     "fieldRequired":"field Required",
 
-    "address": "address"
+    "address": "address",
+    "branchName": "Branch Name"
 
 }

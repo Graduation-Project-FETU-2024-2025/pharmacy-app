@@ -7,19 +7,22 @@ import 'package:meta/meta.dart';
 import 'package:pharmacy_app/core/database/api/api_error_handler.dart';
 import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/features/add_branch/data/models/add_branch_model_response.dart';
+import 'package:pharmacy_app/features/branch_edit/data/repo/edit_branch_repo.dart';
 import '../../../../../core/database/cache/secure_storage.dart';
 import '../../../../all_branches/data/models/working_hours_model.dart';
+import '../../../../branch_edit/data/models/update_branch_model.dart';
 import '../../../data/models/add_branch_model.dart';
 import '../../../data/repo/add_branch_repo.dart';
 part 'pharmacy_edit_state.dart';
 
 class PharmacyEditCubit extends Cubit<PharmacyEditState> {
-  PharmacyEditCubit(this.branchRepository) : super(PharmacyEditInitial());
+  PharmacyEditCubit(this.addBranchRepo, this.editBranchRepo) : super(PharmacyEditInitial());
   static PharmacyEditCubit get(context) => BlocProvider.of<PharmacyEditCubit>(context);
 
   final TextEditingController pharmacyNameController = TextEditingController();
   final TextEditingController arBranchNameController = TextEditingController();
   final TextEditingController enBranchNameController = TextEditingController();
+  final TextEditingController branchNameController = TextEditingController();
   final TextEditingController addressController = TextEditingController();
   final TextEditingController pricePerKilo= TextEditingController();
   final TextEditingController phoneController = TextEditingController();
@@ -34,7 +37,8 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
 
 
 
-final AddBranchRepo branchRepository;
+final AddBranchRepo addBranchRepo;
+final EditBranchRepo editBranchRepo;
 
   Future<void> addBranch() async {
   final List<WorkingHours> workingHoursList = [
@@ -60,7 +64,7 @@ final AddBranchRepo branchRepository;
       address: addressController.text,
       workingHours: workingHoursList, 
     );
-    final result = await branchRepository.addBranch(branch);
+    final result = await addBranchRepo.addBranch(branch);
     result.fold(
       (apiErrorModel) => emit(AddBranchFailure(apiErrorModel)),
       (branch) => emit(AddBranchSuccess(branch)),
@@ -84,12 +88,48 @@ final AddBranchRepo branchRepository;
   }
 
 
+  Future<void> updateBranch(String branchId) async {
+
+    final pharmacyId =await SecureStorage.instance.getData(key: "id");
+
+    final branch = UpdateBranchModel(
+      pharmacyId: pharmacyId!, 
+      arBranchName: arBranchNameController.text,
+      enBranchName: enBranchNameController.text,
+      deliveryRange: int.tryParse(deliveryRange.text) ?? 0,
+      pricePerKilo: int.tryParse(pricePerKilo.text) ?? 0,
+      minDeliveryPrice: int.tryParse(lowestPriceController.text) ?? 0,
+      status: branchStatusController.text,
+      image: "https://images.wuzzuf-data.net/files/company_logo/eltarshouby-pharmacy-Egypt-31230-1519210111-og.jpg", // imageFile?.path ?? '',
+      phoneNumber: phoneController.text,
+      lat: double.tryParse(latitudeController.text) ?? 0.0,
+      long: double.tryParse(longitudeController.text) ?? 0.0,
+      address: addressController.text,
+      workingHours: [
+        WorkingHours(
+          start: startTimeController.text,
+          end: endTimeController.text,
+        )
+      ], 
+    );
+
+    emit(UpdateBranchLoading());
+    final result = await editBranchRepo.updateBranch(branch, branchId);
+    result.fold(
+      (apiErrorModel) => emit(UpdateBranchFailure(apiErrorModel: apiErrorModel)),
+      (_) => emit(UpdateBranchSuccess()),
+    );
+  }
+
+
+
 
   @override
   Future<void> close() {
     pharmacyNameController.dispose();
     arBranchNameController.dispose();
     enBranchNameController.dispose();
+    branchNameController.dispose();
     addressController.dispose();
     pricePerKilo.dispose();
     phoneController.dispose();

@@ -9,8 +9,8 @@ import 'package:pharmacy_app/generated/l10n.dart';
 import '../../../../add_branch/presentation/view/widgets/delivery_status_field.dart';
 import '../../../../add_branch/presentation/view/widgets/working_hour_widget.dart';
 
-class CustomEditList extends StatelessWidget {
-  const CustomEditList({super.key, this.branch});
+class CustomAddList extends StatelessWidget {
+  const CustomAddList({super.key, this.branch});
   final PharmacyBranchModel? branch;
 
   @override
@@ -22,12 +22,21 @@ class CustomEditList extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(S.of(context).branchName,
+            Text(S.of(context).enBranchName,
                 style: Theme.of(context).textTheme.labelMedium),
             Gap(18.h),
             CustomEditTextFormField(
-              controller: PharmacyEditCubit.get(context).branchNameController,
-              hintTxt: S.of(context).branchName,
+              controller: PharmacyEditCubit.get(context).enBranchNameController,
+              hintTxt: S.of(context).enBranchName,
+              initialVal: branch?.branchName,
+            ),
+            Gap(31.h),
+            Text(S.of(context).arBranchName,
+                style: Theme.of(context).textTheme.labelMedium),
+            Gap(18.h),
+            CustomEditTextFormField(
+              controller: PharmacyEditCubit.get(context).arBranchNameController,
+              hintTxt: S.of(context).arBranchName,
               initialVal: branch?.branchName,
             ),
             Gap(31.h),

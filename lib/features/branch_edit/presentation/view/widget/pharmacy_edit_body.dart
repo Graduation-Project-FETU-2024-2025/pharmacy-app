@@ -54,7 +54,7 @@ class PharmacyEditBody extends StatelessWidget {
                       onPressed: state is UpdateBranchLoading
                           ? null
                           : () {
-                              // context.read<UpdateBranchCubit>().updateBranch();
+                              context.read<PharmacyEditCubit>().updateBranch(branch.id);
                             },
                       child: state is UpdateBranchLoading
                           ? CircularProgressIndicator(color: Colors.white)
