@@ -292,20 +292,20 @@ class S {
     );
   }
 
-  /// `Arabic Branch Name`
+  /// `Branch Name in Arabic`
   String get arBranchName {
     return Intl.message(
-      'Arabic Branch Name',
+      'Branch Name in Arabic',
       name: 'arBranchName',
       desc: '',
       args: [],
     );
   }
 
-  /// `English Branch Name`
+  /// `Branch Name in English`
   String get enBranchName {
     return Intl.message(
-      'English Branch Name',
+      'Branch Name in English',
       name: 'enBranchName',
       desc: '',
       args: [],
@@ -897,6 +897,26 @@ class S {
     return Intl.message(
       'Branch Name',
       name: 'branchName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address in Arabic`
+  String get arAddress {
+    return Intl.message(
+      'Address in Arabic',
+      name: 'arAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address in English`
+  String get enAddress {
+    return Intl.message(
+      'Address in English',
+      name: 'enAddress',
       desc: '',
       args: [],
     );

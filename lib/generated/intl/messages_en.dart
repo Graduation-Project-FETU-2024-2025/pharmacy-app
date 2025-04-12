@@ -36,8 +36,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "allMedicines": MessageLookupByLibrary.simpleMessage("All Medicines"),
         "almostRunOut":
             MessageLookupByLibrary.simpleMessage("Almost running out"),
+        "arAddress": MessageLookupByLibrary.simpleMessage("Address in Arabic"),
         "arBranchName":
-            MessageLookupByLibrary.simpleMessage("Arabic Branch Name"),
+            MessageLookupByLibrary.simpleMessage("Branch Name in Arabic"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "areYouSureToDelete": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to delete this medicine?"),
@@ -55,8 +56,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
             "Dr. Stone Pharmacy | Elestad"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "enAddress": MessageLookupByLibrary.simpleMessage("Address in English"),
         "enBranchName":
-            MessageLookupByLibrary.simpleMessage("English Branch Name"),
+            MessageLookupByLibrary.simpleMessage("Branch Name in English"),
         "enableLocationService": MessageLookupByLibrary.simpleMessage(
             "Please enable location service"),
         "endTime": MessageLookupByLibrary.simpleMessage("End Time"),

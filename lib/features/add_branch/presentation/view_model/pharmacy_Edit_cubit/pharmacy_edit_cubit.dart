@@ -23,7 +23,8 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
   final TextEditingController arBranchNameController = TextEditingController();
   final TextEditingController enBranchNameController = TextEditingController();
   final TextEditingController branchNameController = TextEditingController();
-  final TextEditingController addressController = TextEditingController();
+  final TextEditingController enAddressController = TextEditingController();
+  final TextEditingController arAddressController = TextEditingController();
   final TextEditingController pricePerKilo= TextEditingController();
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController deliveryRange = TextEditingController();
@@ -57,11 +58,12 @@ final EditBranchRepo editBranchRepo;
       pricePerKilo: int.tryParse(pricePerKilo.text) ?? 0,
       minDeliveryPrice: int.tryParse(lowestPriceController.text) ?? 0,
       status: branchStatusController.text,
-      image: "https://images.wuzzuf-data.net/files/company_logo/eltarshouby-pharmacy-Egypt-31230-1519210111-og.jpg", // imageFile?.path ?? '',
+      image:imageFile?.path ?? '',// "https://images.wuzzuf-data.net/files/company_logo/eltarshouby-pharmacy-Egypt-31230-1519210111-og.jpg", // imageFile?.path ?? '',
       phoneNumber: phoneController.text,
       lat: double.tryParse(latitudeController.text) ?? 0.0,
       long: double.tryParse(longitudeController.text) ?? 0.0,
-      address: addressController.text,
+      enAddress: enAddressController.text,
+      arAddress: arAddressController.text,
       workingHours: workingHoursList, 
     );
     final result = await addBranchRepo.addBranch(branch);
@@ -100,11 +102,12 @@ final EditBranchRepo editBranchRepo;
       pricePerKilo: int.tryParse(pricePerKilo.text) ?? 0,
       minDeliveryPrice: int.tryParse(lowestPriceController.text) ?? 0,
       status: branchStatusController.text,
-      image: "https://images.wuzzuf-data.net/files/company_logo/eltarshouby-pharmacy-Egypt-31230-1519210111-og.jpg", // imageFile?.path ?? '',
+      image:imageFile?.path ?? '',// "https://images.wuzzuf-data.net/files/company_logo/eltarshouby-pharmacy-Egypt-31230-1519210111-og.jpg", // imageFile?.path ?? '',
       phoneNumber: phoneController.text,
       lat: double.tryParse(latitudeController.text) ?? 0.0,
       long: double.tryParse(longitudeController.text) ?? 0.0,
-      address: addressController.text,
+      enAddress: enAddressController.text,
+      arAddress: arAddressController.text,
       workingHours: [
         WorkingHours(
           start: startTimeController.text,
@@ -130,7 +133,8 @@ final EditBranchRepo editBranchRepo;
     arBranchNameController.dispose();
     enBranchNameController.dispose();
     branchNameController.dispose();
-    addressController.dispose();
+    enAddressController.dispose();
+    arAddressController.dispose();
     pricePerKilo.dispose();
     phoneController.dispose();
     deliveryRange.dispose();

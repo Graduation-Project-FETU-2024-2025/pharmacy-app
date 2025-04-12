@@ -35,6 +35,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBranches": MessageLookupByLibrary.simpleMessage("جميع الفروع"),
         "allMedicines": MessageLookupByLibrary.simpleMessage("جميع الأدوية"),
         "almostRunOut": MessageLookupByLibrary.simpleMessage("شارف على النفاذ"),
+        "arAddress":
+            MessageLookupByLibrary.simpleMessage(" العنوان باللغه العربية"),
+        "arBranchName":
+            MessageLookupByLibrary.simpleMessage("اسم الفرع باللغة العربية"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "areYouSureToDelete":
             MessageLookupByLibrary.simpleMessage("هل انت متاكد من حذف الدواء؟"),
@@ -51,6 +55,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "drStonePharmacy":
             MessageLookupByLibrary.simpleMessage("صيدلية دكتور ستون | الاستاد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "enAddress":
+            MessageLookupByLibrary.simpleMessage("العنوان باللغة الانجليزية"),
+        "enBranchName":
+            MessageLookupByLibrary.simpleMessage("اسم الفرع باللغة الانجليزية"),
         "enableLocationService":
             MessageLookupByLibrary.simpleMessage("يرجى تفعيل خدمة الموقع"),
         "endTime": MessageLookupByLibrary.simpleMessage("وقت الانتهاء"),

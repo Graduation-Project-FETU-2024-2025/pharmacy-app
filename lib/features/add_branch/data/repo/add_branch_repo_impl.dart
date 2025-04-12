@@ -20,6 +20,7 @@ class AddBranchRepoImpl implements AddBranchRepo {
       final response = await apiConsumer.post(
         EndPoints.getBranches,
         data: branch.toJson(),
+        isFormData: true
       );
       final branchModel = AddBranchModelResponse.fromJson(response.data['data']);
       return Right(branchModel);

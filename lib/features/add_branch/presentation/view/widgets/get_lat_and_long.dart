@@ -84,6 +84,7 @@ class _GetLatAndLongState extends State<GetLatAndLong> {
                               controller:
                                   PharmacyEditCubit.get(context).latitudeController,
                               hintTxt:widget.lat?? "00.000",
+                              keyboardType: TextInputType.number,
                             ),
                           ],
                         ),
@@ -102,6 +103,7 @@ class _GetLatAndLongState extends State<GetLatAndLong> {
                               controller: PharmacyEditCubit.get(context)
                                   .longitudeController,
                               hintTxt:widget.long?? "00.000",
+                              keyboardType: TextInputType.number,
                             ),
                           ],
                         ),

@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 
 class CustomEditTextFormField extends StatelessWidget {
-  const CustomEditTextFormField({super.key, required this.controller, required this.hintTxt, this.initialVal, this.maxLines, this.suffixIcon} );
+  const CustomEditTextFormField({super.key, required this.controller, required this.hintTxt, this.initialVal, this.maxLines, this.suffixIcon, this.keyboardType} );
   final TextEditingController controller;
   final String? initialVal;
   final String hintTxt;
   final int? maxLines;
   final Widget? suffixIcon;
+  final TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +19,7 @@ class CustomEditTextFormField extends StatelessWidget {
       style: Theme.of(context).textTheme.labelMedium!.copyWith(color: AppColors.primaryColor),
       controller: controller,
       maxLines: maxLines,
+      keyboardType: keyboardType,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
         fillColor: Colors.transparent,

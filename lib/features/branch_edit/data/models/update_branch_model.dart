@@ -9,7 +9,8 @@ class UpdateBranchModel {
   final int minDeliveryPrice;
   final String status;
   final String image;
-  final String address;
+  final String arAddress;
+  final String enAddress;
   final String phoneNumber;
   final double lat;
   final double long;
@@ -24,7 +25,8 @@ class UpdateBranchModel {
     required this.minDeliveryPrice,
     required this.status,
     required this.image,
-    required this.address,
+    required this.arAddress,
+    required this.enAddress,
     required this.phoneNumber,
     required this.lat,
     required this.long,
@@ -41,7 +43,8 @@ class UpdateBranchModel {
       minDeliveryPrice: json["minDeliveryPrice"] ?? 0,
       status: json["status"] ?? "",
       image: json["image"] ?? "",
-      address: json["address"] ?? "",
+      arAddress: json["AR_Address"] ?? "",
+      enAddress: json["EN_Address"] ?? "",
       phoneNumber: json["phoneNumber"] ?? "",
       lat: (json["lat"] ?? 0).toDouble(),
       long: (json["long"] ?? 0).toDouble(),
@@ -62,7 +65,8 @@ class UpdateBranchModel {
       'minDeliveryPrice': minDeliveryPrice,
       'status': status,
       'image': image,
-      'address': address,
+      'AR_Address': arAddress,
+      'EN_Address': enAddress,
       'phoneNumber': phoneNumber,
       'lat': lat,
       'long': long,

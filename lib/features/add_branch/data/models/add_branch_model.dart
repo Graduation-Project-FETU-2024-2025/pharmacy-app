@@ -12,7 +12,8 @@ class AddBranchModel {
   final String phoneNumber;
   final double lat;
   final double long;
-  final String? address;
+  final String? enAddress;
+  final String? arAddress;
   final List<WorkingHours> workingHours;
 
   AddBranchModel({
@@ -28,7 +29,8 @@ class AddBranchModel {
     required this.lat,
     required this.long,
     required this.workingHours,
-    this.address,
+    this.arAddress,
+    this.enAddress,
   });
 
   factory AddBranchModel.fromJson(Map<String, dynamic> json) {
@@ -44,7 +46,8 @@ class AddBranchModel {
       phoneNumber: json['phoneNumber'],
       lat: json['lat'].toDouble(),
       long: json['long'].toDouble(),
-      address: json['address'],
+      enAddress: json['EN_Address'],
+      arAddress: json['AR_Address'],
       workingHours: (json['workingHours'] as List)
           .map((e) => WorkingHours.fromJson(e))
           .toList(),
@@ -64,7 +67,8 @@ Map<String, dynamic> toJson() {
       'phoneNumber': phoneNumber,
       'lat': lat,
       'long': long,
-      'address': address,
+      'EN_Address': enAddress,
+      'AR_Address': arAddress,
       'workingHours': workingHours.map((e) => e.toJson()).toList(),
     };
   }

@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 import '../../../../../core/utils/app_icons.dart';
-// import 'dart:io';
+import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../../core/utils/app_images.dart';
@@ -68,7 +68,7 @@ class _PharmacyEditImgState extends State<PharmacyEditImg> {
   Widget build(BuildContext context) {
     return BlocBuilder<PharmacyEditCubit, PharmacyEditState>(
       builder: (context, state) {
-        // File? imageFile = context.read<PharmacyEditCubit>().imageFile;
+        File? imageFile = context.read<PharmacyEditCubit>().imageFile;
         return Padding(
           padding: EdgeInsets.symmetric(horizontal: 151.w, vertical: 30.h),
           child: Container(
@@ -78,11 +78,11 @@ class _PharmacyEditImgState extends State<PharmacyEditImg> {
               color: Colors.black,
               image: DecorationImage(
                 image: 
-                // imageFile != null
-                //     ? FileImage(imageFile)
-                //     :widget.pharmacyImg != null
-                //         ? NetworkImage(widget.pharmacyImg!) as ImageProvider
-                //         :
+                imageFile != null
+                    ? FileImage(imageFile)
+                    :widget.pharmacyImg != null
+                        ? NetworkImage(widget.pharmacyImg!) as ImageProvider
+                        :
                           AssetImage(AppImages.pharmacyDetailImg) as ImageProvider,
                 fit: BoxFit.cover,
               ),

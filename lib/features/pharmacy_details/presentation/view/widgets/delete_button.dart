@@ -23,6 +23,7 @@ class DeleteButton extends StatelessWidget {
       listener: (context, state) {
         if (state is DeleteBranchSuccess) {
           successToast(message: "Branch deleted successfully");
+          Navigator.pop(context, true);
         }
         if (state is DeleteBranchFailure) {
           errorToast(message: state.apiErrorModel.message!);
@@ -69,7 +70,7 @@ class DeleteButton extends StatelessWidget {
                             ),
                             onPressed: () {
                               deleteCubit.deleteBranch(branchId);
-                              Navigator.pop(context, true);
+                              Navigator.pop(context);
                             },
                             child: Text(S.of(context).yes, style: TextStyle(color: Colors.white)),
                           ),

@@ -29,8 +29,8 @@
 
     "pharmacyInfo": "Pharmacy Information",
     "pharmacyName": "Pharmacy Name",
-    "arBranchName":"Arabic Branch Name",
-    "enBranchName":"English Branch Name",
+    "arBranchName":"Branch Name in Arabic",
+    "enBranchName":"Branch Name in English",
     "deliveryMan":"Delivery man name",
     "phoneNum":"Phone Number",
     "mileage":"Mileage",
@@ -95,6 +95,8 @@
     "fieldRequired":"field Required",
 
     "address": "address",
-    "branchName": "Branch Name"
+    "branchName": "Branch Name",
+    "arAddress":"Address in Arabic",
+    "enAddress":"Address in English"
 
 }

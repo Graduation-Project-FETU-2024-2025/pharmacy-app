@@ -19,6 +19,7 @@ class EditBranchRepoImpl implements EditBranchRepo {
       final response = await apiConsumer.put(
       '${EndPoints.getBranches}/$branchId', 
         data: branch.toJson(),
+        isFormData: true
       );
       return Right(UpdateBranchResponseModel.fromJson(response.data));
     } catch (error) {
