@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,8 +15,10 @@ import '../../../data/repo/add_branch_repo.dart';
 part 'pharmacy_edit_state.dart';
 
 class PharmacyEditCubit extends Cubit<PharmacyEditState> {
-  PharmacyEditCubit(this.addBranchRepo, this.editBranchRepo) : super(PharmacyEditInitial());
-  static PharmacyEditCubit get(context) => BlocProvider.of<PharmacyEditCubit>(context);
+  PharmacyEditCubit(this.addBranchRepo, this.editBranchRepo)
+      : super(PharmacyEditInitial());
+  static PharmacyEditCubit get(context) =>
+      BlocProvider.of<PharmacyEditCubit>(context);
 
   final TextEditingController pharmacyNameController = TextEditingController();
   final TextEditingController arBranchNameController = TextEditingController();
@@ -25,7 +26,7 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
   final TextEditingController branchNameController = TextEditingController();
   final TextEditingController enAddressController = TextEditingController();
   final TextEditingController arAddressController = TextEditingController();
-  final TextEditingController pricePerKilo= TextEditingController();
+  final TextEditingController pricePerKilo = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController deliveryRange = TextEditingController();
   final TextEditingController lowestPriceController = TextEditingController();
@@ -35,36 +36,35 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
   final TextEditingController latitudeController = TextEditingController();
   final TextEditingController longitudeController = TextEditingController();
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
-
-
-
-final AddBranchRepo addBranchRepo;
-final EditBranchRepo editBranchRepo;
+  XFile? imageFile;
+  final AddBranchRepo addBranchRepo;
+  final EditBranchRepo editBranchRepo;
 
   Future<void> addBranch() async {
-  final List<WorkingHours> workingHoursList = [
-    WorkingHours(
-      start: startTimeController.text,
-      end: endTimeController.text,
-    ),
-  ];
-    final pharmacyId =await SecureStorage.instance.getData(key: "id");
+
+    final List<WorkingHours> workingHoursList = [
+      WorkingHours(
+        start:startTimeController.text,
+        end: endTimeController.text,
+      ),
+    ];
+    final pharmacyId = await SecureStorage.instance.getData(key: "id");
     emit(AddBranchLoading());
     final branch = AddBranchModel(
-      pharmacyId: pharmacyId!, 
-      arBranchName: arBranchNameController.text,
+      pharmacyId: pharmacyId!,
+      arBranchName:arBranchNameController.text,
       enBranchName: enBranchNameController.text,
-      deliveryRange: int.tryParse(deliveryRange.text) ?? 0,
+      deliveryRange:int.tryParse(deliveryRange.text) ?? 0,
       pricePerKilo: int.tryParse(pricePerKilo.text) ?? 0,
       minDeliveryPrice: int.tryParse(lowestPriceController.text) ?? 0,
       status: branchStatusController.text,
-      image:imageFile?.path ?? '',// "https://images.wuzzuf-data.net/files/company_logo/eltarshouby-pharmacy-Egypt-31230-1519210111-og.jpg", // imageFile?.path ?? '',
+      image: imageFile,
       phoneNumber: phoneController.text,
-      lat: double.tryParse(latitudeController.text) ?? 0.0,
+      lat:double.tryParse(latitudeController.text) ?? 0.0,
       long: double.tryParse(longitudeController.text) ?? 0.0,
       enAddress: enAddressController.text,
-      arAddress: arAddressController.text,
-      workingHours: workingHoursList, 
+      arAddress:arAddressController.text,
+      workingHours: workingHoursList,
     );
     final result = await addBranchRepo.addBranch(branch);
     result.fold(
@@ -74,35 +74,33 @@ final EditBranchRepo editBranchRepo;
   }
 
 
-  File? imageFile;
   final ImagePicker picker = ImagePicker();
 
   Future<void> pickImage(ImageSource source) async {
     try {
       final pickedFile = await picker.pickImage(source: source);
       if (pickedFile != null) {
-        imageFile = File(pickedFile.path);
+        imageFile = pickedFile;
         emit(BranchImagePicked(imageFile!));
-      } 
+      }
     } catch (e) {
       emit(AddBranchFailure(ApiErrorHandler.handleError(e)));
     }
   }
 
-
   Future<void> updateBranch(String branchId) async {
-
-    final pharmacyId =await SecureStorage.instance.getData(key: "id");
+    final pharmacyId = await SecureStorage.instance.getData(key: "id");
 
     final branch = UpdateBranchModel(
-      pharmacyId: pharmacyId!, 
+      pharmacyId: pharmacyId!,
       arBranchName: arBranchNameController.text,
       enBranchName: enBranchNameController.text,
       deliveryRange: int.tryParse(deliveryRange.text) ?? 0,
       pricePerKilo: int.tryParse(pricePerKilo.text) ?? 0,
       minDeliveryPrice: int.tryParse(lowestPriceController.text) ?? 0,
       status: branchStatusController.text,
-      image:imageFile?.path ?? '',// "https://images.wuzzuf-data.net/files/company_logo/eltarshouby-pharmacy-Egypt-31230-1519210111-og.jpg", // imageFile?.path ?? '',
+      image: imageFile?.path ??
+          '', // "https://images.wuzzuf-data.net/files/company_logo/eltarshouby-pharmacy-Egypt-31230-1519210111-og.jpg", // imageFile?.path ?? '',
       phoneNumber: phoneController.text,
       lat: double.tryParse(latitudeController.text) ?? 0.0,
       long: double.tryParse(longitudeController.text) ?? 0.0,
@@ -113,19 +111,17 @@ final EditBranchRepo editBranchRepo;
           start: startTimeController.text,
           end: endTimeController.text,
         )
-      ], 
+      ],
     );
 
     emit(UpdateBranchLoading());
     final result = await editBranchRepo.updateBranch(branch, branchId);
     result.fold(
-      (apiErrorModel) => emit(UpdateBranchFailure(apiErrorModel: apiErrorModel)),
+      (apiErrorModel) =>
+          emit(UpdateBranchFailure(apiErrorModel: apiErrorModel)),
       (_) => emit(UpdateBranchSuccess()),
     );
   }
-
-
-
 
   @override
   Future<void> close() {

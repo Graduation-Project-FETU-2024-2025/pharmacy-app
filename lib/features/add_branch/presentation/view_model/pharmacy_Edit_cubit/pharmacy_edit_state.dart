@@ -19,7 +19,7 @@ class AddBranchFailure extends PharmacyEditState {
 }
 
 class BranchImagePicked extends PharmacyEditState {
-  final File image;
+  final XFile image;
   BranchImagePicked(this.image);
 }
 

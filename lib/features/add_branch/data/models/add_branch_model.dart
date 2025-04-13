@@ -1,3 +1,6 @@
+
+
+import 'package:image_picker/image_picker.dart';
 import 'package:pharmacy_app/features/all_branches/data/models/working_hours_model.dart';
 
 class AddBranchModel {
@@ -8,7 +11,7 @@ class AddBranchModel {
   final int pricePerKilo;
   final int minDeliveryPrice;
   final String status;
-  final String image;
+  final XFile? image;
   final String phoneNumber;
   final double lat;
   final double long;
@@ -33,43 +36,21 @@ class AddBranchModel {
     this.enAddress,
   });
 
-  factory AddBranchModel.fromJson(Map<String, dynamic> json) {
-    return AddBranchModel(
-      pharmacyId: json['pharmacyId'],
-      arBranchName: json['aR_BranchName'],
-      enBranchName: json['eN_BranchName'],
-      deliveryRange: json['deliveryRange'],
-      pricePerKilo: json['pricePerKilo'],
-      minDeliveryPrice: json['minDeliveryPrice'],
-      status: json['status'],
-      image: json['image'],
-      phoneNumber: json['phoneNumber'],
-      lat: json['lat'].toDouble(),
-      long: json['long'].toDouble(),
-      enAddress: json['EN_Address'],
-      arAddress: json['AR_Address'],
-      workingHours: (json['workingHours'] as List)
-          .map((e) => WorkingHours.fromJson(e))
-          .toList(),
-    );
-  }
-
 Map<String, dynamic> toJson() {
     return {
-      'pharmacyId': pharmacyId,
+      'PharmacyId': pharmacyId,
       'aR_BranchName': arBranchName,
       'eN_BranchName': enBranchName,
-      'deliveryRange': deliveryRange,
-      'pricePerKilo': pricePerKilo,
-      'minDeliveryPrice': minDeliveryPrice,
-      'status': status,
-      'image': image,
-      'phoneNumber': phoneNumber,
-      'lat': lat,
-      'long': long,
+      'DeliveryRange': deliveryRange,
+      'PricePerKilo': pricePerKilo,
+      'MinDeliveryPrice': minDeliveryPrice,
+      'Status': status,
+      'PhoneNumber': phoneNumber,
+      'Lat': lat,
+      'Long': long,
       'EN_Address': enAddress,
       'AR_Address': arAddress,
-      'workingHours': workingHours.map((e) => e.toJson()).toList(),
+      'WorkingHours':workingHours.map((e) => e.toJson(),).toList(),
     };
   }
 }

@@ -68,7 +68,7 @@ class _PharmacyEditImgState extends State<PharmacyEditImg> {
   Widget build(BuildContext context) {
     return BlocBuilder<PharmacyEditCubit, PharmacyEditState>(
       builder: (context, state) {
-        File? imageFile = context.read<PharmacyEditCubit>().imageFile;
+        XFile? imageFile = context.read<PharmacyEditCubit>().imageFile;
         return Padding(
           padding: EdgeInsets.symmetric(horizontal: 151.w, vertical: 30.h),
           child: Container(
@@ -79,7 +79,7 @@ class _PharmacyEditImgState extends State<PharmacyEditImg> {
               image: DecorationImage(
                 image: 
                 imageFile != null
-                    ? FileImage(imageFile)
+                    ? FileImage(File(imageFile.path))
                     :widget.pharmacyImg != null
                         ? NetworkImage(widget.pharmacyImg!) as ImageProvider
                         :
