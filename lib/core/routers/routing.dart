@@ -21,4 +21,5 @@ abstract class Routing {
 
   static const String addBranch = '/addBranch';
 
+  static const String mainView = '/mainView';
 }

@@ -27,8 +27,4 @@ class OutOfStockCubit extends Cubit<OutOfStockState> {
       ),
     );
   }
-  //dont forget to add ro getit func.
-
-  //dont forget to add to endpoint.
-  //static String getOutOfStock = "api/secure/Product/out-of-stock";
 }
