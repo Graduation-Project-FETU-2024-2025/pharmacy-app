@@ -35,7 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
         "allMedicines": MessageLookupByLibrary.simpleMessage("All Medicines"),
         "almostRunOut":
-            MessageLookupByLibrary.simpleMessage("Almost running out"),
+            MessageLookupByLibrary.simpleMessage("Nearly out of stock"),
         "arBranchName":
             MessageLookupByLibrary.simpleMessage("Arabic Branch Name"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
@@ -101,8 +101,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "noBranches": MessageLookupByLibrary.simpleMessage("No Branches Found"),
-        "noMedicines":
-            MessageLookupByLibrary.simpleMessage("No Medicines Found"),
+        "noMedicines": MessageLookupByLibrary.simpleMessage(
+            "No Medicines Found in this branch"),
+        "noOutOfStock": MessageLookupByLibrary.simpleMessage(
+            "No medicines will run out soon"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),

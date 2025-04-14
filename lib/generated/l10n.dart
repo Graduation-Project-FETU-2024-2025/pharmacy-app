@@ -512,10 +512,10 @@ class S {
     );
   }
 
-  /// `Almost running out`
+  /// `Nearly out of stock`
   String get almostRunOut {
     return Intl.message(
-      'Almost running out',
+      'Nearly out of stock',
       name: 'almostRunOut',
       desc: '',
       args: [],
@@ -772,10 +772,10 @@ class S {
     );
   }
 
-  /// `No Medicines Found`
+  /// `No Medicines Found in this branch`
   String get noMedicines {
     return Intl.message(
-      'No Medicines Found',
+      'No Medicines Found in this branch',
       name: 'noMedicines',
       desc: '',
       args: [],
@@ -897,6 +897,16 @@ class S {
     return Intl.message(
       'Branch Name',
       name: 'branchName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No medicines will run out soon`
+  String get noOutOfStock {
+    return Intl.message(
+      'No medicines will run out soon',
+      name: 'noOutOfStock',
       desc: '',
       args: [],
     );

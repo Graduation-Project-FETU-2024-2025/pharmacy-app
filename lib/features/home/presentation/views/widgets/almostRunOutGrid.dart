@@ -6,6 +6,7 @@ import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_
 import 'package:pharmacy_app/features/all_medicines/data/models/product_dto_model.dart';
 import 'package:pharmacy_app/features/home/presentation/view_models/out_of_stock_cubit/out_of_stock_cubit.dart';
 import 'package:pharmacy_app/features/home/presentation/views/widgets/almostRunOutCard.dart';
+import 'package:pharmacy_app/generated/l10n.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class AlmostRunOutGrid extends StatelessWidget {
@@ -19,7 +20,12 @@ class AlmostRunOutGrid extends StatelessWidget {
       builder: (context, state) {
         if (state is OutOfStockSuccess) {
           if (state.medicines.isEmpty) {
-            return Text('');
+            return Center(
+              child: Text(
+                S.of(context).noOutOfStock,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            );
           }
           return GridView.builder(
             physics: const NeverScrollableScrollPhysics(),

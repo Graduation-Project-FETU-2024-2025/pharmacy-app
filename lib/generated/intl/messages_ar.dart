@@ -96,7 +96,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "noBranches": MessageLookupByLibrary.simpleMessage("لا توجد فروع"),
-        "noMedicines": MessageLookupByLibrary.simpleMessage("لا توجد أدوية"),
+        "noMedicines":
+            MessageLookupByLibrary.simpleMessage("لا توجد أدوية في هذا الفرع"),
+        "noOutOfStock":
+            MessageLookupByLibrary.simpleMessage("لا يوجد أدوية ستنفذ"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
