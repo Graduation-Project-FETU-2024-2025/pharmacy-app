@@ -32,7 +32,6 @@ class SearchTextField extends StatelessWidget {
               cursorColor: AppColors.primaryColor,
               style: Theme.of(context).textTheme.titleMedium,
               decoration: InputDecoration(
-                //contentPadding: const EdgeInsets.symmetric(horizontal: 16),
                 hintText: S.of(context).searchHint,
                 hintStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
                       color: Color(0xffBDBDBD),
