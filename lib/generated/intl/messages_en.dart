@@ -101,10 +101,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "noBranches": MessageLookupByLibrary.simpleMessage("No Branches Found"),
+        "noMedicineFound":
+            MessageLookupByLibrary.simpleMessage("No medicines found"),
         "noMedicines": MessageLookupByLibrary.simpleMessage(
             "No Medicines Found in this branch"),
         "noOutOfStock": MessageLookupByLibrary.simpleMessage(
             "No medicines will run out soon"),
+        "nosearchResult":
+            MessageLookupByLibrary.simpleMessage("No search result"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
@@ -126,6 +130,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectBranch": MessageLookupByLibrary.simpleMessage("Select Branch"),
         "somethingWrong":
             MessageLookupByLibrary.simpleMessage("Something Went Wrong"),
+        "sorry": MessageLookupByLibrary.simpleMessage("Sorry!"),
         "startTime": MessageLookupByLibrary.simpleMessage("Start Time"),
         "update": MessageLookupByLibrary.simpleMessage("Update"),
         "updateMedFail":

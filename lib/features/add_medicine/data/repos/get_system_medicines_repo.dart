@@ -5,4 +5,6 @@ import 'package:pharmacy_app/features/add_medicine/data/models/system_medicine_r
 abstract class GetSystemMedicinesRepo {
   Future<Either<ApiErrorModel, SystemMedicineResponseModel>>
       getSystemMedicines();
+  Future<Either<ApiErrorModel, SystemMedicineResponseModel>>
+      searchInSystemMedicines({required String query});
 }

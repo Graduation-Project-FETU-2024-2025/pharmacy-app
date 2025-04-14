@@ -96,6 +96,9 @@
 
     "address": "address",
     "branchName": "Branch Name",
-    "noOutOfStock":"No medicines will run out soon"
+    "noOutOfStock":"No medicines will run out soon",
+    "noMedicineFound":"No medicines found",
+    "sorry":"Sorry!",
+    "nosearchResult":"No search result"
 
 }

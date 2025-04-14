@@ -36,4 +36,28 @@ class GetBranchProductsRepoImpl implements GetBranchProductsRepo {
       return Left(ApiErrorHandler.handleError(e));
     }
   }
+
+  @override
+  Future<Either<ApiErrorModel, GetBranchProductsModel>> searchInBranchProducts({
+    required String branchId,
+    required String query,
+  }) async {
+    try {
+      final response = await apiConsumer.get(
+        "${EndPoints.getBranchProducts}/$branchId",
+        queryParameter: {"page": 1, "pageSize": 10, "search": query},
+      );
+      if (response.statusCode == 204) {
+        return right(GetBranchProductsModel(
+          data: [],
+          message: "No products found",
+          statusCode: 204,
+        ));
+      }
+      final data = GetBranchProductsModel.fromJson(response.data);
+      return Right(data);
+    } catch (e) {
+      return Left(ApiErrorHandler.handleError(e));
+    }
+  }
 }

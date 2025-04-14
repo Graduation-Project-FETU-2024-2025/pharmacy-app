@@ -63,7 +63,11 @@ class HomeViewBody extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 30.h),
-                      SearchTextField(),
+                      SearchTextField(
+                        onChanged: (p0) => {},
+                        onPressed: () => {},
+                        controller: TextEditingController(),
+                      ),
                       SizedBox(height: 10.h),
                     ],
                   ),

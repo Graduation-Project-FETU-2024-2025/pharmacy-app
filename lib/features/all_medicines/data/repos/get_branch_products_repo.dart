@@ -6,4 +6,8 @@ abstract class GetBranchProductsRepo {
   Future<Either<ApiErrorModel, GetBranchProductsModel>> getBranchProducts({
     required String branchId,
   });
+  Future<Either<ApiErrorModel, GetBranchProductsModel>> searchInBranchProducts({
+    required String branchId,
+    required String query,
+  });
 }
