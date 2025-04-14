@@ -14,12 +14,13 @@ class EditBranchRepoImpl implements EditBranchRepo {
   EditBranchRepoImpl(this.apiConsumer);
 
   @override
-  Future<Either<ApiErrorModel, UpdateBranchResponseModel>> updateBranch(UpdateBranchModel branch, String branchId) async {
+  Future<Either<ApiErrorModel, UpdateBranchResponseModel>> updateBranch(
+      UpdateBranchModel branch, String branchId) async {
     try {
       final response = await apiConsumer.put(
-      '${EndPoints.getBranches}/$branchId', 
-        data: branch.toJson(),
-      );
+          '${EndPoints.getBranches}/$branchId',
+          data: branch.toJson(),
+          isFormData: true);
       return Right(UpdateBranchResponseModel.fromJson(response.data));
     } catch (error) {
       return Left(ApiErrorHandler.handleError(error));

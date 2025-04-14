@@ -80,7 +80,7 @@ class AddMedicineViewBody extends StatelessWidget {
                 ),
                 TextAddMedForm(
                   label: S.of(context).medicineName,
-                  hintText: systemMedicineModel.companyName,
+                  hintText: systemMedicineModel.name,
                   readOnly: true,
                 ),
                 SizedBox(

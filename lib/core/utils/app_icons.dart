@@ -120,4 +120,20 @@ class AppIcons {
   /// assets/icons/filter.svg
   static const String iconsFilter = "assets/icons/filter.svg";
   static const String iconTime = "assets/icons/time.svg";
+
+  /// Assets for filter
+  /// assets/icons/myHome.svg
+  static const String iconsMyHome = "assets/icons/myHome.svg";
+
+  /// Assets for filter
+  /// assets/icons/myBranches.svg
+  static const String iconsMyBranches = "assets/icons/myBranches.svg";
+
+  /// Assets for filter
+  /// assets/icons/medinice.svg
+  static const String iconsMedicine = "assets/icons/medinice.svg";
+
+  /// Assets for filter
+  /// assets/icons/myProfile.svg
+  static const String iconsMyProfile = "assets/icons/myProfile.svg";
 }

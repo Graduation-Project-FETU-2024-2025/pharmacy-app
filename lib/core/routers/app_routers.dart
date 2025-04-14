@@ -20,6 +20,7 @@ import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit
 import 'package:pharmacy_app/features/auth/presentation/views/otp_view.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:pharmacy_app/features/home/presentation/views/home_view.dart';
+import 'package:pharmacy_app/features/main/presentation/views/main_view.dart';
 import 'package:pharmacy_app/features/medicine_details/data/repos/get_medicine_repo.dart';
 import 'package:pharmacy_app/features/medicine_details/presentation/view_models/get_medicine/get_medicine_cubit.dart';
 import 'package:pharmacy_app/features/medicine_details/presentation/views/medicine_details_view.dart';
@@ -157,6 +158,8 @@ class AppRouters {
             branchId: branchId,
           ),
         ));
+      case Routing.mainView:
+        return _buildRoute(MainView());
       default:
         return _buildRoute(
           Scaffold(

@@ -20,6 +20,13 @@ class OutOfStockRepoImpl implements OutOfStockRepo {
           "pageSize": 10,
         },
       );
+      if (response.statusCode == 204) {
+        return right(OutOfStockResponseModel(
+          data: [],
+          message: "No products found",
+          statusCode: 204,
+        ));
+      }
       final data = OutOfStockResponseModel.fromJson(response.data);
       return Right(data);
     } catch (e) {
