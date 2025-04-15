@@ -13,8 +13,8 @@ class WorkingHours {
 
   Map<String, dynamic> toJson() {
     return {
-      'start': start,
-      'end': end,
+      'Start': start,
+      'End': end,
     };
   }
 }

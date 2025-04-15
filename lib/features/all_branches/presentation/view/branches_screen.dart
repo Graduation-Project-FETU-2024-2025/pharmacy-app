@@ -61,16 +61,16 @@ class BranchesScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-  onPressed: () async {
-    final result = await context.pushNamed(Routing.addBranch);
-    if (result == true) {
-      context.read<GetBranchesCubit>().fetchBranches(); 
-    }
-  },
-  backgroundColor: AppColors.primaryColor,
-  shape: CircleBorder(),
-  child: Icon(Icons.add, color: AppColors.white),
-),
+        onPressed: () async {
+          final result = await context.pushNamed(Routing.addBranch);
+          if (result == true) {
+            context.read<GetBranchesCubit>().fetchBranches();
+          }
+        },
+        backgroundColor: AppColors.primaryColor,
+        shape: CircleBorder(),
+        child: Icon(Icons.add, color: AppColors.white),
+      ),
     );
   }
 }

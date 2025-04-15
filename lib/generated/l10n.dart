@@ -260,7 +260,15 @@ class S {
     );
   }
 
-  // skipped getter for the 'deliveryArea&price' key
+  /// `Delivery Area & Price`
+  String get deliveryAreaAndPrice {
+    return Intl.message(
+      'Delivery Area & Price',
+      name: 'deliveryAreaAndPrice',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Description`
   String get description {
@@ -917,6 +925,106 @@ class S {
     return Intl.message(
       'Address in English',
       name: 'enAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error`
+  String get error {
+    return Intl.message(
+      'Error',
+      name: 'error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch deleted successfully`
+  String get successDeleteBranch {
+    return Intl.message(
+      'Branch deleted successfully',
+      name: 'successDeleteBranch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete this branch?`
+  String get wantToDeleteBranch {
+    return Intl.message(
+      'Are you sure you want to delete this branch?',
+      name: 'wantToDeleteBranch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Camera`
+  String get camera {
+    return Intl.message(
+      'Camera',
+      name: 'camera',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch updated successfully`
+  String get successUpdatedBranch {
+    return Intl.message(
+      'Branch updated successfully',
+      name: 'successUpdatedBranch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch Added successfully`
+  String get successAddBranch {
+    return Intl.message(
+      'Branch Added successfully',
+      name: 'successAddBranch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gallery`
+  String get gallery {
+    return Intl.message(
+      'Gallery',
+      name: 'gallery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery`
+  String get delivery {
+    return Intl.message(
+      'Delivery',
+      name: 'delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Delivery`
+  String get noDelivery {
+    return Intl.message(
+      'No Delivery',
+      name: 'noDelivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Close`
+  String get close {
+    return Intl.message(
+      'Close',
+      name: 'close',
       desc: '',
       args: [],
     );

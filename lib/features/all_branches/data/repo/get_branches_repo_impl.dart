@@ -15,9 +15,9 @@ class GetBranchesRepoImpl implements GetBranchesRepo {
   GetBranchesRepoImpl(this.apiConsumer);
 
   @override
-  Future<Either<ApiErrorModel,List<PharmacyBranchModel>>>getAllBranches() async {
+  Future<Either<ApiErrorModel, List<PharmacyBranchModel>>>
+      getAllBranches() async {
     try {
-
       final response = await apiConsumer.get(
         EndPoints.getBranches,
         queryParameter: {
@@ -27,7 +27,8 @@ class GetBranchesRepoImpl implements GetBranchesRepo {
       );
 
       List<dynamic> data = response.data["data"];
-      return Right(data.map((json) => PharmacyBranchModel.fromJson(json)).toList());
+      return Right(
+          data.map((json) => PharmacyBranchModel.fromJson(json)).toList());
     } catch (e) {
       log(e.toString());
       return Left(ApiErrorHandler.handleError(e));

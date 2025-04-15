@@ -23,7 +23,7 @@
     "workingHour": "ساعات العمل",
     "pounds":"جنيه",
     "km":"كم",
-    "deliveryArea&price":"منطقة التوصيل & السعر",
+    "deliveryAreaAndPrice":"منطقة التوصيل & السعر",
     "description":"الوصف",
 
     "pharmacyInfo":"معلومات الصيدلية",
@@ -100,7 +100,17 @@
     "arAddress":" العنوان باللغه العربية",
     "enAddress":"العنوان باللغة الانجليزية",
     "arBranchName":"اسم الفرع باللغة العربية",
-    "enBranchName":"اسم الفرع باللغة الانجليزية"
+    "enBranchName":"اسم الفرع باللغة الانجليزية",
+    "error":"خطأ",
+    "successDeleteBranch": "تم حذف الفرع بنجاح",
+    "successUpdatedBranch": "تم تحديث الفرع بنجاح",
+    "successAddBranch": "تم اضافة الفرع بنجاح",
+    "wantToDeleteBranch": "هل تريد حذف هذا الفرع ؟",
+    "camera": "كاميرا",
+    "gallery": "معرض الصور",
+    "delivery": "يوجد توصيل",
+    "noDelivery": "لا يوجد توصيل",
+    "close": "مغلق"
     
 
 }

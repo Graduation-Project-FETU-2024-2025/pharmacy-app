@@ -4,14 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:pharmacy_app/features/branch_edit/presentation/view/widget/pharmacy_edit_img.dart';
 import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
-
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/widgets/toast.dart';
+import '../../../../../generated/l10n.dart';
 import 'custom_add_list.dart';
 
 class BranchAddBody extends StatelessWidget {
   const BranchAddBody({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +36,7 @@ class BranchAddBody extends StatelessWidget {
                     } else if (state is AddBranchSuccess) {
                       Navigator.pop(context);
                       Navigator.pop(context, true);
-
-                      successToast(message: "Branch added successfully");
-
+                      successToast(message: S.of(context).successAddBranch);
                     } else if (state is AddBranchFailure) {
                       Navigator.pop(context);
                       errorToast(message: state.apiErrorModel.message!);

@@ -34,28 +34,6 @@ class UpdateBranchModel {
     required this.workingHours,
   });
 
-  // factory UpdateBranchModel.fromJson(Map<String, dynamic> json) {
-  //   return UpdateBranchModel(
-  //     pharmacyId: json["pharmacyId"] ?? "",
-  //     arBranchName: json["aR_BranchName"] ?? "",
-  //     enBranchName: json["eN_BranchName"] ?? "",
-  //     deliveryRange: json["deliveryRange"] ?? 0,
-  //     pricePerKilo: json["pricePerKilo"] ?? 0,
-  //     minDeliveryPrice: json["minDeliveryPrice"] ?? 0,
-  //     status: json["status"] ?? "",
-  //     image: json["image"] ?? "",
-  //     arAddress: json["AR_Address"] ?? "",
-  //     enAddress: json["EN_Address"] ?? "",
-  //     phoneNumber: json["phoneNumber"] ?? "",
-  //     lat: (json["lat"] ?? 0).toDouble(),
-  //     long: (json["long"] ?? 0).toDouble(),
-  //     workingHours: (json['workingHours'] as List)
-  //         .map((e) => WorkingHours.fromJson(e))
-  //         .toList(),
-  //   );
-  // }
-
-
   Map<String, dynamic> toJson() {
     return {
       'PharmacyId': pharmacyId,
@@ -70,8 +48,11 @@ class UpdateBranchModel {
       'Long': long,
       'EN_Address': enAddress,
       'AR_Address': arAddress,
-      'WorkingHours':workingHours.map((e) => e.toJson(),).toList(),
+      'WorkingHours': workingHours
+          .map(
+            (e) => e.toJson(),
+          )
+          .toList(),
     };
   }
-
 }

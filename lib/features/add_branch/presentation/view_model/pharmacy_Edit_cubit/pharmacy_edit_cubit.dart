@@ -5,7 +5,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:meta/meta.dart';
 import 'package:pharmacy_app/core/database/api/api_error_handler.dart';
 import 'package:pharmacy_app/core/database/api/api_error_model.dart';
-import 'package:pharmacy_app/features/add_branch/data/models/add_branch_model_response.dart';
 import 'package:pharmacy_app/features/branch_edit/data/repo/edit_branch_repo.dart';
 import '../../../../../core/database/cache/secure_storage.dart';
 import '../../../../all_branches/data/models/working_hours_model.dart';
@@ -41,10 +40,9 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
   final EditBranchRepo editBranchRepo;
 
   Future<void> addBranch() async {
-
     final List<WorkingHours> workingHoursList = [
       WorkingHours(
-        start:startTimeController.text,
+        start: startTimeController.text,
         end: endTimeController.text,
       ),
     ];
@@ -52,27 +50,26 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
     emit(AddBranchLoading());
     final branch = AddBranchModel(
       pharmacyId: pharmacyId!,
-      arBranchName:arBranchNameController.text,
+      arBranchName: arBranchNameController.text,
       enBranchName: enBranchNameController.text,
-      deliveryRange:int.tryParse(deliveryRange.text) !,
+      deliveryRange: int.tryParse(deliveryRange.text)!,
       pricePerKilo: int.tryParse(pricePerKilo.text)!,
       minDeliveryPrice: int.tryParse(lowestPriceController.text)!,
       status: branchStatusController.text,
       image: imageFile,
       phoneNumber: phoneController.text,
-      lat:double.tryParse(latitudeController.text)!,
+      lat: double.tryParse(latitudeController.text)!,
       long: double.tryParse(longitudeController.text)!,
       enAddress: enAddressController.text,
-      arAddress:arAddressController.text,
+      arAddress: arAddressController.text,
       workingHours: workingHoursList,
     );
     final result = await addBranchRepo.addBranch(branch);
     result.fold(
       (apiErrorModel) => emit(AddBranchFailure(apiErrorModel)),
-      (branch) => emit(AddBranchSuccess(branch)),
+      (_) => emit(AddBranchSuccess()),
     );
   }
-
 
   final ImagePicker picker = ImagePicker();
 
@@ -90,7 +87,6 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
 
   Future<void> updateBranch(String branchId) async {
     final pharmacyId = await SecureStorage.instance.getData(key: "id");
-
     final branch = UpdateBranchModel(
       pharmacyId: pharmacyId!,
       arBranchName: arBranchNameController.text,

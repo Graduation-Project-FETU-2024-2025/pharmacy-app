@@ -3,9 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../core/utils/app_icons.dart';
 import '../../../../../core/utils/app_images.dart';
+import '../../../../../generated/l10n.dart';
 
 class DeliveryCardDetail extends StatelessWidget {
-  const DeliveryCardDetail({super.key, required this.phoneNum, required this.pricePerKilo, required this.deliveryRange});
+  const DeliveryCardDetail(
+      {super.key,
+      required this.phoneNum,
+      required this.pricePerKilo,
+      required this.deliveryRange});
   final String phoneNum;
   final double pricePerKilo;
   final int deliveryRange;
@@ -21,7 +26,11 @@ class DeliveryCardDetail extends StatelessWidget {
             height: 80.h,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage(AppImages.deliveryImg, ), fit: BoxFit.cover,)),
+              image: AssetImage(
+                AppImages.deliveryImg,
+              ),
+              fit: BoxFit.cover,
+            )),
           ),
           SizedBox(
             width: 160.w,
@@ -62,7 +71,7 @@ class DeliveryCardDetail extends StatelessWidget {
                     ),
                     SizedBox(width: 5.w),
                     Text(
-                      '$pricePerKilo Pounds',
+                      '$pricePerKilo ${S.of(context).pounds}',
                       style: Theme.of(context).textTheme.bodySmall,
                       overflow: TextOverflow.ellipsis,
                     ),

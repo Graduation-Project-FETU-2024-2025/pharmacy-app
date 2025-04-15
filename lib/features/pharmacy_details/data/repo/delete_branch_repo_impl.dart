@@ -19,8 +19,8 @@ class DeleteBranchRepoImpl implements DeleteBranchRepo {
       );
       if (response.statusCode == 200) {
         return Right(true);
-      } else{
-          return Left(ApiErrorHandler.handleError(response.message));
+      } else {
+        return Left(ApiErrorHandler.handleError(response.message));
       }
     } catch (e) {
       return Left(ApiErrorHandler.handleError(e));

@@ -68,7 +68,6 @@ class CustomEditList extends StatelessWidget {
               controller: PharmacyEditCubit.get(context).pricePerKilo,
               hintTxt: S.of(context).pricePerKilo,
               initialVal: branch?.pricePerKilo.toString(),
-              
             ),
             Gap(31.h),
             Text(S.of(context).phoneNum,
@@ -98,7 +97,9 @@ class CustomEditList extends StatelessWidget {
               initialVal: branch?.minDeliveryPrice.toString(),
             ),
             Gap(31.h),
-            WorkingHourWidget(start:  branch?.workingHours.first.start , end : branch?.workingHours.first.end),
+            WorkingHourWidget(
+                start: branch?.workingHours.first.start,
+                end: branch?.workingHours.first.end),
             Gap(31.h),
             Text(S.of(context).branchStatus,
                 style: Theme.of(context).textTheme.labelMedium),
@@ -106,9 +107,10 @@ class CustomEditList extends StatelessWidget {
             DeliveryStatusField(
               controller: PharmacyEditCubit.get(context).branchStatusController,
               status: branch?.status,
-              ),
+            ),
             Gap(31.h),
-            GetLatAndLong(lat : branch?.lat.toString(), long : branch?.long.toString())
+            GetLatAndLong(
+                lat: branch?.lat.toString(), long: branch?.long.toString())
           ],
         ),
       ),

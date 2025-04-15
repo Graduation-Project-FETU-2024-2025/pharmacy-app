@@ -4,5 +4,6 @@ import '../../../../core/database/api/api_error_model.dart';
 import '../models/update_branch_model.dart';
 
 abstract class EditBranchRepo {
-  Future<Either<ApiErrorModel, bool>> updateBranch(UpdateBranchModel branch, String branchId);
+  Future<Either<ApiErrorModel, bool>> updateBranch(
+      UpdateBranchModel branch, String branchId);
 }

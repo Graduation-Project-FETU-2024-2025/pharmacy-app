@@ -12,7 +12,8 @@ class GetOneBranchRepoImpl implements GetOneBranchRepo {
   GetOneBranchRepoImpl(this.apiConsumer);
 
   @override
-  Future<Either<ApiErrorModel, PharmacyBranchModel>> getBranch(String branchId) async {
+  Future<Either<ApiErrorModel, PharmacyBranchModel>> getBranch(
+      String branchId) async {
     try {
       final response = await apiConsumer.get(
         '${EndPoints.getBranches}/$branchId',

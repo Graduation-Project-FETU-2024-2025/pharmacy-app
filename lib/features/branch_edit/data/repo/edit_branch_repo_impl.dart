@@ -16,23 +16,21 @@ class EditBranchRepoImpl implements EditBranchRepo {
   EditBranchRepoImpl(this.apiConsumer);
 
   @override
-  Future<Either<ApiErrorModel, bool>> updateBranch(UpdateBranchModel branch, String branchId) async {
+  Future<Either<ApiErrorModel, bool>> updateBranch(
+      UpdateBranchModel branch, String branchId) async {
     try {
       log(branch.toString());
-      
+
       final Map<String, dynamic> formData = branch.toJson();
       // formData['Image'] = await uploadImageToAPI(branch.image!);
       if (branch.image != null) {
-            final imageFile = await uploadImageToAPI(branch.image!);
-            formData['Image'] = imageFile;
-          }
-      await apiConsumer.put(
-      '${EndPoints.getBranches}/$branchId', 
-        data: formData,
-        isFormData: true
-      );
+        final imageFile = await uploadImageToAPI(branch.image!);
+        formData['Image'] = imageFile;
+      }
+      await apiConsumer.put('${EndPoints.getBranches}/$branchId',
+          data: formData, isFormData: true);
       // return Right(UpdateBranchResponseModel.fromJson(response.data));
-    return Right(true);
+      return Right(true);
     } catch (error) {
       return Left(ApiErrorHandler.handleError(error));
     }

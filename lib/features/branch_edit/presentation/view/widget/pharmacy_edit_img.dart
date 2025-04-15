@@ -8,6 +8,7 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../../core/utils/app_images.dart';
+import '../../../../../generated/l10n.dart';
 import '../../../../add_branch/presentation/view/widgets/build_image_option.dart';
 
 class PharmacyEditImg extends StatefulWidget {
@@ -19,50 +20,49 @@ class PharmacyEditImg extends StatefulWidget {
 }
 
 class _PharmacyEditImgState extends State<PharmacyEditImg> {
-
   void showImagePicker(BuildContext context) {
-  final branchCubit = context.read<PharmacyEditCubit>(); 
+    final branchCubit = context.read<PharmacyEditCubit>();
 
-  showModalBottomSheet(
-    context: context,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
-    ),
-    builder: (context) => BlocProvider.value( 
-      value: branchCubit, 
-      child: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                BuildImageOption(
-                  icon: Icons.photo_library,
-                  text: "Gallery",
-                  onTap: () {
-                    branchCubit.pickImage(ImageSource.gallery); 
-                    Navigator.pop(context);
-                  },
-                ),
-                BuildImageOption(
-                  icon: Icons.camera_alt,
-                  text: "Camera",
-                  onTap: () {
-                    branchCubit.pickImage(ImageSource.camera);
-                    Navigator.pop(context);
-                  },
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-          ],
+    showModalBottomSheet(
+      context: context,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
+      ),
+      builder: (context) => BlocProvider.value(
+        value: branchCubit,
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  BuildImageOption(
+                    icon: Icons.photo_library,
+                    text: S.of(context).gallery,
+                    onTap: () {
+                      branchCubit.pickImage(ImageSource.gallery);
+                      Navigator.pop(context);
+                    },
+                  ),
+                  BuildImageOption(
+                    icon: Icons.camera_alt,
+                    text: S.of(context).camera,
+                    onTap: () {
+                      branchCubit.pickImage(ImageSource.camera);
+                      Navigator.pop(context);
+                    },
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
         ),
       ),
-    ),
-  );
-}
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,20 +77,19 @@ class _PharmacyEditImgState extends State<PharmacyEditImg> {
               shape: BoxShape.circle,
               color: Colors.black,
               image: DecorationImage(
-                image: 
-                imageFile != null
+                image: imageFile != null
                     ? FileImage(File(imageFile.path))
-                    :widget.pharmacyImg != null
+                    : widget.pharmacyImg != null
                         ? NetworkImage(widget.pharmacyImg!) as ImageProvider
-                        :
-                          AssetImage(AppImages.pharmacyDetailImg) as ImageProvider,
+                        : AssetImage(AppImages.pharmacyDetailImg)
+                            as ImageProvider,
                 fit: BoxFit.cover,
               ),
             ),
             child: Align(
               alignment: Alignment(1.5.w, 2.h),
               child: IconButton(
-                onPressed:()=>showImagePicker(context),
+                onPressed: () => showImagePicker(context),
                 icon: SvgPicture.asset(AppIcons.iconsCamera),
               ),
             ),
@@ -99,5 +98,4 @@ class _PharmacyEditImgState extends State<PharmacyEditImg> {
       },
     );
   }
-
 }

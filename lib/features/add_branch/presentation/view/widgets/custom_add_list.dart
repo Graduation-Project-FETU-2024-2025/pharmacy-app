@@ -98,7 +98,9 @@ class CustomAddList extends StatelessWidget {
               keyboardType: TextInputType.number,
             ),
             Gap(31.h),
-            WorkingHourWidget(start:  branch?.workingHours.first.start , end : branch?.workingHours.first.end),
+            WorkingHourWidget(
+                start: branch?.workingHours.first.start,
+                end: branch?.workingHours.first.end),
             Gap(31.h),
             Text(S.of(context).branchStatus,
                 style: Theme.of(context).textTheme.labelMedium),
@@ -106,9 +108,10 @@ class CustomAddList extends StatelessWidget {
             DeliveryStatusField(
               controller: PharmacyEditCubit.get(context).branchStatusController,
               status: branch?.status,
-              ),
+            ),
             Gap(31.h),
-            GetLatAndLong(lat : branch?.lat.toString(), long : branch?.long.toString())
+            GetLatAndLong(
+                lat: branch?.lat.toString(), long: branch?.long.toString())
           ],
         ),
       ),

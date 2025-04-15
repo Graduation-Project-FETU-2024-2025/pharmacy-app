@@ -5,8 +5,8 @@ import 'package:gap/gap.dart';
 import 'package:pharmacy_app/core/widgets/toast.dart';
 import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 import 'package:pharmacy_app/features/all_branches/data/models/pharmacy_branch_model.dart';
-
 import '../../../../../core/utils/app_colors.dart';
+import '../../../../../generated/l10n.dart';
 import 'custom_edit_list.dart';
 import 'pharmacy_edit_img.dart';
 
@@ -38,8 +38,7 @@ class PharmacyEditBody extends StatelessWidget {
                     } else if (state is UpdateBranchSuccess) {
                       Navigator.pop(context);
                       Navigator.pop(context, true);
-                      successToast(message: "Branch Updated successfully");
-
+                      successToast(message: S.of(context).successUpdatedBranch);
                     } else if (state is UpdateBranchFailure) {
                       Navigator.pop(context);
                       errorToast(message: state.apiErrorModel.message!);
@@ -50,12 +49,14 @@ class PharmacyEditBody extends StatelessWidget {
                       onPressed: state is UpdateBranchLoading
                           ? null
                           : () {
-                              context.read<PharmacyEditCubit>().updateBranch(branch.id);
+                              context
+                                  .read<PharmacyEditCubit>()
+                                  .updateBranch(branch.id);
                             },
                       child: state is UpdateBranchLoading
                           ? CircularProgressIndicator(color: Colors.white)
                           : Text(
-                              "Save",
+                              S.of(context).save,
                               style: Theme.of(context)
                                   .textTheme
                                   .displayMedium!

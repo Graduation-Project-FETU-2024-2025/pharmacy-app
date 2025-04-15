@@ -47,8 +47,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "branch": MessageLookupByLibrary.simpleMessage("Branch"),
         "branchName": MessageLookupByLibrary.simpleMessage("Branch Name"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("Branch Status"),
+        "camera": MessageLookupByLibrary.simpleMessage("Camera"),
+        "close": MessageLookupByLibrary.simpleMessage("Close"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
+        "delivery": MessageLookupByLibrary.simpleMessage("Delivery"),
+        "deliveryAreaAndPrice":
+            MessageLookupByLibrary.simpleMessage("Delivery Area & Price"),
         "deliveryMan":
             MessageLookupByLibrary.simpleMessage("Delivery man name"),
         "deliveryRange": MessageLookupByLibrary.simpleMessage("Delivery Range"),
@@ -68,9 +73,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter OTP we sent you at"),
         "enterPrice": MessageLookupByLibrary.simpleMessage("Enter Price"),
         "enterQuantity": MessageLookupByLibrary.simpleMessage("Enter Quantity"),
+        "error": MessageLookupByLibrary.simpleMessage("Error"),
         "fieldRequired": MessageLookupByLibrary.simpleMessage("field Required"),
         "form": MessageLookupByLibrary.simpleMessage("Form"),
         "freeDelivery": MessageLookupByLibrary.simpleMessage("Free Delivery"),
+        "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
         "getAddressInfo":
             MessageLookupByLibrary.simpleMessage("Get Address Info"),
         "haveNotReceivedOTP":
@@ -103,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "noBranches": MessageLookupByLibrary.simpleMessage("No Branches Found"),
+        "noDelivery": MessageLookupByLibrary.simpleMessage("No Delivery"),
         "noMedicines":
             MessageLookupByLibrary.simpleMessage("No Medicines Found"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
@@ -127,11 +135,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "somethingWrong":
             MessageLookupByLibrary.simpleMessage("Something Went Wrong"),
         "startTime": MessageLookupByLibrary.simpleMessage("Start Time"),
+        "successAddBranch":
+            MessageLookupByLibrary.simpleMessage("Branch Added successfully"),
+        "successDeleteBranch":
+            MessageLookupByLibrary.simpleMessage("Branch deleted successfully"),
+        "successUpdatedBranch":
+            MessageLookupByLibrary.simpleMessage("Branch updated successfully"),
         "update": MessageLookupByLibrary.simpleMessage("Update"),
         "updateMedFail":
             MessageLookupByLibrary.simpleMessage("Failed to Update Medicine"),
         "updateMedSuccess": MessageLookupByLibrary.simpleMessage(
             "Medicine Updated Successfully"),
+        "wantToDeleteBranch": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to delete this branch?"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("Twenty four hours service !"),

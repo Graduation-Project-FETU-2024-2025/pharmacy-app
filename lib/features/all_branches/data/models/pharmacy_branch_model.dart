@@ -52,7 +52,7 @@ class PharmacyBranchModel {
       phoneNumber: json['phoneNumber'],
       image: json['image'],
       status: json['status'],
-      deliveryRange: json['deliveryRange'] ,
+      deliveryRange: json['deliveryRange'],
       pricePerKilo: (json['pricePerKilo'] as num).toDouble(),
       minDeliveryPrice: (json['minDeliveryPrice'] as num).toDouble(),
       lat: (json['lat'] as num).toDouble(),

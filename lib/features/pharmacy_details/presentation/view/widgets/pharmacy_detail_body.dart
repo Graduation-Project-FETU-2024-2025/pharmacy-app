@@ -11,7 +11,7 @@ import 'package:pharmacy_app/features/pharmacy_details/data/repo/delete_branch_r
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/widgets/delivery_area_card.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/widgets/row_btn.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view_model/delete_branch/delete_branch_cubit.dart';
-
+import '../../../../../generated/l10n.dart';
 import 'working_hour_detail.dart';
 
 class PharmacyDetailBody extends StatelessWidget {
@@ -53,7 +53,7 @@ class PharmacyDetailBody extends StatelessWidget {
           ),
           Gap(32.h),
           Text(
-            'Delivery Area & Price',
+            S.of(context).deliveryAreaAndPrice,
             style: Theme.of(context).textTheme.titleSmall,
           ),
           DeliveryAreaCard(
@@ -71,7 +71,7 @@ class PharmacyDetailBody extends StatelessWidget {
               ),
               Gap(4.w),
               Text(
-                'Working Hours',
+                S.of(context).workingHour,
                 style: Theme.of(context).textTheme.titleSmall,
               ),
             ],

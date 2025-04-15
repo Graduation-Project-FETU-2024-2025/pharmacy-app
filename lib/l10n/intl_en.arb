@@ -24,7 +24,7 @@
     "workingHour": "Working Hours",
     "pounds":"Pounds",
     "km":"KM",
-    "deliveryArea&price" :"Delivery Area & Price",
+    "deliveryAreaAndPrice" :"Delivery Area & Price",
     "description":"Description",
 
     "pharmacyInfo": "Pharmacy Information",
@@ -97,6 +97,16 @@
     "address": "address",
     "branchName": "Branch Name",
     "arAddress":"Address in Arabic",
-    "enAddress":"Address in English"
+    "enAddress":"Address in English",
+    "error":"Error",
+    "successDeleteBranch":"Branch deleted successfully",
+    "wantToDeleteBranch":"Are you sure you want to delete this branch?",
+    "camera": "Camera",
+    "successUpdatedBranch":"Branch updated successfully",
+    "successAddBranch":"Branch Added successfully",
+    "gallery":"Gallery",
+    "delivery": "Delivery",
+    "noDelivery": "No Delivery",
+    "close": "Close"
 
 }

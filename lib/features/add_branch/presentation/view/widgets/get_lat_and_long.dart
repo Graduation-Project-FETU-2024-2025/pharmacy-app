@@ -18,8 +18,7 @@ class GetLatAndLong extends StatefulWidget {
 }
 
 class _GetLatAndLongState extends State<GetLatAndLong> {
-
-    Future<void> getCurrentLocation() async {
+  Future<void> getCurrentLocation() async {
     bool serviceEnabled;
     LocationPermission permission;
 
@@ -60,83 +59,85 @@ class _GetLatAndLongState extends State<GetLatAndLong> {
           position.longitude.toString();
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-                  height: 100,
-                  width: double.infinity,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              S.of(context).latitude,
-                              style: Theme.of(context).textTheme.labelMedium,
-                            ),
-                            Gap(18.h),
-                            CustomEditTextFormField(
-                              controller:
-                                  PharmacyEditCubit.get(context).latitudeController,
-                              hintTxt:widget.lat?? "00.000",
-                              keyboardType: TextInputType.number,
-                              initialVal: widget.lat,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Gap(19.h),
-                      Flexible(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              S.of(context).longitude,
-                              style: Theme.of(context).textTheme.labelMedium,
-                            ),
-                            Gap(18.h),
-                            CustomEditTextFormField(
-                              controller: PharmacyEditCubit.get(context)
-                                  .longitudeController,
-                              hintTxt:widget.long?? "00.000",
-                              keyboardType: TextInputType.number,
-                              initialVal: widget.long,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Gap(31.h),
-                SizedBox(
-            width: 214.w,
-            height: 36.h,
-            child: ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: WidgetStatePropertyAll(AppColors.primaryColor.withOpacity(0.7)),
-                shape: WidgetStatePropertyAll(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
+          height: 100,
+          width: double.infinity,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      S.of(context).latitude,
+                      style: Theme.of(context).textTheme.labelMedium,
+                    ),
+                    Gap(18.h),
+                    CustomEditTextFormField(
+                      controller:
+                          PharmacyEditCubit.get(context).latitudeController,
+                      hintTxt: widget.lat ?? "00.000",
+                      keyboardType: TextInputType.number,
+                      initialVal: widget.lat,
+                    ),
+                  ],
                 ),
               ),
-              onPressed: getCurrentLocation,
-              child: Text(
-                S.of(context).getAddressInfo,
-                style: Theme.of(context)
-                    .textTheme
-                    .displayMedium!
-                    .copyWith(fontSize: 18, color: AppColors.white),
+              Gap(19.h),
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      S.of(context).longitude,
+                      style: Theme.of(context).textTheme.labelMedium,
+                    ),
+                    Gap(18.h),
+                    CustomEditTextFormField(
+                      controller:
+                          PharmacyEditCubit.get(context).longitudeController,
+                      hintTxt: widget.long ?? "00.000",
+                      keyboardType: TextInputType.number,
+                      initialVal: widget.long,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Gap(31.h),
+        SizedBox(
+          width: 214.w,
+          height: 36.h,
+          child: ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: WidgetStatePropertyAll(
+                  AppColors.primaryColor.withOpacity(0.7)),
+              shape: WidgetStatePropertyAll(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
               ),
             ),
-                    ),
-                    Gap(31.h),
+            onPressed: getCurrentLocation,
+            child: Text(
+              S.of(context).getAddressInfo,
+              style: Theme.of(context)
+                  .textTheme
+                  .displayMedium!
+                  .copyWith(fontSize: 18, color: AppColors.white),
+            ),
+          ),
+        ),
+        Gap(31.h),
       ],
     );
   }
