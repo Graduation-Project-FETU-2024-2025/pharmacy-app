@@ -22,27 +22,34 @@ class PharmacyDetailsView extends StatelessWidget {
       )..fetchOneBranch(),
       child: BlocBuilder<GetOneBranchCubit, GetOneBranchState>(
         builder: (context, state) {
-          return Scaffold(
-            body: state is GetOneBranchLoading
-                ? PharmacyDetailShimmer()
-                : state is GetOneBranchFailure
-                    ? Center(
-                        child: Text('${S.of(context).error}: ${state.apiErrorModel.message}'))
-                    : state is GetOneBranchSuccess
-                        ? CustomScrollView(
-                            slivers: [
-                              CustomSliverAppBar(
-                                img: state.branch.image,
-                                isBtnValid: false,
-                                height:
-                                    MediaQuery.of(context).size.height * 0.3,
-                              ),
-                              SliverToBoxAdapter(
-                                  child:
-                                      PharmacyDetailBody(branch: state.branch))
-                            ],
-                          )
-                        : const SizedBox.shrink(),
+          return PopScope(
+            canPop: false,
+      onPopInvokedWithResult: (didPop, result) async {
+        if (didPop) return;
+        Navigator.of(context).pop(true);
+      },
+            child: Scaffold(
+              body: state is GetOneBranchLoading
+                  ? PharmacyDetailShimmer()
+                  : state is GetOneBranchFailure
+                      ? Center(
+                          child: Text('${S.of(context).error}: ${state.apiErrorModel.message}'))
+                      : state is GetOneBranchSuccess
+                          ? CustomScrollView(
+                              slivers: [
+                                CustomSliverAppBar(
+                                  img: state.branch.image,
+                                  isBtnValid: false,
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.3,
+                                ),
+                                SliverToBoxAdapter(
+                                    child:
+                                        PharmacyDetailBody(branch: state.branch))
+                              ],
+                            )
+                          : const SizedBox.shrink(),
+            ),
           );
         },
       ),

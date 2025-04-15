@@ -11,8 +11,6 @@ import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/theme/app_theme.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
 
-final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
-
 class PharmacyApp extends StatelessWidget {
   const PharmacyApp({super.key});
   @override
@@ -23,7 +21,6 @@ class PharmacyApp extends StatelessWidget {
         return BlocBuilder<ChangeLanguageCubit, ChangeLanguageState>(
           builder: (context, state) {
             return MaterialApp(
-              navigatorObservers: [routeObserver],
               debugShowCheckedModeBanner: false,
               localizationsDelegates: const [
                 S.delegate,

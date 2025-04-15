@@ -8,39 +8,12 @@ import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_images.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../../../generated/l10n.dart';
-import '../../../../pharmacy_app.dart';
 import 'widgets/branches_card_item.dart';
 import 'widgets/custom_sliver_appbar.dart';
 import 'widgets/shimmer_loading_branches.dart';
 
-class BranchesScreen extends StatefulWidget {
+class BranchesScreen extends StatelessWidget {
   const BranchesScreen({super.key});
-
-  @override
-  State<BranchesScreen> createState() => _BranchesScreenState();
-}
-
-class _BranchesScreenState extends State<BranchesScreen> with RouteAware{
-  @override
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    final route = ModalRoute.of(context);
-    if (route is PageRoute) {
-      routeObserver.subscribe(this, route);
-    }
-  }
-
-  @override
-  void dispose() {
-    routeObserver.unsubscribe(this);
-    super.dispose();
-  }
-
-  @override
-  void didPopNext() {
-    context.read<GetBranchesCubit>().fetchBranches();
-  }
 
   @override
   Widget build(BuildContext context) {
