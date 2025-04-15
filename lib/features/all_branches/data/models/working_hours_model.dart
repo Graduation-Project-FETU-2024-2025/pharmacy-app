@@ -6,15 +6,15 @@ class WorkingHours {
 
   factory WorkingHours.fromJson(Map<String, dynamic> json) {
     return WorkingHours(
-      start: json['Start'],
-      end: json['End'],
+      start: json['start'],
+      end: json['end'],
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
-      'Start': start,
-      'End': end,
+      'start': start,
+      'end': end,
     };
   }
 }

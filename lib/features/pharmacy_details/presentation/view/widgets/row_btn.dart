@@ -8,7 +8,7 @@ import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/features/all_branches/data/models/pharmacy_branch_model.dart';
-import '../../../../all_branches/presentation/view_model/cubit/get_branches/get_branches_cubit.dart';
+import 'package:pharmacy_app/features/pharmacy_details/presentation/view_model/get_one_branch_cubit/get_one_branch_cubit.dart';
 import 'delete_button.dart';
 
 class RowBtn extends StatelessWidget {
@@ -41,7 +41,7 @@ class RowBtn extends StatelessWidget {
                     .pushNamed(Routing.branchEdit, argument: branch)
                     .then((value) {
                   if (value == true) {
-                    context.read<GetBranchesCubit>().fetchBranches();
+                    context.read<GetOneBranchCubit>().fetchOneBranch();
                   }
                 });
               },

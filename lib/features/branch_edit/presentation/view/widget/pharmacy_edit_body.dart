@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:pharmacy_app/core/widgets/toast.dart';
 import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 import 'package:pharmacy_app/features/all_branches/data/models/pharmacy_branch_model.dart';
 
@@ -35,18 +36,13 @@ class PharmacyEditBody extends StatelessWidget {
                             Center(child: CircularProgressIndicator()),
                       );
                     } else if (state is UpdateBranchSuccess) {
+                      Navigator.pop(context);
                       Navigator.pop(context, true);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text("Branch Updated successfully!")),
-                      );
-                      Navigator.pop(context,true);
+                      successToast(message: "Branch Updated successfully");
+
                     } else if (state is UpdateBranchFailure) {
                       Navigator.pop(context);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                            content: Text(state.apiErrorModel.message!),
-                            backgroundColor: Colors.red),
-                      );
+                      errorToast(message: state.apiErrorModel.message!);
                     }
                   },
                   builder: (context, state) {

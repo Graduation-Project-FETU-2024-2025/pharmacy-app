@@ -6,6 +6,7 @@ import 'package:pharmacy_app/features/branch_edit/presentation/view/widget/pharm
 import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 
 import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/widgets/toast.dart';
 import 'custom_add_list.dart';
 
 class BranchAddBody extends StatelessWidget {
@@ -34,18 +35,14 @@ class BranchAddBody extends StatelessWidget {
                             Center(child: CircularProgressIndicator()),
                       );
                     } else if (state is AddBranchSuccess) {
+                      Navigator.pop(context);
                       Navigator.pop(context, true);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text("Branch added successfully!")),
-                      );
-                      Navigator.pop(context,true);
+
+                      successToast(message: "Branch added successfully");
+
                     } else if (state is AddBranchFailure) {
                       Navigator.pop(context);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                            content: Text(state.apiErrorModel.message!),
-                            backgroundColor: Colors.red),
-                      );
+                      errorToast(message: state.apiErrorModel.message!);
                     }
                   },
                   builder: (context, state) {

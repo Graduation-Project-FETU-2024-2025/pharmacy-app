@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -15,6 +17,7 @@ class CustomEditList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log(branch.toString());
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Form(
