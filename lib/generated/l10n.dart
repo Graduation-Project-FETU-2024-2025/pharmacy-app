@@ -1029,6 +1029,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Please Complete All Fields`
+  String get pleaseCompleteAllFields {
+    return Intl.message(
+      'Please Complete All Fields',
+      name: 'pleaseCompleteAllFields',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the branch name in English`
+  String get pleaseEnterEnBranchName {
+    return Intl.message(
+      'Please enter the branch name in English',
+      name: 'pleaseEnterEnBranchName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the branch name in Arabic`
+  String get pleaseEnterArBranchName {
+    return Intl.message(
+      'Please enter the branch name in Arabic',
+      name: 'pleaseEnterArBranchName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the Address in English`
+  String get pleaseEnterEnAddress {
+    return Intl.message(
+      'Please enter the Address in English',
+      name: 'pleaseEnterEnAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the Address in Arabic`
+  String get pleaseEnterArAddress {
+    return Intl.message(
+      'Please enter the Address in Arabic',
+      name: 'pleaseEnterArAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the price per kilo`
+  String get enterPricePerKilo {
+    return Intl.message(
+      'Please enter the price per kilo',
+      name: 'enterPricePerKilo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Must be a valid number`
+  String get enterValidNumber {
+    return Intl.message(
+      'Must be a valid number',
+      name: 'enterValidNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the phone number`
+  String get enterPhoneNumber {
+    return Intl.message(
+      'Please enter the phone number',
+      name: 'enterPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid phone number`
+  String get invalidPhoneNumber {
+    return Intl.message(
+      'Invalid phone number',
+      name: 'invalidPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the delivery range`
+  String get enterDeliveryRange {
+    return Intl.message(
+      'Please enter the delivery range',
+      name: 'enterDeliveryRange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the minimum delivery price`
+  String get enterMinDeliveryPrice {
+    return Intl.message(
+      'Please enter the minimum delivery price',
+      name: 'enterMinDeliveryPrice',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

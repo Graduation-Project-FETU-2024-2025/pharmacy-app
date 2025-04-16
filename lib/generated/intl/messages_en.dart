@@ -68,11 +68,21 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please enable location service"),
         "endTime": MessageLookupByLibrary.simpleMessage("End Time"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
+        "enterDeliveryRange": MessageLookupByLibrary.simpleMessage(
+            "Please enter the delivery range"),
+        "enterMinDeliveryPrice": MessageLookupByLibrary.simpleMessage(
+            "Please enter the minimum delivery price"),
         "enterOTP": MessageLookupByLibrary.simpleMessage("Enter OTP"),
         "enterOTPWeSent":
             MessageLookupByLibrary.simpleMessage("Enter OTP we sent you at"),
+        "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
+            "Please enter the phone number"),
         "enterPrice": MessageLookupByLibrary.simpleMessage("Enter Price"),
+        "enterPricePerKilo": MessageLookupByLibrary.simpleMessage(
+            "Please enter the price per kilo"),
         "enterQuantity": MessageLookupByLibrary.simpleMessage("Enter Quantity"),
+        "enterValidNumber":
+            MessageLookupByLibrary.simpleMessage("Must be a valid number"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
         "fieldRequired": MessageLookupByLibrary.simpleMessage("field Required"),
         "form": MessageLookupByLibrary.simpleMessage("Form"),
@@ -86,6 +96,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeMessage": MessageLookupByLibrary.simpleMessage(
             "We will deliver you medicines!"),
         "inStock": MessageLookupByLibrary.simpleMessage("In Stock"),
+        "invalidPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Invalid phone number"),
         "km": MessageLookupByLibrary.simpleMessage("KM"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastAdded": MessageLookupByLibrary.simpleMessage("Last Added"),
@@ -121,6 +133,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "pharmacyName": MessageLookupByLibrary.simpleMessage("Pharmacy Name"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "phoneNum": MessageLookupByLibrary.simpleMessage("Phone Number"),
+        "pleaseCompleteAllFields":
+            MessageLookupByLibrary.simpleMessage("Please Complete All Fields"),
+        "pleaseEnterArAddress": MessageLookupByLibrary.simpleMessage(
+            "Please enter the Address in Arabic"),
+        "pleaseEnterArBranchName": MessageLookupByLibrary.simpleMessage(
+            "Please enter the branch name in Arabic"),
+        "pleaseEnterEnAddress": MessageLookupByLibrary.simpleMessage(
+            "Please enter the Address in English"),
+        "pleaseEnterEnBranchName": MessageLookupByLibrary.simpleMessage(
+            "Please enter the branch name in English"),
         "pounds": MessageLookupByLibrary.simpleMessage("Pounds"),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "pricePerKilo": MessageLookupByLibrary.simpleMessage("Price Per Killo"),

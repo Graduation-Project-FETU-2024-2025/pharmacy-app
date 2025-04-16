@@ -107,6 +107,18 @@
     "gallery":"Gallery",
     "delivery": "Delivery",
     "noDelivery": "No Delivery",
-    "close": "Close"
+    "close": "Close",
+    "pleaseCompleteAllFields": "Please Complete All Fields",
+    "pleaseEnterEnBranchName":"Please enter the branch name in English",
+    "pleaseEnterArBranchName":"Please enter the branch name in Arabic",
+    "pleaseEnterEnAddress":"Please enter the Address in English",
+    "pleaseEnterArAddress":"Please enter the Address in Arabic",
+    "enterPricePerKilo": "Please enter the price per kilo",
+    "enterValidNumber": "Must be a valid number",
+    "enterPhoneNumber": "Please enter the phone number",
+    "invalidPhoneNumber": "Invalid phone number",
+    "enterDeliveryRange": "Please enter the delivery range",
+    "enterMinDeliveryPrice": "Please enter the minimum delivery price"
+
 
 }

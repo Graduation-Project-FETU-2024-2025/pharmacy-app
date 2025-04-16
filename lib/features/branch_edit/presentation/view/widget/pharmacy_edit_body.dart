@@ -49,12 +49,20 @@ class PharmacyEditBody extends StatelessWidget {
                       onPressed: state is UpdateBranchLoading
                           ? null
                           : () {
-                              context
-                                  .read<PharmacyEditCubit>()
-                                  .updateBranch(branch.id);
+                              final formKey =
+                                  PharmacyEditCubit.get(context).formKey;
+                              if (formKey.currentState!.validate()) {
+                                context
+                                    .read<PharmacyEditCubit>()
+                                    .updateBranch(branch.id);
+                              } else {
+                                errorToast(
+                                    message:
+                                        S.of(context).pleaseCompleteAllFields);
+                              }
                             },
                       child: state is UpdateBranchLoading
-                          ? CircularProgressIndicator(color: Colors.white)
+                          ? null
                           : Text(
                               S.of(context).save,
                               style: Theme.of(context)

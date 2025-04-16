@@ -1,9 +1,6 @@
-import 'dart:developer';
-
 import 'package:dartz/dartz.dart';
 import 'package:pharmacy_app/core/database/api/api_error_handler.dart';
 import 'package:pharmacy_app/core/database/api/api_error_model.dart';
-
 import '../../../../core/database/api/end_points.dart';
 import '../models/pharmacy_branch_model.dart';
 import 'get_branches_repo.dart';
@@ -26,11 +23,15 @@ class GetBranchesRepoImpl implements GetBranchesRepo {
         },
       );
 
+      if (response.statusCode == 204) {
+        List<PharmacyBranchModel> data = [];
+        return Right(data);
+      }
+
       List<dynamic> data = response.data["data"];
       return Right(
           data.map((json) => PharmacyBranchModel.fromJson(json)).toList());
     } catch (e) {
-      log(e.toString());
       return Left(ApiErrorHandler.handleError(e));
     }
   }

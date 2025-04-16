@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/helpers/extentions.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_cubit.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_state.dart';
@@ -39,7 +40,15 @@ class BranchesScreen extends StatelessWidget {
               if (state is GetBranchesLoading) {
                 return ShimmerLoadingBranches();
               } else if (state is GetBranchesSuccess) {
-                return SliverList.builder(
+                if (state.branches.isEmpty) {
+                  return SliverToBoxAdapter(
+                  child: Image.asset(
+                AppImages.noData,
+                width: 300.w,
+                height: 300.h,
+              ));
+                }
+                else{return SliverList.builder(
                   itemCount: state.branches.length,
                   itemBuilder: (context, index) {
                     return Padding(
@@ -47,7 +56,7 @@ class BranchesScreen extends StatelessWidget {
                       child: BranchesCardItems(branches: state.branches[index]),
                     );
                   },
-                );
+                );}
               } else if (state is GetBranchesFailure) {
                 return SliverToBoxAdapter(
                   child: Center(

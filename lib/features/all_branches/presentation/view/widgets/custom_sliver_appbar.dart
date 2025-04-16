@@ -27,7 +27,7 @@ class CustomSliverAppBar extends StatelessWidget {
       stretch: true,
       flexibleSpace: FlexibleSpaceBar(
         background: isLocalImage
-            ? Image.asset(img)
+            ? Image.asset(img , fit: BoxFit.cover,)
             : CachedNetworkImage(
                 imageUrl: img,
                 fit: BoxFit.cover,

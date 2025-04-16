@@ -74,6 +74,7 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                       suffixIcon: IconButton(
                           onPressed: () => getTimeFromUser(isStartTime: true),
                           icon: SvgPicture.asset(AppIcons.iconTime)),
+                          readOnly: true,
                     ),
                   ],
                 ),
@@ -97,6 +98,7 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                       suffixIcon: IconButton(
                           onPressed: () => getTimeFromUser(isStartTime: false),
                           icon: SvgPicture.asset(AppIcons.iconTime)),
+                          readOnly: true,
                     ),
                   ],
                 ),

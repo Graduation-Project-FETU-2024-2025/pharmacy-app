@@ -68,11 +68,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("يرجى تفعيل خدمة الموقع"),
         "endTime": MessageLookupByLibrary.simpleMessage("وقت الانتهاء"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
+        "enterDeliveryRange":
+            MessageLookupByLibrary.simpleMessage("من فضلك أدخل نطاق التوصيل"),
+        "enterMinDeliveryPrice": MessageLookupByLibrary.simpleMessage(
+            "من فضلك أدخل أقل سعر للتوصيل"),
         "enterOTP": MessageLookupByLibrary.simpleMessage("أدخل رمز التحقق"),
         "enterOTPWeSent": MessageLookupByLibrary.simpleMessage(
             "أدخل رمز التحقق الذي أرسلناه لك على"),
+        "enterPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("من فضلك أدخل رقم الهاتف"),
         "enterPrice": MessageLookupByLibrary.simpleMessage("ادخل السعر"),
+        "enterPricePerKilo":
+            MessageLookupByLibrary.simpleMessage("من فضلك أدخل السعر لكل كيلو"),
         "enterQuantity": MessageLookupByLibrary.simpleMessage("ادخل الكمية"),
+        "enterValidNumber":
+            MessageLookupByLibrary.simpleMessage("يجب أن يكون رقماً"),
         "error": MessageLookupByLibrary.simpleMessage("خطأ"),
         "fieldRequired":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
@@ -87,6 +97,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeMessage": MessageLookupByLibrary.simpleMessage(
             "سوف نقوم بتوصيل الأدوية إليك!"),
         "inStock": MessageLookupByLibrary.simpleMessage("متوفر في المخزن"),
+        "invalidPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("رقم الهاتف غير صالح"),
         "km": MessageLookupByLibrary.simpleMessage("كم"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "lastAdded": MessageLookupByLibrary.simpleMessage("المضاف حديثاً"),
@@ -121,6 +133,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "pharmacyName": MessageLookupByLibrary.simpleMessage("اسم الصيدلية"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "phoneNum": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "pleaseCompleteAllFields":
+            MessageLookupByLibrary.simpleMessage("من فضلك املأ كل الحقول"),
+        "pleaseEnterArAddress": MessageLookupByLibrary.simpleMessage(
+            "ادخل اسم البرانش باللغة العربيه"),
+        "pleaseEnterArBranchName": MessageLookupByLibrary.simpleMessage(
+            "ادخل اسم البرانش باللغه العربية"),
+        "pleaseEnterEnAddress": MessageLookupByLibrary.simpleMessage(
+            "ادخل اسم البرانش باللغة الانجليزية"),
+        "pleaseEnterEnBranchName": MessageLookupByLibrary.simpleMessage(
+            "ادخل اسم البرانش باللغه الانجليزية"),
         "pounds": MessageLookupByLibrary.simpleMessage("جنيه"),
         "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "pricePerKilo": MessageLookupByLibrary.simpleMessage("السعر بالكيلو"),

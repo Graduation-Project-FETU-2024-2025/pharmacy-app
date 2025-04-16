@@ -110,7 +110,20 @@
     "gallery": "معرض الصور",
     "delivery": "يوجد توصيل",
     "noDelivery": "لا يوجد توصيل",
-    "close": "مغلق"
+    "close": "مغلق",
+    "pleaseCompleteAllFields":"من فضلك املأ كل الحقول",
+    "pleaseEnterEnBranchName":"ادخل اسم البرانش باللغه الانجليزية",
+    "pleaseEnterArBranchName":"ادخل اسم البرانش باللغه العربية",
+    "pleaseEnterEnAddress":"ادخل اسم البرانش باللغة الانجليزية",
+    "pleaseEnterArAddress":"ادخل اسم البرانش باللغة العربيه",
+    "enterPricePerKilo": "من فضلك أدخل السعر لكل كيلو",
+    "enterValidNumber": "يجب أن يكون رقماً",
+    "enterPhoneNumber": "من فضلك أدخل رقم الهاتف",
+    "invalidPhoneNumber": "رقم الهاتف غير صالح",
+    "enterDeliveryRange": "من فضلك أدخل نطاق التوصيل",
+    "enterMinDeliveryPrice": "من فضلك أدخل أقل سعر للتوصيل"
+
+    
     
 
 }

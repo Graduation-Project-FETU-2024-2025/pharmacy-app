@@ -47,10 +47,18 @@ class BranchAddBody extends StatelessWidget {
                       onPressed: state is AddBranchLoading
                           ? null
                           : () {
-                              context.read<PharmacyEditCubit>().addBranch();
+                              final formKey =
+                                  PharmacyEditCubit.get(context).formKey;
+                              if (formKey.currentState!.validate()) {
+                                context.read<PharmacyEditCubit>().addBranch();
+                              } else {
+                                errorToast(
+                                    message:
+                                        S.of(context).pleaseCompleteAllFields);
+                              }
                             },
                       child: state is AddBranchLoading
-                          ? CircularProgressIndicator(color: Colors.white)
+                          ? null
                           : Text(
                               "Save",
                               style: Theme.of(context)

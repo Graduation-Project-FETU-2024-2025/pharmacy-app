@@ -35,6 +35,7 @@ class _DeliveryStatusFieldState extends State<DeliveryStatusField> {
           controller: widget.controller,
           hintTxt: S.of(context).branchStatus,
           initialVal: widget.status,
+          readOnly: true,
         ),
         Positioned(
           right: 15.h,

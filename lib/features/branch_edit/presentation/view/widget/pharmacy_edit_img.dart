@@ -87,7 +87,7 @@ class _PharmacyEditImgState extends State<PharmacyEditImg> {
               ),
             ),
             child: Align(
-              alignment: Alignment(1.5.w, 2.h),
+              alignment: Alignment.bottomRight,
               child: IconButton(
                 onPressed: () => showImagePicker(context),
                 icon: SvgPicture.asset(AppIcons.iconsCamera),
