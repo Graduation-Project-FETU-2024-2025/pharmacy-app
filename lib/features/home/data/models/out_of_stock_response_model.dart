@@ -1,9 +1,9 @@
-import '../../../all_medicines/data/models/medicine_branch_model.dart';
+import 'package:pharmacy_app/features/home/data/models/out_of_stock_model.dart';
 
 class OutOfStockResponseModel {
   final String message;
   final int statusCode;
-  final List<MedicineBranchModel> data;
+  final List<OutOfStockModel> data;
 
   OutOfStockResponseModel({
     required this.message,
@@ -16,8 +16,7 @@ class OutOfStockResponseModel {
       message: json['message'],
       statusCode: json['statusCode'],
       data: (json['data'] as List<dynamic>)
-          .map<MedicineBranchModel>(
-              (item) => MedicineBranchModel.fromJson(item))
+          .map<OutOfStockModel>((item) => OutOfStockModel.fromJson(item))
           .toList(),
     );
   }

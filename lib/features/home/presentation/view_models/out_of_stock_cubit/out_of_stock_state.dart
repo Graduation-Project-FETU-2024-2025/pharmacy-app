@@ -8,7 +8,7 @@ final class OutOfStockInitial extends OutOfStockState {}
 final class OutOfStockLoading extends OutOfStockState {}
 
 final class OutOfStockSuccess extends OutOfStockState {
-  final List<MedicineBranchModel> medicines;
+  final List<OutOfStockModel> medicines;
   OutOfStockSuccess({required this.medicines});
 }
 

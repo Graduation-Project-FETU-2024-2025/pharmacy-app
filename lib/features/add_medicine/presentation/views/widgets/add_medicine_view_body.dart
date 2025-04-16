@@ -87,16 +87,8 @@ class AddMedicineViewBody extends StatelessWidget {
                   height: 24.h,
                 ),
                 TextAddMedForm(
-                  label: S.of(context).form,
-                  hintText: systemMedicineModel.type,
-                  readOnly: true,
-                ),
-                SizedBox(
-                  height: 24.h,
-                ),
-                TextAddMedForm(
                   label: S.of(context).DoageForm,
-                  hintText: 'Enter Quantity',
+                  hintText: systemMedicineModel.type,
                   readOnly: true,
                 ),
                 SizedBox(

@@ -26,12 +26,6 @@ class AllIfoMedicine extends StatelessWidget {
               : medicineBranchModel.productsDTO.arName,
           style: Theme.of(context).textTheme.displayLarge,
         ),
-        Text(
-          'أقراص - 50 قرص',
-          style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                color: AppColors.black.withOpacity(0.3),
-              ),
-        ),
         SizedBox(
           height: 30.h,
         ),

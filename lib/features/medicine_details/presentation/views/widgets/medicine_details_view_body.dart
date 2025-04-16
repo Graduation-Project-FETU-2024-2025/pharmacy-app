@@ -152,9 +152,7 @@ class MedicineDetailsViewBody extends StatelessWidget {
             child: ErrorApiWidget(message: state.apiErrorModel.message!),
           );
         } else {
-          return const Center(
-            child: LoadingWidget(),
-          );
+          return LoadingWidget();
         }
       },
     );
