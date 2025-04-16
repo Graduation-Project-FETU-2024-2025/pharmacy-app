@@ -1,3 +1,5 @@
+import 'dart:async';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
@@ -7,12 +9,42 @@ import 'package:pharmacy_app/features/auth/presentation/view_model/otp_cubit/otp
 import 'package:pharmacy_app/generated/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ResendOtpBlocListener extends StatelessWidget {
+class ResendOtpBlocListener extends StatefulWidget {
   const ResendOtpBlocListener({
     super.key,
     required this.email,
   });
   final String email;
+
+  @override
+  State<ResendOtpBlocListener> createState() => _ResendOtpBlocListenerState();
+}
+
+class _ResendOtpBlocListenerState extends State<ResendOtpBlocListener> {
+  int counter = 6;
+  Timer? _timer;
+  void foo() {
+    _timer?.cancel();
+    Timer.periodic(
+      Duration(seconds: 1),
+      (timer) {
+        if (counter > 0) {
+          setState(() {
+            counter--;
+          });
+        } else {
+          timer.cancel();
+        }
+      },
+    );
+  }
+
+  @override
+  void initState() {
+    foo();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocListener<OtpCubit, OtpState>(
@@ -28,17 +60,38 @@ class ResendOtpBlocListener extends StatelessWidget {
           successToast(message: S.of(context).emailResentedSuccessfully);
         }
       },
-      child: TextButton(
-        onPressed: () {
-          context.read<OtpCubit>().resendOTP(email);
-        },
-        child: Text(
-          S.of(context).resend,
-          style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                color: AppColors.primaryColor,
-                fontWeight: FontWeight.w500,
-              ),
-        ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          TextButton(
+            onPressed: counter == 0
+                ? () {
+                    // context.read<OtpCubit>().resendOTP(widget.email);
+                    log('Yes I have been pressed');
+                    setState(() {
+                      counter = 30;
+                      foo();
+                    });
+                  }
+                : null,
+            child: Text(
+              counter != 0
+                  ? 'Next code in ${(counter ~/ 60).toString().padLeft(2, '0')}:${(counter % 60).toString().padLeft(2, '0')} '
+                  : S.of(context).resend,
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: AppColors.primaryColor,
+                    fontWeight: FontWeight.w500,
+                  ),
+            ),
+          ),
+          // Text(
+          //   ' ${(counter ~/ 60).toString().padLeft(2, '0')}:${(counter % 60).toString().padLeft(2, '0')}',
+          //   style: Theme.of(context).textTheme.titleMedium!.copyWith(
+          //         color: AppColors.primaryColor,
+          //         fontWeight: FontWeight.w500,
+          //       ),
+          // ),
+        ],
       ),
     );
   }
