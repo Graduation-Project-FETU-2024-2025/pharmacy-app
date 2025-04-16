@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pharmacy_app/core/utils/app_colors.dart';
 
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({
@@ -8,7 +9,9 @@ class LoadingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-        child: CircularProgressIndicator(),
-      );
+      child: CircularProgressIndicator(
+        color: AppColors.primaryColor,
+      ),
+    );
   }
 }
