@@ -14,6 +14,8 @@ class OtpCubit extends Cubit<OtpState> {
 
   List<FocusNode> otpFocusNodes =
       List.generate(_numberOTP, (index) => FocusNode());
+  GlobalKey<FormState> otpFormKey = GlobalKey<FormState>();
+
   void submitOtp(String email) async {
     emit(OtpCheckLoading());
     String otp = '';
@@ -28,7 +30,15 @@ class OtpCubit extends Cubit<OtpState> {
     );
   }
 
-  GlobalKey<FormState> otpFormKey = GlobalKey<FormState>();
+  void resendOTP(String email) async {
+    emit(ResendOTPLoading());
+    final result = await _authRepo.login(email);
+    result.fold(
+      (apiErrorModel) => emit(ResendOTPFailure(apiErrorModel: apiErrorModel)),
+      (r) => emit(ResendOTPSuccess()),
+    );
+  }
+
   int get numberOfOtp => _numberOTP;
   void nextFiled(String value, FocusNode focusNode) {
     if (value.length == 1) {
