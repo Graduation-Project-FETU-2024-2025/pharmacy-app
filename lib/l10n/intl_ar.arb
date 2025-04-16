@@ -97,7 +97,10 @@
 
 
     "address":"العنوان",
-    "noOutOfStock":"لا يوجد أدوية ستنفذ"
+    "noOutOfStock":"لا يوجد أدوية ستنفذ",
+    "noMedicineFound":"لا توجد أدوية",
+    "sorry":"للأسف!",
+    "nosearchResult":"لا توجد نتائج بحث"
 
 
 

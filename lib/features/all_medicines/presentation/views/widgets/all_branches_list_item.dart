@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/database/cache/cashe_helper.dart';
-import '../../../../../core/services/get_it.dart';
-
 class AllBranchListItem extends StatelessWidget {
   const AllBranchListItem({super.key, required this.branchName});
   final String branchName;
@@ -24,9 +21,7 @@ class AllBranchListItem extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               Spacer(),
-              Icon(getIt.get<CacheHelper>().getCurrentLanguage() == 'ar'
-                  ? Icons.arrow_back_ios
-                  : Icons.arrow_forward_ios),
+              Icon(Icons.arrow_forward_ios),
             ],
           ),
           SizedBox(

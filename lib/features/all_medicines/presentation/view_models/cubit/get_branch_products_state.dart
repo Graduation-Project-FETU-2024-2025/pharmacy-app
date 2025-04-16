@@ -12,6 +12,11 @@ final class GetBranchProductsSuccess extends GetBranchProductsState {
   GetBranchProductsSuccess({required this.medicines});
 }
 
+final class SearchBranchProductsSuccess extends GetBranchProductsState {
+  final List<MedicineBranchModel> medicines;
+  SearchBranchProductsSuccess({required this.medicines});
+}
+
 final class GetBranchProductsFailure extends GetBranchProductsState {
   final ApiErrorModel apiErrorModel;
 

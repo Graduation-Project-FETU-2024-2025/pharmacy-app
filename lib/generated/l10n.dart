@@ -911,6 +911,36 @@ class S {
       args: [],
     );
   }
+
+  /// `No medicines found`
+  String get noMedicineFound {
+    return Intl.message(
+      'No medicines found',
+      name: 'noMedicineFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sorry!`
+  String get sorry {
+    return Intl.message(
+      'Sorry!',
+      name: 'sorry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No search result`
+  String get nosearchResult {
+    return Intl.message(
+      'No search result',
+      name: 'nosearchResult',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
