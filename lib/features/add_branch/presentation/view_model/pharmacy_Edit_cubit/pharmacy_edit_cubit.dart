@@ -49,7 +49,7 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
     final pharmacyId = await SecureStorage.instance.getData(key: "id");
     emit(AddBranchLoading());
     final branch = AddBranchModel(
-      pharmacyId: pharmacyId??"fc01d1d3-8e55-46f5-928e-a63a840ee90f",
+      pharmacyId: pharmacyId!,
       arBranchName: arBranchNameController.text,
       enBranchName: enBranchNameController.text,
       deliveryRange: int.tryParse(deliveryRange.text)!,
@@ -88,7 +88,7 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
   Future<void> updateBranch(String branchId) async {
     final pharmacyId = await SecureStorage.instance.getData(key: "id");
     final branch = UpdateBranchModel(
-      pharmacyId: pharmacyId??"fc01d1d3-8e55-46f5-928e-a63a840ee90f",
+      pharmacyId: pharmacyId!,
       arBranchName: arBranchNameController.text,
       enBranchName: enBranchNameController.text,
       deliveryRange: int.tryParse(deliveryRange.text)!,
