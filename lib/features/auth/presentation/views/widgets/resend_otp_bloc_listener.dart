@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
@@ -23,7 +22,7 @@ class ResendOtpBlocListener extends StatefulWidget {
 class _ResendOtpBlocListenerState extends State<ResendOtpBlocListener> {
   int counter = 6;
   Timer? _timer;
-  void foo() {
+  void ticTack() {
     _timer?.cancel();
     Timer.periodic(
       Duration(seconds: 1),
@@ -41,8 +40,14 @@ class _ResendOtpBlocListenerState extends State<ResendOtpBlocListener> {
 
   @override
   void initState() {
-    foo();
+    ticTack();
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
   }
 
   @override
@@ -66,11 +71,11 @@ class _ResendOtpBlocListenerState extends State<ResendOtpBlocListener> {
           TextButton(
             onPressed: counter == 0
                 ? () {
-                    // context.read<OtpCubit>().resendOTP(widget.email);
-                    log('Yes I have been pressed');
+                    context.read<OtpCubit>().resendOTP(widget.email);
+
                     setState(() {
                       counter = 30;
-                      foo();
+                      ticTack();
                     });
                   }
                 : null,
@@ -84,13 +89,6 @@ class _ResendOtpBlocListenerState extends State<ResendOtpBlocListener> {
                   ),
             ),
           ),
-          // Text(
-          //   ' ${(counter ~/ 60).toString().padLeft(2, '0')}:${(counter % 60).toString().padLeft(2, '0')}',
-          //   style: Theme.of(context).textTheme.titleMedium!.copyWith(
-          //         color: AppColors.primaryColor,
-          //         fontWeight: FontWeight.w500,
-          //       ),
-          // ),
         ],
       ),
     );
