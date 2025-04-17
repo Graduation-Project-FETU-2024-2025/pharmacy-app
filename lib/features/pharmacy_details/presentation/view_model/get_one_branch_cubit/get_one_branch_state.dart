@@ -1,4 +1,3 @@
-
 import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/features/all_branches/data/models/pharmacy_branch_model.dart';
 
@@ -9,13 +8,11 @@ final class GetOneBranchInitial extends GetOneBranchState {}
 final class GetOneBranchLoading extends GetOneBranchState {}
 
 final class GetOneBranchSuccess extends GetOneBranchState {
-final PharmacyBranchModel branch;
-
+  final PharmacyBranchModel branch;
   GetOneBranchSuccess({required this.branch});
 }
 
 final class GetOneBranchFailure extends GetOneBranchState {
   final ApiErrorModel apiErrorModel;
-
-
-  GetOneBranchFailure({required this.apiErrorModel});}
+  GetOneBranchFailure({required this.apiErrorModel});
+}

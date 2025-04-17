@@ -70,9 +70,11 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                           PharmacyEditCubit.get(context).startTimeController,
                       hintTxt: widget.start ?? "00:00",
                       initialVal: widget.start,
+                      keyboardType: TextInputType.number,
                       suffixIcon: IconButton(
                           onPressed: () => getTimeFromUser(isStartTime: true),
                           icon: SvgPicture.asset(AppIcons.iconTime)),
+                          readOnly: true,
                     ),
                   ],
                 ),
@@ -92,9 +94,11 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                           PharmacyEditCubit.get(context).endTimeController,
                       hintTxt: widget.end ?? "00:00",
                       initialVal: widget.end,
+                      keyboardType: TextInputType.number,
                       suffixIcon: IconButton(
                           onPressed: () => getTimeFromUser(isStartTime: false),
                           icon: SvgPicture.asset(AppIcons.iconTime)),
+                          readOnly: true,
                     ),
                   ],
                 ),

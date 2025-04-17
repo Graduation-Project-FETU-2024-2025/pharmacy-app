@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -7,7 +8,8 @@ class CustomSliverAppBar extends StatelessWidget {
       {super.key,
       required this.img,
       required this.isBtnValid,
-      required this.height,  this.isLocalImage=false});
+      required this.height,
+      this.isLocalImage = false});
   final String img;
   final bool isBtnValid;
   final double height;
@@ -24,11 +26,15 @@ class CustomSliverAppBar extends StatelessWidget {
       elevation: 0.0,
       stretch: true,
       flexibleSpace: FlexibleSpaceBar(
-        background:isLocalImage? Image.asset(img) :Image.network(
-           // TODO: change this to CachedNetworkImage
-          img,
-          fit: BoxFit.cover,
-        ),
+        background: isLocalImage
+            ? Image.asset(img , fit: BoxFit.cover,)
+            : CachedNetworkImage(
+                imageUrl: img,
+                fit: BoxFit.cover,
+                placeholder: (context, url) =>
+                    Center(child: CircularProgressIndicator()),
+                errorWidget: (context, url, error) => Icon(Icons.error),
+              ),
         stretchModes: const [
           StretchMode.blurBackground,
           StretchMode.zoomBackground,

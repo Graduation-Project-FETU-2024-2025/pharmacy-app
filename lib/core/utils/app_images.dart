@@ -38,6 +38,7 @@ class AppImages {
   static String imgMedicine = "assets/images/medicine.png";
 
   static String imgMedDetail = 'assets/images/medicine_details.png';
+  static String noData = 'assets/images/noData.gif';
 
   static String imgNoSearch = 'assets/images/emptySearch.png';
 }

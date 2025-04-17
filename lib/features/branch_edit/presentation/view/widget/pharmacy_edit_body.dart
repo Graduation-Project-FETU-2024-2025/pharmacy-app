@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:pharmacy_app/core/widgets/toast.dart';
 import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
 import 'package:pharmacy_app/features/all_branches/data/models/pharmacy_branch_model.dart';
-
 import '../../../../../core/utils/app_colors.dart';
+import '../../../../../generated/l10n.dart';
 import 'custom_edit_list.dart';
 import 'pharmacy_edit_img.dart';
 
@@ -35,18 +36,12 @@ class PharmacyEditBody extends StatelessWidget {
                             Center(child: CircularProgressIndicator()),
                       );
                     } else if (state is UpdateBranchSuccess) {
+                      Navigator.pop(context);
                       Navigator.pop(context, true);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text("Branch Updated successfully!")),
-                      );
-                      Navigator.pop(context,true);
+                      successToast(message: S.of(context).successUpdatedBranch);
                     } else if (state is UpdateBranchFailure) {
                       Navigator.pop(context);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                            content: Text(state.apiErrorModel.message!),
-                            backgroundColor: Colors.red),
-                      );
+                      errorToast(message: state.apiErrorModel.message!);
                     }
                   },
                   builder: (context, state) {
@@ -54,12 +49,22 @@ class PharmacyEditBody extends StatelessWidget {
                       onPressed: state is UpdateBranchLoading
                           ? null
                           : () {
-                              context.read<PharmacyEditCubit>().updateBranch(branch.id);
+                              final formKey =
+                                  PharmacyEditCubit.get(context).formKey;
+                              if (formKey.currentState!.validate()) {
+                                context
+                                    .read<PharmacyEditCubit>()
+                                    .updateBranch(branch.id);
+                              } else {
+                                errorToast(
+                                    message:
+                                        S.of(context).pleaseCompleteAllFields);
+                              }
                             },
                       child: state is UpdateBranchLoading
-                          ? CircularProgressIndicator(color: Colors.white)
+                          ? null
                           : Text(
-                              "Save",
+                              S.of(context).save,
                               style: Theme.of(context)
                                   .textTheme
                                   .displayMedium!

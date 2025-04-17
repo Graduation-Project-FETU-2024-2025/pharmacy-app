@@ -4,5 +4,5 @@ import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import '../models/pharmacy_branch_model.dart';
 
 abstract class GetBranchesRepo {
-  Future<Either<ApiErrorModel,List<PharmacyBranchModel>>> getAllBranches();
+  Future<Either<ApiErrorModel, List<PharmacyBranchModel>>> getAllBranches();
 }

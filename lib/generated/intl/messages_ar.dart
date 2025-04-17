@@ -35,6 +35,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBranches": MessageLookupByLibrary.simpleMessage("جميع الفروع"),
         "allMedicines": MessageLookupByLibrary.simpleMessage("جميع الأدوية"),
         "almostRunOut": MessageLookupByLibrary.simpleMessage("شارف على النفاذ"),
+        "arAddress":
+            MessageLookupByLibrary.simpleMessage(" العنوان باللغه العربية"),
+        "arBranchName":
+            MessageLookupByLibrary.simpleMessage("اسم الفرع باللغة العربية"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "areYouSureToDelete":
             MessageLookupByLibrary.simpleMessage("هل انت متاكد من حذف الدواء؟"),
@@ -43,8 +47,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "branch": MessageLookupByLibrary.simpleMessage("الفرع"),
         "branchName": MessageLookupByLibrary.simpleMessage("اسم الفرع"),
         "branchStatus": MessageLookupByLibrary.simpleMessage("حالة الفرع"),
+        "camera": MessageLookupByLibrary.simpleMessage("كاميرا"),
+        "close": MessageLookupByLibrary.simpleMessage("مغلق"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
+        "delivery": MessageLookupByLibrary.simpleMessage("يوجد توصيل"),
+        "deliveryAreaAndPrice":
+            MessageLookupByLibrary.simpleMessage("منطقة التوصيل & السعر"),
         "deliveryMan": MessageLookupByLibrary.simpleMessage("اسم رجل التوصيل"),
         "deliveryRange": MessageLookupByLibrary.simpleMessage("نطاق التوصيل"),
         "description": MessageLookupByLibrary.simpleMessage("الوصف"),
@@ -53,19 +62,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "emailResentedSuccessfully": MessageLookupByLibrary.simpleMessage(
             "تم إعادة إرسال الايميل بنجاح"),
+        "enAddress":
+            MessageLookupByLibrary.simpleMessage("العنوان باللغة الانجليزية"),
+        "enBranchName":
+            MessageLookupByLibrary.simpleMessage("اسم الفرع باللغة الانجليزية"),
         "enableLocationService":
             MessageLookupByLibrary.simpleMessage("يرجى تفعيل خدمة الموقع"),
         "endTime": MessageLookupByLibrary.simpleMessage("وقت الانتهاء"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
+        "enterDeliveryRange":
+            MessageLookupByLibrary.simpleMessage("من فضلك أدخل نطاق التوصيل"),
+        "enterMinDeliveryPrice": MessageLookupByLibrary.simpleMessage(
+            "من فضلك أدخل أقل سعر للتوصيل"),
         "enterOTP": MessageLookupByLibrary.simpleMessage("أدخل رمز التحقق"),
         "enterOTPWeSent": MessageLookupByLibrary.simpleMessage(
             "أدخل رمز التحقق الذي أرسلناه لك على"),
+        "enterPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("من فضلك أدخل رقم الهاتف"),
         "enterPrice": MessageLookupByLibrary.simpleMessage("ادخل السعر"),
+        "enterPricePerKilo":
+            MessageLookupByLibrary.simpleMessage("من فضلك أدخل السعر لكل كيلو"),
         "enterQuantity": MessageLookupByLibrary.simpleMessage("ادخل الكمية"),
+        "enterValidNumber":
+            MessageLookupByLibrary.simpleMessage("يجب أن يكون رقماً"),
+        "error": MessageLookupByLibrary.simpleMessage("خطأ"),
         "fieldRequired":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "form": MessageLookupByLibrary.simpleMessage("الشكل"),
         "freeDelivery": MessageLookupByLibrary.simpleMessage("توصيل مجاني"),
+        "gallery": MessageLookupByLibrary.simpleMessage("معرض الصور"),
         "getAddressInfo":
             MessageLookupByLibrary.simpleMessage("الحصول على معلومات العنوان"),
         "haveNotReceivedOTP":
@@ -74,6 +99,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeMessage": MessageLookupByLibrary.simpleMessage(
             "سوف نقوم بتوصيل الأدوية إليك!"),
         "inStock": MessageLookupByLibrary.simpleMessage("متوفر في المخزن"),
+        "invalidPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("رقم الهاتف غير صالح"),
         "km": MessageLookupByLibrary.simpleMessage("كم"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "lastAdded": MessageLookupByLibrary.simpleMessage("المضاف حديثاً"),
@@ -98,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "noBranches": MessageLookupByLibrary.simpleMessage("لا توجد فروع"),
+        "noDelivery": MessageLookupByLibrary.simpleMessage("لا يوجد توصيل"),
         "noMedicineFound":
             MessageLookupByLibrary.simpleMessage("لا توجد أدوية"),
         "noMedicines":
@@ -114,6 +142,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "pharmacyName": MessageLookupByLibrary.simpleMessage("اسم الصيدلية"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "phoneNum": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "pleaseCompleteAllFields":
+            MessageLookupByLibrary.simpleMessage("من فضلك املأ كل الحقول"),
+        "pleaseEnterArAddress": MessageLookupByLibrary.simpleMessage(
+            "ادخل اسم البرانش باللغة العربيه"),
+        "pleaseEnterArBranchName": MessageLookupByLibrary.simpleMessage(
+            "ادخل اسم البرانش باللغه العربية"),
+        "pleaseEnterEnAddress": MessageLookupByLibrary.simpleMessage(
+            "ادخل اسم البرانش باللغة الانجليزية"),
+        "pleaseEnterEnBranchName": MessageLookupByLibrary.simpleMessage(
+            "ادخل اسم البرانش باللغه الانجليزية"),
         "pounds": MessageLookupByLibrary.simpleMessage("جنيه"),
         "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "pricePerKilo": MessageLookupByLibrary.simpleMessage("السعر بالكيلو"),
@@ -127,11 +165,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "somethingWrong": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "sorry": MessageLookupByLibrary.simpleMessage("للأسف!"),
         "startTime": MessageLookupByLibrary.simpleMessage("وقت البداية"),
+        "successAddBranch":
+            MessageLookupByLibrary.simpleMessage("تم اضافة الفرع بنجاح"),
+        "successDeleteBranch":
+            MessageLookupByLibrary.simpleMessage("تم حذف الفرع بنجاح"),
+        "successUpdatedBranch":
+            MessageLookupByLibrary.simpleMessage("تم تحديث الفرع بنجاح"),
         "update": MessageLookupByLibrary.simpleMessage("تعديل"),
         "updateMedFail":
             MessageLookupByLibrary.simpleMessage("فشل في تعديل الدواء"),
         "updateMedSuccess":
             MessageLookupByLibrary.simpleMessage("تم تعديل الدواء بنجاح"),
+        "wantToDeleteBranch":
+            MessageLookupByLibrary.simpleMessage("هل تريد حذف هذا الفرع ؟"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بعودتك"),
         "work24Hour":
             MessageLookupByLibrary.simpleMessage("خدمة أربع و عشرون ساعة !"),

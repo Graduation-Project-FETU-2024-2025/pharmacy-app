@@ -4,7 +4,11 @@ class PharmacyBranchModel {
   final String id;
   final String pharmacyId;
   final String address;
+  final String? aRAddress;
+  final String? eNAddress;
   final String branchName;
+  final String aRBranchName;
+  final String eNBranchName;
   final String phoneNumber;
   final String image;
   final String status;
@@ -19,7 +23,11 @@ class PharmacyBranchModel {
     required this.id,
     required this.pharmacyId,
     required this.address,
+    required this.aRAddress,
+    required this.eNAddress,
     required this.branchName,
+    required this.aRBranchName,
+    required this.eNBranchName,
     required this.phoneNumber,
     required this.image,
     required this.status,
@@ -35,8 +43,12 @@ class PharmacyBranchModel {
     return PharmacyBranchModel(
       id: json['id'],
       pharmacyId: json['pharmacyId'],
-      address: json['address'] ?? "",
-      branchName: json['branchName'],
+      address: json['address'].toString(),
+      aRAddress: json['aR_Address'].toString(),
+      eNAddress: json['eN_Address'].toString(),
+      branchName: json['branchName'].toString(),
+      aRBranchName: json['aR_BranchName'],
+      eNBranchName: json['eN_BranchName'],
       phoneNumber: json['phoneNumber'],
       image: json['image'],
       status: json['status'],
@@ -56,9 +68,12 @@ class PharmacyBranchModel {
       'id': id,
       'pharmacyId': pharmacyId,
       'address': address,
+      'aR_Address': aRAddress,
+      'eN_Address': eNAddress,
       'branchName': branchName,
+      'aR_BranchName': aRBranchName,
+      'eN_BranchName': eNBranchName,
       'phoneNumber': phoneNumber,
-      'image': image,
       'status': status,
       'deliveryRange': deliveryRange,
       'pricePerKilo': pricePerKilo,

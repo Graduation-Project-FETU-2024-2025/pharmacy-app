@@ -260,7 +260,15 @@ class S {
     );
   }
 
-  // skipped getter for the 'deliveryArea&price' key
+  /// `Delivery Area & Price`
+  String get deliveryAreaAndPrice {
+    return Intl.message(
+      'Delivery Area & Price',
+      name: 'deliveryAreaAndPrice',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Description`
   String get description {
@@ -292,20 +300,20 @@ class S {
     );
   }
 
-  /// `Arabic Branch Name`
+  /// `Branch Name in Arabic`
   String get arBranchName {
     return Intl.message(
-      'Arabic Branch Name',
+      'Branch Name in Arabic',
       name: 'arBranchName',
       desc: '',
       args: [],
     );
   }
 
-  /// `English Branch Name`
+  /// `Branch Name in English`
   String get enBranchName {
     return Intl.message(
-      'English Branch Name',
+      'Branch Name in English',
       name: 'enBranchName',
       desc: '',
       args: [],
@@ -897,6 +905,236 @@ class S {
     return Intl.message(
       'Branch Name',
       name: 'branchName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address in Arabic`
+  String get arAddress {
+    return Intl.message(
+      'Address in Arabic',
+      name: 'arAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address in English`
+  String get enAddress {
+    return Intl.message(
+      'Address in English',
+      name: 'enAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error`
+  String get error {
+    return Intl.message(
+      'Error',
+      name: 'error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch deleted successfully`
+  String get successDeleteBranch {
+    return Intl.message(
+      'Branch deleted successfully',
+      name: 'successDeleteBranch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete this branch?`
+  String get wantToDeleteBranch {
+    return Intl.message(
+      'Are you sure you want to delete this branch?',
+      name: 'wantToDeleteBranch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Camera`
+  String get camera {
+    return Intl.message(
+      'Camera',
+      name: 'camera',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch updated successfully`
+  String get successUpdatedBranch {
+    return Intl.message(
+      'Branch updated successfully',
+      name: 'successUpdatedBranch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch Added successfully`
+  String get successAddBranch {
+    return Intl.message(
+      'Branch Added successfully',
+      name: 'successAddBranch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gallery`
+  String get gallery {
+    return Intl.message(
+      'Gallery',
+      name: 'gallery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery`
+  String get delivery {
+    return Intl.message(
+      'Delivery',
+      name: 'delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Delivery`
+  String get noDelivery {
+    return Intl.message(
+      'No Delivery',
+      name: 'noDelivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Close`
+  String get close {
+    return Intl.message(
+      'Close',
+      name: 'close',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Complete All Fields`
+  String get pleaseCompleteAllFields {
+    return Intl.message(
+      'Please Complete All Fields',
+      name: 'pleaseCompleteAllFields',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the branch name in English`
+  String get pleaseEnterEnBranchName {
+    return Intl.message(
+      'Please enter the branch name in English',
+      name: 'pleaseEnterEnBranchName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the branch name in Arabic`
+  String get pleaseEnterArBranchName {
+    return Intl.message(
+      'Please enter the branch name in Arabic',
+      name: 'pleaseEnterArBranchName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the Address in English`
+  String get pleaseEnterEnAddress {
+    return Intl.message(
+      'Please enter the Address in English',
+      name: 'pleaseEnterEnAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the Address in Arabic`
+  String get pleaseEnterArAddress {
+    return Intl.message(
+      'Please enter the Address in Arabic',
+      name: 'pleaseEnterArAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the price per kilo`
+  String get enterPricePerKilo {
+    return Intl.message(
+      'Please enter the price per kilo',
+      name: 'enterPricePerKilo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Must be a valid number`
+  String get enterValidNumber {
+    return Intl.message(
+      'Must be a valid number',
+      name: 'enterValidNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the phone number`
+  String get enterPhoneNumber {
+    return Intl.message(
+      'Please enter the phone number',
+      name: 'enterPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid phone number`
+  String get invalidPhoneNumber {
+    return Intl.message(
+      'Invalid phone number',
+      name: 'invalidPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the delivery range`
+  String get enterDeliveryRange {
+    return Intl.message(
+      'Please enter the delivery range',
+      name: 'enterDeliveryRange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the minimum delivery price`
+  String get enterMinDeliveryPrice {
+    return Intl.message(
+      'Please enter the minimum delivery price',
+      name: 'enterMinDeliveryPrice',
       desc: '',
       args: [],
     );

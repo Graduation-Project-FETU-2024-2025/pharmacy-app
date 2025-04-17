@@ -22,7 +22,8 @@ class DeleteButton extends StatelessWidget {
     return BlocConsumer<DeleteBranchCubit, DeleteBranchState>(
       listener: (context, state) {
         if (state is DeleteBranchSuccess) {
-          successToast(message: "Branch deleted successfully");
+          successToast(message: S.of(context).successDeleteBranch);
+          Navigator.pop(context, true);
         }
         if (state is DeleteBranchFailure) {
           errorToast(message: state.apiErrorModel.message!);
@@ -35,7 +36,9 @@ class DeleteButton extends StatelessWidget {
           child: ElevatedButton(
             style: ButtonStyle(
               backgroundColor: WidgetStatePropertyAll(
-                state is DeleteBranchSuccess ? Colors.grey.withOpacity(0.3) : AppColors.red,
+                state is DeleteBranchSuccess
+                    ? Colors.grey.withOpacity(0.3)
+                    : AppColors.red,
               ),
               shape: WidgetStatePropertyAll(
                 RoundedRectangleBorder(
@@ -55,43 +58,48 @@ class DeleteButton extends StatelessWidget {
                           children: [
                             Text(S.of(context).delete),
                             SizedBox(width: 10.h),
-                            Icon(Icons.priority_high, color: AppColors.red, size: 30.sp),
+                            Icon(Icons.priority_high,
+                                color: AppColors.red, size: 30.sp),
                           ],
                         ),
                         content: Text(
-                          "Are you sure you want to delete this branch?",
+                          S.of(context).wantToDeleteBranch,
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                         actions: [
                           TextButton(
                             style: ButtonStyle(
-                              backgroundColor: WidgetStatePropertyAll(AppColors.red),
+                              backgroundColor:
+                                  WidgetStatePropertyAll(AppColors.red),
                             ),
                             onPressed: () {
                               deleteCubit.deleteBranch(branchId);
-                              Navigator.pop(context, true);
+                              Navigator.pop(context);
                             },
-                            child: Text(S.of(context).yes, style: TextStyle(color: Colors.white)),
+                            child: Text(S.of(context).yes,
+                                style: TextStyle(color: Colors.white)),
                           ),
                           SizedBox(width: 20.w),
                           TextButton(
                             style: ButtonStyle(
-                              backgroundColor: WidgetStatePropertyAll(AppColors.gray),
+                              backgroundColor:
+                                  WidgetStatePropertyAll(AppColors.gray),
                             ),
                             onPressed: () => Navigator.pop(context),
-                            child: Text(S.of(context).no, style: TextStyle(color: Colors.black)),
+                            child: Text(S.of(context).no,
+                                style: TextStyle(color: Colors.black)),
                           ),
                         ],
                       ),
                     );
                   },
             child: Text(
-                    S.of(context).delete,
-                    style: Theme.of(context)
-                        .textTheme
-                        .displayMedium!
-                        .copyWith(fontSize: 18, color: AppColors.white),
-                  ),
+              S.of(context).delete,
+              style: Theme.of(context)
+                  .textTheme
+                  .displayMedium!
+                  .copyWith(fontSize: 18, color: AppColors.white),
+            ),
           ),
         );
       },

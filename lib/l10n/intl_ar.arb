@@ -23,7 +23,7 @@
     "workingHour": "ساعات العمل",
     "pounds":"جنيه",
     "km":"كم",
-    "deliveryArea&price":"منطقة التوصيل & السعر",
+    "deliveryAreaAndPrice":"منطقة التوصيل & السعر",
     "description":"الوصف",
 
     "pharmacyInfo":"معلومات الصيدلية",
@@ -97,6 +97,34 @@
 
 
     "address":"العنوان",
+    "arAddress":" العنوان باللغه العربية",
+    "enAddress":"العنوان باللغة الانجليزية",
+    "arBranchName":"اسم الفرع باللغة العربية",
+    "enBranchName":"اسم الفرع باللغة الانجليزية",
+    "error":"خطأ",
+    "successDeleteBranch": "تم حذف الفرع بنجاح",
+    "successUpdatedBranch": "تم تحديث الفرع بنجاح",
+    "successAddBranch": "تم اضافة الفرع بنجاح",
+    "wantToDeleteBranch": "هل تريد حذف هذا الفرع ؟",
+    "camera": "كاميرا",
+    "gallery": "معرض الصور",
+    "delivery": "يوجد توصيل",
+    "noDelivery": "لا يوجد توصيل",
+    "close": "مغلق",
+    "pleaseCompleteAllFields":"من فضلك املأ كل الحقول",
+    "pleaseEnterEnBranchName":"ادخل اسم البرانش باللغه الانجليزية",
+    "pleaseEnterArBranchName":"ادخل اسم البرانش باللغه العربية",
+    "pleaseEnterEnAddress":"ادخل اسم البرانش باللغة الانجليزية",
+    "pleaseEnterArAddress":"ادخل اسم البرانش باللغة العربيه",
+    "enterPricePerKilo": "من فضلك أدخل السعر لكل كيلو",
+    "enterValidNumber": "يجب أن يكون رقماً",
+    "enterPhoneNumber": "من فضلك أدخل رقم الهاتف",
+    "invalidPhoneNumber": "رقم الهاتف غير صالح",
+    "enterDeliveryRange": "من فضلك أدخل نطاق التوصيل",
+    "enterMinDeliveryPrice": "من فضلك أدخل أقل سعر للتوصيل",
+
+    
+    
     "noOutOfStock":"لا يوجد أدوية ستنفذ",
     "noMedicineFound":"لا توجد أدوية",
     "sorry":"للأسف!",
