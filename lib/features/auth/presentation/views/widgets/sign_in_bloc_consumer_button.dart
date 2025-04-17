@@ -40,7 +40,7 @@ class SignInBlocConsumerButton extends StatelessWidget {
             : CustomButton(
                 onPressed: () {
                   if (signInCubit.formKey.currentState!.validate()) {
-                    signInCubit.signUpStateEmitter();
+                    signInCubit.signInStateEmitter();
                   }
                 },
                 text: S.of(context).login,
@@ -49,4 +49,3 @@ class SignInBlocConsumerButton extends StatelessWidget {
     );
   }
 }
-

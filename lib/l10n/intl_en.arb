@@ -99,6 +99,7 @@
     "noOutOfStock":"No medicines will run out soon",
     "noMedicineFound":"No medicines found",
     "sorry":"Sorry!",
-    "nosearchResult":"No search result"
+    "nosearchResult":"No search result",
+    "emailResentedSuccessfully":"Email resented Successfully"
 
 }

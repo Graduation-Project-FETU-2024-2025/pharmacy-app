@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
@@ -5,6 +6,7 @@ import 'package:pharmacy_app/core/utils/app_images.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/widgets/otp_digits_section.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/widgets/otp_sing_in_bloc_consumer_button.dart';
+import 'package:pharmacy_app/features/auth/presentation/views/widgets/resend_otp_bloc_listener.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
 
 class OTPBody extends StatelessWidget {
@@ -52,19 +54,11 @@ class OTPBody extends StatelessWidget {
               ),
         ),
         Gap(10.h),
-        TextButton(
-          onPressed: () {},
-          child: Text(
-            S.of(context).resend,
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: AppColors.primaryColor,
-                  fontWeight: FontWeight.w500,
-                ),
-          ),
+        ResendOtpBlocListener(
+          email: email,
         ),
         Gap(30.h),
       ],
     );
   }
 }
-

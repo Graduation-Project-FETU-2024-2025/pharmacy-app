@@ -941,6 +941,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Email resented Successfully`
+  String get emailResentedSuccessfully {
+    return Intl.message(
+      'Email resented Successfully',
+      name: 'emailResentedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
