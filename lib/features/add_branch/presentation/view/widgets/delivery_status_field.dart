@@ -39,6 +39,7 @@ class _DeliveryStatusFieldState extends State<DeliveryStatusField> {
         ),
         Positioned(
           right: 15.h,
+          left: 15.h,
           child: DropdownButtonHideUnderline(
             child: DropdownButton<String>(
               dropdownColor: Colors.white,
