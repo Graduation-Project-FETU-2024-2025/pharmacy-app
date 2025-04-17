@@ -60,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "drStonePharmacy":
             MessageLookupByLibrary.simpleMessage("صيدلية دكتور ستون | الاستاد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "emailResentedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "تم إعادة إرسال الايميل بنجاح"),
         "enAddress":
             MessageLookupByLibrary.simpleMessage("العنوان باللغة الانجليزية"),
         "enBranchName":
@@ -124,7 +126,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "noBranches": MessageLookupByLibrary.simpleMessage("لا توجد فروع"),
         "noDelivery": MessageLookupByLibrary.simpleMessage("لا يوجد توصيل"),
-        "noMedicines": MessageLookupByLibrary.simpleMessage("لا توجد أدوية"),
+        "noMedicineFound":
+            MessageLookupByLibrary.simpleMessage("لا توجد أدوية"),
+        "noMedicines":
+            MessageLookupByLibrary.simpleMessage("لا توجد أدوية في هذا الفرع"),
+        "noOutOfStock":
+            MessageLookupByLibrary.simpleMessage("لا يوجد أدوية ستنفذ"),
+        "nosearchResult":
+            MessageLookupByLibrary.simpleMessage("لا توجد نتائج بحث"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("كل الخدمات لأجل صحتك"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
@@ -154,6 +163,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "selectBranch": MessageLookupByLibrary.simpleMessage("اختر الفرع"),
         "somethingWrong": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
+        "sorry": MessageLookupByLibrary.simpleMessage("للأسف!"),
         "startTime": MessageLookupByLibrary.simpleMessage("وقت البداية"),
         "successAddBranch":
             MessageLookupByLibrary.simpleMessage("تم اضافة الفرع بنجاح"),

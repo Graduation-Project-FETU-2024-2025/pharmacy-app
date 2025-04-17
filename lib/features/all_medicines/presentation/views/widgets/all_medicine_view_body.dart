@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
+import 'package:pharmacy_app/features/all_medicines/presentation/view_models/cubit/get_branch_products_cubit.dart';
 import 'package:pharmacy_app/features/all_medicines/presentation/views/widgets/filter_dialog.dart';
 import '../../../../../core/widgets/search_text_field.dart';
 import 'all_medicines_grid_view.dart';
@@ -25,6 +26,7 @@ class _AllMedicineViewBodyState extends State<AllMedicineViewBody> {
 
   @override
   Widget build(BuildContext context) {
+    final getBranchProductsCubit = GetBranchProductsCubit.get(context);
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 24.0.h),
@@ -56,7 +58,15 @@ class _AllMedicineViewBodyState extends State<AllMedicineViewBody> {
               ],
             ),
             SizedBox(height: 20.h),
-            SearchTextField(),
+            SearchTextField(
+              onChanged: (value) {
+                getBranchProductsCubit.searchInBranchProducts();
+              },
+              onPressed: () {
+                getBranchProductsCubit.searchInBranchProducts();
+              },
+              controller: getBranchProductsCubit.searchController,
+            ),
             SizedBox(height: 60.h),
             AllMedicinesGridview(),
           ],

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
-import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
+import 'package:pharmacy_app/features/home/data/models/out_of_stock_model.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_images.dart';
@@ -11,9 +11,9 @@ import '../../../../../core/utils/app_images.dart';
 class AlmostRunOutCard extends StatelessWidget {
   const AlmostRunOutCard({
     super.key,
-    required this.medicineBranchModel,
+    required this.ofStockModel,
   });
-  final MedicineBranchModel medicineBranchModel;
+  final OutOfStockModel ofStockModel;
   @override
   Widget build(BuildContext context) {
     String lang = getIt<CacheHelper>().getCurrentLanguage();
@@ -29,7 +29,7 @@ class AlmostRunOutCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            flex: 2,
+            flex: 3,
             child: Padding(
               padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 24.h),
               child: Container(
@@ -37,7 +37,7 @@ class AlmostRunOutCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                     image: CachedNetworkImageProvider(
-                      medicineBranchModel.productsDTO.image,
+                      ofStockModel.productsDTO.image,
                     ),
                     fit: BoxFit.fill,
                   ),
@@ -46,7 +46,7 @@ class AlmostRunOutCard extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -60,8 +60,8 @@ class AlmostRunOutCard extends StatelessWidget {
                   ),
                   child: Text(
                     lang == 'ar'
-                        ? medicineBranchModel.productsDTO.arName
-                        : medicineBranchModel.productsDTO.enName,
+                        ? ofStockModel.productsDTO.arName
+                        : ofStockModel.productsDTO.enName,
                     style: Theme.of(context).textTheme.labelMedium,
                   ),
                 ),
@@ -72,7 +72,7 @@ class AlmostRunOutCard extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
-                      Text('${medicineBranchModel.price}\$',
+                      Text('${ofStockModel.price}\$',
                           style: Theme.of(context).textTheme.labelSmall),
                       Spacer(),
                       Container(
@@ -92,7 +92,7 @@ class AlmostRunOutCard extends StatelessWidget {
                             ),
                             SizedBox(width: 3.w),
                             Text(
-                              medicineBranchModel.stock.toString(),
+                              ofStockModel.stock.toString(),
                               style: Theme.of(context)
                                   .textTheme
                                   .bodySmall!
@@ -106,20 +106,34 @@ class AlmostRunOutCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                // Padding(
-                //   padding: EdgeInsets.only(
-                //     left: getIt<CacheHelper>().getCurrentLanguage() == 'en'
-                //         ? 24.w
-                //         : 0,
-                //     right: getIt<CacheHelper>().getCurrentLanguage() == 'ar'
-                //         ? 24.w
-                //         : 0,
-                //   ),
-                //   child: Text(
-                //     'Dr.Stone | Elstad',
-                //     style: Theme.of(context).textTheme.displaySmall,
-                //   ),
-                // ),
+                SizedBox(
+                  height: 8.h,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: getIt<CacheHelper>().getCurrentLanguage() == 'en'
+                        ? 24.w
+                        : 0,
+                    right: getIt<CacheHelper>().getCurrentLanguage() == 'ar'
+                        ? 24.w
+                        : 0,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        AppImages.imgBranch,
+                        width: 12.w,
+                        height: 12.h,
+                      ),
+                      SizedBox(width: 2),
+                      Text(
+                        ofStockModel.branchName,
+                        style: Theme.of(context).textTheme.displaySmall,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

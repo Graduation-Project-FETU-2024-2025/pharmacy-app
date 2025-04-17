@@ -22,7 +22,7 @@ class OtpSignInBlocConsumerButton extends StatelessWidget {
           current is OtpCheckSuccess || current is OtpCheckFailure,
       listener: (context, state) {
         if (state is OtpCheckSuccess) {
-          context.pushNamedAndRemoveUntil(Routing.homeView,
+          context.pushNamedAndRemoveUntil(Routing.mainView,
               predicate: (route) => false);
         } else if (state is OtpCheckFailure) {
           errorToast(message: state.apiErrorModel.message!);

@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/widgets/error_api_widget.dart';
-import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
 import 'package:pharmacy_app/features/all_medicines/data/models/product_dto_model.dart';
+import 'package:pharmacy_app/features/home/data/models/out_of_stock_model.dart';
 import 'package:pharmacy_app/features/home/presentation/view_models/out_of_stock_cubit/out_of_stock_cubit.dart';
 import 'package:pharmacy_app/features/home/presentation/views/widgets/almostRunOutCard.dart';
+import 'package:pharmacy_app/generated/l10n.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class AlmostRunOutGrid extends StatelessWidget {
@@ -19,7 +20,12 @@ class AlmostRunOutGrid extends StatelessWidget {
       builder: (context, state) {
         if (state is OutOfStockSuccess) {
           if (state.medicines.isEmpty) {
-            return Text('');
+            return Center(
+              child: Text(
+                S.of(context).noOutOfStock,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            );
           }
           return GridView.builder(
             physics: const NeverScrollableScrollPhysics(),
@@ -33,7 +39,7 @@ class AlmostRunOutGrid extends StatelessWidget {
             ),
             itemBuilder: (context, index) {
               return AlmostRunOutCard(
-                medicineBranchModel: state.medicines[index],
+                ofStockModel: state.medicines[index],
               );
             },
           );
@@ -57,8 +63,9 @@ class AlmostRunOutGrid extends StatelessWidget {
               ),
               itemBuilder: (context, index) {
                 return AlmostRunOutCard(
-                  medicineBranchModel: MedicineBranchModel(
+                  ofStockModel: OutOfStockModel(
                     branchId: '',
+                    branchName: '',
                     name: '',
                     systemProductCode: '',
                     stock: 0,
@@ -68,7 +75,8 @@ class AlmostRunOutGrid extends StatelessWidget {
                       code: '',
                       arName: 'cnmdv',
                       enName: 'vmd,v',
-                      image: 'm,d',
+                      image:
+                          'https://dkud4u09qff41.cloudfront.net/Products/ac84b8ac-e0e8-45e8-827f-7c7a3b0c5aca.jpeg',
                       type: 'ndm,vn',
                       activePrincipal: 'm,dv',
                       companyName: 'dnmv',

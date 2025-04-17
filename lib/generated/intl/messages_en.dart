@@ -35,7 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
         "allMedicines": MessageLookupByLibrary.simpleMessage("All Medicines"),
         "almostRunOut":
-            MessageLookupByLibrary.simpleMessage("Almost running out"),
+            MessageLookupByLibrary.simpleMessage("Nearly out of stock"),
         "arAddress": MessageLookupByLibrary.simpleMessage("Address in Arabic"),
         "arBranchName":
             MessageLookupByLibrary.simpleMessage("Branch Name in Arabic"),
@@ -61,6 +61,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
             "Dr. Stone Pharmacy | Elestad"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "emailResentedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Email resented Successfully"),
         "enAddress": MessageLookupByLibrary.simpleMessage("Address in English"),
         "enBranchName":
             MessageLookupByLibrary.simpleMessage("Branch Name in English"),
@@ -123,8 +125,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "noBranches": MessageLookupByLibrary.simpleMessage("No Branches Found"),
         "noDelivery": MessageLookupByLibrary.simpleMessage("No Delivery"),
-        "noMedicines":
-            MessageLookupByLibrary.simpleMessage("No Medicines Found"),
+        "noMedicineFound":
+            MessageLookupByLibrary.simpleMessage("No medicines found"),
+        "noMedicines": MessageLookupByLibrary.simpleMessage(
+            "No Medicines Found in this branch"),
+        "noOutOfStock": MessageLookupByLibrary.simpleMessage(
+            "No medicines will run out soon"),
+        "nosearchResult":
+            MessageLookupByLibrary.simpleMessage("No search result"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
@@ -156,6 +164,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectBranch": MessageLookupByLibrary.simpleMessage("Select Branch"),
         "somethingWrong":
             MessageLookupByLibrary.simpleMessage("Something Went Wrong"),
+        "sorry": MessageLookupByLibrary.simpleMessage("Sorry!"),
         "startTime": MessageLookupByLibrary.simpleMessage("Start Time"),
         "successAddBranch":
             MessageLookupByLibrary.simpleMessage("Branch Added successfully"),

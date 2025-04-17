@@ -12,7 +12,7 @@ class SignInCubit extends Cubit<SignInState> {
 
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  void signUpStateEmitter() async {
+  void signInStateEmitter() async {
     emit(SignInLoading());
     final result = await authRepo.login(emailController.text);
     result.fold(

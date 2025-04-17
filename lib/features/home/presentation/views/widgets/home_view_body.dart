@@ -7,7 +7,9 @@ import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/utils/app_images.dart';
 import 'package:pharmacy_app/core/widgets/search_text_field.dart';
+import 'package:pharmacy_app/features/home/data/repos/last_added_repo.dart';
 import 'package:pharmacy_app/features/home/data/repos/out_of_stock_repo.dart';
+import 'package:pharmacy_app/features/home/presentation/view_models/cubit/last_added_cubit.dart';
 import 'package:pharmacy_app/features/home/presentation/view_models/out_of_stock_cubit/out_of_stock_cubit.dart';
 import 'package:pharmacy_app/features/home/presentation/views/widgets/almostRunOutGrid.dart';
 import 'package:pharmacy_app/features/home/presentation/views/widgets/last_added_section.dart';
@@ -63,7 +65,11 @@ class HomeViewBody extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 30.h),
-                      SearchTextField(),
+                      SearchTextField(
+                        onChanged: (p0) => {},
+                        onPressed: () => {},
+                        controller: TextEditingController(),
+                      ),
                       SizedBox(height: 10.h),
                     ],
                   ),
@@ -130,7 +136,11 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: LastAddedSection(),
+            child: BlocProvider(
+              create: (context) =>
+                  LastAddedCubit(getIt<LastAddedRepo>())..getLastAdded(),
+              child: LastAddedSection(),
+            ),
           ),
           SliverToBoxAdapter(
             child: Padding(

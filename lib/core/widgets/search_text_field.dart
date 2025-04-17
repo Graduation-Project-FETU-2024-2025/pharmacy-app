@@ -5,8 +5,11 @@ import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 
 class SearchTextField extends StatelessWidget {
-  const SearchTextField({super.key});
-
+  const SearchTextField(
+      {super.key, required this.controller, this.onPressed, this.onChanged});
+  final TextEditingController controller;
+  final void Function()? onPressed;
+  final Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,13 +23,15 @@ class SearchTextField extends StatelessWidget {
           Expanded(
             flex: 3,
             child: TextField(
+              onChanged: onChanged,
+              controller: controller,
               onTapOutside: (v) {
                 FocusScope.of(context).unfocus();
               },
               cursorHeight: 25,
               cursorColor: AppColors.primaryColor,
+              style: Theme.of(context).textTheme.titleMedium,
               decoration: InputDecoration(
-                contentPadding: const EdgeInsets.symmetric(horizontal: 16),
                 hintText: S.of(context).searchHint,
                 hintStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
                       color: Color(0xffBDBDBD),
@@ -59,7 +64,7 @@ class SearchTextField extends StatelessWidget {
                 vertical: 8,
               ),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: onPressed,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.primaryColor,
                   shape: const RoundedRectangleBorder(

@@ -8,13 +8,21 @@ class GetBranchesCubit extends Cubit<GetBranchesState> {
   final GetBranchesRepo getBranchesRepo;
 
   Future<void> fetchBranches() async {
+    if (isClosed) return;
     emit(GetBranchesLoading());
     final result = await getBranchesRepo.getAllBranches();
+    if (isClosed) return;
     result.fold(
-      (apiErrorModel) => GetBranchesFailure(apiErrorModel: apiErrorModel),
-      (branches) => emit(
-        GetBranchesSuccess(branches: branches),
-      ),
+      (apiErrorModel) {
+        if (!isClosed) {
+          emit(GetBranchesFailure(apiErrorModel: apiErrorModel));
+        }
+      },
+      (branches) {
+        if (!isClosed) {
+          emit(GetBranchesSuccess(branches: branches));
+        }
+      },
     );
   }
 }

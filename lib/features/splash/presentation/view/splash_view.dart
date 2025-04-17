@@ -55,7 +55,7 @@ class _SplashViewState extends State<SplashView> {
     final token = await SecureStorage.instance.getData(key: ApiKeys.token);
     if (mounted) {
       if (token != null) {
-        context.pushReplacementNamed(Routing.homeView);
+        context.pushReplacementNamed(Routing.mainView);
       } else if (!getIt<CacheHelper>().getData(key: CacheKeys.isFirstTime)) {
         context.pushReplacementNamed(Routing.signIn);
       } else {

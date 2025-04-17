@@ -53,7 +53,7 @@
     "hi":"Hi",
     "homeMessage":"We will deliver you medicines!",
     "lastAdded":"Last Added",
-    "almostRunOut":"Almost running out",
+    "almostRunOut":"Nearly out of stock",
     "seeAll":"See All",
 
     "searchButtonTitle":"search",
@@ -82,7 +82,7 @@
     "locationPermanentlyDenied": "Location permission permanently denied",
     "somethingWrong":"Something Went Wrong",
     "noBranches":"No Branches Found",
-    "noMedicines":"No Medicines Found",
+    "noMedicines":"No Medicines Found in this branch",
     "addMedSuccess":"Medicine Added Successfully",
     "addMedFail":"Failed to Add Medicine",
     "update":"Update",
@@ -118,7 +118,12 @@
     "enterPhoneNumber": "Please enter the phone number",
     "invalidPhoneNumber": "Invalid phone number",
     "enterDeliveryRange": "Please enter the delivery range",
-    "enterMinDeliveryPrice": "Please enter the minimum delivery price"
+    "enterMinDeliveryPrice": "Please enter the minimum delivery price",
 
+    "noOutOfStock":"No medicines will run out soon",
+    "noMedicineFound":"No medicines found",
+    "sorry":"Sorry!",
+    "nosearchResult":"No search result",
+    "emailResentedSuccessfully":"Email resented Successfully"
 
 }

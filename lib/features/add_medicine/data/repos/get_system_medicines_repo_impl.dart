@@ -27,4 +27,32 @@ class GetSystemMedicinesRepoImpl implements GetSystemMedicinesRepo {
       );
     }
   }
+
+  @override
+  Future<Either<ApiErrorModel, SystemMedicineResponseModel>>
+      searchInSystemMedicines({
+    required String query,
+  }) async {
+    try {
+      final response = await apiConsumer
+          .get(EndPoints.getAllSystemMedicines, queryParameter: {
+        "page": 1,
+        "pageSize": 10,
+        "search": query,
+      });
+      if (response.statusCode == 204) {
+        return right(SystemMedicineResponseModel(
+          data: [],
+          message: "No products found",
+          statusCode: 204,
+        ));
+      }
+      final data = SystemMedicineResponseModel.fromJson(response.data);
+      return Right(data);
+    } catch (e) {
+      return Left(
+        ApiErrorHandler.handleError(e),
+      );
+    }
+  }
 }
