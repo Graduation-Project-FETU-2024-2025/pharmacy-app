@@ -16,7 +16,7 @@ class AddBranchRepoImpl implements AddBranchRepo {
   Future<Either<ApiErrorModel, bool>> addBranch(AddBranchModel branch) async {
     try {
       final Map<String, dynamic> formData = branch.toJson();
-      formData['Image'] = await uploadImageToAPI(branch.image!);
+      formData['image'] = await uploadImageToAPI(branch.image!);
 
       await apiConsumer.post(EndPoints.getBranches,
           data: formData, isFormData: true);

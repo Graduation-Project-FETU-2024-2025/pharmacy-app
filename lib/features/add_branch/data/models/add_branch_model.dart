@@ -1,6 +1,6 @@
 
-
 import 'package:image_picker/image_picker.dart';
+
 import 'package:pharmacy_app/features/all_branches/data/models/working_hours_model.dart';
 
 class AddBranchModel {
@@ -36,21 +36,32 @@ class AddBranchModel {
     this.enAddress,
   });
 
-Map<String, dynamic> toJson() {
+  Map<String, dynamic> toJson() {
     return {
       'PharmacyId': pharmacyId,
       'aR_BranchName': arBranchName,
       'eN_BranchName': enBranchName,
-      'DeliveryRange': deliveryRange,
-      'PricePerKilo': pricePerKilo,
-      'MinDeliveryPrice': minDeliveryPrice,
-      'Status': status,
-      'PhoneNumber': phoneNumber,
-      'Lat': lat,
-      'Long': long,
+      'deliveryRange': deliveryRange,
+      'pricePerKilo': pricePerKilo,
+      'minDeliveryPrice': minDeliveryPrice,
+      'status': status,
+      'phoneNumber': phoneNumber,
+      'lat': lat,
+      'long': long,
       'EN_Address': enAddress,
       'AR_Address': arAddress,
-      'WorkingHours':workingHours.map((e) => e.toJson(),).toList(),
+      'workingHours': workingHours
+          .map(
+            (e) => e.toJson(),
+          )
+          .toList(),
     };
+  }
+
+ 
+
+  @override
+  String toString() {
+    return 'AddBranchModel(pharmacyId: $pharmacyId, arBranchName: $arBranchName, enBranchName: $enBranchName, deliveryRange: $deliveryRange, pricePerKilo: $pricePerKilo, minDeliveryPrice: $minDeliveryPrice, status: $status, image: $image, phoneNumber: $phoneNumber, lat: $lat, long: $long, enAddress: $enAddress, arAddress: $arAddress, workingHours: $workingHours)';
   }
 }
