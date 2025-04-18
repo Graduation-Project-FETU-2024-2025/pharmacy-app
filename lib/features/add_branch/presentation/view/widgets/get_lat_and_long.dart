@@ -117,7 +117,7 @@ class _GetLatAndLongState extends State<GetLatAndLong> {
         ),
         Gap(31.h),
         SizedBox(
-          width: 214.w,
+          // width: 214.w,
           height: 36.h,
           child: ElevatedButton(
             style: ButtonStyle(
