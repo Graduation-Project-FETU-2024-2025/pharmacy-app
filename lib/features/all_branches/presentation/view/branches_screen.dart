@@ -42,21 +42,23 @@ class BranchesScreen extends StatelessWidget {
               } else if (state is GetBranchesSuccess) {
                 if (state.branches.isEmpty) {
                   return SliverToBoxAdapter(
-                  child: Image.asset(
-                AppImages.noData,
-                width: 300.w,
-                height: 300.h,
-              ));
+                      child: Image.asset(
+                    AppImages.noData,
+                    width: 300.w,
+                    height: 300.h,
+                  ));
+                } else {
+                  return SliverList.builder(
+                    itemCount: state.branches.length,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 19.0),
+                        child:
+                            BranchesCardItems(branches: state.branches[index]),
+                      );
+                    },
+                  );
                 }
-                else{return SliverList.builder(
-                  itemCount: state.branches.length,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(bottom: 19.0),
-                      child: BranchesCardItems(branches: state.branches[index]),
-                    );
-                  },
-                );}
               } else if (state is GetBranchesFailure) {
                 return SliverToBoxAdapter(
                   child: Center(

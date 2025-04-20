@@ -21,7 +21,7 @@ class ChangeLanguageDialog extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 32.h),
       decoration: BoxDecoration(
-        color: AppColors.gray,
+        color:Theme.of(context).brightness == Brightness.dark?AppColors.darkGray :AppColors.gray,
         borderRadius: BorderRadius.circular(25.r),
       ),
       child: BlocBuilder<ChangeLanguageCubit, ChangeLanguageState>(

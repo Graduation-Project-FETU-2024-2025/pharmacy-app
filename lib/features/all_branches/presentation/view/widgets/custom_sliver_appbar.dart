@@ -22,12 +22,17 @@ class CustomSliverAppBar extends StatelessWidget {
       systemOverlayStyle:
           const SystemUiOverlayStyle(statusBarBrightness: Brightness.dark),
       expandedHeight: height,
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? AppColors.black
+          : AppColors.white,
       elevation: 0.0,
       stretch: true,
       flexibleSpace: FlexibleSpaceBar(
         background: isLocalImage
-            ? Image.asset(img , fit: BoxFit.cover,)
+            ? Image.asset(
+                img,
+                fit: BoxFit.cover,
+              )
             : CachedNetworkImage(
                 imageUrl: img,
                 fit: BoxFit.cover,
@@ -46,8 +51,10 @@ class CustomSliverAppBar extends StatelessWidget {
               child: Container(
                 height: 32.0,
                 alignment: Alignment.center,
-                decoration: const BoxDecoration(
-                  color: AppColors.white,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? AppColors.black
+                      : AppColors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(32.0),
                     topRight: Radius.circular(32.0),
@@ -57,7 +64,9 @@ class CustomSliverAppBar extends StatelessWidget {
                   width: 85.0,
                   height: 10.0,
                   decoration: BoxDecoration(
-                    color: AppColors.black.withOpacity(0.3),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? AppColors.white.withOpacity(.6)
+                        : AppColors.black.withOpacity(.6),
                     borderRadius: BorderRadius.circular(100.0),
                   ),
                 ),
