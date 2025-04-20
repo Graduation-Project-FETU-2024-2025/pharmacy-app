@@ -34,7 +34,9 @@ class PharmacyApp extends StatelessWidget {
               initialRoute: Routing.splash,
               theme: Themes.lightTheme,
               darkTheme: Themes.darkTheme,
-              themeMode: context.watch<ChangeThemesCubit>().isDarkMode?ThemeMode.dark:ThemeMode.light,
+              themeMode: context.watch<ChangeThemesCubit>().isDarkMode
+                  ? ThemeMode.dark
+                  : ThemeMode.light,
               onGenerateRoute: AppRouters().generateRoute,
             );
           },

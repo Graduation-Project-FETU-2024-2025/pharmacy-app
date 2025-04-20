@@ -28,8 +28,6 @@ class OtpTextFromFiled extends StatelessWidget {
       textAlign: TextAlign.center,
       maxLength: 1,
       decoration: const InputDecoration(
-        fillColor: Color(0xffF6F8FA),
-        filled: true,
         counterText: '',
       ),
       keyboardType: TextInputType.number,

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pharmacy_app/core/database/cache/cache_keys.dart';
+import 'package:pharmacy_app/core/database/cache/secure_storage.dart';
 import 'package:pharmacy_app/core/global_cubits/change_themes_cubit/change_themes_cubit.dart';
+import 'package:pharmacy_app/core/helpers/extentions.dart';
+import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/features/profile/presentation/view/widgets/change_language_dialog.dart';
@@ -57,12 +61,21 @@ class ProfileOptionContainer extends StatelessWidget {
               value: Theme.of(context).brightness == Brightness.dark,
               onChanged: (value) {
                 context.read<ChangeThemesCubit>().changeAppTheme();
-              }, //TODO: Implement dark mode
+              },
             ),
           ),
           Divider(),
           ListTile(
-            onTap: () {}, // TODO naigate to sign in and distroy the token
+            onTap: () async {
+              await SecureStorage.instance.deleteData(key: CacheKeys.token);
+              await SecureStorage.instance.deleteData(key: CacheKeys.id);
+              if (context.mounted) {
+                context.pushNamedAndRemoveUntil(
+                  Routing.signIn,
+                  predicate: (route) => false,
+                );
+              }
+            },
             leading: SvgPicture.asset(AppIcons.iconsLogout),
             title: Text(
               S.of(context).logout,
