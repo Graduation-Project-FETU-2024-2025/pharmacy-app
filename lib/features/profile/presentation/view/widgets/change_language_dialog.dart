@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:pharmacy_app/core/database/cache/cache_keys.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/global_cubits/change_language_cubit/change_language_cubit.dart';
 import 'package:pharmacy_app/core/global_cubits/change_language_cubit/change_language_state.dart';
@@ -17,7 +18,7 @@ class ChangeLanguageDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String selectedValue = getIt<CacheHelper>().getCurrentLanguage();
+    String selectedValue = getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage)??'en';
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 32.h),
       decoration: BoxDecoration(

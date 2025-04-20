@@ -13,7 +13,7 @@ import 'package:pharmacy_app/generated/l10n.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});
-  void cacheOnboarding(BuildContext context) async {
+  Future<void> cacheOnboarding(BuildContext context) async {
     await getIt<CacheHelper>()
         .saveData(key: CacheKeys.isFirstTime, value: false);
     if (context.mounted) {
@@ -40,9 +40,12 @@ class OnboardingView extends StatelessWidget {
           ),
           Spacer(),
           CustomButton(
-            onPressed: () {
-              ChangeLanguageCubit.get(context).changeLanguage(language: 'ar');
-              cacheOnboarding(context);
+            onPressed: () async {
+              await ChangeLanguageCubit.get(context)
+                  .changeLanguage(language: 'ar');
+              if (context.mounted) {
+                await cacheOnboarding(context);
+              }
             },
             text: 'أكمل باللغة العربية',
             backgroundColor: AppColors.secondaryColor,
@@ -51,9 +54,12 @@ class OnboardingView extends StatelessWidget {
             height: 36.h,
           ),
           CustomButton(
-            onPressed: () {
-              ChangeLanguageCubit.get(context).changeLanguage(language: 'en');
-              cacheOnboarding(context);
+            onPressed: () async {
+              await ChangeLanguageCubit.get(context)
+                  .changeLanguage(language: 'en');
+              if (context.mounted) {
+                await cacheOnboarding(context);
+              }
             },
             text: 'Continue in English',
           ),

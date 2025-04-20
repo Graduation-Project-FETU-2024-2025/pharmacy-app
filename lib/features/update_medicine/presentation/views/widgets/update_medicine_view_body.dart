@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pharmacy_app/core/database/cache/cache_keys.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
@@ -25,7 +26,7 @@ class UpdateMedicineViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final updateCubit = UpdateMedcineCubit.get(context);
-    String lang = getIt<CacheHelper>().getCurrentLanguage();
+    String lang = getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage)??'en';
     return SafeArea(
       child: SingleChildScrollView(
         child: Padding(

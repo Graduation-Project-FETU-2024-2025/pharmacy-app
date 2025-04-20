@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmacy_app/core/database/cache/cache_keys.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
 
@@ -21,7 +22,7 @@ class AllIfoMedicine extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          getIt.get<CacheHelper>().getCurrentLanguage() == 'en'
+          getIt.get<CacheHelper>().getString(key: CacheKeys.currentLanguage) == 'en'
               ? medicineBranchModel.productsDTO.enName
               : medicineBranchModel.productsDTO.arName,
           style: Theme.of(context).textTheme.displayLarge,
