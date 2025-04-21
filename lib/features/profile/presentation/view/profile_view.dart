@@ -20,9 +20,7 @@ class ProfileView extends StatelessWidget {
               Row(),
               UserInfoWidget(
                 imagePath: AppImages.imgMap,
-                name: 'Ahmed Mohamed',
-
-                
+                name: 'Khaled Elalfy',
               ),
               Gap(30.h),
               ProfileOptionContainer(),

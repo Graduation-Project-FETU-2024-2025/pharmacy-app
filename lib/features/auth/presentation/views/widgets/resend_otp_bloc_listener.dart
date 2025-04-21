@@ -20,7 +20,7 @@ class ResendOtpBlocListener extends StatefulWidget {
 }
 
 class _ResendOtpBlocListenerState extends State<ResendOtpBlocListener> {
-  int counter = 6;
+  int counter = 60;
   Timer? _timer;
   void ticTack() {
     _timer?.cancel();
