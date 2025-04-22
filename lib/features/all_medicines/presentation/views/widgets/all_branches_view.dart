@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmacy_app/core/utils/app_colors.dart';
+import 'package:pharmacy_app/core/utils/app_images.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_cubit.dart';
 
 import 'package:skeletonizer/skeletonizer.dart';
@@ -23,31 +25,67 @@ class AllBranchesView extends StatelessWidget {
         builder: (context, state) {
           if (state is GetBranchesSuccess) {
             if (state.branches.isEmpty) {
-              return Center(
-                child: Text(
-                  S.of(context).noBranches,
-                  style: Theme.of(context).textTheme.titleMedium,
+              return RefreshIndicator(
+                onRefresh: () =>
+                    context.read<GetBranchesCubit>().fetchBranches(),
+                color: AppColors.primaryColor,
+                child: SingleChildScrollView(
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  child: SizedBox(
+                    height: MediaQuery.of(context).size.height,
+                    child: Center(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Image.asset(
+                            AppImages.noData,
+                          ),
+                          Text(
+                            S.of(context).noMedicineFound,
+                            style: Theme.of(context).textTheme.titleMedium,
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
               );
             }
-            return ListView.builder(
-              itemCount: state.branches.length,
-              itemBuilder: (context, index) => GestureDetector(
-                onTap: () {
-                  getBranchProductsCubit.getBranchProducts(
-                    branchId: state.branches[index].id,
-                  );
-                },
-                child: AllBranchListItem(
-                  branchName: state.branches[index].branchName,
+            return RefreshIndicator(
+              onRefresh: () => context.read<GetBranchesCubit>().fetchBranches(),
+              color: AppColors.primaryColor,
+              child: ListView.builder(
+                itemCount: state.branches.length,
+                physics: const AlwaysScrollableScrollPhysics(),
+                itemBuilder: (context, index) => GestureDetector(
+                  onTap: () {
+                    getBranchProductsCubit.getBranchProducts(
+                      branchId: state.branches[index].id,
+                    );
+                  },
+                  child: AllBranchListItem(
+                    branchName: state.branches[index].branchName,
+                  ),
                 ),
               ),
             );
           } else if (state is GetBranchesFailure) {
-            return Center(
-              child: Text(
-                S.of(context).somethingWrong,
-                style: Theme.of(context).textTheme.titleMedium,
+            return RefreshIndicator(
+              onRefresh: () => context.read<GetBranchesCubit>().fetchBranches(),
+              color: AppColors.primaryColor,
+              child: SingleChildScrollView(
+                physics: const AlwaysScrollableScrollPhysics(),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height,
+                  child: Center(
+                    child: Text(
+                      state.apiErrorModel.message!,
+                      style: Theme.of(context).textTheme.titleMedium,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
               ),
             );
           } else {

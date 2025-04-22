@@ -125,6 +125,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "noBranches": MessageLookupByLibrary.simpleMessage("No Branches Found"),
         "noDelivery": MessageLookupByLibrary.simpleMessage("No Delivery"),
+        "noLastAdded":
+            MessageLookupByLibrary.simpleMessage("No newly added medicines"),
         "noMedicineFound":
             MessageLookupByLibrary.simpleMessage("No medicines found"),
         "noMedicines": MessageLookupByLibrary.simpleMessage(

@@ -129,7 +129,8 @@
     "noMedicineFound":"لا توجد أدوية",
     "sorry":"للأسف!",
     "nosearchResult":"لا توجد نتائج بحث",
-     "emailResentedSuccessfully":"تم إعادة إرسال الايميل بنجاح"
+     "emailResentedSuccessfully":"تم إعادة إرسال الايميل بنجاح",
+     "noLastAdded":"لا توجد أدوية مضافه حديثا"
 
 
 }

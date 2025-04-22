@@ -3,10 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
+import 'package:pharmacy_app/core/utils/app_images.dart';
 import 'package:pharmacy_app/core/widgets/error_api_widget.dart';
 import 'package:pharmacy_app/features/all_medicines/data/models/product_dto_model.dart';
 import 'package:pharmacy_app/features/home/data/models/last_added_model.dart';
-import 'package:pharmacy_app/features/home/presentation/view_models/cubit/last_added_cubit.dart';
+import 'package:pharmacy_app/features/home/presentation/view_models/last_added/last_added_cubit.dart';
 import 'package:pharmacy_app/features/home/presentation/views/widgets/last_added_medicine_card.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
 import 'package:skeletonizer/skeletonizer.dart';
@@ -23,9 +24,18 @@ class LastAddedListView extends StatelessWidget {
         if (state is LastAddedSuccess) {
           if (state.medicines.isEmpty) {
             return Center(
-              child: Text(
-                S.of(context).noOutOfStock,
-                style: Theme.of(context).textTheme.titleMedium,
+              child: Column(
+                children: [
+                  Flexible(
+                    child: Image.asset(
+                      AppImages.noData,
+                    ),
+                  ),
+                  Text(
+                    S.of(context).noLastAdded,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                ],
               ),
             );
           }

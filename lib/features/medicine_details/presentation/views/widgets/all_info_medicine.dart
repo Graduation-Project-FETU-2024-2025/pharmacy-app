@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../../../../core/database/cache/cashe_helper.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -67,13 +68,15 @@ class AllIfoMedicine extends StatelessWidget {
                     angle: 180 * 3.14 / 180,
                     child: SizedBox(
                       height: 10.h,
-                      child: LinearProgressIndicator(
-                        value: medicineBranchModel.stock < 5 ? 0.25 : 0.75,
-                        color: medicineBranchModel.stock < 5
-                            ? Colors.red
-                            : Color(0xff24B58E),
-                        backgroundColor: AppColors.black.withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(20),
+                      child: Skeleton.shade(
+                        child: LinearProgressIndicator(
+                          value: medicineBranchModel.stock < 5 ? 0.25 : 0.75,
+                          color: medicineBranchModel.stock < 5
+                              ? Colors.red
+                              : Color(0xff24B58E),
+                          backgroundColor: AppColors.black.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
                       ),
                     ),
                   ),

@@ -124,6 +124,7 @@
     "noMedicineFound":"No medicines found",
     "sorry":"Sorry!",
     "nosearchResult":"No search result",
-    "emailResentedSuccessfully":"Email resented Successfully"
+    "emailResentedSuccessfully":"Email resented Successfully",
+    "noLastAdded":"No newly added medicines"
 
 }

@@ -19,108 +19,115 @@ class MedicineCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 157 / 150,
-      child: Container(
-        width: 157,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(
-            color: Color(0xffB3B3B3),
-          ),
-        ),
-        child: Column(
-          children: [
-            Expanded(
-              flex: 4,
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10),
-                  ),
-                  image: DecorationImage(
-                    image: CachedNetworkImageProvider(
-                      medicineModel.productsDTO.image,
-                    ),
-                    fit: BoxFit.fill,
-                  ),
-                ),
+      child: Stack(
+        children: [
+          Container(
+            width: 157,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(
+                color: Color(0xffB3B3B3),
               ),
             ),
-            SizedBox(height: 5.h),
-            Expanded(
-              flex: 2,
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10),
+            child: Column(
+              children: [
+                Expanded(
+                  flex: 4,
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10),
+                      ),
+                      image: DecorationImage(
+                        image: CachedNetworkImageProvider(
+                          medicineModel.productsDTO.image,
+                        ),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
                   ),
                 ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 10.w,
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                SizedBox(height: 5.h),
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 10.w,
+                      ),
+                      child: Column(
                         children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                          Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                getIt<CacheHelper>().getCurrentLanguage() ==
-                                        'ar'
-                                    ? medicineModel.productsDTO.arName
-                                    : medicineModel.productsDTO.enName,
-                                style: Theme.of(context).textTheme.labelMedium,
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    getIt<CacheHelper>().getCurrentLanguage() ==
+                                            'ar'
+                                        ? medicineModel.productsDTO.arName
+                                        : medicineModel.productsDTO.enName,
+                                    style:
+                                        Theme.of(context).textTheme.labelMedium,
+                                  ),
+                                  SizedBox(height: 5.h),
+                                  Text(
+                                    medicineModel.productsDTO.activePrincipal,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodySmall
+                                        ?.copyWith(
+                                          color:
+                                              AppColors.black.withOpacity(0.6),
+                                        ),
+                                  ),
+                                ],
                               ),
-                              SizedBox(height: 5.h),
+                              Spacer(),
                               Text(
-                                medicineModel.productsDTO.activePrincipal,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodySmall
-                                    ?.copyWith(
-                                      color: AppColors.black.withOpacity(0.6),
-                                    ),
+                                '${medicineModel.price}\$',
+                                style: Theme.of(context).textTheme.labelSmall,
                               ),
                             ],
                           ),
-                          Spacer(),
-                          Text(
-                            '${medicineModel.price}\$',
-                            style: Theme.of(context).textTheme.labelSmall,
-                          ),
+                          SizedBox(height: 8.h),
                         ],
                       ),
-                      // Spacer(),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.start,
-                      //   children: [
-                      //     Image.asset(
-                      //       AppImages.imgBranch,
-                      //       width: 12.w,
-                      //       height: 12.h,
-                      //     ),
-                      //     SizedBox(width: 2),
-                      //     Text(
-                      //       'Dr.Stone | Elstad',
-                      //       style: Theme.of(context).textTheme.displaySmall,
-                      //     ),
-                      //   ],
-                      // ),
-                      SizedBox(height: 8.h),
-                    ],
+                    ),
                   ),
+                ),
+              ],
+            ),
+          ),
+          PositionedDirectional(
+            top: 8,
+            start: 8,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppColors.white,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(3),
+                child: Text(
+                  medicineModel.stock.toString(),
+                  style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
             ),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }

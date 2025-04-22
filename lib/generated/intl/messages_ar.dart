@@ -126,6 +126,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "noBranches": MessageLookupByLibrary.simpleMessage("لا توجد فروع"),
         "noDelivery": MessageLookupByLibrary.simpleMessage("لا يوجد توصيل"),
+        "noLastAdded":
+            MessageLookupByLibrary.simpleMessage("لا توجد أدوية مضافه حديثا"),
         "noMedicineFound":
             MessageLookupByLibrary.simpleMessage("لا توجد أدوية"),
         "noMedicines":

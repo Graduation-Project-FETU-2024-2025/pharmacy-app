@@ -110,13 +110,8 @@ class AlmostRunOutCard extends StatelessWidget {
                   height: 8.h,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(
-                    left: getIt<CacheHelper>().getCurrentLanguage() == 'en'
-                        ? 24.w
-                        : 0,
-                    right: getIt<CacheHelper>().getCurrentLanguage() == 'ar'
-                        ? 24.w
-                        : 0,
+                  padding: EdgeInsetsDirectional.only(
+                    start: 24.w,
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,

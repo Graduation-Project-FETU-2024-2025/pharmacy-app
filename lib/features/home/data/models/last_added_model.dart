@@ -24,7 +24,7 @@ class LastAddedModel {
   factory LastAddedModel.fromJson(Map<String, dynamic> json) {
     return LastAddedModel(
       branchId: json['branchId'],
-      branchName: json['branchName'],
+      branchName: json['branchName'] ?? "",
       name: json['name'],
       systemProductCode: json['systemProductCode'],
       stock: json['stock'],

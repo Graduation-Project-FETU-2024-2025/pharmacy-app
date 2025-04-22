@@ -1189,6 +1189,16 @@ class S {
       args: [],
     );
   }
+
+  /// `No newly added medicines`
+  String get noLastAdded {
+    return Intl.message(
+      'No newly added medicines',
+      name: 'noLastAdded',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

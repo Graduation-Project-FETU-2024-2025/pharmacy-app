@@ -19,55 +19,63 @@ class BranchesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          CustomSliverAppBar(
-            img: AppImages.imgMap,
-            isBtnValid: true,
-            height: MediaQuery.of(context).size.height * 0.4,
-            isLocalImage: true,
-          ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10),
-              child:
-                  Text(S.of(context).allBranches, style: AppStyles.semiBold15),
+      body: RefreshIndicator(
+        onRefresh: () async {
+          context.read<GetBranchesCubit>().fetchBranches();
+        },
+        color: AppColors.primaryColor,
+        child: CustomScrollView(
+          slivers: [
+            CustomSliverAppBar(
+              img: AppImages.imgMap,
+              isBtnValid: true,
+              height: MediaQuery.of(context).size.height * 0.4,
+              isLocalImage: true,
             ),
-          ),
-          BlocBuilder<GetBranchesCubit, GetBranchesState>(
-            builder: (context, state) {
-              if (state is GetBranchesLoading) {
-                return ShimmerLoadingBranches();
-              } else if (state is GetBranchesSuccess) {
-                if (state.branches.isEmpty) {
-                  return SliverToBoxAdapter(
-                  child: Image.asset(
-                AppImages.noData,
-                width: 300.w,
-                height: 300.h,
-              ));
-                }
-                else{return SliverList.builder(
-                  itemCount: state.branches.length,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(bottom: 19.0),
-                      child: BranchesCardItems(branches: state.branches[index]),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10),
+                child: Text(S.of(context).allBranches,
+                    style: AppStyles.semiBold15),
+              ),
+            ),
+            BlocBuilder<GetBranchesCubit, GetBranchesState>(
+              builder: (context, state) {
+                if (state is GetBranchesLoading) {
+                  return ShimmerLoadingBranches();
+                } else if (state is GetBranchesSuccess) {
+                  if (state.branches.isEmpty) {
+                    return SliverToBoxAdapter(
+                        child: Image.asset(
+                      AppImages.noData,
+                      width: 300.w,
+                      height: 300.h,
+                    ));
+                  } else {
+                    return SliverList.builder(
+                      itemCount: state.branches.length,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 19.0),
+                          child: BranchesCardItems(
+                              branches: state.branches[index]),
+                        );
+                      },
                     );
-                  },
-                );}
-              } else if (state is GetBranchesFailure) {
-                return SliverToBoxAdapter(
-                  child: Center(
-                      child: Text(state.apiErrorModel.message!,
-                          style: TextStyle(color: Colors.red))),
-                );
-              }
-              return const SliverToBoxAdapter(child: SizedBox());
-            },
-          ),
-        ],
+                  }
+                } else if (state is GetBranchesFailure) {
+                  return SliverToBoxAdapter(
+                    child: Center(
+                        child: Text(state.apiErrorModel.message!,
+                            style: TextStyle(color: Colors.red))),
+                  );
+                }
+                return const SliverToBoxAdapter(child: SizedBox());
+              },
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {

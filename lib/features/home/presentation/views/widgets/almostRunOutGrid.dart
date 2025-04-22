@@ -9,6 +9,8 @@ import 'package:pharmacy_app/features/home/presentation/views/widgets/almostRunO
 import 'package:pharmacy_app/generated/l10n.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
+import '../../../../../core/utils/app_images.dart';
+
 class AlmostRunOutGrid extends StatelessWidget {
   const AlmostRunOutGrid({
     super.key,
@@ -21,9 +23,16 @@ class AlmostRunOutGrid extends StatelessWidget {
         if (state is OutOfStockSuccess) {
           if (state.medicines.isEmpty) {
             return Center(
-              child: Text(
-                S.of(context).noOutOfStock,
-                style: Theme.of(context).textTheme.titleMedium,
+              child: Column(
+                children: [
+                  Image.asset(
+                    AppImages.noData,
+                  ),
+                  Text(
+                    S.of(context).noOutOfStock,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                ],
               ),
             );
           }
