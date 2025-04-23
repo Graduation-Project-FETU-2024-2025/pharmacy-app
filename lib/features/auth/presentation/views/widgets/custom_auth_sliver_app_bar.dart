@@ -43,7 +43,9 @@ class CustomAuthSliverAppBar extends StatelessWidget {
           width: double.infinity,
           height: 20,
           decoration: BoxDecoration(
-            color: AppColors.white,
+            color:  Theme.of(context).brightness == Brightness.dark
+          ? AppColors.black
+          : AppColors.white,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(50.r),
               topRight: Radius.circular(50.r),

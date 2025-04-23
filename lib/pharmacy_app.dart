@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmacy_app/core/database/cache/cache_keys.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/global_cubits/change_language_cubit/change_language_cubit.dart';
 import 'package:pharmacy_app/core/global_cubits/change_language_cubit/change_language_state.dart';
+import 'package:pharmacy_app/core/global_cubits/change_themes_cubit/change_themes_cubit.dart';
 import 'package:pharmacy_app/core/routers/app_routers.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
@@ -29,11 +31,13 @@ class PharmacyApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: S.delegate.supportedLocales,
-              locale: Locale(getIt<CacheHelper>().getCurrentLanguage()),
+              locale: Locale(getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage)??'en'),
               initialRoute: Routing.splash,
               theme: Themes.lightTheme,
               darkTheme: Themes.darkTheme,
-              themeMode: ThemeMode.light,
+              themeMode: context.watch<ChangeThemesCubit>().isDarkMode
+                  ? ThemeMode.dark
+                  : ThemeMode.light,
               onGenerateRoute: AppRouters().generateRoute,
             );
           },

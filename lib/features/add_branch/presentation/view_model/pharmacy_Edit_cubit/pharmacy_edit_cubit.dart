@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -47,6 +49,7 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
       ),
     ];
     final pharmacyId = await SecureStorage.instance.getData(key: "id");
+    print('the Pharmacy ID ======================== $pharmacyId');
     emit(AddBranchLoading());
     final branch = AddBranchModel(
       pharmacyId: pharmacyId!,
@@ -64,6 +67,7 @@ class PharmacyEditCubit extends Cubit<PharmacyEditState> {
       arAddress: arAddressController.text,
       workingHours: workingHoursList,
     );
+    log(branch.toString());
     final result = await addBranchRepo.addBranch(branch);
     result.fold(
       (apiErrorModel) => emit(AddBranchFailure(apiErrorModel)),

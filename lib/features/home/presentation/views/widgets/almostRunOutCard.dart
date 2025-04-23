@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmacy_app/core/database/cache/cache_keys.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/features/home/data/models/out_of_stock_model.dart';
@@ -16,7 +17,8 @@ class AlmostRunOutCard extends StatelessWidget {
   final OutOfStockModel ofStockModel;
   @override
   Widget build(BuildContext context) {
-    String lang = getIt<CacheHelper>().getCurrentLanguage();
+    String lang =
+        getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage) ?? 'en';
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -54,9 +56,9 @@ class AlmostRunOutCard extends StatelessWidget {
                   height: 8.h,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(
-                    left: lang == 'en' ? 24.w : 0,
-                    right: lang == 'ar' ? 24.w : 0,
+                  padding: EdgeInsetsDirectional.only(
+                    end: 24.w,
+                    start: 24.w,
                   ),
                   child: Text(
                     lang == 'ar'
