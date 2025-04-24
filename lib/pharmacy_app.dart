@@ -31,13 +31,15 @@ class PharmacyApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: S.delegate.supportedLocales,
-              locale: Locale(getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage)??'en'),
-              initialRoute: Routing.splash,
+              locale: Locale(getIt<CacheHelper>()
+                      .getString(key: CacheKeys.currentLanguage) ??
+                  'en'),
               theme: Themes.lightTheme,
               darkTheme: Themes.darkTheme,
               themeMode: context.watch<ChangeThemesCubit>().isDarkMode
                   ? ThemeMode.dark
                   : ThemeMode.light,
+              initialRoute: Routing.splash,
               onGenerateRoute: AppRouters().generateRoute,
             );
           },
