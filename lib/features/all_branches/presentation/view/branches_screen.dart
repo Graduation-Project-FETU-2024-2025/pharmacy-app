@@ -48,7 +48,7 @@ class BranchesScreen extends StatelessWidget {
                   if (state.branches.isEmpty) {
                     return SliverToBoxAdapter(
                         child: Image.asset(
-                      AppImages.noData,
+                      AppImages.newNoData,
                       width: 300.w,
                       height: 300.h,
                     ));

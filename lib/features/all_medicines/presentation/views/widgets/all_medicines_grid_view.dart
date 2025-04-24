@@ -28,7 +28,7 @@ class AllMedicinesGridview extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(
-                    AppImages.noData,
+                    AppImages.newNoData,
                   ),
                   Text(
                     S.of(context).noMedicines,
@@ -70,7 +70,7 @@ class AllMedicinesGridview extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(
-                    AppImages.noData,
+                    AppImages.newNoData,
                   ),
                   Text(
                     S.of(context).noOutOfStock,
@@ -120,7 +120,7 @@ class AllMedicinesGridview extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(
-                    AppImages.noData,
+                    AppImages.newNoData,
                   ),
                   Text(
                     S.of(context).noLastAdded,

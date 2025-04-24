@@ -26,7 +26,7 @@ class AlmostRunOutGrid extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(
-                    AppImages.noData,
+                    AppImages.newNoData,
                   ),
                   Text(
                     S.of(context).noOutOfStock,

@@ -122,6 +122,9 @@ class AlmostRunOutCard extends StatelessWidget {
                         AppImages.imgBranch,
                         width: 12.w,
                         height: 12.h,
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? AppColors.white
+                            : AppColors.black,
                       ),
                       SizedBox(width: 2),
                       Text(

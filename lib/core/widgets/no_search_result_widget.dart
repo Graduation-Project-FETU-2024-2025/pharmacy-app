@@ -11,7 +11,9 @@ class NoSearchResult extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset(AppImages.imgNoSearch),
+        Image.asset(
+          AppImages.imgNoSearch,
+        ),
         Positioned(
           bottom: 0,
           left: 0,

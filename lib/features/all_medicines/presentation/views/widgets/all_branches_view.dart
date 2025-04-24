@@ -38,7 +38,7 @@ class AllBranchesView extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Image.asset(
-                            AppImages.noData,
+                            AppImages.newNoData,
                           ),
                           Text(
                             S.of(context).noMedicineFound,

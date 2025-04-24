@@ -55,7 +55,9 @@ class _FilterDialogState extends State<FilterDialog> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(30),
       ),
-      backgroundColor: AppColors.white,
+      backgroundColor: Theme.of(context).brightness == Brightness.light
+          ? AppColors.white
+          : AppColors.black,
       child: SizedBox(
         height: 240.h,
         child: SingleChildScrollView(
