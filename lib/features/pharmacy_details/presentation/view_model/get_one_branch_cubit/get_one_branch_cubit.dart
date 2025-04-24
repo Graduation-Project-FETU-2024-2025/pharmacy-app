@@ -9,12 +9,21 @@ class GetOneBranchCubit extends Cubit<GetOneBranchState> {
   final String branchId;
 
   Future<void> fetchOneBranch() async {
+    if (isClosed) return;
     emit(GetOneBranchLoading());
     final result = await getOneBranchRepo.getBranch(branchId);
+    if (isClosed) return;
     result.fold(
-      (apiErrorModel) =>
-          emit(GetOneBranchFailure(apiErrorModel: apiErrorModel)),
-      (branch) => emit(GetOneBranchSuccess(branch: branch)),
+      (apiErrorModel) {
+        if (!isClosed) {
+          emit(GetOneBranchFailure(apiErrorModel: apiErrorModel));
+        }
+      },
+      (branch) {
+        if (!isClosed) {
+          emit(GetOneBranchSuccess(branch: branch));
+        }
+      },
     );
   }
 }

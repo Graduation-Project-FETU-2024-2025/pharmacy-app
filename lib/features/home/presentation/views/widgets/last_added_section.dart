@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
-import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/features/home/presentation/views/widgets/last_added_list_view.dart';
 
 import '../../../../../generated/l10n.dart';
@@ -14,9 +12,8 @@ class LastAddedSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
-        left: getIt<CacheHelper>().getCurrentLanguage() == 'en' ? 24.w : 0,
-        right: getIt<CacheHelper>().getCurrentLanguage() == 'ar' ? 24.w : 0,
+      padding: EdgeInsetsDirectional.only(
+        start: 24.w,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

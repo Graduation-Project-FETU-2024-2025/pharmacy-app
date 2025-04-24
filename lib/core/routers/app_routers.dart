@@ -13,6 +13,8 @@ import 'package:pharmacy_app/features/all_branches/data/repo/get_branches_repo.d
 import 'package:pharmacy_app/features/all_branches/presentation/view/branches_screen.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view_model/cubit/get_branches/get_branches_cubit.dart';
 import 'package:pharmacy_app/features/all_medicines/data/repos/get_branch_products_repo.dart';
+import 'package:pharmacy_app/features/all_medicines/data/repos/get_last_added_branch_repo.dart';
+import 'package:pharmacy_app/features/all_medicines/data/repos/get_out_of_stock_branch_repo.dart';
 import 'package:pharmacy_app/features/all_medicines/presentation/view_models/cubit/get_branch_products_cubit.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
 import 'package:pharmacy_app/features/auth/presentation/view_model/otp_cubit/otp_cubit.dart';
@@ -86,9 +88,11 @@ class AppRouters {
         return _buildRoute(HomeView());
       case Routing.allMedicinesScreen:
         return _buildRoute(BlocProvider(
-          create: (context) =>
-              GetBranchProductsCubit(getIt<GetBranchProductsRepo>())
-                ..selectBranch(),
+          create: (context) => GetBranchProductsCubit(
+            getBranchProductsRepo: getIt<GetBranchProductsRepo>(),
+            getOutOfStockBranchRepo: getIt<GetOutOfStockBranchRepo>(),
+            getLastAddedBranchRepo: getIt<GetLastAddedBranchRepo>(),
+          )..selectBranch(),
           child: AllMedicineView(),
         ));
       case Routing.medicineDetails:

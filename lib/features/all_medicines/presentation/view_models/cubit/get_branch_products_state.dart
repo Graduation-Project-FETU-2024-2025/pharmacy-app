@@ -12,6 +12,16 @@ final class GetBranchProductsSuccess extends GetBranchProductsState {
   GetBranchProductsSuccess({required this.medicines});
 }
 
+final class GetOutOfStockBranchsSuccess extends GetBranchProductsState {
+  final List<OutOfStockModel> medicines;
+  GetOutOfStockBranchsSuccess({required this.medicines});
+}
+
+final class GetLastAddedBranchsSuccess extends GetBranchProductsState {
+  final List<LastAddedModel> medicines;
+  GetLastAddedBranchsSuccess({required this.medicines});
+}
+
 final class SearchBranchProductsSuccess extends GetBranchProductsState {
   final List<MedicineBranchModel> medicines;
   SearchBranchProductsSuccess({required this.medicines});

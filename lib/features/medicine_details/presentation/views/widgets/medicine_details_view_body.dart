@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pharmacy_app/core/database/cache/cache_keys.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
@@ -11,13 +10,15 @@ import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 import 'package:pharmacy_app/core/widgets/add_delete_button.dart';
 import 'package:pharmacy_app/core/widgets/error_api_widget.dart';
-import 'package:pharmacy_app/features/auth/presentation/views/widgets/loading_widget.dart';
+import 'package:pharmacy_app/features/all_medicines/data/models/medicine_branch_model.dart';
+import 'package:pharmacy_app/features/all_medicines/data/models/product_dto_model.dart';
 import 'package:pharmacy_app/features/medicine_details/data/repos/delete_repo.dart';
 import 'package:pharmacy_app/features/medicine_details/presentation/view_models/delete_cubit/delete_cubit.dart';
 import 'package:pharmacy_app/features/medicine_details/presentation/view_models/get_medicine/get_medicine_cubit.dart';
 import 'package:pharmacy_app/features/medicine_details/presentation/views/widgets/delete_button_consumer.dart';
 import 'package:pharmacy_app/features/update_medicine/presentation/view_models/update_medicine/update_medcine_cubit.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 import 'all_info_medicine.dart';
 
@@ -41,21 +42,18 @@ class MedicineDetailsViewBody extends StatelessWidget {
               children: [
                 Stack(
                   children: [
-                    getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage) == 'ar'
-                        ? Positioned(
-                            top: 16.h,
-                            left: 16.w,
-                            child: SvgPicture.asset(
-                              AppIcons.iconsBack,
-                            ),
-                          )
-                        : Positioned(
-                            top: 16.h,
-                            right: 16.w,
-                            child: SvgPicture.asset(
-                              AppIcons.iconsBackRight,
-                            ),
+                    Container(
+                      width: double.infinity,
+                      height: 360.h,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: CachedNetworkImageProvider(
+                            state.medicineBranchModel.productsDTO.image,
                           ),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
                     Positioned(
                       bottom: 35.h,
                       left: MediaQuery.sizeOf(context).width * 0.38.w,
@@ -70,16 +68,18 @@ class MedicineDetailsViewBody extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                      width: double.infinity,
-                      height: 360.h,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: CachedNetworkImageProvider(
-                            state.medicineBranchModel.productsDTO.image,
-                          ),
-                          fit: BoxFit.fill,
-                        ),
+                    PositionedDirectional(
+                      top: 16.h,
+                      start: 16.w,
+                      child: GestureDetector(
+                        onTap: () => Navigator.pop(context),
+                        child: getIt<CacheHelper>().getCurrentLanguage() == 'en'
+                            ? SvgPicture.asset(
+                                AppIcons.iconsBack,
+                              )
+                            : SvgPicture.asset(
+                                AppIcons.iconsBackRight,
+                              ),
                       ),
                     ),
                   ],
@@ -153,7 +153,52 @@ class MedicineDetailsViewBody extends StatelessWidget {
             child: ErrorApiWidget(message: state.apiErrorModel.message!),
           );
         } else {
-          return LoadingWidget();
+          return Skeletonizer(
+            effect: ShimmerEffect(),
+            enabled: true,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: double.infinity,
+                  height: 360.h,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: CachedNetworkImageProvider(
+                        'https://dkud4u09qff41.cloudfront.net/Products/ac84b8ac-e0e8-45e8-827f-7c7a3b0c5aca.jpeg',
+                      ),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 16.h,
+                  ),
+                  child: AllIfoMedicine(
+                    medicineBranchModel: MedicineBranchModel(
+                      branchId: branchId,
+                      name: 'kcdj',
+                      systemProductCode: '12345678',
+                      stock: 0,
+                      price: 0,
+                      visibility: true,
+                      productsDTO: ProductDtoModel(
+                        code: "123456789",
+                        arName: 'arName',
+                        enName: 'enName',
+                        image: 'image',
+                        type: 'type',
+                        activePrincipal: '',
+                        companyName: 'companyName',
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
         }
       },
     );

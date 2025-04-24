@@ -9,6 +9,10 @@ import 'package:pharmacy_app/features/add_medicine/data/repos/get_system_medicin
 import 'package:pharmacy_app/features/add_medicine/data/repos/get_system_medicines_repo_impl.dart';
 import 'package:pharmacy_app/features/all_branches/data/repo/get_branches_repo.dart';
 import 'package:pharmacy_app/features/all_medicines/data/repos/get_branch_products_repo.dart';
+import 'package:pharmacy_app/features/all_medicines/data/repos/get_last_added_branch_repo.dart';
+import 'package:pharmacy_app/features/all_medicines/data/repos/get_last_added_branch_repo_impl.dart';
+import 'package:pharmacy_app/features/all_medicines/data/repos/get_out_of_stock_branch_repo.dart';
+import 'package:pharmacy_app/features/all_medicines/data/repos/get_out_of_stock_branch_repo_impl.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo_impl.dart';
 import 'package:pharmacy_app/features/home/data/repos/last_added_repo.dart';
@@ -85,5 +89,11 @@ void setup() {
   );
   getIt.registerLazySingleton<LastAddedRepo>(
     () => LastAddedRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<GetOutOfStockBranchRepo>(
+    () => GetOutOfStockBranchRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<GetLastAddedBranchRepo>(
+    () => GetLastAddedBranchRepoImpl(apiConsumer: getIt<ApiConsumer>()),
   );
 }

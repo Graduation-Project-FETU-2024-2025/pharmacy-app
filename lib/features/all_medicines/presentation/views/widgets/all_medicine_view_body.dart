@@ -27,49 +27,72 @@ class _AllMedicineViewBodyState extends State<AllMedicineViewBody> {
   @override
   Widget build(BuildContext context) {
     final getBranchProductsCubit = GetBranchProductsCubit.get(context);
-    return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 24.0.h),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    showDialog(
-                      context: context,
-                      builder: (context) => FilterDialog(
-                        selectedIndex: selectedIndex,
-                        onSelect: updateSelection,
+    return RefreshIndicator(
+      onRefresh: () async {
+        if (selectedIndex == 0) {
+          getBranchProductsCubit.getBranchProducts(
+            branchId: getBranchProductsCubit.currentBranchId!,
+          );
+        }
+        if (selectedIndex == 1) {
+          getBranchProductsCubit.fetechOutOfStock(
+            branchId: getBranchProductsCubit.currentBranchId!,
+          );
+        }
+        if (selectedIndex == 2) {
+          getBranchProductsCubit.fetechLastAdded(
+            branchId: getBranchProductsCubit.currentBranchId!,
+          );
+        }
+      },
+      color: AppColors.primaryColor,
+      child: SingleChildScrollView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 24.0.h),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) => FilterDialog(
+                          getBranchCubit: getBranchProductsCubit,
+                          branchId: getBranchProductsCubit.currentBranchId!,
+                          selectedIndex: selectedIndex,
+                          onSelect: updateSelection,
+                        ),
+                      );
+                    },
+                    child: SvgPicture.asset(
+                      AppIcons.iconsFilter,
+                      width: 24.w,
+                      height: 24.h,
+                      colorFilter: const ColorFilter.mode(
+                        AppColors.primaryColor,
+                        BlendMode.srcIn,
                       ),
-                    );
-                  },
-                  child: SvgPicture.asset(
-                    AppIcons.iconsFilter,
-                    width: 24.w,
-                    height: 24.h,
-                    colorFilter: const ColorFilter.mode(
-                      AppColors.primaryColor,
-                      BlendMode.srcIn,
                     ),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(height: 20.h),
-            SearchTextField(
-              onChanged: (value) {
-                getBranchProductsCubit.searchInBranchProducts();
-              },
-              onPressed: () {
-                getBranchProductsCubit.searchInBranchProducts();
-              },
-              controller: getBranchProductsCubit.searchController,
-            ),
-            SizedBox(height: 60.h),
-            AllMedicinesGridview(),
-          ],
+                ],
+              ),
+              SizedBox(height: 20.h),
+              SearchTextField(
+                onChanged: (value) {
+                  getBranchProductsCubit.searchInBranchProducts();
+                },
+                onPressed: () {
+                  getBranchProductsCubit.searchInBranchProducts();
+                },
+                controller: getBranchProductsCubit.searchController,
+              ),
+              SizedBox(height: 60.h),
+              AllMedicinesGridview(),
+            ],
+          ),
         ),
       ),
     );
