@@ -34,6 +34,17 @@ class PharmacyApp extends StatelessWidget {
               locale: Locale(getIt<CacheHelper>()
                       .getString(key: CacheKeys.currentLanguage) ??
                   'en'),
+              builder: (context, child) {
+                final mediaQuery = MediaQuery.of(context);
+                return MediaQuery(
+                  data: mediaQuery.copyWith(
+                    textScaler: TextScaler.linear(
+                      1.0,
+                    ),
+                  ), 
+                  child: child!,
+                );
+              },
               theme: Themes.lightTheme,
               darkTheme: Themes.darkTheme,
               themeMode: context.watch<ChangeThemesCubit>().isDarkMode
