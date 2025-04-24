@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
 
+import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/widgets/custom_edit_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
 
@@ -42,9 +43,19 @@ class _DeliveryStatusFieldState extends State<DeliveryStatusField> {
           left: 15.h,
           child: DropdownButtonHideUnderline(
             child: DropdownButton<String>(
-              dropdownColor: Colors.white,
+              dropdownColor: Theme.of(context).brightness == Brightness.light
+                  ? Colors.white
+                  : Colors.black,
               borderRadius: BorderRadius.circular(20),
-              icon: SvgPicture.asset(AppIcons.arrowDown),
+              icon: SvgPicture.asset(
+                AppIcons.arrowDown,
+                colorFilter: ColorFilter.mode(
+                  Theme.of(context).brightness == Brightness.light
+                      ? AppColors.black.withOpacity(0.7)
+                      : AppColors.white.withOpacity(0.7),
+                  BlendMode.srcIn,
+                ),
+              ),
               onChanged: (String? newValue) {
                 setState(() {
                   selectedStatus = newValue;

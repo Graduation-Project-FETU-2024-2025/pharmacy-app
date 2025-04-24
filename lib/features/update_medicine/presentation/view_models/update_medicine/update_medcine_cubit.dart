@@ -41,11 +41,6 @@ class UpdateMedcineCubit extends Cubit<UpdateMedcineState> {
     );
   }
 
-  void setInitialValues({required String price, required String stock}) {
-    medicinePriceController.text = price;
-    medicineStockController.text = stock;
-  }
-
   @override
   Future<void> close() {
     medicinePriceController.dispose();

@@ -16,6 +16,9 @@ class SystemMedicineCard extends StatelessWidget {
         width: 157,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
+          color: Theme.of(context).brightness == Brightness.light
+              ? AppColors.white
+              : AppColors.darkWhite,
           border: Border.all(
             color: Color(0xffB3B3B3),
           ),
@@ -75,7 +78,10 @@ class SystemMedicineCard extends StatelessWidget {
                                     .textTheme
                                     .bodySmall
                                     ?.copyWith(
-                                      color: AppColors.black.withOpacity(0.6),
+                                      color: Theme.of(context).brightness ==
+                                              Brightness.light
+                                          ? AppColors.black.withOpacity(0.6)
+                                          : AppColors.white.withOpacity(0.6),
                                     ),
                               ),
                             ],

@@ -28,7 +28,7 @@ class LastAddedListView extends StatelessWidget {
                 children: [
                   Flexible(
                     child: Image.asset(
-                      AppImages.noData,
+                      AppImages.newNoData,
                     ),
                   ),
                   Text(
