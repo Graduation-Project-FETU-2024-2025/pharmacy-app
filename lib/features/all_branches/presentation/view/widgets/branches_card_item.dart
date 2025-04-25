@@ -15,6 +15,8 @@ class BranchesCardItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    final cardColor = isDarkMode ? Colors.white24 : AppColors.primaryColor.withOpacity(0.2);
     return GestureDetector(
       onTap: () async {
         context
@@ -30,7 +32,7 @@ class BranchesCardItems extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25),
-            color: AppColors.primaryColor.withOpacity(0.2),
+            color: cardColor,
           ),
           child: Row(
             children: [
