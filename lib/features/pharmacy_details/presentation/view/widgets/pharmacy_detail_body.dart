@@ -58,6 +58,7 @@ class PharmacyDetailBody extends StatelessWidget {
             S.of(context).deliveryAreaAndPrice,
             style: Theme.of(context).textTheme.titleSmall,
           ),
+          Gap(15.h),
           DeliveryAreaCard(
               phoneNum: branch.phoneNumber,
               pricePerKilo: branch.pricePerKilo,
