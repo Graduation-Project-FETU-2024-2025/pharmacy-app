@@ -68,7 +68,7 @@ class PharmacyDetailShimmer extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 4.h),
+          SizedBox(height: 14.h),
           Padding(
             padding: const EdgeInsets.only(bottom: 19.0, left: 10, right: 10),
             child: Shimmer.fromColors(

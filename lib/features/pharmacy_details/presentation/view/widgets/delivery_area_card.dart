@@ -18,6 +18,7 @@ class DeliveryAreaCard extends StatelessWidget {
           ? AppColors.white
           : AppColors.white.withOpacity(0.15),
       elevation: 2,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
           padding: EdgeInsets.all(18),
           child: DeliveryCardDetail(
