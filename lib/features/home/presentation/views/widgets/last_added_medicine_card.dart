@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
-import 'package:pharmacy_app/core/utils/app_images.dart';
 import 'package:pharmacy_app/features/home/data/models/last_added_model.dart';
 
 import '../../../../../core/utils/app_colors.dart';
@@ -103,23 +102,35 @@ class LastAddedMedicineCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Spacer(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Image.asset(
-                          AppImages.imgBranch,
-                          width: 12.w,
-                          height: 12.h,
-                        ),
-                        SizedBox(width: 2),
-                        Text(
-                          medicineModel.branchName,
-                          style: Theme.of(context).textTheme.displaySmall,
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 8.h),
+                    // Spacer(),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.start,
+                    //   children: [
+                    //     Image.asset(
+                    //       AppImages.imgBranch,
+                    //       width: 12.w,
+                    //       height: 12.h,
+                    //       color:
+                    //           Theme.of(context).brightness == Brightness.light
+                    //               ? AppColors.black
+                    //               : AppColors.white,
+                    //     ),
+                    //     SizedBox(width: 2),
+                    //     Text(
+                    //       medicineModel.branchName,
+                    //       style: Theme.of(context)
+                    //           .textTheme
+                    //           .displaySmall!
+                    //           .copyWith(
+                    //             color: Theme.of(context).brightness ==
+                    //                     Brightness.dark
+                    //                 ? AppColors.white
+                    //                 : AppColors.primaryColor,
+                    //           ),
+                    //     ),
+                    //   ],
+                    // ),
+                    // SizedBox(height: 8.h),
                   ],
                 ),
               ),

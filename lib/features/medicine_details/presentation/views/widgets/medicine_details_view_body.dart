@@ -148,7 +148,11 @@ class MedicineDetailsViewBody extends StatelessWidget {
           );
         } else {
           return Skeletonizer(
-            effect: ShimmerEffect(),
+            effect: ShimmerEffect(
+              baseColor: Theme.of(context).brightness == Brightness.dark
+                  ? AppColors.darkGray
+                  : AppColors.lightGray,
+            ),
             enabled: true,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

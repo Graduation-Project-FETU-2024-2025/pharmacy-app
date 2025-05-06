@@ -11,13 +11,11 @@ class GetLastAddedBranchRepoImpl implements GetLastAddedBranchRepo {
 
   GetLastAddedBranchRepoImpl({required this.apiConsumer});
   @override
-  Future<Either<ApiErrorModel, LastAddedResponseModel>> fetchLastAddedBranch({
-    required String branchId,
-  }) async {
+  Future<Either<ApiErrorModel, LastAddedResponseModel>>
+      fetchLastAddedBranch() async {
     try {
       final response = await apiConsumer.get(
         EndPoints.getLastAdded,
-        queryParameter: {"branch_id": branchId},
       );
       if (response.statusCode == 204) {
         return right(LastAddedResponseModel(

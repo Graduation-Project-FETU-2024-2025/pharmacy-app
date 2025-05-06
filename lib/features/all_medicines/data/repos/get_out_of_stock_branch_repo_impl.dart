@@ -12,13 +12,14 @@ class GetOutOfStockBranchRepoImpl implements GetOutOfStockBranchRepo {
   GetOutOfStockBranchRepoImpl({required this.apiConsumer});
   @override
   Future<Either<ApiErrorModel, OutOfStockResponseModel>>
-      fetechOutOfStockBranch({
-    required String branchId,
-  }) async {
+      fetechOutOfStockBranch() async {
     try {
       final response = await apiConsumer.get(
         EndPoints.getOutOfStock,
-        queryParameter: {"page": 1, "pageSize": 10, "branch_id": branchId},
+        queryParameter: {
+          "page": 1,
+          "pageSize": 10,
+        },
       );
       if (response.statusCode == 204) {
         return right(OutOfStockResponseModel(

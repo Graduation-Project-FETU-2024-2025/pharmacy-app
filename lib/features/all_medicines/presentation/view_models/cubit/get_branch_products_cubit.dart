@@ -69,32 +69,32 @@ class GetBranchProductsCubit extends Cubit<GetBranchProductsState> {
 
   void fetechOutOfStock({required String branchId}) async {
     emit(GetBranchProductsLoading());
-    final result = await getOutOfStockBranchRepo.fetechOutOfStockBranch(
-      branchId: branchId,
-    );
+    final result = await getOutOfStockBranchRepo.fetechOutOfStockBranch();
     result.fold(
-      (apiErrorModel) => emit(
-        GetBranchProductsFailure(apiErrorModel: apiErrorModel),
-      ),
-      (right) => emit(
-        GetOutOfStockBranchsSuccess(medicines: right.data),
-      ),
-    );
+        (apiErrorModel) => emit(
+              GetBranchProductsFailure(apiErrorModel: apiErrorModel),
+            ), (right) {
+      final filtered =
+          right.data.where((med) => med.branchId == currentBranchId).toList();
+      emit(
+        GetOutOfStockBranchsSuccess(medicines: filtered),
+      );
+    });
   }
 
   void fetechLastAdded({required String branchId}) async {
     emit(GetBranchProductsLoading());
-    final result = await getLastAddedBranchRepo.fetchLastAddedBranch(
-      branchId: branchId,
-    );
+    final result = await getLastAddedBranchRepo.fetchLastAddedBranch();
     result.fold(
-      (apiErrorModel) => emit(
-        GetBranchProductsFailure(apiErrorModel: apiErrorModel),
-      ),
-      (right) => emit(
-        GetLastAddedBranchsSuccess(medicines: right.data),
-      ),
-    );
+        (apiErrorModel) => emit(
+              GetBranchProductsFailure(apiErrorModel: apiErrorModel),
+            ), (right) {
+      final filtered =
+          right.data.where((med) => med.branchId == currentBranchId).toList();
+      emit(
+        GetLastAddedBranchsSuccess(medicines: filtered),
+      );
+    });
   }
 
   void selectBranch() {
