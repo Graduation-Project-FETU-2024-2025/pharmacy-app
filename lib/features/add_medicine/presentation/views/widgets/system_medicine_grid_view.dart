@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/routers/routing.dart';
+import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/widgets/error_api_widget.dart';
 import 'package:pharmacy_app/core/widgets/no_search_result_widget.dart';
 import 'package:pharmacy_app/features/add_medicine/data/models/system_medicine_model.dart';
@@ -56,7 +57,11 @@ class SystemMedicineGridView extends StatelessWidget {
           );
         } else {
           return Skeletonizer(
-            effect: ShimmerEffect(),
+            effect: ShimmerEffect(
+              baseColor: Theme.of(context).brightness == Brightness.dark
+                  ? AppColors.darkGray
+                  : AppColors.lightGray,
+            ),
             enabled: true,
             child: GridView.builder(
               itemCount: 4,

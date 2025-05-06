@@ -91,7 +91,11 @@ class AllBranchesView extends StatelessWidget {
           } else {
             return Skeletonizer(
               enabled: true,
-              effect: ShimmerEffect(),
+              effect: ShimmerEffect(
+                baseColor: Theme.of(context).brightness == Brightness.dark
+                    ? AppColors.darkGray
+                    : AppColors.lightGray,
+              ),
               child: ListView.builder(
                 itemCount: 5,
                 itemBuilder: (context, index) => GestureDetector(

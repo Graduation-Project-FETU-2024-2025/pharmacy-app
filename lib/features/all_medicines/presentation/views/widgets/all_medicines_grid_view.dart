@@ -92,7 +92,15 @@ class AllMedicinesGridview extends StatelessWidget {
                 final result = await Navigator.pushNamed(
                   context,
                   Routing.medicineDetails,
-                  arguments: state.medicines[index],
+                  arguments: MedicineBranchModel(
+                    branchId: state.medicines[index].branchId,
+                    name: state.medicines[index].name,
+                    systemProductCode: state.medicines[index].systemProductCode,
+                    stock: state.medicines[index].stock,
+                    price: state.medicines[index].price,
+                    visibility: state.medicines[index].visibility,
+                    productsDTO: state.medicines[index].productsDTO,
+                  ),
                 );
                 if (result == true) {
                   cubit.getBranchProducts(branchId: cubit.currentBranchId!);
@@ -142,7 +150,15 @@ class AllMedicinesGridview extends StatelessWidget {
                 final result = await Navigator.pushNamed(
                   context,
                   Routing.medicineDetails,
-                  arguments: state.medicines[index],
+                  arguments: MedicineBranchModel(
+                    branchId: state.medicines[index].branchId,
+                    name: state.medicines[index].name,
+                    systemProductCode: state.medicines[index].systemProductCode,
+                    stock: state.medicines[index].stock,
+                    price: state.medicines[index].price,
+                    visibility: state.medicines[index].visibility,
+                    productsDTO: state.medicines[index].productsDTO,
+                  ),
                 );
                 if (result == true) {
                   cubit.getBranchProducts(branchId: cubit.currentBranchId!);

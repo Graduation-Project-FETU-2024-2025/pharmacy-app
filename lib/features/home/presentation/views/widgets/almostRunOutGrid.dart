@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/widgets/error_api_widget.dart';
 import 'package:pharmacy_app/features/all_medicines/data/models/product_dto_model.dart';
 import 'package:pharmacy_app/features/home/data/models/out_of_stock_model.dart';
@@ -59,7 +60,11 @@ class AlmostRunOutGrid extends StatelessWidget {
         } else {
           return Skeletonizer(
             enabled: true,
-            effect: ShimmerEffect(),
+            effect: ShimmerEffect(
+              baseColor: Theme.of(context).brightness == Brightness.dark
+                  ? AppColors.darkGray
+                  : AppColors.lightGray,
+            ),
             child: GridView.builder(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,

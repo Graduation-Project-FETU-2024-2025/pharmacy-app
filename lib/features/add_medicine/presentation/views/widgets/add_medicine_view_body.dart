@@ -139,6 +139,7 @@ class AddMedicineViewBody extends StatelessWidget {
                     listener: (context, state) {
                       if (state is AddMedicineSuccess) {
                         successToast(message: S.of(context).addMedSuccess);
+                        Navigator.pop(context);
                       }
                       if (state is AddMedicineFailure) {
                         errorToast(message: state.apiErrorModel.message!);

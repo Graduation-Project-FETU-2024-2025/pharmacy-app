@@ -24,7 +24,7 @@ class LastAddedSection extends StatelessWidget {
           ),
           SizedBox(height: 15.h),
           SizedBox(
-            height: 175.h,
+            height: 157.h,
             child: LastAddedListView(),
           ),
         ],

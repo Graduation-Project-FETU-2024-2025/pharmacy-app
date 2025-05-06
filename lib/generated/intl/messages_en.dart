@@ -22,206 +22,169 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
-    "DoageForm": MessageLookupByLibrary.simpleMessage("Dosage Form"),
-    "activeSubstance": MessageLookupByLibrary.simpleMessage("Active Substance"),
-    "add": MessageLookupByLibrary.simpleMessage("Add"),
-    "addMedFail": MessageLookupByLibrary.simpleMessage(
-      "Failed to Add Medicine",
-    ),
-    "addMedSuccess": MessageLookupByLibrary.simpleMessage(
-      "Medicine Added Successfully",
-    ),
-    "address": MessageLookupByLibrary.simpleMessage("address"),
-    "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
-    "allMedicines": MessageLookupByLibrary.simpleMessage("All Medicines"),
-    "almostRunOut": MessageLookupByLibrary.simpleMessage("Nearly out of stock"),
-    "arAddress": MessageLookupByLibrary.simpleMessage("Address in Arabic"),
-    "arBranchName": MessageLookupByLibrary.simpleMessage(
-      "Branch Name in Arabic",
-    ),
-    "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
-    "areYouSureToDelete": MessageLookupByLibrary.simpleMessage(
-      "Are you sure you want to delete this medicine?",
-    ),
-    "areaAndPrice": MessageLookupByLibrary.simpleMessage(
-      "Delivery Area & Price",
-    ),
-    "branch": MessageLookupByLibrary.simpleMessage("Branch"),
-    "branchName": MessageLookupByLibrary.simpleMessage("Branch Name"),
-    "branchStatus": MessageLookupByLibrary.simpleMessage("Branch Status"),
-    "camera": MessageLookupByLibrary.simpleMessage("Camera"),
-    "close": MessageLookupByLibrary.simpleMessage("Close"),
-    "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
-    "delete": MessageLookupByLibrary.simpleMessage("Delete"),
-    "delivery": MessageLookupByLibrary.simpleMessage("Delivery"),
-    "deliveryAreaAndPrice": MessageLookupByLibrary.simpleMessage(
-      "Delivery Area & Price",
-    ),
-    "deliveryMan": MessageLookupByLibrary.simpleMessage("Delivery man name"),
-    "deliveryRange": MessageLookupByLibrary.simpleMessage("Delivery Range"),
-    "description": MessageLookupByLibrary.simpleMessage("Description"),
-    "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
-      "Dr. Stone Pharmacy | Elestad",
-    ),
-    "email": MessageLookupByLibrary.simpleMessage("Email Address"),
-    "emailResentedSuccessfully": MessageLookupByLibrary.simpleMessage(
-      "Email resented Successfully",
-    ),
-    "enAddress": MessageLookupByLibrary.simpleMessage("Address in English"),
-    "enBranchName": MessageLookupByLibrary.simpleMessage(
-      "Branch Name in English",
-    ),
-    "enableLocationService": MessageLookupByLibrary.simpleMessage(
-      "Please enable location service",
-    ),
-    "endTime": MessageLookupByLibrary.simpleMessage("End Time"),
-    "english": MessageLookupByLibrary.simpleMessage("English"),
-    "enterDeliveryRange": MessageLookupByLibrary.simpleMessage(
-      "Please enter the delivery range",
-    ),
-    "enterMinDeliveryPrice": MessageLookupByLibrary.simpleMessage(
-      "Please enter the minimum delivery price",
-    ),
-    "enterOTP": MessageLookupByLibrary.simpleMessage("Enter OTP"),
-    "enterOTPWeSent": MessageLookupByLibrary.simpleMessage(
-      "Enter OTP we sent you at",
-    ),
-    "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
-      "Please enter the phone number",
-    ),
-    "enterPrice": MessageLookupByLibrary.simpleMessage("Enter Price"),
-    "enterPricePerKilo": MessageLookupByLibrary.simpleMessage(
-      "Please enter the price per kilo",
-    ),
-    "enterQuantity": MessageLookupByLibrary.simpleMessage("Enter Quantity"),
-    "enterValidNumber": MessageLookupByLibrary.simpleMessage(
-      "Must be a valid number",
-    ),
-    "error": MessageLookupByLibrary.simpleMessage("Error"),
-    "fieldRequired": MessageLookupByLibrary.simpleMessage("field Required"),
-    "form": MessageLookupByLibrary.simpleMessage("Form"),
-    "freeDelivery": MessageLookupByLibrary.simpleMessage("Free Delivery"),
-    "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
-    "getAddressInfo": MessageLookupByLibrary.simpleMessage("Get Address Info"),
-    "haveNotReceivedOTP": MessageLookupByLibrary.simpleMessage(
-      "Haven\'t received OTP?",
-    ),
-    "hi": MessageLookupByLibrary.simpleMessage("Hi"),
-    "homeMessage": MessageLookupByLibrary.simpleMessage(
-      "We will deliver you medicines!",
-    ),
-    "inStock": MessageLookupByLibrary.simpleMessage("In Stock"),
-    "invalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
-      "Invalid phone number",
-    ),
-    "km": MessageLookupByLibrary.simpleMessage("KM"),
-    "language": MessageLookupByLibrary.simpleMessage("Language"),
-    "lastAdded": MessageLookupByLibrary.simpleMessage("Last Added"),
-    "latitude": MessageLookupByLibrary.simpleMessage("Latitude"),
-    "locateEgTanEstad": MessageLookupByLibrary.simpleMessage(
-      "Egypt, Tanta, El Estad Street",
-    ),
-    "locationPermanentlyDenied": MessageLookupByLibrary.simpleMessage(
-      "Location permission permanently denied",
-    ),
-    "locationPermissionDenied": MessageLookupByLibrary.simpleMessage(
-      "Location permission denied",
-    ),
-    "login": MessageLookupByLibrary.simpleMessage("Login"),
-    "loginToYourAccount": MessageLookupByLibrary.simpleMessage(
-      "Login to your account",
-    ),
-    "logout": MessageLookupByLibrary.simpleMessage("Log Out"),
-    "longitude": MessageLookupByLibrary.simpleMessage("Longitude"),
-    "lowestPrice": MessageLookupByLibrary.simpleMessage("Lowest price"),
-    "manufacturer": MessageLookupByLibrary.simpleMessage("Manufacturer"),
-    "medicineInformation": MessageLookupByLibrary.simpleMessage(
-      "Medicine Information",
-    ),
-    "medicineName": MessageLookupByLibrary.simpleMessage("Medicine Name"),
-    "mileage": MessageLookupByLibrary.simpleMessage("Mileage"),
-    "name": MessageLookupByLibrary.simpleMessage("Name"),
-    "no": MessageLookupByLibrary.simpleMessage("No"),
-    "noBranches": MessageLookupByLibrary.simpleMessage("No Branches Found"),
-    "noDelivery": MessageLookupByLibrary.simpleMessage("No Delivery"),
-    "noLastAdded": MessageLookupByLibrary.simpleMessage(
-      "No newly added medicines",
-    ),
-    "noMedicineFound": MessageLookupByLibrary.simpleMessage(
-      "No medicines found",
-    ),
-    "noMedicines": MessageLookupByLibrary.simpleMessage(
-      "No Medicines Found in this branch",
-    ),
-    "noOutOfStock": MessageLookupByLibrary.simpleMessage(
-      "No medicines will run out soon",
-    ),
-    "nosearchResult": MessageLookupByLibrary.simpleMessage("No search result"),
-    "onboarding": MessageLookupByLibrary.simpleMessage(
-      "All Services for your health",
-    ),
-    "password": MessageLookupByLibrary.simpleMessage("Password"),
-    "pharmacyInfo": MessageLookupByLibrary.simpleMessage(
-      "Pharmacy Information",
-    ),
-    "pharmacyName": MessageLookupByLibrary.simpleMessage("Pharmacy Name"),
-    "phone": MessageLookupByLibrary.simpleMessage("Phone"),
-    "phoneNum": MessageLookupByLibrary.simpleMessage("Phone Number"),
-    "pleaseCompleteAllFields": MessageLookupByLibrary.simpleMessage(
-      "Please Complete All Fields",
-    ),
-    "pleaseEnterArAddress": MessageLookupByLibrary.simpleMessage(
-      "Please enter the Address in Arabic",
-    ),
-    "pleaseEnterArBranchName": MessageLookupByLibrary.simpleMessage(
-      "Please enter the branch name in Arabic",
-    ),
-    "pleaseEnterEnAddress": MessageLookupByLibrary.simpleMessage(
-      "Please enter the Address in English",
-    ),
-    "pleaseEnterEnBranchName": MessageLookupByLibrary.simpleMessage(
-      "Please enter the branch name in English",
-    ),
-    "pounds": MessageLookupByLibrary.simpleMessage("Pounds"),
-    "price": MessageLookupByLibrary.simpleMessage("Price"),
-    "pricePerKilo": MessageLookupByLibrary.simpleMessage("Price Per Killo"),
-    "quantity": MessageLookupByLibrary.simpleMessage("Quantity"),
-    "resend": MessageLookupByLibrary.simpleMessage("Resend"),
-    "save": MessageLookupByLibrary.simpleMessage("Save"),
-    "searchButtonTitle": MessageLookupByLibrary.simpleMessage("search"),
-    "searchHint": MessageLookupByLibrary.simpleMessage("Search for medicine"),
-    "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
-    "selectBranch": MessageLookupByLibrary.simpleMessage("Select Branch"),
-    "somethingWrong": MessageLookupByLibrary.simpleMessage(
-      "Something Went Wrong",
-    ),
-    "sorry": MessageLookupByLibrary.simpleMessage("Sorry!"),
-    "startTime": MessageLookupByLibrary.simpleMessage("Start Time"),
-    "successAddBranch": MessageLookupByLibrary.simpleMessage(
-      "Branch Added successfully",
-    ),
-    "successDeleteBranch": MessageLookupByLibrary.simpleMessage(
-      "Branch deleted successfully",
-    ),
-    "successUpdatedBranch": MessageLookupByLibrary.simpleMessage(
-      "Branch updated successfully",
-    ),
-    "update": MessageLookupByLibrary.simpleMessage("Update"),
-    "updateMedFail": MessageLookupByLibrary.simpleMessage(
-      "Failed to Update Medicine",
-    ),
-    "updateMedSuccess": MessageLookupByLibrary.simpleMessage(
-      "Medicine Updated Successfully",
-    ),
-    "wantToDeleteBranch": MessageLookupByLibrary.simpleMessage(
-      "Are you sure you want to delete this branch?",
-    ),
-    "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
-    "work24Hour": MessageLookupByLibrary.simpleMessage(
-      "Twenty four hours service !",
-    ),
-    "workingHour": MessageLookupByLibrary.simpleMessage("Working Hours"),
-    "yes": MessageLookupByLibrary.simpleMessage("Yes"),
-  };
+        "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
+        "DoageForm": MessageLookupByLibrary.simpleMessage("Dosage Form"),
+        "activeSubstance":
+            MessageLookupByLibrary.simpleMessage("Active Substance"),
+        "add": MessageLookupByLibrary.simpleMessage("Add"),
+        "addMedFail":
+            MessageLookupByLibrary.simpleMessage("Failed to Add Medicine"),
+        "addMedSuccess":
+            MessageLookupByLibrary.simpleMessage("Medicine Added Successfully"),
+        "address": MessageLookupByLibrary.simpleMessage("address"),
+        "allBranches": MessageLookupByLibrary.simpleMessage("All Branches"),
+        "allMedicines": MessageLookupByLibrary.simpleMessage("All Medicines"),
+        "almostRunOut":
+            MessageLookupByLibrary.simpleMessage("Nearly out of stock"),
+        "arAddress": MessageLookupByLibrary.simpleMessage("Address in Arabic"),
+        "arBranchName":
+            MessageLookupByLibrary.simpleMessage("Branch Name in Arabic"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "areYouSureToDelete": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to delete this medicine?"),
+        "areaAndPrice":
+            MessageLookupByLibrary.simpleMessage("Delivery Area & Price"),
+        "branch": MessageLookupByLibrary.simpleMessage("Branch"),
+        "branchName": MessageLookupByLibrary.simpleMessage("Branch Name"),
+        "branchStatus": MessageLookupByLibrary.simpleMessage("Branch Status"),
+        "camera": MessageLookupByLibrary.simpleMessage("Camera"),
+        "close": MessageLookupByLibrary.simpleMessage("Close"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
+        "delivery": MessageLookupByLibrary.simpleMessage("Delivery"),
+        "deliveryAreaAndPrice":
+            MessageLookupByLibrary.simpleMessage("Delivery Area & Price"),
+        "deliveryMan":
+            MessageLookupByLibrary.simpleMessage("Delivery man name"),
+        "deliveryRange": MessageLookupByLibrary.simpleMessage("Delivery Range"),
+        "description": MessageLookupByLibrary.simpleMessage("Description"),
+        "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
+            "Dr. Stone Pharmacy | Elestad"),
+        "email": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "emailResentedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Email resented Successfully"),
+        "enAddress": MessageLookupByLibrary.simpleMessage("Address in English"),
+        "enBranchName":
+            MessageLookupByLibrary.simpleMessage("Branch Name in English"),
+        "enableLocationService": MessageLookupByLibrary.simpleMessage(
+            "Please enable location service"),
+        "endTime": MessageLookupByLibrary.simpleMessage("End Time"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
+        "enterDeliveryRange": MessageLookupByLibrary.simpleMessage(
+            "Please enter the delivery range"),
+        "enterMinDeliveryPrice": MessageLookupByLibrary.simpleMessage(
+            "Please enter the minimum delivery price"),
+        "enterOTP": MessageLookupByLibrary.simpleMessage("Enter OTP"),
+        "enterOTPWeSent":
+            MessageLookupByLibrary.simpleMessage("Enter OTP we sent you at"),
+        "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
+            "Please enter the phone number"),
+        "enterPrice": MessageLookupByLibrary.simpleMessage("Enter Price"),
+        "enterPricePerKilo": MessageLookupByLibrary.simpleMessage(
+            "Please enter the price per kilo"),
+        "enterQuantity": MessageLookupByLibrary.simpleMessage("Enter Quantity"),
+        "enterValidNumber":
+            MessageLookupByLibrary.simpleMessage("Must be a valid number"),
+        "error": MessageLookupByLibrary.simpleMessage("Error"),
+        "fieldRequired": MessageLookupByLibrary.simpleMessage("field Required"),
+        "form": MessageLookupByLibrary.simpleMessage("Form"),
+        "freeDelivery": MessageLookupByLibrary.simpleMessage("Free Delivery"),
+        "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
+        "getAddressInfo":
+            MessageLookupByLibrary.simpleMessage("Get Address Info"),
+        "haveNotReceivedOTP":
+            MessageLookupByLibrary.simpleMessage("Haven\'t received OTP?"),
+        "hi": MessageLookupByLibrary.simpleMessage("Hi"),
+        "homeMessage": MessageLookupByLibrary.simpleMessage(
+            "We will deliver you medicines!"),
+        "inStock": MessageLookupByLibrary.simpleMessage("In Stock"),
+        "invalidPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Invalid phone number"),
+        "km": MessageLookupByLibrary.simpleMessage("KM"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "lastAdded": MessageLookupByLibrary.simpleMessage("Last Added"),
+        "latitude": MessageLookupByLibrary.simpleMessage("Latitude"),
+        "locateEgTanEstad": MessageLookupByLibrary.simpleMessage(
+            "Egypt, Tanta, El Estad Street"),
+        "locationPermanentlyDenied": MessageLookupByLibrary.simpleMessage(
+            "Location permission permanently denied"),
+        "locationPermissionDenied":
+            MessageLookupByLibrary.simpleMessage("Location permission denied"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "loginToYourAccount":
+            MessageLookupByLibrary.simpleMessage("Login to your account"),
+        "logout": MessageLookupByLibrary.simpleMessage("Log Out"),
+        "longitude": MessageLookupByLibrary.simpleMessage("Longitude"),
+        "lowestPrice": MessageLookupByLibrary.simpleMessage("Lowest price"),
+        "manufacturer": MessageLookupByLibrary.simpleMessage("Manufacturer"),
+        "medicineInformation":
+            MessageLookupByLibrary.simpleMessage("Medicine Information"),
+        "medicineName": MessageLookupByLibrary.simpleMessage("Medicine Name"),
+        "mileage": MessageLookupByLibrary.simpleMessage("Mileage"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
+        "noBranches": MessageLookupByLibrary.simpleMessage("No Branches Found"),
+        "noDelivery": MessageLookupByLibrary.simpleMessage("No Delivery"),
+        "noLastAdded":
+            MessageLookupByLibrary.simpleMessage("No newly added medicines"),
+        "noMedicineFound":
+            MessageLookupByLibrary.simpleMessage("No medicines found"),
+        "noMedicines": MessageLookupByLibrary.simpleMessage(
+            "No Medicines Found in this branch"),
+        "noOutOfStock": MessageLookupByLibrary.simpleMessage(
+            "No medicines will run out soon"),
+        "nosearchResult":
+            MessageLookupByLibrary.simpleMessage("No search result"),
+        "onboarding": MessageLookupByLibrary.simpleMessage(
+            "All Services for your health"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "pharmacyInfo":
+            MessageLookupByLibrary.simpleMessage("Pharmacy Information"),
+        "pharmacyName": MessageLookupByLibrary.simpleMessage("Pharmacy Name"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "phoneNum": MessageLookupByLibrary.simpleMessage("Phone Number"),
+        "pleaseCompleteAllFields":
+            MessageLookupByLibrary.simpleMessage("Please Complete All Fields"),
+        "pleaseEnterArAddress": MessageLookupByLibrary.simpleMessage(
+            "Please enter the Address in Arabic"),
+        "pleaseEnterArBranchName": MessageLookupByLibrary.simpleMessage(
+            "Please enter the branch name in Arabic"),
+        "pleaseEnterEnAddress": MessageLookupByLibrary.simpleMessage(
+            "Please enter the Address in English"),
+        "pleaseEnterEnBranchName": MessageLookupByLibrary.simpleMessage(
+            "Please enter the branch name in English"),
+        "pounds": MessageLookupByLibrary.simpleMessage("Pounds"),
+        "price": MessageLookupByLibrary.simpleMessage("Price"),
+        "pricePerKilo": MessageLookupByLibrary.simpleMessage("Price Per Killo"),
+        "quantity": MessageLookupByLibrary.simpleMessage("Quantity"),
+        "resend": MessageLookupByLibrary.simpleMessage("Resend"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "searchButtonTitle": MessageLookupByLibrary.simpleMessage("search"),
+        "searchHint":
+            MessageLookupByLibrary.simpleMessage("Search for medicine"),
+        "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
+        "selectBranch": MessageLookupByLibrary.simpleMessage("Select Branch"),
+        "somethingWrong":
+            MessageLookupByLibrary.simpleMessage("Something Went Wrong"),
+        "sorry": MessageLookupByLibrary.simpleMessage("Sorry!"),
+        "startTime": MessageLookupByLibrary.simpleMessage("Start Time"),
+        "successAddBranch":
+            MessageLookupByLibrary.simpleMessage("Branch Added successfully"),
+        "successDeleteBranch":
+            MessageLookupByLibrary.simpleMessage("Branch deleted successfully"),
+        "successUpdatedBranch":
+            MessageLookupByLibrary.simpleMessage("Branch updated successfully"),
+        "update": MessageLookupByLibrary.simpleMessage("Update"),
+        "updateMedFail":
+            MessageLookupByLibrary.simpleMessage("Failed to Update Medicine"),
+        "updateMedSuccess": MessageLookupByLibrary.simpleMessage(
+            "Medicine Updated Successfully"),
+        "wantToDeleteBranch": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to delete this branch?"),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
+        "work24Hour":
+            MessageLookupByLibrary.simpleMessage("Twenty four hours service !"),
+        "workingHour": MessageLookupByLibrary.simpleMessage("Working Hours"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
+      };
 }
