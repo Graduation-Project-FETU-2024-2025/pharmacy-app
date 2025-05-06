@@ -41,7 +41,7 @@ class PharmacyApp extends StatelessWidget {
                     textScaler: TextScaler.linear(
                       1.0,
                     ),
-                  ), 
+                  ),
                   child: child!,
                 );
               },

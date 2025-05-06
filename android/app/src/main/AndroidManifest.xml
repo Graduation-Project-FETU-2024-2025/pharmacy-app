@@ -11,7 +11,7 @@
     <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
 
     <application
-        android:label="pharmacy_app"
+        android:label="Afiatuk-pharmacy"
         android:name="${applicationName}"
         android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/ic_launcher">

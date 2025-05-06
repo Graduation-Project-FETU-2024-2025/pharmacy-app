@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pharmacy_app/core/database/cache/cache_keys.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
@@ -48,7 +49,7 @@ class HomeViewBody extends StatelessWidget {
                               width: 3.w,
                             ),
                             Text(
-                              '${S.of(context).hi}, Mohamed!',
+                              '${S.of(context).hi}, ${getIt<CacheHelper>().getString(key: CacheKeys.username) ?? "user"}!',
                               style: Theme.of(context).textTheme.headlineSmall,
                             ),
                             Spacer(),

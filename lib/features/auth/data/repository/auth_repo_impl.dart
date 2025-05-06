@@ -4,7 +4,9 @@ import 'package:pharmacy_app/core/database/api/api_error_handler.dart';
 import 'package:pharmacy_app/core/database/api/api_error_model.dart';
 import 'package:pharmacy_app/core/database/api/end_points.dart';
 import 'package:pharmacy_app/core/database/cache/cache_keys.dart';
+import 'package:pharmacy_app/core/database/cache/cashe_helper.dart';
 import 'package:pharmacy_app/core/database/cache/secure_storage.dart';
+import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/features/auth/data/data/otp_sign_in_response_model.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
 import 'package:jwt_decode/jwt_decode.dart';
@@ -33,13 +35,18 @@ class AuthRepoImpl extends AuthRepo {
       await _cacheTokenAndId(data.token);
       return Right(data.message);
     } catch (e) {
-        return Left(ApiErrorHandler.handleError(e));
+      return Left(ApiErrorHandler.handleError(e));
     }
   }
 
   Future<void> _cacheTokenAndId(String token) async {
     await SecureStorage.instance.addData(key: CacheKeys.token, data: token);
     Map<String, dynamic> payload = Jwt.parseJwt(token);
+    getIt<CacheHelper>().saveData(
+      key: CacheKeys.username,
+      value:
+          payload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'],
+    );
     await SecureStorage.instance
         .addData(key: CacheKeys.id, data: payload['Pharmacy']);
   }
