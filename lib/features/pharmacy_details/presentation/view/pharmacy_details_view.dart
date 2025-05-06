@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/features/all_branches/presentation/view/widgets/custom_sliver_appbar.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view_model/get_one_branch_cubit/get_one_branch_cubit.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view_model/get_one_branch_cubit/get_one_branch_state.dart';
@@ -24,29 +25,51 @@ class PharmacyDetailsView extends StatelessWidget {
         builder: (context, state) {
           return PopScope(
             canPop: false,
-      onPopInvokedWithResult: (didPop, result) async {
-        if (didPop) return;
-        Navigator.of(context).pop(true);
-      },
+            onPopInvokedWithResult: (didPop, result) async {
+              if (didPop) return;
+              Navigator.of(context).pop(true);
+            },
             child: Scaffold(
               body: state is GetOneBranchLoading
                   ? PharmacyDetailShimmer()
                   : state is GetOneBranchFailure
-                      ? Center(
-                          child: Text('${S.of(context).error}: ${state.apiErrorModel.message}'))
-                      : state is GetOneBranchSuccess
-                          ? CustomScrollView(
-                              slivers: [
-                                CustomSliverAppBar(
-                                  img: state.branch.image,
-                                  isBtnValid: false,
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.3,
+                      ? RefreshIndicator(
+                          onRefresh: () => context
+                              .read<GetOneBranchCubit>()
+                              .fetchOneBranch(),
+                          color: AppColors.primaryColor,
+                          child: SingleChildScrollView(
+                            physics: AlwaysScrollableScrollPhysics(),
+                            child: SizedBox(
+                              height: MediaQuery.of(context).size.height,
+                              child: Center(
+                                child: Text(
+                                  '${S.of(context).error}: ${state.apiErrorModel.message}',
+                                  textAlign: TextAlign.center,
                                 ),
-                                SliverToBoxAdapter(
-                                    child:
-                                        PharmacyDetailBody(branch: state.branch))
-                              ],
+                              ),
+                            ),
+                          ),
+                        )
+                      : state is GetOneBranchSuccess
+                          ? RefreshIndicator(
+                              onRefresh: () => context
+                                  .read<GetOneBranchCubit>()
+                                  .fetchOneBranch(),
+                              color: AppColors.primaryColor,
+                              child: CustomScrollView(
+                                slivers: [
+                                  CustomSliverAppBar(
+                                    img: state.branch.image,
+                                    isBtnValid: false,
+                                    height: MediaQuery.of(context).size.height *
+                                        0.3,
+                                  ),
+                                  SliverToBoxAdapter(
+                                      child: PharmacyDetailBody(
+                                          branch: state.branch))
+                                ],
+                              ),
                             )
                           : const SizedBox.shrink(),
             ),

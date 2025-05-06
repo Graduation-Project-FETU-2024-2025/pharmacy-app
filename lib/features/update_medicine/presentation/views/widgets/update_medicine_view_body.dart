@@ -26,7 +26,8 @@ class UpdateMedicineViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final updateCubit = UpdateMedcineCubit.get(context);
-    String lang = getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage)??'en';
+    String lang =
+        getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage) ?? 'en';
     return SafeArea(
       child: SingleChildScrollView(
         child: Padding(
@@ -95,16 +96,8 @@ class UpdateMedicineViewBody extends StatelessWidget {
                   height: 24.h,
                 ),
                 TextAddMedForm(
-                  label: S.of(context).form,
-                  hintText: medicineBranchModel.productsDTO.type,
-                  readOnly: true,
-                ),
-                SizedBox(
-                  height: 24.h,
-                ),
-                TextAddMedForm(
                   label: S.of(context).DoageForm,
-                  hintText: 'Enter Quantity',
+                  hintText: medicineBranchModel.productsDTO.type,
                   readOnly: true,
                 ),
                 SizedBox(
@@ -131,6 +124,7 @@ class UpdateMedicineViewBody extends StatelessWidget {
                   keyboardType: TextInputType.number,
                   hintText: medicineBranchModel.price.toString(),
                   readOnly: false,
+                  initValue: medicineBranchModel.price.toString(),
                   controller: updateCubit.medicinePriceController,
                 ),
                 SizedBox(
@@ -141,6 +135,7 @@ class UpdateMedicineViewBody extends StatelessWidget {
                   hintText: medicineBranchModel.stock.toString(),
                   keyboardType: TextInputType.number,
                   readOnly: false,
+                  initValue: medicineBranchModel.stock.toString(),
                   controller: updateCubit.medicineStockController,
                 ),
                 SizedBox(

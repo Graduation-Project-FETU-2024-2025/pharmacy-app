@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
+import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 import '../../../../../core/widgets/custom_edit_text_form_field.dart';
 import '../../view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
@@ -72,9 +73,18 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                       initialVal: widget.start,
                       keyboardType: TextInputType.number,
                       suffixIcon: IconButton(
-                          onPressed: () => getTimeFromUser(isStartTime: true),
-                          icon: SvgPicture.asset(AppIcons.iconTime)),
-                          readOnly: true,
+                        onPressed: () => getTimeFromUser(isStartTime: true),
+                        icon: SvgPicture.asset(
+                          AppIcons.iconTime,
+                          colorFilter: ColorFilter.mode(
+                            Theme.of(context).brightness == Brightness.light
+                                ? AppColors.black.withOpacity(0.7)
+                                : AppColors.white.withOpacity(0.7),
+                            BlendMode.srcIn,
+                          ),
+                        ),
+                      ),
+                      readOnly: true,
                     ),
                   ],
                 ),
@@ -96,9 +106,18 @@ class _WorkingHourWidgetState extends State<WorkingHourWidget> {
                       initialVal: widget.end,
                       keyboardType: TextInputType.number,
                       suffixIcon: IconButton(
-                          onPressed: () => getTimeFromUser(isStartTime: false),
-                          icon: SvgPicture.asset(AppIcons.iconTime)),
-                          readOnly: true,
+                        onPressed: () => getTimeFromUser(isStartTime: false),
+                        icon: SvgPicture.asset(
+                          AppIcons.iconTime,
+                          colorFilter: ColorFilter.mode(
+                            Theme.of(context).brightness == Brightness.light
+                                ? AppColors.black.withOpacity(0.7)
+                                : AppColors.white.withOpacity(0.7),
+                            BlendMode.srcIn,
+                          ),
+                        ),
+                      ),
+                      readOnly: true,
                     ),
                   ],
                 ),

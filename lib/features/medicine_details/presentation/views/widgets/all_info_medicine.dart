@@ -23,7 +23,8 @@ class AllIfoMedicine extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          getIt.get<CacheHelper>().getString(key: CacheKeys.currentLanguage) == 'en'
+          getIt.get<CacheHelper>().getString(key: CacheKeys.currentLanguage) ==
+                  'en'
               ? medicineBranchModel.productsDTO.enName
               : medicineBranchModel.productsDTO.arName,
           style: Theme.of(context).textTheme.displayLarge,
@@ -36,7 +37,7 @@ class AllIfoMedicine extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Text(
-                ' ${medicineBranchModel.price}',
+                "\$ ${medicineBranchModel.price.toStringAsFixed(2)}",
                 style: Theme.of(context).textTheme.displayLarge,
               ),
             ),
@@ -75,7 +76,10 @@ class AllIfoMedicine extends StatelessWidget {
                           color: medicineBranchModel.stock < 5
                               ? Colors.red
                               : Color(0xff24B58E),
-                          backgroundColor: AppColors.black.withOpacity(0.1),
+                          backgroundColor:
+                              Theme.of(context).brightness == Brightness.light
+                                  ? AppColors.black.withOpacity(0.1)
+                                  : AppColors.white.withOpacity(0.6),
                           borderRadius: BorderRadius.circular(20),
                         ),
                       ),

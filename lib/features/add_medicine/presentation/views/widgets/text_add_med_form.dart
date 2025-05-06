@@ -11,14 +11,19 @@ class TextAddMedForm extends StatelessWidget {
     this.controller,
     required this.hintText,
     this.keyboardType,
+    this.initValue,
   });
   final String label;
   final bool readOnly;
   final TextEditingController? controller;
   final String hintText;
   final TextInputType? keyboardType;
+  final String? initValue;
   @override
   Widget build(BuildContext context) {
+    if (controller != null && controller!.text.isEmpty && initValue != null) {
+      controller!.text = initValue!;
+    }
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -33,7 +38,11 @@ class TextAddMedForm extends StatelessWidget {
           width: double.infinity,
           height: 50.h,
           decoration: BoxDecoration(
-            color: readOnly ? Color(0xffD9D9D9) : Colors.transparent,
+            color: readOnly
+                ? Theme.of(context).brightness == Brightness.light
+                    ? Color(0xffE8E8E8)
+                    : Color(0xff939393)
+                : Colors.transparent,
             borderRadius: readOnly
                 ? BorderRadius.circular(10.r)
                 : BorderRadius.circular(20.r),
@@ -64,7 +73,11 @@ class TextAddMedForm extends StatelessWidget {
                   : Theme.of(context).textTheme.labelMedium!.copyWith(
                         color: AppColors.black.withOpacity(0.3),
                       ),
-              fillColor: readOnly ? Color(0xffD9D9D9) : Colors.transparent,
+              fillColor: readOnly
+                  ? Theme.of(context).brightness == Brightness.light
+                      ? Color(0xffE8E8E8)
+                      : Color(0xff939393)
+                  : Colors.transparent,
               filled: true,
               enabledBorder: OutlineInputBorder(
                 borderRadius: readOnly
@@ -74,7 +87,9 @@ class TextAddMedForm extends StatelessWidget {
                   width: 1,
                   color: readOnly
                       ? Colors.transparent
-                      : AppColors.black.withOpacity(0.3),
+                      : Theme.of(context).brightness == Brightness.light
+                          ? AppColors.black.withOpacity(0.3)
+                          : AppColors.white.withOpacity(0.6),
                 ),
               ),
               focusedBorder: OutlineInputBorder(

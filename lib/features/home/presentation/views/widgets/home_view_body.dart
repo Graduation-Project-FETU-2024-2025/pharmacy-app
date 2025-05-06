@@ -99,7 +99,10 @@ class HomeViewBody extends StatelessWidget {
                                       .textTheme
                                       .displayLarge!
                                       .copyWith(
-                                        color: AppColors.black,
+                                        color: Theme.of(context).brightness ==
+                                                Brightness.light
+                                            ? AppColors.black
+                                            : AppColors.white,
                                         fontSize: getIt<CacheHelper>()
                                                     .getCurrentLanguage() ==
                                                 'ar'

@@ -18,7 +18,9 @@ class MedicineInfoWidget extends StatelessWidget {
         Text(
           title,
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                color: AppColors.black.withOpacity(0.4),
+                color: Theme.of(context).brightness == Brightness.light
+                    ? AppColors.black.withOpacity(0.4)
+                    : AppColors.white.withOpacity(0.4),
               ),
         ),
         SizedBox(height: 8),
