@@ -14,8 +14,11 @@ class DeliveryAreaCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: AppColors.white,
+      color: Theme.of(context).brightness == Brightness.light
+          ? AppColors.white
+          : AppColors.white.withOpacity(0.15),
       elevation: 2,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
           padding: EdgeInsets.all(18),
           child: DeliveryCardDetail(

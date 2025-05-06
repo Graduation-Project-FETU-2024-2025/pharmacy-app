@@ -45,7 +45,9 @@ class PharmacyDetailBody extends StatelessWidget {
               Text(
                 branch.address,
                 style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                    color: AppColors.black.withOpacity(0.4),
+                    color: Theme.of(context).brightness == Brightness.light
+                        ? AppColors.black.withOpacity(0.4)
+                        : AppColors.white.withOpacity(0.4),
                     fontWeight: FontWeight.normal),
                 overflow: TextOverflow.ellipsis,
               ),
@@ -56,6 +58,7 @@ class PharmacyDetailBody extends StatelessWidget {
             S.of(context).deliveryAreaAndPrice,
             style: Theme.of(context).textTheme.titleSmall,
           ),
+          Gap(15.h),
           DeliveryAreaCard(
               phoneNum: branch.phoneNumber,
               pricePerKilo: branch.pricePerKilo,

@@ -7,127 +7,141 @@ class PharmacyDetailShimmer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Center(
-          child: Shimmer.fromColors(
-            baseColor: Colors.grey[300]!,
-            highlightColor: Colors.grey[100]!,
-            child: Container(
-              height: 250.h,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    final baseColor = isDarkMode ? Colors.grey[700]! : Colors.grey[300]!;
+    final highlightColor = isDarkMode ? Colors.grey[600]! : Colors.grey[100]!;
+
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Center(
+            child: Shimmer.fromColors(
+              baseColor: baseColor,
+              highlightColor: highlightColor,
+              child: Container(
+                height: 300.h,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.rectangle,
+                ),
               ),
             ),
           ),
-        ),
-        SizedBox(height: 20.h),
-        Shimmer.fromColors(
-          baseColor: Colors.grey[300]!,
-          highlightColor: Colors.grey[100]!,
-          child: Container(
-            height: 24.h,
-            width: 200.w,
-            color: Colors.white,
-          ),
-        ),
-        SizedBox(height: 10.h),
-        Row(
-          children: [
-            Container(
-              width: 20.w,
-              height: 20.h,
-              color: Colors.white,
+          SizedBox(height: 20.h),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Shimmer.fromColors(
+              baseColor: baseColor,
+              highlightColor: highlightColor,
+              child: Container(
+                height: 24.h,
+                width: 200.w,
+                color: Colors.grey[100]!,
+              ),
             ),
-            SizedBox(width: 5.w),
-            Shimmer.fromColors(
-              baseColor: Colors.grey[300]!,
-              highlightColor: Colors.grey[100]!,
+          ),
+          SizedBox(height: 10.h),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Shimmer.fromColors(
+              baseColor: baseColor,
+              highlightColor: highlightColor,
               child: Container(
                 height: 14.h,
                 width: 150.w,
-                color: Colors.white,
-              ),
-            ),
-          ],
-        ),
-        SizedBox(height: 32.h),
-        Shimmer.fromColors(
-          baseColor: Colors.grey[300]!,
-          highlightColor: Colors.grey[100]!,
-          child: Container(
-            height: 18.h,
-            width: 180.w,
-            color: Colors.white,
-          ),
-        ),
-        SizedBox(height: 14.h),
-        Container(
-          height: 80.h,
-          width: double.infinity,
-          color: Colors.white,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 19.0, left: 10, right: 10),
-          child: Shimmer.fromColors(
-            baseColor: Colors.grey[300]!,
-            highlightColor: Colors.grey[100]!,
-            child: Container(
-              height: 127.h,
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
+                color: Colors.grey[100]!,
               ),
             ),
           ),
-        ),
-        Row(
-          children: [
-            Container(
-              width: 20.w,
-              height: 20.h,
-              color: Colors.white,
-            ),
-            SizedBox(width: 4.w),
-            Shimmer.fromColors(
-              baseColor: Colors.grey[300]!,
-              highlightColor: Colors.grey[100]!,
+          SizedBox(height: 32.h),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0 , vertical: 4),
+            child: Shimmer.fromColors(
+              baseColor: baseColor,
+              highlightColor: highlightColor,
               child: Container(
                 height: 18.h,
                 width: 150.w,
-                color: Colors.white,
+                color: Colors.grey[100]!,
               ),
             ),
-          ],
-        ),
-        SizedBox(height: 14.h),
-        Container(
-          height: 30.h,
-          width: double.infinity,
-          color: Colors.white,
-        ),
-        SizedBox(height: 33.h),
-        Container(
-          height: 30.h,
-          width: double.infinity,
-          color: Colors.white,
-        ),
-        SizedBox(height: 42.h),
-        Center(
-          child: Container(
-            height: 30.h,
-            width: 150.w,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(8),
+          ),
+          SizedBox(height: 14.h),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 19.0, left: 10, right: 10),
+            child: Shimmer.fromColors(
+              baseColor: baseColor,
+              highlightColor: highlightColor,
+              child: Container(
+                height: 127.h,
+                margin: const EdgeInsets.symmetric(horizontal: 16),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
             ),
           ),
-        ),
-      ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Shimmer.fromColors(
+              baseColor: baseColor,
+              highlightColor: highlightColor,
+              child: Container(
+                height: 18.h,
+                width: 150.w,
+                color: Colors.grey[300],
+              ),
+            ),
+          ),
+          SizedBox(height: 14.h),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Shimmer.fromColors(
+              baseColor: baseColor,
+              highlightColor: highlightColor,
+              child: Container(
+                height: 20.h,
+                width: 150.w,
+                color: Colors.grey[300],
+              ),
+            ),
+          ),
+          
+          SizedBox(height: 40.h),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: Shimmer.fromColors(
+                baseColor: baseColor,
+                highlightColor: highlightColor,
+                child: Container(
+                  height: 30.h,
+                  width: 120.w,
+                  color: Colors.grey[300],
+                ),
+              ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: Shimmer.fromColors(
+                baseColor: baseColor,
+                highlightColor: highlightColor,
+                child: Container(
+                  height: 30.h,
+                  width: 50.w,
+                  color: Colors.grey[300],
+                ),
+              ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

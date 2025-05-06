@@ -58,6 +58,10 @@ class _AllMedicineViewBodyState extends State<AllMedicineViewBody> {
                   GestureDetector(
                     onTap: () {
                       showDialog(
+                        barrierColor:
+                            Theme.of(context).brightness == Brightness.dark
+                                ? AppColors.white.withOpacity(0.4)
+                                : AppColors.black.withOpacity(0.4),
                         context: context,
                         builder: (context) => FilterDialog(
                           getBranchCubit: getBranchProductsCubit,

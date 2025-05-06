@@ -16,7 +16,6 @@ import 'package:pharmacy_app/features/medicine_details/data/repos/delete_repo.da
 import 'package:pharmacy_app/features/medicine_details/presentation/view_models/delete_cubit/delete_cubit.dart';
 import 'package:pharmacy_app/features/medicine_details/presentation/view_models/get_medicine/get_medicine_cubit.dart';
 import 'package:pharmacy_app/features/medicine_details/presentation/views/widgets/delete_button_consumer.dart';
-import 'package:pharmacy_app/features/update_medicine/presentation/view_models/update_medicine/update_medcine_cubit.dart';
 import 'package:pharmacy_app/generated/l10n.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
@@ -108,11 +107,6 @@ class MedicineDetailsViewBody extends StatelessWidget {
                           title: S.of(context).update,
                           color: AppColors.primaryColor,
                           onpressed: () async {
-                            final updateCubit = UpdateMedcineCubit.get(context);
-                            updateCubit.setInitialValues(
-                              price: state.medicineBranchModel.price.toString(),
-                              stock: state.medicineBranchModel.stock.toString(),
-                            );
                             final result = await Navigator.pushNamed(
                                 context, Routing.updateMedicine,
                                 arguments: {

@@ -21,6 +21,9 @@ class LastAddedMedicineCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
+        color: Theme.of(context).brightness == Brightness.light
+            ? AppColors.white
+            : AppColors.darkWhite,
         border: Border.all(
           color: Color(0xffB3B3B3),
         ),
@@ -85,7 +88,10 @@ class LastAddedMedicineCard extends StatelessWidget {
                                   .textTheme
                                   .bodySmall
                                   ?.copyWith(
-                                    color: AppColors.black.withOpacity(0.6),
+                                    color: Theme.of(context).brightness ==
+                                            Brightness.light
+                                        ? AppColors.black.withOpacity(0.6)
+                                        : AppColors.white.withOpacity(0.6),
                                   ),
                             ),
                           ],
