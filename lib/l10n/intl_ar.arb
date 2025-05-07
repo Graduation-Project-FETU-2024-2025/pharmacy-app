@@ -130,7 +130,8 @@
     "sorry":"للأسف!",
     "nosearchResult":"لا توجد نتائج بحث",
      "emailResentedSuccessfully":"تم إعادة إرسال الايميل بنجاح",
-     "noLastAdded":"لا توجد أدوية مضافه حديثا"
+     "noLastAdded":"لا توجد أدوية مضافه حديثا",
+    "editProfile":"تعديل الملف الشخصى"
 
 
 }

@@ -8,6 +8,7 @@ abstract class Routing {
   static const String branchEdit = '/branchEdit';
 
   static const String profile = '/profile';
+  static const String editProfile = '/editProfile';
 
   static const String homeView = '/homeView';
 

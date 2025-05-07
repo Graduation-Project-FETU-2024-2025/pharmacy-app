@@ -28,6 +28,7 @@ class AppImages {
   static String imgOnboarding = "assets/images/onboarding.png";
 
   static String imgEditName = "assets/images/edit.png";
+  static String imgEditNameDark = "assets/images/edit_dark.png";
 
   static String imgWelcomeHome = "assets/images/welcomeHome.png";
 
@@ -42,4 +43,5 @@ class AppImages {
   static String newNoData = 'assets/images/Empty-rafiki.png';
 
   static String imgNoSearch = 'assets/images/noSearch.png';
+  static String personAvatar = 'assets/images/person_avatar.png';
 }

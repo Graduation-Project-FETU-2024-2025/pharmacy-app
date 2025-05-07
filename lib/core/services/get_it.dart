@@ -15,12 +15,16 @@ import 'package:pharmacy_app/features/all_medicines/data/repos/get_out_of_stock_
 import 'package:pharmacy_app/features/all_medicines/data/repos/get_out_of_stock_branch_repo_impl.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo.dart';
 import 'package:pharmacy_app/features/auth/data/repository/auth_repo_impl.dart';
+import 'package:pharmacy_app/features/edit_profile/data/repo/edit_profile_repo.dart';
+import 'package:pharmacy_app/features/edit_profile/data/repo/edit_profile_repo_impl.dart';
 import 'package:pharmacy_app/features/home/data/repos/last_added_repo.dart';
 import 'package:pharmacy_app/features/home/data/repos/last_added_repo_impl.dart';
 import 'package:pharmacy_app/features/medicine_details/data/repos/get_medicine_repo.dart';
 import 'package:pharmacy_app/features/medicine_details/data/repos/get_medicine_repo_impl.dart';
 import 'package:pharmacy_app/features/pharmacy_details/data/repo/delete_branch_repo.dart';
 import 'package:pharmacy_app/features/pharmacy_details/data/repo/delete_branch_repo_impl.dart';
+import 'package:pharmacy_app/features/profile/data/repo/profile_repo.dart';
+import 'package:pharmacy_app/features/profile/data/repo/profile_repo_impl.dart';
 import 'package:pharmacy_app/features/update_medicine/data/repos/update_medicine_repo.dart';
 import 'package:pharmacy_app/features/update_medicine/data/repos/update_medicine_repo_impl.dart';
 import 'package:pharmacy_app/features/home/data/repos/out_of_stock_repo.dart';
@@ -95,5 +99,12 @@ void setup() {
   );
   getIt.registerLazySingleton<GetLastAddedBranchRepo>(
     () => GetLastAddedBranchRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+
+  getIt.registerLazySingleton<ProfileRepo>(
+    () => ProfileRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<EditProfileRepo>(
+    () => EditProfileRepoImpl(apiConsumer: getIt<ApiConsumer>()),
   );
 }

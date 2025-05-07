@@ -125,6 +125,7 @@
     "sorry":"Sorry!",
     "nosearchResult":"No search result",
     "emailResentedSuccessfully":"Email resented Successfully",
-    "noLastAdded":"No newly added medicines"
+    "noLastAdded":"No newly added medicines",
+    "editProfile":"Edit Profile"
 
 }

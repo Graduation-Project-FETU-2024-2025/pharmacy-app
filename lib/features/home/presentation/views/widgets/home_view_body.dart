@@ -1,8 +1,10 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_app/core/database/cache/cache_keys.dart';
+import 'package:pharmacy_app/core/functions/is_network_image.dart';
 import 'package:pharmacy_app/core/services/get_it.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
@@ -44,6 +46,19 @@ class HomeViewBody extends StatelessWidget {
                           children: [
                             CircleAvatar(
                               radius: 15.r,
+                              backgroundColor: AppColors.gray,
+                              backgroundImage: isNetworkImage(
+                                getIt<CacheHelper>().getString(
+                                  key: CacheKeys.profileImage,
+                                ),
+                              )
+                                  ? CachedNetworkImageProvider(
+                                      getIt<CacheHelper>().getString(
+                                      key: CacheKeys.profileImage,
+                                    )!)
+                                  : AssetImage(
+                                      AppImages.personAvatar,
+                                    ),
                             ),
                             SizedBox(
                               width: 3.w,

@@ -21,6 +21,9 @@ import 'package:pharmacy_app/features/auth/presentation/view_model/otp_cubit/otp
 import 'package:pharmacy_app/features/auth/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/otp_view.dart';
 import 'package:pharmacy_app/features/auth/presentation/views/sign_in_view.dart';
+import 'package:pharmacy_app/features/edit_profile/data/repo/edit_profile_repo.dart';
+import 'package:pharmacy_app/features/edit_profile/presentation/view/edit_profile_view.dart';
+import 'package:pharmacy_app/features/edit_profile/presentation/view_model/edit_profile_cubit/edit_profile_cubit.dart';
 import 'package:pharmacy_app/features/home/presentation/views/home_view.dart';
 import 'package:pharmacy_app/features/main/presentation/views/main_view.dart';
 import 'package:pharmacy_app/features/medicine_details/data/repos/get_medicine_repo.dart';
@@ -29,6 +32,8 @@ import 'package:pharmacy_app/features/medicine_details/presentation/views/medici
 import 'package:pharmacy_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/pharmacy_details_view.dart';
 import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
+import 'package:pharmacy_app/features/profile/data/models/user_model.dart';
+
 import 'package:pharmacy_app/features/profile/presentation/view/profile_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
 import 'package:pharmacy_app/features/update_medicine/data/repos/update_medicine_repo.dart';
@@ -53,6 +58,13 @@ class AppRouters {
 
       case Routing.onboarding:
         return _buildRoute(OnboardingView());
+      case Routing.editProfile:
+        return _buildRoute(BlocProvider(
+          create: (context) => EditProfileCubit(getIt<EditProfileRepo>()),
+          child: EditProfileView(
+            userModel: argument as UserModel,
+          ),
+        ));
       case Routing.signIn:
         return _buildRoute(
           BlocProvider(
