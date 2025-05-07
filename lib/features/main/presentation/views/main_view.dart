@@ -17,6 +17,8 @@ import 'package:pharmacy_app/features/home/data/repos/last_added_repo.dart';
 import 'package:pharmacy_app/features/home/presentation/view_models/last_added/last_added_cubit.dart';
 import 'package:pharmacy_app/features/home/presentation/view_models/out_of_stock_cubit/out_of_stock_cubit.dart';
 import 'package:pharmacy_app/features/home/presentation/views/home_view.dart';
+import 'package:pharmacy_app/features/profile/data/repo/profile_repo.dart';
+import 'package:pharmacy_app/features/profile/presentation/model_view/profile_cubit/profile_cubit.dart';
 import 'package:pharmacy_app/features/profile/presentation/view/profile_view.dart';
 
 import '../../../home/data/repos/out_of_stock_repo.dart';
@@ -64,6 +66,10 @@ class _MainViewState extends State<MainView> {
             getOutOfStockBranchRepo: getIt<GetOutOfStockBranchRepo>(),
             getLastAddedBranchRepo: getIt<GetLastAddedBranchRepo>(),
           )..selectBranch(),
+        ),
+        BlocProvider(
+          create: (context) =>
+              ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),
         ),
       ],
       child: Scaffold(

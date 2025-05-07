@@ -29,6 +29,7 @@ import 'package:pharmacy_app/features/medicine_details/presentation/views/medici
 import 'package:pharmacy_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:pharmacy_app/features/pharmacy_details/presentation/view/pharmacy_details_view.dart';
 import 'package:pharmacy_app/features/add_branch/presentation/view_model/pharmacy_Edit_cubit/pharmacy_edit_cubit.dart';
+import 'package:pharmacy_app/features/profile/presentation/view/edit_profile.dart';
 import 'package:pharmacy_app/features/profile/presentation/view/profile_view.dart';
 import 'package:pharmacy_app/features/splash/presentation/view/splash_view.dart';
 import 'package:pharmacy_app/features/update_medicine/data/repos/update_medicine_repo.dart';
@@ -53,6 +54,8 @@ class AppRouters {
 
       case Routing.onboarding:
         return _buildRoute(OnboardingView());
+      case Routing.editProfile:
+        return _buildRoute(EditProfile());
       case Routing.signIn:
         return _buildRoute(
           BlocProvider(

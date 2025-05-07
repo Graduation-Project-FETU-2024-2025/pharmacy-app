@@ -1,12 +1,18 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pharmacy_app/core/functions/is_network_image.dart';
+import 'package:pharmacy_app/core/helpers/extentions.dart';
+import 'package:pharmacy_app/core/routers/routing.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/utils/app_icons.dart';
+import 'package:pharmacy_app/core/utils/app_images.dart';
 
 class CustomProfileImage extends StatelessWidget {
   const CustomProfileImage({
-    super.key, required this.imagePath,
+    super.key,
+    required this.imagePath,
   });
   final String imagePath;
   @override
@@ -16,13 +22,17 @@ class CustomProfileImage extends StatelessWidget {
         CircleAvatar(
           radius: 45.r,
           backgroundColor: AppColors.gray,
-          backgroundImage: AssetImage(imagePath),
+          backgroundImage: isNetworkImage(imagePath)
+              ? CachedNetworkImageProvider(imagePath)
+              : AssetImage(AppImages.personAvatar),
         ),
         Positioned(
           bottom: -10,
           right: -6,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(Routing.editProfile);
+            },
             icon: SvgPicture.asset(
               AppIcons.iconsCamera,
             ),
