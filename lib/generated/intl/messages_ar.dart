@@ -64,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "drStonePharmacy": MessageLookupByLibrary.simpleMessage(
       "صيدلية دكتور ستون | الاستاد",
     ),
+    "editProfile": MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصى"),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "emailResentedSuccessfully": MessageLookupByLibrary.simpleMessage(
       "تم إعادة إرسال الايميل بنجاح",
