@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/core/utils/app_colors.dart';
 import 'package:pharmacy_app/core/widgets/add_delete_button.dart';
 import 'package:pharmacy_app/core/widgets/toast.dart';
@@ -28,12 +29,16 @@ class EditProfileButtonBlocConsumer extends StatelessWidget {
             ? Center(
                 child: CircularProgressIndicator(),
               )
-            : AddDeleteButton(
-                color: AppColors.primaryColor,
-                onpressed: () {
-                  context.read<EditProfileCubit>().editProfile();
-                },
-                title: S.of(context).save,
+            : SizedBox(
+                width: 120.w,
+                height: 36.h,
+                child: AddDeleteButton(
+                  color: AppColors.primaryColor,
+                  onpressed: () {
+                    context.read<EditProfileCubit>().editProfile();
+                  },
+                  title: S.of(context).save,
+                ),
               );
       },
     );

@@ -6,8 +6,8 @@ class EndPoints {
 
   //auth
   static String auth = "api/Auth/";
-  static String signIn = "${auth}login";
-  static String otp = "${auth}test-otp";
+  static String signIn = "${auth}get-otp";
+  static String otp = "${auth}login";
   static String getBranches = '/api/secure/Branch';
   static String getBranchProducts = 'api/secure/Product/';
 
