@@ -27,8 +27,3 @@ The Afiatuk Pharmacy App helps pharmacists manage multiple branches, respond to 
 *Include some inventory management or branch management UI shots here*
 
 ---
-
-## 👥 Team
-
-- Mobile Developers: [@Khaled Elalfy](https://github.com/...), [@Dina Ahmed](https://github.com/...)
-- Backend Team: [@Rana Ibrahim](https://github.com/...), [@Hamza Mosad](https://github.com/...), [@Khaled Atef](https://github.com/...)
