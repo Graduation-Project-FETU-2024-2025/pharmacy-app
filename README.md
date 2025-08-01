@@ -1,19 +1,34 @@
-# pharmacy_app
+# Afiatuk - Pharmacy App
 
-A new Flutter project.
+The Afiatuk Pharmacy App helps pharmacists manage multiple branches, respond to medicine requests, and track inventory.
 
-## Getting Started
+## 🔑 Features
 
-This project is a starting point for a Flutter application.
+- OTP authentication
+- Add/edit multiple branches with delivery radius and timing
+- Receive medicine orders from users
+- Respond to orders (accept/reject)
+- Manage inventory: add, update, or delete medicines
+- Low stock alerts
+- Language and theme customization
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter**
+- **Cubit**
+- **MVVM**
+- **Dio & PrettyDioLogger**
+- **Secure Storage**
+- **Figma UI Design**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
+## 📷 Demo
 
-dart  run build_runner build --delete-conflicting-outputs
+*Include some inventory management or branch management UI shots here*
+
+---
+
+## 👥 Team
+
+- Mobile Developers: [@Khaled Elalfy](https://github.com/...), [@Dina Ahmed](https://github.com/...)
+- Backend Team: [@Rana Ibrahim](https://github.com/...), [@Hamza Mosad](https://github.com/...), [@Khaled Atef](https://github.com/...)
